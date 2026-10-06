@@ -91,6 +91,8 @@ const STRUCTURES = [
 
 const CHANNELS = ["Email", "WhatsApp", "Call / Zoom"];
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const DEFAULT_FILES: QuotesFile[] = [
   { name: "ledger_consolidation_spec_v2.xlsx", size: "2.4 MB", note: "Ready for review", icon: "description" },
   { name: "institutional_briefing_notes.pdf", size: "1.1 MB", note: "Ready for review", icon: "picture_as_pdf" },
@@ -139,7 +141,13 @@ export function ContactWizard() {
   const [contactPhone, setContactPhone] = useState("");
   const [contactCountry, setContactCountry] = useState("");
   const [notes, setNotes] = useState("");
+  const [consent, setConsent] = useState(true);
   const [submitted, setSubmitted] = useState(false);
+  const [trackerId, setTrackerId] = useState("");
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "error">("idle");
+  const [submitError, setSubmitError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ field: string; message: string }[]>([]);
+  const [contactError, setContactError] = useState("");
 
   const goToStep = (targetStep: number) => {
     if (targetStep < quote.step) {
@@ -147,7 +155,16 @@ export function ContactWizard() {
       return;
     }
     if (targetStep === 2 && (!title.trim() || !description.trim())) return;
-    if (targetStep === 6 && (!quote.contactName.trim() || !quote.contactEmail.includes("@"))) return;
+    if (targetStep === 6) {
+      if (!quote.contactName.trim()) {
+        setContactError("Please enter your full name.");
+        return;
+      }
+      if (!EMAIL_RE.test(quote.contactEmail)) {
+        setContactError("Please enter a valid business email address.");
+        return;
+      }
+    }
     setQuote((state) => ({ ...state, step: targetStep }));
   };
 
@@ -176,7 +193,74 @@ export function ContactWizard() {
   const removeFile = (index: number) =>
     setQuote((state) => ({ ...state, files: state.files.filter((_, i) => i !== index) }));
 
-  const submitQuote = () => setSubmitted(true);
+  const submitQuote = async () => {
+    if (submitState === "submitting") return;
+
+    if (!consent) {
+      setFieldErrors([{ field: "consent", message: "Please accept the privacy policy before submitting." }]);
+      setSubmitError("");
+      setSubmitState("error");
+      return;
+    }
+
+    setSubmitError("");
+    setFieldErrors([]);
+    setSubmitState("submitting");
+
+    const payload = {
+      service: quote.service,
+      title: title.trim(),
+      description: description.trim(),
+      outcome: outcome.trim(),
+      deadline: quote.deadline,
+      budget: quote.budget,
+      currency: quote.currency,
+      structure: quote.structure,
+      files: quote.files.map((file) => ({ name: file.name, size: file.size })),
+      contactName: quote.contactName.trim(),
+      contactOrg: quote.contactOrg.trim(),
+      contactEmail: quote.contactEmail.trim(),
+      contactPhone: contactPhone.trim(),
+      contactCountry: contactCountry.trim(),
+      preferredChannel: quote.preferredChannel,
+      notes: notes.trim(),
+      consent,
+    };
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json().catch(() => null)) as {
+        success: boolean;
+        trackerId?: string;
+        error?: string;
+        details?: { field: string; message: string }[];
+      } | null;
+
+      if (response.ok && result?.success && result.trackerId) {
+        setTrackerId(result.trackerId);
+        setSubmitState("idle");
+        setSubmitted(true);
+        return;
+      }
+
+      if (result?.error === "VALIDATION_ERROR") {
+        setSubmitError("Some details couldn't be validated. Please review your entry and try again.");
+        setFieldErrors(result.details ?? []);
+      } else if (result?.error === "RATE_LIMITED") {
+        setSubmitError("We've received too many requests from your network. Please wait a few minutes and try again.");
+      } else {
+        setSubmitError("We couldn't submit your request right now. Please try again.");
+      }
+      setSubmitState("error");
+    } catch {
+      setSubmitError("We couldn't submit your request right now. Please try again.");
+      setSubmitState("error");
+    }
+  };
 
   const resetWizard = () => {
     setQuote(INITIAL_STATE);
@@ -186,6 +270,12 @@ export function ContactWizard() {
     setContactPhone("");
     setContactCountry("");
     setNotes("");
+    setConsent(true);
+    setTrackerId("");
+    setSubmitState("idle");
+    setSubmitError("");
+    setFieldErrors([]);
+    setContactError("");
     setSubmitted(false);
   };
 
@@ -224,7 +314,7 @@ export function ContactWizard() {
               </h3>
               <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container font-mono text-label-sm text-on-surface-variant my-space-md">
                 <span>REQUEST TRACKER ID:</span>
-                <span className="text-whiteout font-bold">FBX-782941</span>
+                <span className="text-whiteout font-bold">{trackerId || "FBX-XXXXXX"}</span>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-lg mb-space-2xl">
                 Thank you for reaching out to FreelancersBix. Our domain practice leads are already examining your
@@ -772,8 +862,12 @@ export function ContactWizard() {
                     placeholder="sarah.jenkins@nexuscap.com"
                     type="email"
                     value={quote.contactEmail}
-                    onChange={(event) => setQuote((state) => ({ ...state, contactEmail: event.target.value }))}
+                    onChange={(event) => {
+                      setContactError("");
+                      setQuote((state) => ({ ...state, contactEmail: event.target.value }));
+                    }}
                   />
+                  {contactError ? <span className="font-label-sm text-label-sm text-error">{contactError}</span> : null}
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
@@ -850,7 +944,8 @@ export function ContactWizard() {
                   className="mt-1 w-4 h-4 rounded bg-surface-container border-0 accent-signal-blue cursor-pointer"
                   id="privacy-check"
                   type="checkbox"
-                  defaultChecked
+                  checked={consent}
+                  onChange={(event) => setConsent(event.target.checked)}
                 />
                 <label
                   className="font-body-sm text-[13px] text-on-surface-variant cursor-pointer"
@@ -971,14 +1066,36 @@ export function ContactWizard() {
                   <span>Edit Details</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-bold transition-all shadow-lg"
+                  className="inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-whiteout hover:opacity-90 disabled:opacity-60 text-ink rounded-lg font-label-lg text-label-lg font-bold transition-all shadow-lg disabled:cursor-not-allowed"
                   onClick={submitQuote}
+                  disabled={submitState === "submitting"}
                   type="button"
+                  aria-busy={submitState === "submitting"}
                 >
-                  <span>Submit Request</span>
+                  <span>{submitState === "submitting" ? "Submitting Request…" : "Submit Request"}</span>
                   <MaterialIcon name="send" className="text-[20px]" />
                 </button>
               </div>
+              {submitState === "error" ? (
+                <div className="mt-space-lg p-space-md rounded-lg bg-error/10 border border-error/30 flex items-start gap-space-sm">
+                  <MaterialIcon name="warning" className="text-error text-[20px] shrink-0" />
+                  <div className="flex flex-col gap-1">
+                    <p className="font-body-sm text-body-sm text-whiteout">{submitError}</p>
+                    {fieldErrors.length > 0 ? (
+                      <ul className="flex flex-col gap-0.5">
+                        {fieldErrors.map((fieldError) => (
+                          <li
+                            key={`${fieldError.field}-${fieldError.message}`}
+                            className="font-label-sm text-label-sm text-error"
+                          >
+                            {fieldError.field}: {fieldError.message}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
             </div>
           )}
         </div>
