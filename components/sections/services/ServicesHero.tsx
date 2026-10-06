@@ -1,0 +1,115 @@
+import Link from "next/link";
+import { MaterialIcon } from "@/components/icons/MaterialIcon";
+
+export function ServicesHero() {
+  return (
+    <section className="relative w-full overflow-hidden bg-black-void pb-space-3xl pt-space-xl">
+      <div className="absolute -top-32 right-0 w-[580px] h-[580px] bg-twilight-blue/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-signal-blue/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+          {/* Text Column */}
+          <div className="lg:col-span-7 flex flex-col items-start gap-space-md z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high/80 border border-white/10 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-signal-blue animate-pulse" />
+              <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-semibold">
+                Our Services
+              </span>
+            </div>
+            <h1 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary tracking-tight uppercase">
+              Professional Expertise For Complex Requirements.
+            </h1>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+              From academic research and business consulting to foreign accounting, data analysis and digital support,
+              FreelancersBix provides structured professional services designed around your exact operational goals.
+            </p>
+            <div className="flex flex-wrap items-center gap-space-md mt-space-md">
+              <Link
+                href="#quote-cta"
+                className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-ink hover:bg-haze transition-all font-medium shadow-lg hover:shadow-white/10"
+              >
+                Get a Quote
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-transparent text-primary hover:bg-white/5 border border-white/20 transition-all font-medium"
+              >
+                Contact Us
+              </Link>
+            </div>
+            <div className="flex flex-wrap items-center gap-space-lg pt-space-lg text-on-surface-variant">
+              <div className="flex items-center gap-2">
+                <MaterialIcon name="verified" className="text-signal-blue text-[18px]" />
+                <span className="font-label-sm text-label-sm uppercase tracking-wider">Methodical Delivery</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MaterialIcon name="lock" className="text-signal-blue text-[18px]" />
+                <span className="font-label-sm text-label-sm uppercase tracking-wider">Strict Confidentiality</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MaterialIcon name="hub" className="text-signal-blue text-[18px]" />
+                <span className="font-label-sm text-label-sm uppercase tracking-wider">Global Protocols</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Abstract Connected Node Visual */}
+          <div className="lg:col-span-5 relative flex items-center justify-center">
+            <div className="relative w-full aspect-square max-w-[460px] rounded-2xl bg-surface-container-lowest/80 border border-white/10 p-6 backdrop-blur-xl shadow-2xl flex flex-col justify-between overflow-hidden">
+              <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
+              <div className="flex justify-between items-center z-10">
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-high/90 text-primary border border-white/10 shadow-sm">
+                  Academic
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-signal-blue/20 text-secondary border border-signal-blue/30 shadow-sm">
+                  GAAP / IFRS
+                </span>
+              </div>
+              <div className="relative w-full h-52 flex items-center justify-center z-10">
+                <svg
+                  className="w-full h-full text-on-surface-variant/40"
+                  fill="none"
+                  viewBox="0 0 320 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 40 100 C 100 40, 160 40, 220 100 C 250 130, 280 130, 300 100"
+                    stroke="currentColor"
+                    strokeDasharray="3 3"
+                    strokeWidth="1.5"
+                  />
+                  <path d="M 40 140 C 110 140, 150 70, 260 70" opacity="0.6" stroke="currentColor" strokeWidth="1.2" />
+                  <path d="M 90 30 L 160 100 L 230 160" opacity="0.5" stroke="#426188" strokeWidth="1.5" />
+                  <circle cx="160" cy="100" fill="#1b1b1b" r="28" stroke="#ffffff" strokeWidth="1.5" />
+                  <circle cx="160" cy="100" fill="#2b7fff" r="6" />
+                  <circle cx="70" cy="65" fill="#1b1b1b" r="14" stroke="currentColor" strokeWidth="1" />
+                  <circle cx="250" cy="70" fill="#1b1b1b" r="16" stroke="#2b7fff" strokeWidth="1" />
+                  <circle cx="100" cy="140" fill="#1b1b1b" r="12" stroke="currentColor" strokeWidth="1" />
+                  <circle cx="230" cy="150" fill="#1b1b1b" r="14" stroke="currentColor" strokeWidth="1" />
+                  <path d="M 154 100 L 166 100 M 160 94 L 160 106" stroke="#ffffff" strokeWidth="1.5" />
+                </svg>
+              </div>
+              <div className="flex justify-between items-center z-10 pt-2 border-t border-white/5">
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-high/90 text-on-surface-variant border border-white/10">
+                  Consulting
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-high/90 text-primary border border-white/10">
+                  Data Synthesis
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-high/90 text-on-surface-variant border border-white/10">
+                  Digital Ops
+                </span>
+              </div>
+              <div className="absolute bottom-2 right-4 flex items-center gap-1.5 opacity-60">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="text-[10px] tracking-widest uppercase font-mono text-on-surface-variant">
+                  Pipeline Active
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
