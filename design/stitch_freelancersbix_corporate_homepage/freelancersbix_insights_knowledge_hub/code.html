@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#636565", "on-secondary-fixed-variant": "#28486e", "on-surface-variant": "#c4c7c8", "on-primary-container": "#636565", "surface-tint": "#c6c6c7", "primary-fixed-dim": "#c6c6c7", "on-primary-fixed-variant": "#454747", "on-secondary-container": "#98b7e3", "haze": "#f5f5f5", "surface-container": "#1f1f1f", "background": "#131313", "primary-container": "#e2e2e2", "whiteout": "#ffffff", "on-surface": "#e2e2e2", "tertiary-container": "#e2e2e2", "on-background": "#e2e2e2", "tertiary": "#ffffff", "primary-fixed": "#e2e2e2", "black-void": "#000000", "error-container": "#93000a", "on-secondary": "#0c3256", "inverse-on-surface": "#303030", "outline-variant": "#444748", "on-error-container": "#ffdad6", "surface-bright": "#393939", "on-secondary-fixed": "#001c38", "primary": "#ffffff", "inverse-primary": "#5d5f5f", "signal-blue": "#2b7fff", "surface-variant": "#353535", "on-error": "#690005", "surface-container-low": "#1b1b1b", "surface-container-lowest": "#0e0e0e", "twilight-blue": "#426188", "surface": "#131313", "on-primary": "#2f3131", "on-primary-fixed": "#1a1c1c", "inverse-surface": "#e2e2e2", "secondary-fixed-dim": "#a9c9f5", "surface-container-highest": "#353535", "surface-dim": "#131313", "on-tertiary-fixed-variant": "#454747", "secondary-container": "#28486e", "ink": "#1b1b1b", "error": "#ffb4ab", "on-tertiary": "#2f3131", "outline": "#8e9192", "tertiary-fixed": "#e2e2e2", "surface-container-high": "#2a2a2a", "secondary": "#a9c9f5", "on-tertiary-fixed": "#1a1c1c", "tertiary-fixed-dim": "#c6c6c7", "secondary-fixed": "#d3e4ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-3xl": "5rem", "gutter": "1.5rem", "space-4xl": "7.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-2xl": "3.25rem", "space-lg": "1.5rem", "margin": "3.25rem", "space-xs": "0.25rem", "gutter-sm": "1rem" }, fontFamily: { "headline-sm": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Anton"], "body-md": ["Inter"], "headline-xl": ["Anton"], "headline-lg-mobile": ["Anton"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl-mobile": ["Anton"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg": ["52px", { "lineHeight": "56px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["80px", { "lineHeight": "84px", "letterSpacing": "0.02em", "fontWeight": "900" }], "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "900" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-black-void/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="w-full px-margin-mobile md:px-margin h-20 flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-primary font-bold transition-colors" data-path="insights" href="#">Insights</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-primary bg-transparent hover:bg-surface-container-high hover:text-on-surface transition-all border border-primary/20" data-path="contact" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Menu" class="lg:hidden flex items-center justify-center p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div><div class="hidden lg:hidden w-full bg-black-void/95 backdrop-blur-2xl border-t border-outline-variant/20 px-margin-mobile py-space-lg" id="mobile-drawer"><nav class="flex flex-col gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-primary font-bold transition-colors" data-path="insights" href="#">Insights</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a><div class="pt-space-sm"><a class="inline-flex w-full items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-primary bg-surface-container hover:bg-surface-container-high hover:text-on-surface transition-all border border-primary/20" data-path="contact" href="#">Get a Quote</a></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full text-on-surface">
+<!-- =========================================================================
+       SECTION 1 — HERO SECTION
+       ========================================================================= -->
+<section class="relative w-full px-margin-mobile md:px-margin pt-space-2xl pb-space-3xl overflow-hidden bg-surface">
+<!-- Ambient subtle radial glow behind hero -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-signal-blue/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-[30rem] h-[30rem] rounded-full bg-twilight-blue/15 blur-[140px] pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left Column: Typographic & Editorial Engine -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-lg">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-signal-blue animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">INSIGHTS &amp; EXPERTISE</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-whiteout uppercase tracking-tight leading-[0.92]">
+          IDEAS, INSIGHTS AND EXPERTISE THAT MOVE WORK FORWARD.
+        </h1>
+<!-- Supporting Body -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Explore practical insights across research, business, accounting, data, digital support and professional services designed for forward-moving operators.
+        </p>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:bg-haze transition-all shadow-md" href="#insights-hub">
+<span>Explore Insights</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-transparent text-whiteout font-label-lg text-label-lg font-medium hover:bg-surface-container transition-all" data-path="contact" href="#">
+<span>Work With Us</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+<!-- Key Telemetry Stats Bar -->
+<div class="w-full pt-space-lg mt-space-md grid grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scope</span>
+<span class="font-headline-sm text-headline-sm font-bold text-whiteout">6 PRACTICE</span>
+<span class="font-label-sm text-label-sm text-twilight-blue font-medium uppercase tracking-tight">DOMAINS</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Efficiency</span>
+<span class="font-headline-sm text-headline-sm font-bold text-whiteout">8 MIN</span>
+<span class="font-label-sm text-label-sm text-twilight-blue font-medium uppercase tracking-tight">AVG READ TIME</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Rigour</span>
+<span class="font-headline-sm text-headline-sm font-bold text-whiteout">100%</span>
+<span class="font-label-sm text-label-sm text-twilight-blue font-medium uppercase tracking-tight">EVIDENCE-BASED</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Editorial & Telemetry Composition -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full rounded-xl bg-surface-container-low p-space-lg shadow-xl overflow-hidden">
+<!-- Glass sheen overlay -->
+<div class="absolute inset-0 bg-gradient-to-br from-whiteout/5 via-transparent to-transparent pointer-events-none"></div>
+<!-- Card Header & Badge -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-signal-blue"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">KNOWLEDGE BRIEF // VOL. 24</span>
+</div>
+<span class="font-label-sm text-label-sm text-twilight-blue tracking-mono">LIVE FEED</span>
+</div>
+<!-- Abstract SVG Network & Vectors -->
+<div class="w-full my-space-md rounded-lg bg-surface-container-lowest p-space-md flex flex-col gap-space-sm relative">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-medium text-whiteout">SYNERGY TELEMETRY</span>
+<span class="text-signal-blue font-mono">LATENCY: 12ms</span>
+</div>
+<svg class="w-full h-44 text-twilight-blue" fill="none" viewbox="0 0 360 160" xmlns="http://www.w3.org/2000/svg">
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.3" stroke-width="1.5" x1="40" x2="160" y1="80" y2="40"></line>
+<line stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5" x1="160" x2="300" y1="40" y2="60"></line>
+<line stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5" x1="40" x2="200" y1="80" y2="120"></line>
+<line stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" x1="200" x2="300" y1="120" y2="60"></line>
+<line stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" x1="160" x2="200" y1="40" y2="120"></line>
+<!-- Nodes with glowing halos -->
+<circle cx="40" cy="80" fill="#1b1b1b" r="14"></circle>
+<circle cx="40" cy="80" fill="#2b7fff" r="6"></circle>
+<text fill="#c4c7c8" font-family="Inter" font-size="10" text-anchor="middle" x="40" y="112">Research</text>
+<circle cx="160" cy="40" fill="#1b1b1b" r="16"></circle>
+<circle cx="160" cy="40" fill="#ffffff" r="7"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="160" y="24">Accounting</text>
+<circle cx="200" cy="120" fill="#1b1b1b" r="12"></circle>
+<circle cx="200" cy="120" fill="#a9c9f5" r="5"></circle>
+<text fill="#c4c7c8" font-family="Inter" font-size="10" text-anchor="middle" x="200" y="146">Data Stack</text>
+<circle cx="300" cy="60" fill="#1b1b1b" r="18"></circle>
+<circle cx="300" cy="60" fill="#2b7fff" r="8"></circle>
+<circle cx="300" cy="60" r="14" stroke="#2b7fff" stroke-opacity="0.4" stroke-width="1"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="300" y="96">Strategy</text>
+</svg>
+<!-- Diagnostic Telemetry Markers -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-signal-blue"></span>
+<span>Synthesized Datasets: 4.8k</span>
+</div>
+<div class="flex items-center gap-space-xs justify-end">
+<span class="w-1.5 h-1.5 rounded-full bg-whiteout"></span>
+<span>Cross-Field Peer Reviewed</span>
+</div>
+</div>
+</div>
+<!-- Document Telemetry Card Preview -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-signal-blue text-[22px]">auto_stories</span>
+<div class="truncate">
+<p class="font-label-lg text-label-lg text-whiteout font-medium truncate">Annual Empirical Playbook</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Q4 Edition Available in Library</p>
+</div>
+</div>
+<a class="p-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-whiteout transition-colors" href="#featured">
+<span class="material-symbols-outlined text-[18px]">read_more</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 2 — FEATURED INSIGHT
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-2xl bg-surface-container-lowest" id="featured">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Section Tag -->
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-signal-blue/20 text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          FEATURED INSIGHT
+        </span>
+</div>
+<!-- Large Featured Card (Split Layout) -->
+<div class="relative w-full rounded-xl bg-surface-container-low overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Side: Content -->
+<div class="lg:col-span-7 p-space-xl md:p-space-2xl flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">BUSINESS RESEARCH</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+              HOW RESEARCH-DRIVEN DECISION MAKING CREATES STRONGER BUSINESS OUTCOMES
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              A practical look at how structured research, market intelligence and data can help organizations make clearer and more informed decisions across volatile global landscapes.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-md">
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container">Research</span>
+<span>•</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container">Business Strategy</span>
+<span>•</span>
+<span>8 min read</span>
+<span>•</span>
+<span class="text-twilight-blue">Published Oct 2024</span>
+</div>
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg font-bold text-whiteout hover:text-signal-blue transition-colors group" href="#">
+<span>Read Insight</span>
+<span class="material-symbols-outlined text-[18px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Side: Graphic & Abstract Composition -->
+<div class="lg:col-span-5 bg-surface-container p-space-xl md:p-space-2xl relative flex flex-col justify-between overflow-hidden">
+<!-- Background Abstract Graphic Pattern -->
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#2b7fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-mono text-on-surface-variant uppercase">EXECUTIVE DIGEST</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-whiteout">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="relative z-10 my-space-xl p-space-lg rounded-xl bg-surface-container-lowest/80 backdrop-blur-md shadow-md">
+<p class="font-headline-sm text-headline-sm text-whiteout italic leading-snug">
+              “Strategic certainty begins when empirical analysis precedes execution.”
+            </p>
+<div class="mt-space-md flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-signal-blue/30 flex items-center justify-center text-whiteout font-label-sm text-label-sm font-bold">F</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FreelancersBix Research Practice</span>
+</div>
+</div>
+<!-- Micro Sparkline Telemetry -->
+<div class="relative z-10 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>METHODOLOGY: LONGITUDINAL</span>
+<span class="text-secondary font-mono">CONFIDENCE INDEX: 98.4%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 3 — SEARCH & CATEGORY FILTER BAR
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin pt-space-2xl pb-space-lg bg-surface" id="insights-hub">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Top Row: Section Heading & Search Experience -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-bold">TAXONOMY ARCHIVE</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+            EXPLORE BY TOPIC
+          </h2>
+</div>
+<!-- Search Input with Clear Button -->
+<div class="relative w-full lg:w-96">
+<div class="absolute inset-y-0 left-0 pl-space-sm flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-10 rounded-lg bg-surface-container-low text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/60 focus:bg-surface-container focus:outline-none focus:ring-1 focus:ring-signal-blue transition-all" id="insightSearchInput" placeholder="Search insights, topics and expertise…" type="text"/>
+<button aria-label="Clear Search" class="hidden absolute inset-y-0 right-0 pr-space-sm flex items-center text-on-surface-variant hover:text-whiteout" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Chips/Tabs Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs no-scrollbar" id="categoryFilterContainer">
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-bold uppercase transition-all bg-signal-blue text-whiteout shadow-sm" data-category="all" type="button">
+          All
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout" data-category="research" type="button">
+          Research
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout whitespace-nowrap" data-category="academic" type="button">
+          Academic Support
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout" data-category="business" type="button">
+          Business
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout" data-category="accounting" type="button">
+          Accounting
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout whitespace-nowrap" data-category="data" type="button">
+          Data &amp; Analytics
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout" data-category="startups" type="button">
+          Startups
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout whitespace-nowrap" data-category="digital" type="button">
+          Digital Support
+        </button>
+<button class="category-filter-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium uppercase transition-all bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-whiteout whitespace-nowrap" data-category="writing" type="button">
+          Professional Writing
+        </button>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 4 — INSIGHTS GRID (3-COLUMN RESPONSIVE LAYOUT)
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin pb-space-2xl bg-surface">
+<div class="max-w-7xl mx-auto">
+<!-- Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="articlesGrid">
+<!-- ARTICLE 1 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="research" data-keywords="research methodology planning framework structure objectives academic project">
+<!-- Visual: Research Methodology Vectors -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Research Graphic Layer -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<rect fill="currentColor" fill-opacity="0.1" height="28" rx="4" width="240" x="20" y="20"></rect>
+<line stroke="currentColor" stroke-width="2" x1="35" x2="140" y1="34" y2="34"></line>
+<circle cx="230" cy="34" fill="#2b7fff" r="5"></circle>
+<rect fill="currentColor" fill-opacity="0.15" height="28" rx="4" width="220" x="40" y="56"></rect>
+<line stroke="currentColor" stroke-width="2" x1="55" x2="180" y1="70" y2="70"></line>
+<circle cx="230" cy="70" fill="#ffffff" r="5"></circle>
+<rect fill="currentColor" fill-opacity="0.2" height="28" rx="4" width="200" x="60" y="92"></rect>
+<line stroke="currentColor" stroke-width="2" x1="75" x2="160" y1="106" y2="106"></line>
+<circle cx="230" cy="106" fill="#2b7fff" r="5"></circle>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                RESEARCH
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                How to structure a strong research project from the beginning
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                A practical framework for planning research, defining objectives and organizing information effectively before data gathering starts.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Research • 7 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- ARTICLE 2 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="business" data-keywords="business market research competition opportunities risks customer needs strategy">
+<!-- Visual: Market Intelligence Matrix -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Matrix Graphic -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="140" x2="140" y1="15" y2="125"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="20" x2="260" y1="70" y2="70"></line>
+<!-- Quadrant dots -->
+<circle cx="80" cy="40" fill="#a9c9f5" r="4"></circle>
+<circle cx="100" cy="100" fill="#a9c9f5" r="4"></circle>
+<circle cx="210" cy="40" fill="#2b7fff" r="8"></circle>
+<circle cx="210" cy="40" r="14" stroke="#2b7fff" stroke-opacity="0.4"></circle>
+<circle cx="190" cy="110" fill="#ffffff" r="5"></circle>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                BUSINESS
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                Why market research matters before launching a business
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Understand how market research can help identify opportunities, risks, competitors and customer needs to prevent resource misallocation.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Business • 6 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- ARTICLE 3 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="accounting" data-keywords="accounting bookkeeping reconciliation financial reporting ledger currency visibility">
+<!-- Visual: Ledger Preview -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Financial Ledger Svg -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<rect height="90" rx="6" stroke="currentColor" stroke-opacity="0.3" width="230" x="25" y="25"></rect>
+<line stroke="currentColor" stroke-opacity="0.3" x1="25" x2="255" y1="55" y2="55"></line>
+<circle cx="45" cy="40" fill="#ffffff" r="4"></circle>
+<line stroke="#ffffff" stroke-width="2" x1="60" x2="110" y1="40" y2="40"></line>
+<line stroke="#2b7fff" stroke-width="2" x1="190" x2="235" y1="40" y2="40"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="45" x2="130" y1="75" y2="75"></line>
+<line stroke="#a9c9f5" stroke-width="1.5" x1="190" x2="235" y1="75" y2="75"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="45" x2="100" y1="95" y2="95"></line>
+<line stroke="#2b7fff" stroke-width="1.5" x1="190" x2="235" y1="95" y2="95"></line>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                ACCOUNTING
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                Building better financial visibility through organized bookkeeping
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Explore the role of structured bookkeeping, reconciliation and financial reporting in everyday operational control and regulatory compliance.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accounting • 5 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- ARTICLE 4 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="data" data-keywords="data analytics cleaning visualization pipeline metrics interpretation telemetry">
+<!-- Visual: Data Pipeline Visualization -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Data Bars & Wave -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<rect fill="currentColor" height="35" rx="2" width="16" x="40" y="80"></rect>
+<rect fill="currentColor" height="55" rx="2" width="16" x="70" y="60"></rect>
+<rect fill="currentColor" height="70" rx="2" width="16" x="100" y="45"></rect>
+<rect fill="#2b7fff" height="85" rx="2" width="16" x="130" y="30"></rect>
+<rect fill="currentColor" height="65" rx="2" width="16" x="160" y="50"></rect>
+<rect fill="#ffffff" height="75" rx="2" width="16" x="190" y="40"></rect>
+<rect fill="currentColor" height="50" rx="2" width="16" x="220" y="65"></rect>
+<path d="M48 70 Q 130 10 228 55" fill="none" stroke="#2b7fff" stroke-width="2"></path>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                DATA &amp; ANALYTICS
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                Turning raw data into useful business insights
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                A practical introduction to data cleaning, analysis, visualization and interpretation for teams seeking actionable operational metrics.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Data • 8 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- ARTICLE 5 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="startups" data-keywords="startups founders market entry validation opportunity checklist venture planning">
+<!-- Visual: Market Diagnostic Diagram -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Checkpins Vector -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<circle cx="60" cy="70" r="22" stroke="currentColor" stroke-width="1.5"></circle>
+<path d="M53 70 L58 75 L68 64" stroke="#ffffff" stroke-width="2"></path>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="82" x2="118" y1="70" y2="70"></line>
+<circle cx="140" cy="70" r="22" stroke="#2b7fff" stroke-width="2"></circle>
+<circle cx="140" cy="70" fill="#2b7fff" r="7"></circle>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="162" x2="198" y1="70" y2="70"></line>
+<circle cx="220" cy="70" r="22" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="220" cy="70" fill="currentColor" r="4"></circle>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                STARTUPS
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                What founders should research before entering a new market
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Key areas founders should investigate before committing critical capital and time to a new geographic or niche market expansion.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Startups • 7 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- ARTICLE 6 -->
+<article class="article-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all group shadow-md" data-category="writing" data-keywords="professional writing reports documentation clarity executive brief presentation content">
+<!-- Visual: Executive Briefing Sheet Layout -->
+<div class="w-full h-48 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center p-space-md">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<!-- Document Structure Lines -->
+<svg class="w-full h-full text-twilight-blue/40 group-hover:text-twilight-blue/70 transition-colors" fill="none" viewbox="0 0 280 140">
+<rect fill="currentColor" fill-opacity="0.1" height="100" rx="4" width="180" x="50" y="20"></rect>
+<line stroke="#ffffff" stroke-width="3" x1="70" x2="130" y1="36" y2="36"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="70" x2="210" y1="52" y2="52"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="70" x2="195" y1="64" y2="64"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="70" x2="180" y1="76" y2="76"></line>
+<rect fill="#2b7fff" height="16" rx="2" width="40" x="70" y="90"></rect>
+<line stroke="#a9c9f5" stroke-width="2" x1="120" x2="160" y1="98" y2="98"></line>
+</svg>
+<div class="absolute top-space-sm left-space-sm z-20">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                PROFESSIONAL WRITING
+              </span>
+</div>
+</div>
+<!-- Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-whiteout group-hover:text-secondary transition-colors font-medium">
+                What makes a professional business report effective?
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Learn how structure, clarity, evidence and visual presentation transform complex business documentation into leadership assets.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Writing • 5 min read</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Container (Hidden by default, triggered by JS) -->
+<div class="hidden w-full py-space-3xl flex flex-col items-center justify-center text-center rounded-xl bg-surface-container-low p-space-xl" id="noResultsState">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center mb-space-md text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">search_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout mb-space-xs">No insights found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+          We couldn't find any articles matching your search query. Try another keyword or reset the category filter.
+        </p>
+<button class="px-space-lg py-space-sm rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:bg-haze transition-all shadow-md" id="resetSearchBtn" type="button">
+          View All Insights
+        </button>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 5 — EDITORIAL PAGINATION
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin pb-space-3xl bg-surface">
+<div class="max-w-7xl mx-auto flex items-center justify-center">
+<nav aria-label="Pagination Navigation" class="inline-flex items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-low">
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-whiteout hover:bg-surface-container transition-all flex items-center gap-1 opacity-50 cursor-not-allowed" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Previous</span>
+</button>
+<button class="w-9 h-9 rounded-lg font-label-md text-label-md font-bold bg-signal-blue text-whiteout flex items-center justify-center shadow-sm" type="button">
+          1
+        </button>
+<button class="w-9 h-9 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-whiteout hover:bg-surface-container flex items-center justify-center transition-colors" type="button">
+          2
+        </button>
+<button class="w-9 h-9 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-whiteout hover:bg-surface-container flex items-center justify-center transition-colors" type="button">
+          3
+        </button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-whiteout hover:bg-surface-container transition-all flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</nav>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 6 — RESEARCH & KNOWLEDGE BANNER
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest relative overflow-hidden">
+<!-- Glowing deep radial accent -->
+<div class="absolute inset-0 bg-gradient-to-r from-signal-blue/10 via-twilight-blue/15 to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-space-xl md:p-space-3xl overflow-hidden shadow-xl">
+<!-- Grid line background pattern -->
+<div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">OUR PHILOSOPHY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+            BETTER DECISIONS BEGIN WITH BETTER INFORMATION.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Our insights are built around the same principles that guide our work: structured research, careful analysis, clear communication and practical delivery.
+          </p>
+</div>
+<div class="flex items-center shrink-0">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-space-md rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:bg-haze transition-all shadow-xl group" data-path="services" href="#">
+<span>Explore Our Services</span>
+<span class="material-symbols-outlined text-[18px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 7 — POPULAR TOPICS (CURATED TAXONOMY)
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">CURATED TAXONOMY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          POPULAR TOPICS
+        </h2>
+</div>
+<!-- 3x2 Topic Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 1. Research & Academic Support -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Research &amp; Academic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Research methods, formal reports, literature reviews, dissertations and academic projects built with strict methodological rigour.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 2. Business & Strategy -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Business &amp; Strategy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Market research, competitor analysis, business planning, opportunity identification and comprehensive feasibility assessments.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 3. Accounting -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Accounting &amp; Finance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Systematic bookkeeping, multi-currency ledger reconciliation, periodic reporting and structured financial organization.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4. Data & Analytics -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">query_stats</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Data &amp; Analytics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Data preparation pipelines, statistical interpretation, dashboard visualization and actionable enterprise reporting.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 5. Startup Support -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Startup Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Early-stage planning, market entry analysis, investor documentation, financial models and venture development.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 6. Digital Support -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue group-hover:bg-signal-blue group-hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-medium">Digital Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Virtual assistance, rapid research coordination, documentation governance and custom administrative automated workflows.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-whiteout group-hover:text-signal-blue transition-colors pt-space-xs" href="#">
+<span>Explore Topic</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 8 — NEWSLETTER / UPDATES (KNOWLEDGE BRIEF SUBSCRIPTION)
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto relative rounded-xl bg-surface-container-low p-space-xl md:p-space-2xl shadow-xl overflow-hidden">
+<!-- Glow edge -->
+<div class="absolute -top-24 right-1/4 w-72 h-72 rounded-full bg-signal-blue/15 blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-xs">
+<span class="material-symbols-outlined text-[26px]">mark_email_read</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          STAY INFORMED. STAY AHEAD.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+          Receive practical insights on research, business, accounting, data and professional services straight to your inbox monthly. No spam.
+        </p>
+<!-- Newsletter Subscription Form -->
+<form class="w-full max-w-md mt-space-sm flex flex-col sm:flex-row gap-space-xs" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+<div class="relative flex-1">
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="newsletterEmail" placeholder="Enter your email address" required="" type="email"/>
+</div>
+<button class="h-11 px-space-lg rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:bg-haze transition-all shadow-md shrink-0 flex items-center justify-center" id="newsletterSubmitBtn" type="submit">
+<span>Subscribe</span>
+</button>
+</form>
+<!-- Status Messages -->
+<div class="hidden text-secondary font-label-md text-label-md mt-space-xs flex items-center gap-1" id="newsletterSuccess">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>You're subscribed. Thank you for joining FreelancersBix Insights.</span>
+</div>
+<div class="hidden text-error font-label-md text-label-md mt-space-xs flex items-center gap-1" id="newsletterError">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Please enter a valid email address.</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70 mt-space-xs">
+          By subscribing, you agree to receive updates and insights from FreelancersBix. You may unsubscribe anytime.
+        </p>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 9 — TRUST & EXPERTISE (3 PILLARS)
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="text-center flex flex-col items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">EDITORIAL INTEGRITY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          BUILT ON KNOWLEDGE. DELIVERED WITH PURPOSE.
+        </h2>
+</div>
+<!-- 3 Pillars Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl">
+<!-- Pillar 1 -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[24px]">science</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Research-Driven</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Structured research and evidence-based thinking precede every recommendation, publication and service workflow we offer.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Professionally Focused</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Practical support designed around real market requirements, regulatory constraints and high-stakes business decisions.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Clearly Delivered</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Organized outputs, direct communication and professional visual presentation so stakeholders digest insights instantly.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SECTION 10 — FINAL CTA
+       ========================================================================= -->
+<section class="w-full px-margin-mobile md:px-margin py-space-4xl bg-surface-container-lowest relative overflow-hidden">
+<!-- Ambient back glow -->
+<div class="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-signal-blue/10 blur-[130px] pointer-events-none"></div>
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-space-lg relative z-10">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-signal-blue"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">START A CONVERSATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight max-w-2xl">
+        HAVE A REQUIREMENT THAT NEEDS EXPERT SUPPORT?
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+        Tell us what you are working on and discover how FreelancersBix can support your research, business, accounting, data or digital requirements.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-space-sm rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:bg-haze transition-all shadow-md" data-path="contact" href="#">
+<span>Get a Quote</span>
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-xl py-space-sm rounded-lg bg-surface-container text-whiteout font-label-lg text-label-lg font-medium hover:bg-surface-container-high transition-all shadow-sm" data-path="services" href="#">
+<span>Explore Services</span>
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive Search & Category Filtering Script -->
+<script>
+  (function initInsightsHub() {
+    const searchInput = document.getElementById('insightSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const categoryBtns = document.querySelectorAll('.category-filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+    const emptyState = document.getElementById('noResultsState');
+    const resetBtn = document.getElementById('resetSearchBtn');
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    function filterArticles() {
+      let visibleCount = 0;
+
+      articleCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category') || '';
+        const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        const cardText = card.textContent.toLowerCase();
+
+        const matchesCategory = (currentCategory === 'all') || (cardCategory === currentCategory);
+        const matchesSearch = !searchQuery || cardKeywords.includes(searchQuery) || cardText.includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    // Category button handling
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentCategory = btn.getAttribute('data-category') || 'all';
+
+        // Update active UI styles
+        categoryBtns.forEach(b => {
+          b.classList.remove('bg-signal-blue', 'text-whiteout', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-signal-blue', 'text-whiteout', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+        filterArticles();
+      });
+    });
+
+    // Search input handling
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        if (clearBtn) {
+          if (searchQuery.length > 0) {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+        }
+        filterArticles();
+      });
+    }
+
+    // Clear search button
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          filterArticles();
+        }
+      });
+    }
+
+    // Reset button in empty state
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        currentCategory = 'all';
+        searchQuery = '';
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('hidden');
+
+        // Reset category UI
+        categoryBtns.forEach(b => {
+          if (b.getAttribute('data-category') === 'all') {
+            b.classList.add('bg-signal-blue', 'text-whiteout', 'shadow-sm');
+            b.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          } else {
+            b.classList.remove('bg-signal-blue', 'text-whiteout', 'shadow-sm');
+            b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          }
+        });
+
+        filterArticles();
+      });
+    }
+  })();
+
+  // Newsletter interactive submission state handling
+  function handleNewsletterSubmit(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById('newsletterEmail');
+    const submitBtn = document.getElementById('newsletterSubmitBtn');
+    const successMsg = document.getElementById('newsletterSuccess');
+    const errorMsg = document.getElementById('newsletterError');
+
+    if (!emailInput) return;
+    const emailVal = emailInput.value.trim();
+
+    if (!emailVal || !emailVal.includes('@')) {
+      if (errorMsg) errorMsg.classList.remove('hidden');
+      if (successMsg) successMsg.classList.add('hidden');
+      return;
+    }
+
+    // Set loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Subscribing...</span>';
+    }
+
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Subscribed</span>';
+        submitBtn.classList.add('bg-secondary', 'text-ink');
+      }
+      if (errorMsg) errorMsg.classList.add('hidden');
+      if (successMsg) successMsg.classList.remove('hidden');
+      emailInput.value = '';
+    }, 600);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-margin-mobile md:px-margin py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-2xl mb-space-3xl"><div class="lg:col-span-2 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></div><p class="font-label-lg text-label-lg text-primary tracking-wide uppercase">Research. Analyse. Create. Deliver.</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Professional research, business, accounting, data and digital support for students, professionals, startups and businesses worldwide.</p></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Company</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Services</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Academic &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Consulting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Startup</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Content &amp; Writing</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Data &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Digital Support</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Resources</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#">Insights / Blog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="case-studies" href="#">Case Studies</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Legal</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></nav></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 FreelancersBix. All rights reserved.</p><div class="flex items-center gap-space-md"><a aria-label="Global Network" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Corporate Email" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Corporate Location" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div></div></footer></body></html>

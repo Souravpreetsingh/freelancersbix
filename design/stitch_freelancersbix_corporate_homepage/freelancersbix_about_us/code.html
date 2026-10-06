@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#636565", "on-secondary-fixed-variant": "#28486e", "on-surface-variant": "#c4c7c8", "on-primary-container": "#636565", "surface-tint": "#c6c6c7", "primary-fixed-dim": "#c6c6c7", "on-primary-fixed-variant": "#454747", "on-secondary-container": "#98b7e3", "haze": "#f5f5f5", "surface-container": "#1f1f1f", "background": "#131313", "primary-container": "#e2e2e2", "whiteout": "#ffffff", "on-surface": "#e2e2e2", "tertiary-container": "#e2e2e2", "on-background": "#e2e2e2", "tertiary": "#ffffff", "primary-fixed": "#e2e2e2", "black-void": "#000000", "error-container": "#93000a", "on-secondary": "#0c3256", "inverse-on-surface": "#303030", "outline-variant": "#444748", "on-error-container": "#ffdad6", "surface-bright": "#393939", "on-secondary-fixed": "#001c38", "primary": "#ffffff", "inverse-primary": "#5d5f5f", "signal-blue": "#2b7fff", "surface-variant": "#353535", "on-error": "#690005", "surface-container-low": "#1b1b1b", "surface-container-lowest": "#0e0e0e", "twilight-blue": "#426188", "surface": "#131313", "on-primary": "#2f3131", "on-primary-fixed": "#1a1c1c", "inverse-surface": "#e2e2e2", "secondary-fixed-dim": "#a9c9f5", "surface-container-highest": "#353535", "surface-dim": "#131313", "on-tertiary-fixed-variant": "#454747", "secondary-container": "#28486e", "ink": "#1b1b1b", "error": "#ffb4ab", "on-tertiary": "#2f3131", "outline": "#8e9192", "tertiary-fixed": "#e2e2e2", "surface-container-high": "#2a2a2a", "secondary": "#a9c9f5", "on-tertiary-fixed": "#1a1c1c", "tertiary-fixed-dim": "#c6c6c7", "secondary-fixed": "#d3e4ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-3xl": "5rem", "gutter": "1.5rem", "space-4xl": "7.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-2xl": "3.25rem", "space-lg": "1.5rem", "margin": "3.25rem", "space-xs": "0.25rem", "gutter-sm": "1rem" }, fontFamily: { "headline-sm": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Anton"], "body-md": ["Inter"], "headline-xl": ["Anton"], "headline-lg-mobile": ["Anton"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl-mobile": ["Anton"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg": ["52px", { "lineHeight": "56px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["80px", { "lineHeight": "84px", "letterSpacing": "0.02em", "fontWeight": "900" }], "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "900" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-black-void/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="w-full px-margin-mobile md:px-margin h-20 flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-primary bg-transparent hover:bg-surface-container-high hover:text-on-surface transition-all border border-primary/20" data-path="contact" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Menu" class="lg:hidden flex items-center justify-center p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div><div class="hidden lg:hidden w-full bg-black-void/95 backdrop-blur-2xl border-t border-outline-variant/20 px-margin-mobile py-space-lg" id="mobile-drawer"><nav class="flex flex-col gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a><div class="pt-space-sm"><a class="inline-flex w-full items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-primary bg-surface-container hover:bg-surface-container-high hover:text-on-surface transition-all border border-primary/20" data-path="contact" href="#">Get a Quote</a></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<script>
+    (function activateAboutNav() {
+      const currentNavs = document.querySelectorAll('nav [data-path="about"]');
+      currentNavs.forEach(nav => {
+        nav.classList.remove('text-on-surface-variant');
+        nav.classList.add('text-primary', 'font-bold');
+      });
+    })();
+  </script>
+<!-- SECTION 1 — ABOUT HERO -->
+<section class="relative w-full overflow-hidden bg-surface py-space-3xl px-margin-mobile md:px-margin">
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-signal-blue/5 blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-twilight-blue/10 blur-[100px] pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-7 flex flex-col items-start gap-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high/80 border border-outline-variant/30 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-signal-blue animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">About FreelancersBix</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl tracking-tight text-whiteout uppercase">
+          Professional expertise,<br/>
+<span class="text-secondary">built around your goals.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          FreelancersBix provides structured research, business, accounting, data and digital support to help individuals and organizations work smarter and move forward with confidence.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center px-space-xl py-3.5 rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-medium hover:opacity-90 transition-opacity shadow-[0_4px_24px_rgba(255,255,255,0.15)]" data-path="services" href="#">
+            Explore Our Services
+          </a>
+<a class="inline-flex items-center justify-center px-space-xl py-3.5 rounded-lg bg-transparent border border-outline-variant/60 text-whiteout font-label-lg text-label-lg font-medium hover:bg-surface-container transition-colors" data-path="contact" href="#">
+            Contact Us
+          </a>
+</div>
+</div>
+<div class="lg:col-span-5 relative w-full">
+<div class="relative w-full aspect-square max-w-md mx-auto bg-gradient-to-b from-surface-container to-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/30 shadow-[0_16px_40px_rgba(0,0,0,0.65)] flex flex-col justify-between overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#2b7fff_1px,transparent_1px)] [background-size:16px_16px] opacity-15"></div>
+<div class="relative z-10 flex items-center justify-between pb-space-md border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant/60"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-signal-blue"></span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-mono">SYS // CORE.MATRIX</span>
+</div>
+<div class="relative z-10 my-auto py-space-md flex flex-col items-center justify-center">
+<svg class="w-full h-44 text-twilight-blue/40" fill="none" viewbox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="90" r="70" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></circle>
+<circle cx="160" cy="90" r="40" stroke="currentColor" stroke-width="1"></circle>
+<line stroke="currentColor" stroke-opacity="0.4" stroke-width="1" x1="60" x2="260" y1="90" y2="90"></line>
+<line stroke="currentColor" stroke-opacity="0.4" stroke-width="1" x1="160" x2="160" y1="20" y2="160"></line>
+<path d="M 60 120 Q 110 50 160 85 T 260 40" fill="none" stroke="#2b7fff" stroke-width="2"></path>
+<circle class="animate-ping" cx="160" cy="85" fill="#ffffff" r="4" style="animation-duration: 3s;"></circle>
+<circle cx="160" cy="85" fill="#2b7fff" r="3"></circle>
+<circle cx="260" cy="40" fill="#ffffff" r="3"></circle>
+<circle cx="60" cy="120" fill="#a9c9f5" r="3"></circle>
+</svg>
+<div class="grid grid-cols-2 gap-space-sm w-full mt-space-sm">
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high/60 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-on-surface">Research</span>
+<span class="font-label-sm text-label-sm text-signal-blue font-mono">99.4%</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high/60 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-on-surface">Analysis</span>
+<span class="font-label-sm text-label-sm text-signal-blue font-mono">Active</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high/60 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-on-surface">Strategy</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Mapped</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high/60 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-on-surface">Execution</span>
+<span class="font-label-sm text-label-sm text-whiteout font-mono">Sync</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 pt-space-sm flex items-center justify-between border-t border-outline-variant/20 text-on-surface-variant font-label-sm text-label-sm">
+<span>METHODOLOGY INTEGRATED</span>
+<span class="text-secondary font-medium">100% DISCIPLINED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — COMPANY INTRODUCTION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Who We Are</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight max-w-3xl">
+          Support that combines research, expertise and execution.
+        </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-lg text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+            FreelancersBix is a professional services company focused on delivering reliable, structured and high-quality support across academic research, business research, accounting, data, content and digital operations.
+          </p>
+<p>
+            We work with students, professionals, startups and businesses that need dependable expertise to research ideas, organize information, solve business challenges and turn requirements into professional deliverables.
+          </p>
+<div class="p-space-lg rounded-xl bg-surface-container border-l-4 border-signal-blue text-whiteout">
+<p class="font-headline-sm text-headline-sm font-semibold tracking-tight text-whiteout">
+              “Expertise should make complex work simpler.”
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Every deliverable is crafted to provide immediate operational clarity and structural rigor.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-sm hover:border-signal-blue/40 transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-3xl">manage_search</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pillar 01</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evidence-based inquiry grounded in primary data &amp; verified sources.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-sm hover:border-signal-blue/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">analytics</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pillar 02</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Converting dense datasets and variables into actionable patterns.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-sm hover:border-signal-blue/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">insights</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pillar 03</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Strategy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Structuring actionable frameworks aligned with commercial goals.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-sm hover:border-signal-blue/40 transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-3xl">task_alt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pillar 04</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Execution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Delivering polished, audited, ready-to-deploy final outputs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3 — OUR MISSION -->
+<section class="w-full bg-black-void py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Our Mission</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          To make professional expertise more accessible, structured and reliable.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Our mission is to help clients move from questions and requirements to clear, useful and professionally prepared outcomes through research, analysis, creativity and disciplined execution.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-lg border-t border-outline-variant/20">
+<div class="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between h-56">
+<span class="font-headline-md text-headline-md font-mono text-signal-blue font-bold">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-1">Understand</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Understand the need down to the exact scope and foundational objectives.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between h-56">
+<span class="font-headline-md text-headline-md font-mono text-secondary font-bold">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-1">Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Research the problem thoroughly across empirical and domain sources.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between h-56">
+<span class="font-headline-md text-headline-md font-mono text-secondary font-bold">03</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-1">Create</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Create the solution with clear structure, precision, and elegance.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between h-56">
+<span class="font-headline-md text-headline-md font-mono text-whiteout font-bold">04</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-1">Deliver</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deliver with confidence, clarity, and readiness for stakeholders.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — OUR VISION -->
+<section class="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Our Vision</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          To become a trusted global partner for professional support and business solutions.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          We envision FreelancersBix as a reliable professional-services platform connecting expertise with the people and organizations that need it — across research, business, accounting, data and digital operations.
+        </p>
+<div class="grid grid-cols-2 gap-space-md pt-space-sm">
+<div class="flex flex-col gap-1 p-space-md rounded-lg bg-surface-container border border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-whiteout font-bold">Global Reach</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Borderless collaborative execution tailored to regional compliance.</span>
+</div>
+<div class="flex flex-col gap-1 p-space-md rounded-lg bg-surface-container border border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-whiteout font-bold">Zero Overhead</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct access to specialists without institutional bureaucracy.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="w-full aspect-[4/3] rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-space-lg flex flex-col justify-between relative overflow-hidden">
+<svg class="absolute inset-0 w-full h-full opacity-40 text-twilight-blue" fill="none" viewbox="0 0 500 350">
+<path d="M 50 175 Q 150 50 250 175 T 450 175" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M 80 220 Q 200 320 320 180 T 420 120" stroke="currentColor" stroke-width="1"></path>
+<circle cx="90" cy="140" fill="#2b7fff" r="5"></circle>
+<circle cx="210" cy="110" fill="#a9c9f5" r="4"></circle>
+<circle cx="340" cy="190" fill="#ffffff" r="6"></circle>
+<circle cx="410" cy="130" fill="#2b7fff" r="5"></circle>
+<circle cx="160" cy="240" fill="#ffffff" r="4"></circle>
+<circle cx="280" cy="270" fill="#a9c9f5" r="3"></circle>
+<line stroke="#2b7fff" stroke-opacity="0.5" stroke-width="1" x1="90" x2="210" y1="140" y2="110"></line>
+<line stroke="#ffffff" stroke-opacity="0.3" stroke-width="1" x1="210" x2="340" y1="110" y2="190"></line>
+<line stroke="#2b7fff" stroke-opacity="0.5" stroke-width="1" x1="340" x2="410" y1="190" y2="130"></line>
+<line stroke="#a9c9f5" stroke-opacity="0.3" stroke-width="1" x1="160" x2="280" y1="240" y2="270"></line>
+</svg>
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-signal-blue font-mono">GLOBAL DISCIPLINE NETWORK</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-whiteout font-label-sm text-label-sm border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-signal-blue"></span>
+              24/7 Cross-Timezone
+            </div>
+</div>
+<div class="relative z-10 grid grid-cols-3 gap-space-sm pt-space-xl">
+<div class="p-space-sm rounded bg-surface-container/80 border border-outline-variant/30 text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Academic</div>
+<div class="font-headline-sm text-headline-sm text-whiteout font-bold">Standard</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container/80 border border-outline-variant/30 text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Financial</div>
+<div class="font-headline-sm text-headline-sm text-secondary font-bold">GAAP/IFRS</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container/80 border border-outline-variant/30 text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Operations</div>
+<div class="font-headline-sm text-headline-sm text-whiteout font-bold">Agile</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5 — WHAT WE DO (7 CORE DISCIPLINES) -->
+<section class="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">What We Do</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Multiple disciplines. One professional support ecosystem.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 01 Academic & Research -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">01</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Academic &amp; Research Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Literature reviews, research methodology, academic editing, dissertations, and analytical study support.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 02 Business Research -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">02</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Business Research &amp; Consulting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Competitor benchmarks, industry market reports, feasibility assessments, and data-backed business strategy.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 03 Foreign Accounting (FEATURED) -->
+<div class="group p-space-lg rounded-xl bg-surface-container-high border-2 border-signal-blue relative flex flex-col justify-between min-h-[260px] shadow-[0_8px_32px_rgba(43,127,255,0.15)]">
+<div class="absolute -top-3 right-4 px-2 py-0.5 rounded-full bg-signal-blue text-black-void font-label-sm text-label-sm font-bold tracking-wide uppercase">
+            Primary Core Practice
+          </div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-signal-blue">03</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">account_balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Foreign Accounting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">US, UK, and Australian GAAP/IFRS bookkeeping, reconciliations, payroll administration, and financial reporting.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-signal-blue font-bold mt-space-md group-hover:translate-x-1 transition-transform" data-path="foreign-accounting" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 04 Business & Startup -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">04</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">rocket_launch</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Business &amp; Startup Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Investor pitch decks, financial models, executive summaries, go-to-market roadmaps, and business planning.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 05 Content & Writing -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">05</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">edit_note</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Content &amp; Professional Writing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Whitepapers, technical documentation, corporate profiles, articles, and high-impact executive communications.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 06 Data & Research -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">06</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">database</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Data &amp; Research Services</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Data gathering, cleaning, SPSS/R/Excel statistical analysis, survey interpretation, and visualization dashboards.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 07 Digital Support -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px] md:col-span-2 lg:col-span-1">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">07</span>
+<span class="material-symbols-outlined text-signal-blue text-2xl">devices</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Digital &amp; Administrative Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Workflow automation, project coordination, CRM maintenance, document formatting, and operational backlog clearing.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all" data-path="services" href="#">
+            Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — WHO WE SERVE -->
+<section class="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Who We Serve</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Built around the needs of modern clients.
+        </h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between min-h-[280px]">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-whiteout border border-outline-variant/40">
+<span class="font-headline-sm text-headline-sm font-bold">ST</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Students</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Academic research, projects, reports, analysis, documentation and research support.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">HIGHER EDUCATION</span>
+</div>
+<div class="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between min-h-[280px]">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-whiteout border border-outline-variant/40">
+<span class="font-headline-sm text-headline-sm font-bold">PR</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Professionals</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Research, content, documentation, data and productivity support.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">CAREER &amp; LEADERSHIP</span>
+</div>
+<div class="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between min-h-[280px]">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-whiteout border border-outline-variant/40">
+<span class="font-headline-sm text-headline-sm font-bold">SU</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Startups</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Market research, business planning, pitch decks, operational documentation and strategic support.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">VENTURE FORMATION</span>
+</div>
+<div class="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between min-h-[280px]">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-whiteout border border-outline-variant/40">
+<span class="font-headline-sm text-headline-sm font-bold">BZ</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Businesses</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accounting, research, data, administrative and business support for day-to-day and strategic needs.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">OPERATIONAL SCALE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — OUR PRINCIPLES -->
+<section class="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">What We Believe</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Professional work should be clear, useful and dependable.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between h-64">
+<span class="font-label-md text-label-md font-mono text-signal-blue">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">Quality</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We focus on accuracy, clarity and professional presentation.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between h-64">
+<span class="font-label-md text-label-md font-mono text-secondary">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">Integrity</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We value responsible work, transparent communication and professional standards.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between h-64">
+<span class="font-label-md text-label-md font-mono text-signal-blue">03</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">Confidentiality</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We treat client information and project materials with appropriate care and discretion.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between h-64">
+<span class="font-label-md text-label-md font-mono text-secondary">04</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">Reliability</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We believe clear processes and consistent communication create better outcomes.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between h-64">
+<span class="font-label-md text-label-md font-mono text-whiteout">05</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">Continuous Improvement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We continuously improve how we research, analyse, create and deliver.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8 — OUR APPROACH (DETAILED 4-STEP METHODOLOGY) -->
+<section class="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">How We Work</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Research. Analyse. Create. Deliver.
+        </h2>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="hidden lg:block absolute top-12 left-10 right-10 h-0.5 bg-outline-variant/30 z-0"></div>
+<div class="relative z-10 p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-signal-blue text-signal-blue flex items-center justify-center font-bold text-sm">
+            01
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Understand the requirement, gather relevant information and establish the right context.
+          </p>
+</div>
+<div class="relative z-10 p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant text-secondary flex items-center justify-center font-bold text-sm">
+            02
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Analyse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Evaluate information, identify patterns and develop meaningful insights.
+          </p>
+</div>
+<div class="relative z-10 p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant text-secondary flex items-center justify-center font-bold text-sm">
+            03
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Create</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Turn research and insights into structured, professional and useful deliverables.
+          </p>
+</div>
+<div class="relative z-10 p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-whiteout text-whiteout flex items-center justify-center font-bold text-sm">
+            04
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Deliver</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Review, refine and deliver the final work with clarity and attention to detail.
+          </p>
+</div>
+</div>
+<div class="py-space-md px-space-lg rounded-lg bg-surface-container-low border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue">verified</span>
+<span class="font-label-lg text-label-lg text-whiteout">A structured process creates better outcomes.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-mono">RIGOROUS CONTROL</span>
+</div>
+</div>
+</section>
+<!-- SECTION 9 — WHY FREELANCERSBIX -->
+<section class="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Why Choose Us</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Professional support without unnecessary complexity.
+        </h2>
+<p class="font-body-lg text-body-lg text-whiteout font-medium mt-space-sm">
+          “Your requirement is the starting point. Understanding it is our priority.”
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We replace fragmented freelancing with verified discipline leads, clear delivery milestones, and end-to-end accountability.
+        </p>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-signal-blue text-2xl">account_tree</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Structured Approach</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Milestones and clear phases prevent ambiguity.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-2xl">hub</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Multi-Disciplinary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cross-functional synergy across research, finance &amp; tech.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-signal-blue text-2xl">chat</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Clear Communication</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Regular status updates and responsive interaction.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-2xl">high_quality</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Quality-Focused</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Double-pass review cycle prior to client sign-off.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-signal-blue text-2xl">tune</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Flexible Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">On-demand projects or integrated recurring retainer.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-2xl">person_pin</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold">Client-Centered</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Solutions adapted strictly to your objectives.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10 — QUALITY & CONFIDENTIALITY -->
+<section class="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Integrity &amp; Standards</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          Built on professionalism and trust.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+<!-- Quality Card -->
+<div class="p-space-xl rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-signal-blue text-4xl">verified_user</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-whiteout font-mono font-label-sm text-label-sm border border-outline-variant/30">AUDITED WORKFLOW</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Quality Standard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Every project should be clear, organized and professionally presented. Our approach emphasizes research, review, accuracy and consistency. We enforce multi-stage review gates before any deliverable is deemed final.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-outline-variant/20 flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-signal-blue text-sm">check_circle</span>
+            Rigorous Source Verification &amp; Accuracy Checks
+          </div>
+</div>
+<!-- Confidentiality Card -->
+<div class="p-space-xl rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-whiteout text-4xl">lock</span>
+<span class="px-2 py-1 rounded bg-surface-container-high text-whiteout font-mono font-label-sm text-label-sm border border-outline-variant/30">NDA PROTECTED</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold">Confidentiality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Professional support requires responsible handling of client information, documents and project requirements. We operate under strict data hygiene principles and non-disclosure standards across all project types.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-outline-variant/20 flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-whiteout text-sm">shield</span>
+            Zero Unauthorized Sharing &amp; Strict File Isolation
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11 — COMPANY PHILOSOPHY -->
+<section class="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20 relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-signal-blue/5 blur-[100px] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue mb-space-md">Our Philosophy</span>
+<span class="font-headline-xl text-headline-xl text-outline-variant/20 select-none leading-none -mb-6">“</span>
+<blockquote class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight max-w-4xl">
+        Good work begins with understanding.
+      </blockquote>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-lg max-w-3xl leading-relaxed">
+        We believe the best results come from understanding the real requirement before beginning the work. That is why our process starts with research and analysis before moving toward creation and delivery.
+      </p>
+<div class="w-16 h-1 bg-signal-blue mt-space-xl rounded-full"></div>
+</div>
+</section>
+<!-- SECTION 12 — CTA -->
+<section class="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto">
+<div class="relative w-full rounded-2xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container border border-outline-variant/40 p-space-2xl md:p-space-3xl flex flex-col lg:flex-row items-center justify-between gap-space-xl overflow-hidden shadow-[0_24px_50px_rgba(0,0,0,0.8)]">
+<div class="absolute top-0 right-0 w-80 h-80 bg-signal-blue/10 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm max-w-2xl relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Get Started Today</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+            Let’s work on your next requirement.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Whether you need research, accounting, business support, data analysis or digital assistance, FreelancersBix is ready to help.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto relative z-10 shrink-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-space-xl py-4 rounded-lg bg-whiteout text-ink font-label-lg text-label-lg font-bold hover:opacity-90 transition-opacity shadow-[0_4px_20px_rgba(255,255,255,0.2)]" data-path="contact" href="#">
+            Get a Quote
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-space-xl py-4 rounded-lg bg-transparent border border-outline-variant text-whiteout font-label-lg text-label-lg font-medium hover:bg-surface-container transition-colors" data-path="contact" href="#">
+            Contact Us
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-margin-mobile md:px-margin py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-2xl mb-space-3xl"><div class="lg:col-span-2 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></div><p class="font-label-lg text-label-lg text-primary tracking-wide uppercase">Research. Analyse. Create. Deliver.</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Professional research, business, accounting, data and digital support for students, professionals, startups and businesses worldwide.</p></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Company</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Services</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Academic &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Consulting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Startup</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Content &amp; Writing</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Data &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Digital Support</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Resources</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Insights / Blog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="case-studies" href="#">Case Studies</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Legal</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></nav></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 FreelancersBix. All rights reserved.</p><div class="flex items-center gap-space-md"><a aria-label="Global Network" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Corporate Email" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Corporate Location" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div></div></footer></body></html>

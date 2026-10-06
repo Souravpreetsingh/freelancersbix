@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#636565", "on-secondary-fixed-variant": "#28486e", "on-surface-variant": "#c4c7c8", "on-primary-container": "#636565", "surface-tint": "#c6c6c7", "primary-fixed-dim": "#c6c6c7", "on-primary-fixed-variant": "#454747", "on-secondary-container": "#98b7e3", "haze": "#f5f5f5", "surface-container": "#1f1f1f", "background": "#131313", "primary-container": "#e2e2e2", "whiteout": "#ffffff", "on-surface": "#e2e2e2", "tertiary-container": "#e2e2e2", "on-background": "#e2e2e2", "tertiary": "#ffffff", "primary-fixed": "#e2e2e2", "black-void": "#000000", "error-container": "#93000a", "on-secondary": "#0c3256", "inverse-on-surface": "#303030", "outline-variant": "#444748", "on-error-container": "#ffdad6", "surface-bright": "#393939", "on-secondary-fixed": "#001c38", "primary": "#ffffff", "inverse-primary": "#5d5f5f", "signal-blue": "#2b7fff", "surface-variant": "#353535", "on-error": "#690005", "surface-container-low": "#1b1b1b", "surface-container-lowest": "#0e0e0e", "twilight-blue": "#426188", "surface": "#131313", "on-primary": "#2f3131", "on-primary-fixed": "#1a1c1c", "inverse-surface": "#e2e2e2", "secondary-fixed-dim": "#a9c9f5", "surface-container-highest": "#353535", "surface-dim": "#131313", "on-tertiary-fixed-variant": "#454747", "secondary-container": "#28486e", "ink": "#1b1b1b", "error": "#ffb4ab", "on-tertiary": "#2f3131", "outline": "#8e9192", "tertiary-fixed": "#e2e2e2", "surface-container-high": "#2a2a2a", "secondary": "#a9c9f5", "on-tertiary-fixed": "#1a1c1c", "tertiary-fixed-dim": "#c6c6c7", "secondary-fixed": "#d3e4ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-3xl": "5rem", "gutter": "1.5rem", "space-4xl": "7.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-2xl": "3.25rem", "space-lg": "1.5rem", "margin": "3.25rem", "space-xs": "0.25rem", "gutter-sm": "1rem" }, fontFamily: { "headline-sm": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Anton"], "body-md": ["Inter"], "headline-xl": ["Anton"], "headline-lg-mobile": ["Anton"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-xl-mobile": ["Anton"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg": ["52px", { "lineHeight": "56px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["80px", { "lineHeight": "84px", "letterSpacing": "0.02em", "fontWeight": "900" }], "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "900" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "900" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-black-void/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="w-full px-margin-mobile md:px-margin h-20 flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold bg-surface-container-high/60 px-space-sm py-space-xs rounded-lg ring-1 ring-white/10"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-primary font-bold bg-surface-container-high/60 px-space-sm py-space-xs rounded-lg ring-1 ring-white/10 transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-ink bg-whiteout hover:opacity-90 font-medium transition-all" data-path="contact" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Menu" class="lg:hidden flex items-center justify-center p-space-xs rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div><div class="hidden lg:hidden w-full bg-black-void/95 backdrop-blur-2xl border-t border-outline-variant/20 px-margin-mobile py-space-lg" id="mobile-drawer"><nav class="flex flex-col gap-space-md" data-active-classes="text-primary font-bold bg-surface-container-high/60 px-space-sm py-space-xs rounded-lg ring-1 ring-white/10"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-primary font-bold bg-surface-container-high/60 px-space-sm py-space-xs rounded-lg ring-1 ring-white/10 transition-colors" data-path="contact" href="#">Contact</a><div class="pt-space-sm"><a class="inline-flex w-full items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-ink bg-whiteout hover:opacity-90 font-medium transition-all" data-path="contact" href="#">Get a Quote</a></div></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- SECTION 1 — CONTACT HERO -->
+<section class="relative w-full px-margin-mobile md:px-margin pt-space-xl pb-space-3xl overflow-hidden bg-black-void">
+<!-- Atmospheric ambient glow backdrop -->
+<div class="absolute -top-32 right-1/4 w-[480px] h-[480px] rounded-full bg-signal-blue/10 blur-[130px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-10 w-[360px] h-[360px] rounded-full bg-twilight-blue/15 blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Column: Typographic Hook -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/70 backdrop-blur-md mb-space-lg shadow-sm">
+<span class="w-2 h-2 rounded-full bg-signal-blue animate-pulse"></span>
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold">LET'S TALK</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">· INTAKE OPEN</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl uppercase text-whiteout tracking-tight leading-[0.95] mb-space-lg">
+          TELL US WHAT<br/>
+<span class="text-secondary">YOU NEED.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-2xl leading-relaxed">
+          Whether you need research, business support, foreign accounting, data services, content or digital assistance, share your requirement and our multidisciplinary team will map out the exact path forward.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all shadow-md group" onclick="document.getElementById('quote-engine').scrollIntoView({behavior: 'smooth'})">
+<span>Start a Request</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
+</button>
+<a class="inline-flex items-center gap-space-sm px-space-lg py-space-md bg-transparent hover:bg-surface-container-high/60 text-primary rounded-lg font-label-lg text-label-lg font-medium transition-all" data-path="services" href="#">
+<span>Explore Services</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Telemetry Indicators -->
+<div class="grid grid-cols-3 gap-space-lg mt-space-3xl pt-space-xl border-t border-whiteout/10 w-full max-w-lg">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-whiteout">24h</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Initial Scope Review</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-whiteout">7</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Specialized Tracks</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-whiteout">100%</div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Confidential Briefs</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Abstract Telemetry & Architecture Node Graphic -->
+<div class="lg:col-span-5 relative mt-space-xl lg:mt-0">
+<div class="relative w-full aspect-square max-w-[480px] mx-auto bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl p-space-xl shadow-xl overflow-hidden flex flex-col justify-between">
+<!-- Geometric Vector Grid -->
+<div class="absolute inset-0 opacity-15 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="36" id="grid-pattern" patternunits="userSpaceOnUse" width="36">
+<path d="M 36 0 L 0 0 0 36" fill="none" stroke="white" stroke-dasharray="2 3" stroke-width="0.75"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Top Status Bar -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-signal-blue animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">SESSION :: INTAKE_PROTOCOL</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs py-0.5 rounded bg-surface-container">SYSTEM IDLE</span>
+</div>
+<!-- Connected Architecture Nodes Flow -->
+<div class="relative z-10 my-auto flex flex-col gap-space-md">
+<!-- Node 1: Spec Node -->
+<div class="p-space-md rounded-lg bg-surface-container/90 backdrop-blur-md shadow-sm transform hover:-translate-y-0.5 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-signal-blue font-bold">REQ // 01</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SPECIFICATION READY</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-whiteout font-medium">Research Scope &amp; Methodology</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="px-space-xs py-0.5 rounded text-[10px] uppercase font-mono bg-surface-container-high text-on-surface-variant">Qual / Quant</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] uppercase font-mono bg-surface-container-high text-on-surface-variant">Peer Review</span>
+</div>
+</div>
+<!-- Inter-node Bridge Line -->
+<div class="flex items-center justify-center">
+<div class="h-6 w-0.5 bg-gradient-to-b from-signal-blue to-whiteout/20"></div>
+</div>
+<!-- Node 2: Matrix Node -->
+<div class="p-space-md rounded-lg bg-surface-container-high/90 backdrop-blur-md shadow-sm transform hover:-translate-y-0.5 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">LEDGER // 02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">US GAAP / IFRS</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-whiteout font-medium">Foreign Accounting Matrix</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="px-space-xs py-0.5 rounded text-[10px] uppercase font-mono bg-surface-container-highest text-on-surface-variant">QuickBooks Online</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] uppercase font-mono bg-surface-container-highest text-on-surface-variant">Multi-Currency</span>
+</div>
+</div>
+<!-- Inter-node Bridge Line -->
+<div class="flex items-center justify-center">
+<div class="h-6 w-0.5 bg-gradient-to-b from-secondary to-signal-blue"></div>
+</div>
+<!-- Node 3: Deliverables Node -->
+<div class="p-space-md rounded-lg bg-surface-container/90 backdrop-blur-md shadow-sm transform hover:-translate-y-0.5 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-signal-blue font-bold">OUTPUT // 03</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FINAL DISPATCH</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-whiteout font-medium">Deliverable Matrix &amp; Handover</div>
+</div>
+</div>
+<!-- Bottom Telemetry Ticker -->
+<div class="relative z-10 flex items-center justify-between pt-space-sm border-t border-whiteout/10">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">LATENCY: &lt; 0.4s</span>
+<span class="font-label-sm text-label-sm text-signal-blue font-mono font-medium">AES-256 VAULT ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — CONTACT INFORMATION & PRACTICE DIRECTORY -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Direct Coordinates -->
+<div class="lg:col-span-5 flex flex-col">
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold mb-space-sm">CONTACT FREELANCERSBIX</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight leading-tight mb-space-md">
+          WE ARE READY TO HEAR YOUR BRIEF.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-xl">
+          Direct communication channels for institutional clients, venture-backed teams, independent researchers, and growing firms.
+        </p>
+<!-- Coordinates Cards Stack -->
+<div class="flex flex-col gap-space-md">
+<!-- Card: Email -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue">alternate_email</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Direct Mail</span>
+<span class="font-body-lg text-body-lg font-medium text-whiteout mt-space-xs">hello@freelancersbix.com</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">24-hour response turnaround on business days</span>
+</div>
+</div>
+</div>
+<!-- Card: Direct Phone / WhatsApp Desk -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue">call</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Enquiry Desk &amp; Messaging</span>
+<span class="font-body-lg text-body-lg font-medium text-whiteout mt-space-xs">+1 (555) 019-8234 / +44 20 7946 0912</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Available Mon–Fri · 08:00–19:00 UTC</span>
+</div>
+</div>
+</div>
+<!-- Card: Structured Intake -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue">assignment</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Business Enquiries</span>
+<span class="font-body-md text-body-md text-whiteout mt-space-xs">Structured Intake via the Interactive Form</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Fast-tracks priority allocation to specialized team leads</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Discipline Directory Grid -->
+<div class="lg:col-span-7 flex flex-col mt-space-2xl lg:mt-0">
+<div class="p-space-xl rounded-xl bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest font-semibold">PRACTICE MATRIX</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mt-1">What can we help you solve?</h3>
+</div>
+<span class="font-label-sm text-label-sm text-signal-blue bg-signal-blue/10 px-space-sm py-space-xs rounded-full">7 Specializations</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Discipline 1 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">school</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Academic &amp; Research</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Literature reviews, thesis structures, peer-reviewed source curation, and academic data frameworks.</p>
+</div>
+<!-- Discipline 2 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">trending_up</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Business &amp; Consulting</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Market feasibility studies, competitor landscape mapping, and commercial growth strategy models.</p>
+</div>
+<!-- Discipline 3 (Highlighted Foreign Accounting) -->
+<div class="p-space-md rounded-lg bg-surface-container-high relative overflow-hidden group">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-signal-blue text-whiteout font-label-sm text-[10px] font-bold uppercase rounded-bl">Featured</div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-signal-blue text-[20px]">account_balance</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Foreign Accounting</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">US GAAP / IFRS bookkeeping, multi-entity reconciliation, tax pack prep, and QBO/Xero ledger audits.</p>
+</div>
+<!-- Discipline 4 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">rocket_launch</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Startup Support</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Investor pitch deck architecture, cap table modeling, operational SOPs, and go-to-market plans.</p>
+</div>
+<!-- Discipline 5 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">edit_note</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Content &amp; Writing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Technical whitepapers, industry reports, corporate copywriting, and authoritative B2B thought leadership.</p>
+</div>
+<!-- Discipline 6 -->
+<div class="p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">database</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Data &amp; Research</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statistical synthesis, Python/R automation, spreadsheet modeling, and dashboard development.</p>
+</div>
+<!-- Discipline 7 -->
+<div class="sm:col-span-2 p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[20px]">hub</span>
+<span class="font-headline-sm text-[16px] text-whiteout font-semibold">Digital &amp; Administrative Support</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Executive back-office operations, CRM migration, workflow automation, and custom digital maintenance.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3 — INTERACTIVE MULTI-STEP "GET A QUOTE" WIZARD -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest relative" id="quote-engine">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+<span class="font-label-md text-label-md uppercase tracking-widest font-semibold">PROJECT SCOPING ENGINE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight">TELL US ABOUT YOUR PROJECT.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Complete the structured intake below. Our team reviews every detail to provide an accurate timeline and milestone breakdown.
+      </p>
+</div>
+<!-- Wizard Container -->
+<div class="max-w-4xl mx-auto bg-surface rounded-xl shadow-xl overflow-hidden">
+<!-- 6-Stage Progress Indicator Bar -->
+<div class="w-full bg-surface-container px-space-md md:px-space-xl py-space-md">
+<div class="grid grid-cols-6 gap-space-xs sm:gap-space-sm text-center">
+<div class="step-indicator active flex flex-col items-center cursor-pointer transition-all" id="nav-step-1">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-signal-blue">01</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-whiteout font-medium truncate w-full">Service</span>
+<div class="w-full h-1 bg-signal-blue rounded-full mt-1.5 indicator-line"></div>
+</div>
+<div class="step-indicator flex flex-col items-center cursor-pointer transition-all opacity-40" id="nav-step-2">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-on-surface-variant">02</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant font-medium truncate w-full">Requirement</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1.5 indicator-line"></div>
+</div>
+<div class="step-indicator flex flex-col items-center cursor-pointer transition-all opacity-40" id="nav-step-3">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-on-surface-variant">03</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant font-medium truncate w-full">Details</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1.5 indicator-line"></div>
+</div>
+<div class="step-indicator flex flex-col items-center cursor-pointer transition-all opacity-40" id="nav-step-4">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-on-surface-variant">04</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant font-medium truncate w-full">Files</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1.5 indicator-line"></div>
+</div>
+<div class="step-indicator flex flex-col items-center cursor-pointer transition-all opacity-40" id="nav-step-5">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-on-surface-variant">05</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant font-medium truncate w-full">Contact</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1.5 indicator-line"></div>
+</div>
+<div class="step-indicator flex flex-col items-center cursor-pointer transition-all opacity-40" id="nav-step-6">
+<span class="font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold text-on-surface-variant">06</span>
+<span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant font-medium truncate w-full">Review</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1.5 indicator-line"></div>
+</div>
+</div>
+</div>
+<!-- Main Step Viewport -->
+<div class="p-space-lg md:p-space-2xl">
+<!-- =================== STEP 1: SERVICE SELECTOR =================== -->
+<div class="wizard-step flex flex-col" id="wizard-step-1">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 01</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">What primary service track do you require?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the discipline that best reflects your project’s core scope.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-xl" id="service-options-container">
+<!-- Academic -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Academic &amp; Research Support"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Academic &amp; Research</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Literature synthesis, research design &amp; academic methodology</span>
+</div>
+</label>
+<!-- Business Research -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Business Research &amp; Consulting"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Business Research &amp; Consulting</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Market feasibility, benchmark analysis, growth advisory</span>
+</div>
+</label>
+<!-- Foreign Accounting (Selected by default) -->
+<label class="service-card active-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-high cursor-pointer transition-all">
+<input checked="" class="sr-only" name="project_service" type="radio" value="Foreign Accounting &amp; Ledger Support"/>
+<div class="w-9 h-9 rounded-lg bg-signal-blue text-whiteout flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Foreign Accounting</span>
+<span class="text-[10px] font-mono px-1.5 py-0.5 bg-signal-blue/20 text-signal-blue rounded">Popular</span>
+</div>
+<span class="font-body-sm text-[13px] text-on-surface-variant">US GAAP, IFRS, QBO/Xero clean-up &amp; multi-currency ledgers</span>
+</div>
+</label>
+<!-- Startup Support -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Business &amp; Startup Support"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Startup &amp; Venture Support</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Pitch decks, financial projections, business plans</span>
+</div>
+</label>
+<!-- Content Writing -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Content &amp; Professional Writing"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Content &amp; Writing</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Whitepapers, executive briefings, specialized B2B articles</span>
+</div>
+</label>
+<!-- Data & Research -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Data &amp; Research Services"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Data Analysis &amp; Research</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Python / Excel dashboards, scraping, statistical models</span>
+</div>
+</label>
+<!-- Digital Support -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Digital &amp; Administrative Support"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Digital &amp; Admin Support</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Automation, workflow design, CRM ops, executive assistance</span>
+</div>
+</label>
+<!-- Other Discipline -->
+<label class="service-card flex items-start gap-space-md p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-all">
+<input class="sr-only" name="project_service" type="radio" value="Custom Multi-Disciplinary Project"/>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 check-icon">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Multi-Disciplinary / Custom</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Cross-functional project spanning multiple domain areas</span>
+</div>
+</label>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 1 of 6</span>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" onclick="goToStep(2)" type="button">
+<span>Continue to Requirement</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- =================== STEP 2: REQUIREMENT =================== -->
+<div class="wizard-step hidden flex flex-col" id="wizard-step-2">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 02</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">Define your requirement &amp; timeline.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The clearer the context, the faster and more accurately we can assemble your estimate.</p>
+</div>
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<!-- Project Title -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="field-title">Project / Requirement Title <span class="text-signal-blue">*</span></label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="field-title" placeholder="e.g. Multi-Entity Financial Consolidation &amp; 3-Statement Model" type="text"/>
+</div>
+<!-- Requirement Description -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="field-desc">Requirement Scope &amp; Objectives <span class="text-signal-blue">*</span></label>
+<textarea class="w-full p-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="field-desc" placeholder="Detail your exact deliverables, existing roadblocks, tools used (e.g., QuickBooks, Stata, Python), and any specific formatting guidelines..." rows="4"></textarea>
+</div>
+<!-- Desired Outcome -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="field-outcome">Desired Final Output / Deliverable Type</label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="field-outcome" placeholder="e.g. Reconciled Balance Sheet Workbook (.xlsx), PDF Executive Summary, Presentation Deck" type="text"/>
+</div>
+<!-- Deadline Pills -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Desired Delivery Timeline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Subject to final scope review</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-xs" id="deadline-container">
+<button class="deadline-btn px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md transition-all text-center" onclick="selectDeadline(this, 'No Fixed Deadline')" type="button">Flexible</button>
+<button class="deadline-btn px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md transition-all text-center" onclick="selectDeadline(this, 'Within 1 Week')" type="button">&lt; 1 Week</button>
+<button class="deadline-btn active-pill px-space-sm py-space-xs rounded-full bg-whiteout text-ink font-label-md text-label-md transition-all text-center font-medium" onclick="selectDeadline(this, '1–2 Weeks')" type="button">1–2 Weeks</button>
+<button class="deadline-btn px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md transition-all text-center" onclick="selectDeadline(this, '2–4 Weeks')" type="button">2–4 Weeks</button>
+<button class="deadline-btn px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md transition-all text-center" onclick="selectDeadline(this, '1+ Month')" type="button">1+ Month</button>
+<button class="deadline-btn px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md transition-all text-center" onclick="selectDeadline(this, 'Ongoing Retainer')" type="button">Retainer</button>
+</div>
+</div>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="goToStep(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" onclick="validateStep2()" type="button">
+<span>Next: Project Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- =================== STEP 3: DETAILS =================== -->
+<div class="wizard-step hidden flex flex-col" id="wizard-step-3">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 03</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">Project scale &amp; investment framework.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sharing your anticipated budget range helps us propose realistic milestone breakdowns.</p>
+</div>
+<div class="flex flex-col gap-space-xl mb-space-xl">
+<!-- Budget Ranges -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Estimated Budget Range</span>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm" id="budget-container">
+<button class="budget-card p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left transition-all" onclick="selectBudget(this, 'Flexible / Open')" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Not Decided</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">Open Discussion</div>
+</button>
+<button class="budget-card p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left transition-all" onclick="selectBudget(this, 'Under $250')" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Starter Scope</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">Under $250</div>
+</button>
+<button class="budget-card p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left transition-all" onclick="selectBudget(this, '$250 – $750')" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Focused Project</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">$250 – $750</div>
+</button>
+<button class="budget-card active-card p-space-md rounded-xl bg-surface-container-high text-left transition-all" onclick="selectBudget(this, '$750 – $2,000')" type="button">
+<div class="font-label-sm text-label-sm text-signal-blue font-semibold">Standard Scope</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">$750 – $2,000</div>
+</button>
+<button class="budget-card p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left transition-all" onclick="selectBudget(this, '$2,000 – $5,000')" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Complex Analysis</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">$2,000 – $5,000</div>
+</button>
+<button class="budget-card p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left transition-all" onclick="selectBudget(this, '$5,000+')" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Enterprise / Multi-Phase</div>
+<div class="font-headline-sm text-[16px] text-whiteout font-medium mt-1">$5,000+</div>
+</button>
+</div>
+</div>
+<!-- Currency Selector -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Preferred Billing Currency</span>
+<div class="flex flex-wrap gap-space-xs" id="currency-container">
+<button class="curr-btn active-pill px-space-md py-space-xs rounded-full bg-whiteout text-ink font-label-md text-label-md font-medium" onclick="selectCurrency(this, 'USD')" type="button">USD ($)</button>
+<button class="curr-btn px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md" onclick="selectCurrency(this, 'EUR')" type="button">EUR (€)</button>
+<button class="curr-btn px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md" onclick="selectCurrency(this, 'GBP')" type="button">GBP (£)</button>
+<button class="curr-btn px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md" onclick="selectCurrency(this, 'INR')" type="button">INR (₹)</button>
+<button class="curr-btn px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md" onclick="selectCurrency(this, 'AUD')" type="button">AUD (A$)</button>
+<button class="curr-btn px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:text-whiteout font-label-md text-label-md" onclick="selectCurrency(this, 'CAD')" type="button">CAD (C$)</button>
+</div>
+</div>
+<!-- Number of Deliverables / Cadence -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Deliverable Engagement Structure</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="structure-container">
+<button class="struct-btn active-card p-space-md rounded-xl bg-surface-container-high text-left" onclick="selectStructure(this, 'Single Milestone Deliverable')" type="button">
+<div class="font-headline-sm text-[15px] text-whiteout font-semibold">Single Deliverable</div>
+<div class="font-body-sm text-[13px] text-on-surface-variant mt-1">One-time specific report or asset</div>
+</button>
+<button class="struct-btn p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left" onclick="selectStructure(this, 'Multi-Milestone Project')" type="button">
+<div class="font-headline-sm text-[15px] text-whiteout font-semibold">Multi-Stage Project</div>
+<div class="font-body-sm text-[13px] text-on-surface-variant mt-1">Staged phases with intermediate reviews</div>
+</button>
+<button class="struct-btn p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-left" onclick="selectStructure(this, 'Ongoing Monthly Support')" type="button">
+<div class="font-headline-sm text-[15px] text-whiteout font-semibold">Ongoing Monthly</div>
+<div class="font-body-sm text-[13px] text-on-surface-variant mt-1">Dedicated continuous team allocation</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="goToStep(2)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" onclick="goToStep(4)" type="button">
+<span>Next: Attach Files</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- =================== STEP 4: FILE UPLOAD =================== -->
+<div class="wizard-step hidden flex flex-col" id="wizard-step-4">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 04</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">Attach supporting documents.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upload project briefs, spreadsheets, sample data sets, or presentation drafts (Optional).</p>
+</div>
+<!-- Interactive File Drop Zone -->
+<div class="w-full p-space-2xl rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col items-center justify-center text-center mb-space-lg border border-dashed border-whiteout/20 hover:border-signal-blue" id="drop-zone" onclick="triggerFileInput()">
+<input class="hidden" id="file-input" multiple="" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-signal-blue text-[28px]">cloud_upload</span>
+</div>
+<div class="font-headline-sm text-[18px] text-whiteout font-semibold">Drop project files here, or <span class="text-signal-blue underline">browse your disk</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs">
+              Supports PDF, DOCX, XLSX, CSV, ZIP, PPTX (Up to 50MB per batch). Transferred over TLS 1.3 encryption.
+            </p>
+</div>
+<!-- Sample & Uploaded Files List -->
+<div class="flex flex-col gap-space-sm mb-space-xl" id="files-list">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Uploaded Materials (Simulated Ready)</span>
+<!-- Default Attached File 1 -->
+<div class="file-chip flex items-center justify-between p-space-md rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[20px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[14px] text-whiteout font-medium truncate">ledger_consolidation_spec_v2.xlsx</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant">2.4 MB · Ready for review</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-signal-blue font-mono font-medium">100% READY</span>
+<button class="text-on-surface-variant hover:text-whiteout p-1" onclick="removeFile(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Default Attached File 2 -->
+<div class="file-chip flex items-center justify-between p-space-md rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[14px] text-whiteout font-medium truncate">institutional_briefing_notes.pdf</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant">1.1 MB · Ready for review</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-signal-blue font-mono font-medium">100% READY</span>
+<button class="text-on-surface-variant hover:text-whiteout p-1" onclick="removeFile(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="goToStep(3)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" onclick="goToStep(5)" type="button">
+<span>Next: Contact Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- =================== STEP 5: CONTACT DETAILS =================== -->
+<div class="wizard-step hidden flex flex-col" id="wizard-step-5">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 05</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">Your contact details.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Where should our practice leads deliver your project brief evaluation and estimate?</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-name">Full Name <span class="text-signal-blue">*</span></label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-name" placeholder="Sarah Jenkins" type="text"/>
+</div>
+<!-- Organization -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-org">Organization / Company</label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-org" placeholder="Nexus Capital &amp; Advisory" type="text"/>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-email">Business Email <span class="text-signal-blue">*</span></label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-email" placeholder="sarah.jenkins@nexuscap.com" type="email"/>
+</div>
+<!-- Phone / WhatsApp -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-phone">Phone / WhatsApp</label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-phone" placeholder="+1 (415) 890-2134" type="tel"/>
+</div>
+<!-- Country -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-country">Country / Timezone</label>
+<input class="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-country" placeholder="United States (EST)" type="text"/>
+</div>
+<!-- Preferred Channel -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout">Preferred Channel</label>
+<div class="grid grid-cols-3 gap-space-xs h-11">
+<button class="channel-btn active-pill rounded bg-whiteout text-ink font-label-sm text-label-sm font-medium" onclick="selectChannel(this, 'Email')" type="button">Email</button>
+<button class="channel-btn rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" onclick="selectChannel(this, 'WhatsApp')" type="button">WhatsApp</button>
+<button class="channel-btn rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" onclick="selectChannel(this, 'Call / Zoom')" type="button">Call</button>
+</div>
+</div>
+</div>
+<!-- Additional Notes -->
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-whiteout" for="contact-notes">Additional Instructions or Preferences</label>
+<textarea class="w-full p-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue" id="contact-notes" placeholder="e.g. Please reach out via email first with an initial scope proposal before booking a scoping call..." rows="2"></textarea>
+</div>
+<!-- Privacy Policy Agreement -->
+<div class="flex items-start gap-space-sm p-space-md rounded-lg bg-surface-container-low mb-space-xl">
+<input checked="" class="mt-1 w-4 h-4 rounded bg-surface-container border-0 accent-signal-blue cursor-pointer" id="privacy-check" type="checkbox"/>
+<label class="font-body-sm text-[13px] text-on-surface-variant cursor-pointer" for="privacy-check">
+              I understand that the project information and materials submitted will be treated confidentially and used solely to prepare the formal FreelancersBix quote and project plan. Read our <a class="text-signal-blue underline" data-path="privacy-policy" href="#">Privacy Policy</a>.
+            </label>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="goToStep(4)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" onclick="validateStep5()" type="button">
+<span>Next: Review Summary</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- =================== STEP 6: REVIEW & CONFIRMATION =================== -->
+<div class="wizard-step hidden flex flex-col" id="wizard-step-6">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">STAGE 06</span>
+<h3 class="font-headline-md text-headline-md text-whiteout font-bold mt-1">Review your intake specification.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verify the details below before dispatching directly to our engagement leads.</p>
+</div>
+<!-- Summary Recap Box -->
+<div class="p-space-xl rounded-xl bg-surface-container mb-space-xl">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg border-b border-whiteout/10 pb-space-lg mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Discipline Track</span>
+<div class="font-headline-sm text-[17px] text-whiteout font-semibold mt-1" id="summary-service">Foreign Accounting &amp; Ledger Support</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Estimated Budget &amp; Currency</span>
+<div class="font-headline-sm text-[17px] text-signal-blue font-semibold mt-1" id="summary-budget">$750 – $2,000 (USD)</div>
+</div>
+<div class="sm:col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Requirement Title</span>
+<div class="font-headline-sm text-[17px] text-whiteout font-semibold mt-1" id="summary-title">Multi-Entity Financial Consolidation &amp; 3-Statement Model</div>
+</div>
+<div class="sm:col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scope Overview</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-relaxed" id="summary-desc">Multi-currency reconciliation across foreign subsidiary entities with monthly P&amp;L consolidation.</p>
+</div>
+</div>
+<!-- Sub-Grid: Metadata & Contact -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Timeline</span>
+<div class="font-body-md text-body-md text-whiteout font-medium mt-1" id="summary-timeline">1–2 Weeks</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Attached Materials</span>
+<div class="font-body-md text-body-md text-whiteout font-medium mt-1" id="summary-files">2 files attached</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Submitted By</span>
+<div class="font-body-md text-body-md text-whiteout font-medium mt-1" id="summary-contact">Sarah Jenkins</div>
+<div class="font-label-sm text-[12px] text-on-surface-variant" id="summary-email">sarah.jenkins@nexuscap.com</div>
+</div>
+</div>
+</div>
+<!-- Wizard Footer Actions -->
+<div class="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="goToStep(5)" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Edit Details</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-bold transition-all shadow-lg" onclick="submitQuoteRequest()" type="button">
+<span>Submit Request</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+<!-- =================== SUCCESS STATE PANEL =================== -->
+<div class="hidden flex flex-col items-center text-center py-space-xl" id="wizard-success">
+<div class="w-16 h-16 rounded-full bg-signal-blue/20 text-signal-blue flex items-center justify-center mb-space-lg shadow-lg">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-signal-blue font-bold">TRANSMISSION CONFIRMED</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight mt-1 mb-space-xs">
+            YOUR REQUEST HAS BEEN RECEIVED.
+          </h3>
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container font-mono text-label-sm text-on-surface-variant my-space-md">
+<span>REQUEST TRACKER ID:</span>
+<span class="text-whiteout font-bold">FBX-782941</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-space-2xl">
+            Thank you for reaching out to FreelancersBix. Our domain practice leads are already examining your specifications to verify capacity, scope milestones, and turnaround windows.
+          </p>
+<!-- 4-Step Next Steps Roadmap -->
+<div class="w-full max-w-2xl bg-surface-container rounded-xl p-space-lg mb-space-2xl text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-whiteout font-bold block mb-space-md">Next Steps in Our Engagement Flow</span>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-signal-blue font-bold text-label-sm">01</span>
+<span class="font-headline-sm text-[14px] text-whiteout font-semibold mt-1">Review</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Specialist assesses files &amp; objectives</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-signal-blue font-bold text-label-sm">02</span>
+<span class="font-headline-sm text-[14px] text-whiteout font-semibold mt-1">Follow-Up</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Direct contact within 24 business hours</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-signal-blue font-bold text-label-sm">03</span>
+<span class="font-headline-sm text-[14px] text-whiteout font-semibold mt-1">Scope &amp; Quote</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Fixed deliverable proposal &amp; timeline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-mono text-signal-blue font-bold text-label-sm">04</span>
+<span class="font-headline-sm text-[14px] text-whiteout font-semibold mt-1">Kickoff</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Execution with verified handoffs</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all" data-path="home" href="#">
+              Back to Home
+            </a>
+<button class="px-space-lg py-space-md bg-surface-container-high hover:bg-surface-container text-whiteout rounded-lg font-label-lg text-label-lg transition-all" onclick="resetWizard()" type="button">
+              Submit Another Request
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — QUICK CONTACT OPTIONS -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
+<div class="max-w-xl mb-space-2xl">
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold">DIRECT CHANNELS</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight mt-1">QUICK ENGAGEMENT TRACKS.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Option 1: General Enquiries -->
+<div class="p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center mb-space-lg">
+<span class="material-symbols-outlined text-signal-blue text-[24px]">contact_support</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">General Enquiries</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Have general questions about how FreelancersBix operates, payment structures, or service coverage?</p>
+</div>
+<div class="pt-space-xl">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-whiteout font-medium hover:text-signal-blue transition-colors" href="mailto:hello@freelancersbix.com">
+<span>Contact Us</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Option 2: Project Enquiry -->
+<div class="p-space-xl rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center mb-space-lg">
+<span class="material-symbols-outlined text-signal-blue text-[24px]">task_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Project Enquiry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Have a complex deliverable, foreign ledger reconciliation, or urgent research sprint ready to start?</p>
+</div>
+<div class="pt-space-xl">
+<button class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-signal-blue font-medium hover:underline" onclick="document.getElementById('quote-engine').scrollIntoView({behavior: 'smooth'})">
+<span>Get a Quote</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</button>
+</div>
+</div>
+<!-- Option 3: Careers -->
+<div class="p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center mb-space-lg">
+<span class="material-symbols-outlined text-secondary text-[24px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">Practitioner Careers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Interested in joining our international network of researchers, certified accountants, analysts, and writers?</p>
+</div>
+<div class="pt-space-xl">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-whiteout font-medium hover:text-signal-blue transition-colors" data-path="careers" href="#">
+<span>Explore Careers</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5 — WHY SHARE YOUR REQUIREMENT (TIPS FOR BEST RESULTS) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
+<div class="flex flex-col items-start mb-space-2xl">
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold">INTAKE EXCELLENCE</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight mt-1">A LITTLE CONTEXT ENSURES RAPID ACCURACY.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Following these simple preparation principles ensures our practice leads can formulate an accurate deliverable plan immediately without protracted back-and-forth.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tip 1 -->
+<div class="p-space-lg rounded-xl bg-surface hover:bg-surface-container transition-all">
+<div class="font-headline-md text-headline-md font-mono text-signal-blue font-bold mb-space-sm">01</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Be Highly Specific</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Explain the core deliverable format, software tools required (e.g. QuickBooks, R, Excel, LaTeX), and end audience.</p>
+</div>
+<!-- Tip 2 -->
+<div class="p-space-lg rounded-xl bg-surface hover:bg-surface-container transition-all">
+<div class="font-headline-md text-headline-md font-mono text-signal-blue font-bold mb-space-sm">02</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Share Existing Files</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Attaching preliminary drafts, sample reports, style guides, or account structures accelerates evaluation tenfold.</p>
+</div>
+<!-- Tip 3 -->
+<div class="p-space-lg rounded-xl bg-surface hover:bg-surface-container transition-all">
+<div class="font-headline-md text-headline-md font-mono text-signal-blue font-bold mb-space-sm">03</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">State Milestone Deadlines</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specify internal client dates or submission windows so we can allocate dedicated practitioner slots promptly.</p>
+</div>
+<!-- Tip 4 -->
+<div class="p-space-lg rounded-xl bg-surface hover:bg-surface-container transition-all">
+<div class="font-headline-md text-headline-md font-mono text-signal-blue font-bold mb-space-sm">04</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Clarify Priority Focus</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Indicate whether mathematical rigor, deep academic depth, speed-to-market, or compliance precision is paramount.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — CONTACT & INTAKE FAQ (ACCORDION) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
+<div class="max-w-3xl mx-auto flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold">FREQUENTLY ASKED QUESTIONS</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight mt-1">INTAKE &amp; ENGAGEMENT FAQ.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Everything you need to know about our quote procedure, confidentiality frameworks, and service coordination.
+      </p>
+</div>
+<div class="max-w-3xl mx-auto flex flex-col gap-space-sm">
+<!-- FAQ 1 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">How do I request a quote?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            You can use the structured 6-step quote wizard on this page to detail your service track, attach supporting documents, and indicate your timeline. Once submitted, our domain lead will formulate a scope evaluation within 24 hours.
+          </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">What information should I include in my request?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The most useful requests clarify: (1) your objective and deliverable format, (2) software environments involved (e.g. QuickBooks, Xero, Excel, Python), (3) deadline expectations, and (4) any existing draft materials or data schemas.
+          </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Can I upload confidential project documents?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. All uploads are encrypted via TLS and access-restricted strictly to the practice lead formulating your estimate. We routinely execute mutual Non-Disclosure Agreements (NDAs) prior to formal engagement kickoff for sensitive business and accounting data.
+          </p>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Can I request multiple service areas for one project?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Absolutely. Many clients combine Foreign Accounting with Data Analytics, or Startup Deck Design with Business Research. You can select "Multi-Disciplinary / Custom" on Step 1 or specify your mixed requirements in the project description box.
+          </p>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Do I need to know exactly which service I need beforehand?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Not at all. You can pick your closest discipline, and during our review we will diagnose the exact functional scope, clarifying whether your project requires accounting, research, technical writing, or automated digital operations.
+          </p>
+</div>
+</div>
+<!-- FAQ 6 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">What happens after I submit an enquiry?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Your brief is assigned to a lead practitioner in your discipline. They evaluate resource availability, estimate milestone effort, and reply via your preferred contact channel with a clear milestone proposal and quotation.
+          </p>
+</div>
+</div>
+<!-- FAQ 7 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Can I discuss my requirement with someone before requesting a quote?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. You can email us at hello@freelancersbix.com or contact our phone desk to request an introductory 15-minute briefing call with an engagement coordinator.
+          </p>
+</div>
+</div>
+<!-- FAQ 8 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-lg flex items-center justify-between text-left" onclick="toggleFaq(this)" type="button">
+<span class="font-headline-sm text-[16px] text-whiteout font-medium">Can I contact FreelancersBix for general questions?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. Our general enquiry desk handles partnership queries, institutional vendor reviews, and career applications every business day.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — TRUST & PRIVACY GUARANTEE -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
+<div class="p-space-xl md:p-space-3xl rounded-xl bg-surface relative overflow-hidden">
+<!-- Ambient highlight -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-signal-blue/10 blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-blue mb-space-md">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-widest font-semibold">CONFIDENTIALITY &amp; GOVERNANCE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-whiteout tracking-tight">YOUR REQUIREMENT DESERVES RIGOROUS CONFIDENTIALITY.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          We operate with strict institutional standards across all engagements, ensuring your data, proprietary spreadsheets, and strategy documents remain safeguarded at every phase.
+        </p>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-space-lg rounded-lg bg-surface-container-high">
+<div class="w-10 h-10 rounded-full bg-signal-blue/10 text-signal-blue flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Responsible Handling</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Information submitted through this intake is restricted exclusively to authorized scoping leads and never commercialized.</p>
+</div>
+<div class="p-space-lg rounded-lg bg-surface-container-high">
+<div class="w-10 h-10 rounded-full bg-signal-blue/10 text-signal-blue flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Clear Communication</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Transparent milestone structures, unambiguous scope definitions, and continuous feedback loops before payment commitments.</p>
+</div>
+<div class="p-space-lg rounded-lg bg-surface-container-high">
+<div class="w-10 h-10 rounded-full bg-signal-blue/10 text-signal-blue flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">Professional Quality Process</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deliverables undergo systematic peer review and quality audits prior to client sign-off and final repository handoff.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8 — BOTTOM CONVERSION CTA -->
+<section class="w-full px-margin-mobile md:px-margin py-space-4xl bg-black-void relative text-center">
+<div class="max-w-2xl mx-auto flex flex-col items-center">
+<span class="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold mb-space-sm">GET STARTED TODAY</span>
+<h2 class="font-headline-xl text-headline-xl uppercase text-whiteout tracking-tight leading-none mb-space-lg">
+        READY TO DISCUSS<br/>YOUR REQUIREMENT?
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-space-2xl max-w-lg">
+        Start with a structured conversation. Detail what you need and our multidisciplinary teams will prepare your deliverable roadmap.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md">
+<button class="inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-bold transition-all shadow-xl" onclick="document.getElementById('quote-engine').scrollIntoView({behavior: 'smooth'})">
+<span>Get a Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-surface-container hover:bg-surface-container-high text-whiteout rounded-lg font-label-lg text-label-lg font-medium transition-all" href="mailto:hello@freelancersbix.com">
+<span>Contact General Desk</span>
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Client-side Scripting for Multi-Step Form & Accordion -->
+<script>
+  // State Store
+  const quoteState = {
+    step: 1,
+    service: "Foreign Accounting & Ledger Support",
+    title: "",
+    desc: "",
+    outcome: "",
+    deadline: "1–2 Weeks",
+    budget: "$750 – $2,000",
+    currency: "USD",
+    structure: "Single Milestone Deliverable",
+    filesCount: 2,
+    contactName: "",
+    contactOrg: "",
+    contactEmail: "",
+    contactPhone: "",
+    contactCountry: "",
+    preferredChannel: "Email",
+    notes: ""
+  };
+
+  // Service selection listeners
+  document.querySelectorAll('input[name="project_service"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      quoteState.service = e.target.value;
+      document.querySelectorAll('.service-card').forEach(card => {
+        card.classList.remove('active-card', 'bg-surface-container-high');
+        card.classList.add('bg-surface-container');
+        const iconDiv = card.querySelector('.check-icon');
+        if (iconDiv) {
+          iconDiv.classList.remove('bg-signal-blue', 'text-whiteout');
+          iconDiv.classList.add('bg-surface-container-highest');
+        }
+      });
+      const selectedParent = e.target.closest('.service-card');
+      if (selectedParent) {
+        selectedParent.classList.add('active-card', 'bg-surface-container-high');
+        selectedParent.classList.remove('bg-surface-container');
+        const iconDiv = selectedParent.querySelector('.check-icon');
+        if (iconDiv) {
+          iconDiv.classList.add('bg-signal-blue', 'text-whiteout');
+          iconDiv.classList.remove('bg-surface-container-highest');
+        }
+      }
+    });
+  });
+
+  // Deadline selection
+  function selectDeadline(btn, val) {
+    quoteState.deadline = val;
+    document.querySelectorAll('.deadline-btn').forEach(b => {
+      b.classList.remove('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+      b.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btn.classList.add('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+  }
+
+  // Budget selection
+  function selectBudget(btn, val) {
+    quoteState.budget = val;
+    document.querySelectorAll('.budget-card').forEach(b => {
+      b.classList.remove('active-card', 'bg-surface-container-high');
+      b.classList.add('bg-surface-container');
+      const badge = b.querySelector('div:first-child');
+      if (badge) badge.classList.remove('text-signal-blue', 'font-semibold');
+    });
+    btn.classList.add('active-card', 'bg-surface-container-high');
+    btn.classList.remove('bg-surface-container');
+    const badge = btn.querySelector('div:first-child');
+    if (badge) badge.classList.add('text-signal-blue', 'font-semibold');
+  }
+
+  // Currency selection
+  function selectCurrency(btn, val) {
+    quoteState.currency = val;
+    document.querySelectorAll('.curr-btn').forEach(b => {
+      b.classList.remove('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+      b.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btn.classList.add('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+  }
+
+  // Structure selection
+  function selectStructure(btn, val) {
+    quoteState.structure = val;
+    document.querySelectorAll('.struct-btn').forEach(b => {
+      b.classList.remove('active-card', 'bg-surface-container-high');
+      b.classList.add('bg-surface-container');
+    });
+    btn.classList.add('active-card', 'bg-surface-container-high');
+    btn.classList.remove('bg-surface-container');
+  }
+
+  // Channel selection
+  function selectChannel(btn, val) {
+    quoteState.preferredChannel = val;
+    document.querySelectorAll('.channel-btn').forEach(b => {
+      b.classList.remove('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+      b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    });
+    btn.classList.add('active-pill', 'bg-whiteout', 'text-ink', 'font-medium');
+    btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+  }
+
+  // Wizard Step Navigation
+  function goToStep(targetStep) {
+    // Hide all steps
+    document.querySelectorAll('.wizard-step').forEach(stepEl => {
+      stepEl.classList.add('hidden');
+    });
+
+    const targetEl = document.getElementById('wizard-step-' + targetStep);
+    if (targetEl) {
+      targetEl.classList.remove('hidden');
+    }
+
+    quoteState.step = targetStep;
+
+    // Update Indicators
+    for (let i = 1; i <= 6; i++) {
+      const navItem = document.getElementById('nav-step-' + i);
+      const line = navItem.querySelector('.indicator-line');
+      const numSpan = navItem.querySelector('span:first-child');
+      const labelSpan = navItem.querySelector('span:nth-child(2)');
+
+      if (i === targetStep) {
+        navItem.classList.remove('opacity-40');
+        line.classList.add('bg-signal-blue');
+        line.classList.remove('bg-surface-variant', 'bg-whiteout');
+        numSpan.classList.add('text-signal-blue');
+        numSpan.classList.remove('text-on-surface-variant', 'text-whiteout');
+        labelSpan.classList.add('text-whiteout');
+        labelSpan.classList.remove('text-on-surface-variant');
+      } else if (i < targetStep) {
+        navItem.classList.remove('opacity-40');
+        line.classList.add('bg-whiteout');
+        line.classList.remove('bg-signal-blue', 'bg-surface-variant');
+        numSpan.classList.add('text-whiteout');
+        numSpan.classList.remove('text-on-surface-variant', 'text-signal-blue');
+        labelSpan.classList.add('text-whiteout');
+        labelSpan.classList.remove('text-on-surface-variant');
+      } else {
+        navItem.classList.add('opacity-40');
+        line.classList.add('bg-surface-variant');
+        line.classList.remove('bg-signal-blue', 'bg-whiteout');
+        numSpan.classList.add('text-on-surface-variant');
+        numSpan.classList.remove('text-signal-blue', 'text-whiteout');
+        labelSpan.classList.add('text-on-surface-variant');
+        labelSpan.classList.remove('text-whiteout');
+      }
+    }
+
+    // Scroll slightly to container top on step shift
+    const engine = document.getElementById('quote-engine');
+    if (engine) {
+      const topOffset = engine.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
+  }
+
+  // Validate Step 2
+  function validateStep2() {
+    const titleVal = document.getElementById('field-title').value.trim();
+    const descVal = document.getElementById('field-desc').value.trim();
+
+    if (!titleVal) {
+      document.getElementById('field-title').focus();
+      document.getElementById('field-title').classList.add('ring-1', 'ring-signal-blue');
+      return;
+    }
+    if (!descVal) {
+      document.getElementById('field-desc').focus();
+      document.getElementById('field-desc').classList.add('ring-1', 'ring-signal-blue');
+      return;
+    }
+
+    quoteState.title = titleVal;
+    quoteState.desc = descVal;
+    quoteState.outcome = document.getElementById('field-outcome').value.trim();
+
+    goToStep(3);
+  }
+
+  // Validate Step 5 & Populate Step 6 Review
+  function validateStep5() {
+    const nameVal = document.getElementById('contact-name').value.trim();
+    const emailVal = document.getElementById('contact-email').value.trim();
+
+    if (!nameVal) {
+      document.getElementById('contact-name').focus();
+      return;
+    }
+    if (!emailVal || !emailVal.includes('@')) {
+      document.getElementById('contact-email').focus();
+      return;
+    }
+
+    quoteState.contactName = nameVal;
+    quoteState.contactEmail = emailVal;
+    quoteState.contactOrg = document.getElementById('contact-org').value.trim();
+    quoteState.contactPhone = document.getElementById('contact-phone').value.trim();
+    quoteState.contactCountry = document.getElementById('contact-country').value.trim();
+    quoteState.notes = document.getElementById('contact-notes').value.trim();
+
+    // Populate review summary card
+    document.getElementById('summary-service').textContent = quoteState.service;
+    document.getElementById('summary-budget').textContent = `${quoteState.budget} (${quoteState.currency})`;
+    document.getElementById('summary-title').textContent = quoteState.title || "Standard Practice Engagement";
+    document.getElementById('summary-desc').textContent = quoteState.desc || "Scope details provided in attached intake documents.";
+    document.getElementById('summary-timeline').textContent = quoteState.deadline;
+    document.getElementById('summary-files').textContent = `${quoteState.filesCount} file(s) attached`;
+    document.getElementById('summary-contact').textContent = `${quoteState.contactName} ${quoteState.contactOrg ? '(' + quoteState.contactOrg + ')' : ''}`;
+    document.getElementById('summary-email').textContent = `${quoteState.contactEmail} · ${quoteState.preferredChannel}`;
+
+    goToStep(6);
+  }
+
+  // Submit Quote Request -> Success
+  function submitQuoteRequest() {
+    document.querySelectorAll('.wizard-step').forEach(stepEl => stepEl.classList.add('hidden'));
+    const successPanel = document.getElementById('wizard-success');
+    successPanel.classList.remove('hidden');
+
+    // Scroll into view
+    const engine = document.getElementById('quote-engine');
+    if (engine) {
+      const topOffset = engine.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
+  }
+
+  // Reset wizard
+  function resetWizard() {
+    document.getElementById('wizard-success').classList.add('hidden');
+    goToStep(1);
+  }
+
+  // File Upload Handlers
+  function triggerFileInput() {
+    document.getElementById('file-input').click();
+  }
+
+  function handleFileSelect(event) {
+    const files = event.target.files;
+    if (!files || files.length === 0) return;
+
+    const list = document.getElementById('files-list');
+    Array.from(files).forEach(file => {
+      quoteState.filesCount++;
+      const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+      const chip = document.createElement('div');
+      chip.className = "file-chip flex items-center justify-between p-space-md rounded-lg bg-surface-container";
+      chip.innerHTML = `
+        <div class="flex items-center gap-space-md min-w-0">
+          <div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-signal-blue text-[20px]">attach_file</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-headline-sm text-[14px] text-whiteout font-medium truncate">${file.name}</span>
+            <span class="font-label-sm text-[12px] text-on-surface-variant">${sizeMB} MB · Uploaded</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md">
+          <span class="font-label-sm text-label-sm text-signal-blue font-mono font-medium">100% READY</span>
+          <button type="button" onclick="removeFile(this)" class="text-on-surface-variant hover:text-whiteout p-1">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+      `;
+      list.appendChild(chip);
+    });
+  }
+
+  function removeFile(btn) {
+    const chip = btn.closest('.file-chip');
+    if (chip) {
+      chip.remove();
+      if (quoteState.filesCount > 0) quoteState.filesCount--;
+    }
+  }
+
+  // Interactive FAQ Accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    const isOpen = !content.classList.contains('hidden');
+
+    if (isOpen) {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+      item.classList.remove('bg-surface-container');
+      item.classList.add('bg-surface-container-low');
+    } else {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+      item.classList.remove('bg-surface-container-low');
+      item.classList.add('bg-surface-container');
+    }
+  }
+
+  // Allow clicking on progress step bars to jump backwards
+  for (let i = 1; i <= 6; i++) {
+    const navEl = document.getElementById('nav-step-' + i);
+    if (navEl) {
+      navEl.addEventListener('click', () => {
+        if (i < quoteState.step) {
+          goToStep(i);
+        }
+      });
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-margin-mobile md:px-margin py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-2xl mb-space-3xl"><div class="lg:col-span-2 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><img alt="FreelancersBix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UXkZWaP-zFPMmP_1KokCs2naNwyJfKh0KtLuXbYwuRbn-6K7IHEFAjFQqTxplT37T_1wA9fxW3jOnchiumxZ0as_S8hvmK0mGkdNbHvMdXw-T1rkpU6TLNPBOrYzygsiN2LjyBQTX77IPcWWmjq2lQe_HKhop6ZI8Q140pHH5N82dCXYkibkxey_y3YNDu3YyF_qbiGn0Y0KNBE_D8nPQADCjRfxMBTlGklDQNUypCBK1iBTtIHsap9g"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FreelancersBix</span></div><p class="font-label-lg text-label-lg text-primary tracking-wide uppercase">Research. Analyse. Create. Deliver.</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Professional research, business, accounting, data and digital support for students, professionals, startups and businesses worldwide.</p></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Company</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Services</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Academic &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Consulting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Business &amp; Startup</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Content &amp; Writing</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Data &amp; Research</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Digital Support</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Resources</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Insights / Blog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="case-studies" href="#">Case Studies</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">Legal</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></nav></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 FreelancersBix. All rights reserved.</p><div class="flex items-center gap-space-md"><a aria-label="Global Network" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Corporate Email" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Corporate Location" class="p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div></div></footer></body></html>

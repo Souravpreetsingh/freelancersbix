@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1b1b1b", "surface-container-high": "#2a2a2a", "on-secondary": "#0c3256", "surface-container": "#1f1f1f", "whiteout": "#ffffff", "primary-fixed": "#e2e2e2", "surface-tint": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "on-tertiary-container": "#636565", "error-container": "#93000a", "on-surface": "#e2e2e2", "on-background": "#e2e2e2", "surface-variant": "#353535", "surface-container-lowest": "#0e0e0e", "background": "#131313", "on-secondary-fixed-variant": "#28486e", "tertiary-fixed-dim": "#c6c6c7", "haze": "#f5f5f5", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#a9c9f5", "tertiary-fixed": "#e2e2e2", "error": "#ffb4ab", "inverse-primary": "#5d5f5f", "inverse-surface": "#e2e2e2", "on-primary-fixed": "#1a1c1c", "secondary-container": "#28486e", "tertiary-container": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-bright": "#393939", "primary-container": "#e2e2e2", "surface-container-highest": "#353535", "on-surface-variant": "#c4c7c8", "ink": "#1b1b1b", "twilight-blue": "#426188", "secondary-fixed": "#d3e4ff", "primary": "#ffffff", "on-secondary-container": "#98b7e3", "on-secondary-fixed": "#001c38", "on-primary-container": "#636565", "outline-variant": "#444748", "surface": "#131313", "on-error": "#690005", "inverse-on-surface": "#303030", "black-void": "#000000", "primary-fixed-dim": "#c6c6c7", "surface-dim": "#131313", "outline": "#8e9192", "on-primary-fixed-variant": "#454747", "tertiary": "#ffffff", "on-primary": "#2f3131", "secondary": "#a9c9f5", "on-tertiary": "#2f3131", "signal-blue": "#2b7fff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-sm": "1rem", "space-sm": "0.5rem", "margin": "3.25rem", "space-4xl": "7.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-xl": "2rem", "space-2xl": "3.25rem", "space-md": "1rem", "space-3xl": "5rem", "space-lg": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "body-lg": [ "Inter" ], "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-xl": [ "Anton" ], "headline-xl-mobile": [ "Anton" ], "headline-lg": [ "Anton" ], "headline-lg-mobile": [ "Anton" ], "headline-md": [ "Inter" ], "headline-sm": [ "Inter" ], "body-md": [ "Inter" ] }, "fontSize": { "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-xl": [ "80px", { "lineHeight": "84px", "letterSpacing": "0.02em", "fontWeight": "900" } ], "headline-xl-mobile": [ "44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "900" } ], "headline-lg": [ "52px", { "lineHeight": "56px", "letterSpacing": "0.01em", "fontWeight": "900" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "900" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-margin-mobile md:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><a class="flex flex-col group" data-path="home" href="#"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary transition-opacity group-hover:opacity-90">FreelancersBix</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-twilight-blue">Professional Services</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold bg-surface-container-high px-space-sm py-space-xs rounded"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#">Insights</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity" data-path="get-a-quote" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- TOP BREADCRUMB STRIP -->
+<section class="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant/70">
+<a class="hover:text-primary transition-colors" data-path="home" href="#">Home</a>
+<span class="text-[12px] opacity-40">/</span>
+<a class="hover:text-primary transition-colors" data-path="services" href="#">Services</a>
+<span class="text-[12px] opacity-40">/</span>
+<span class="text-whiteout font-medium">Content &amp; Professional Writing</span>
+</nav>
+</section>
+<!-- 1. HERO SECTION (SPLIT EDITORIAL LAYOUT) -->
+<section class="relative w-full px-margin-mobile md:px-margin pt-space-lg pb-space-3xl overflow-hidden">
+<!-- Atmospheric subtle ambient wash -->
+<div class="absolute top-1/4 left-1/3 w-96 h-96 bg-signal-blue/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 right-10 w-80 h-80 bg-twilight-blue/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left Column: Typographic Focus -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-[4px] rounded-full bg-surface-container-high/90 border border-whiteout/10 w-fit backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-signal-blue animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-medium">Content &amp; Professional Writing</span>
+</div>
+<!-- Anton H1 Headline -->
+<h1 class="font-headline-xl text-headline-xl text-whiteout uppercase tracking-tight leading-[0.95] max-w-2xl">
+          Words that make complex ideas easier to understand.
+        </h1>
+<!-- Supporting copy -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-normal leading-relaxed">
+          Research-driven writing, professional documentation, and polished content engineered for forward-thinking enterprises, researchers, and global organizations.
+        </p>
+<!-- CTA row -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-xl py-space-md rounded-lg hover:opacity-90 transition-all shadow-[0_12px_28px_rgba(255,255,255,0.12)]" data-path="get-a-quote" href="#">
+            Get a Quote
+          </a>
+<a class="inline-flex items-center justify-center bg-surface-container-high/60 border border-whiteout/15 text-whiteout font-label-lg text-label-lg font-medium px-space-xl py-space-md rounded-lg hover:bg-surface-container-highest transition-all backdrop-blur-md" href="#services-inventory">
+            Explore Services
+          </a>
+</div>
+<!-- Micro-process metadata marker -->
+<div class="pt-space-md flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant/60 tracking-widest uppercase">
+<span>Research</span>
+<span class="w-1 h-1 rounded-full bg-signal-blue"></span>
+<span>Analyse</span>
+<span class="w-1 h-1 rounded-full bg-signal-blue"></span>
+<span>Create</span>
+<span class="w-1 h-1 rounded-full bg-signal-blue"></span>
+<span>Deliver</span>
+</div>
+</div>
+<!-- Right Column: Abstract Editorial Workspace Architecture Visual -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full rounded-2xl bg-surface-container-lowest/90 border border-whiteout/10 p-space-lg shadow-2xl backdrop-blur-xl overflow-hidden">
+<!-- Card Header Indicator -->
+<div class="flex items-center justify-between pb-space-md border-b border-whiteout/5 mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span class="ml-space-xs font-label-sm text-label-sm text-on-surface-variant/70">workspace_terminal.doc</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-[2px] bg-secondary-container/40 text-secondary rounded">Illustrative Architecture • v2.6</span>
+</div>
+<!-- Layered visual modules -->
+<div class="space-y-space-sm">
+<!-- Layer 1: Research Extract -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 border border-whiteout/5">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="flex items-center gap-1 text-signal-blue"><span class="material-symbols-outlined text-[15px]">database</span> Research Synthesis</span>
+<span class="text-[10px] text-on-surface-variant/50">STAGE 01</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                Synthesized 14 institutional papers into structured evidence matrix with full bibliographic rigor.
+              </p>
+</div>
+<!-- Layer 2: Editorial Wireframe -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border border-whiteout/10 relative">
+<div class="absolute -left-1 top-3 bottom-3 w-1 bg-signal-blue rounded-full"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1 pl-space-xs">
+<span class="flex items-center gap-1 text-whiteout"><span class="material-symbols-outlined text-[15px]">view_quilt</span> Structured Layout &amp; Tone</span>
+<span class="text-[10px] text-signal-blue font-semibold">VALIDATED</span>
+</div>
+<div class="space-y-1 pl-space-xs pt-1">
+<div class="h-2 w-3/4 bg-whiteout/20 rounded"></div>
+<div class="h-2 w-11/12 bg-whiteout/10 rounded"></div>
+<div class="h-2 w-1/2 bg-whiteout/15 rounded"></div>
+</div>
+</div>
+<!-- Layer 3: Content Pipeline Schematic (SVG Graph) -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest border border-whiteout/5">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-space-xs">Content Flow Execution</span>
+<svg class="w-full h-12 text-on-surface-variant" fill="none" viewbox="0 0 380 40">
+<!-- Connectors -->
+<path d="M 35 20 L 105 20 M 125 20 L 195 20 M 215 20 L 285 20 M 305 20 L 365 20" opacity="0.4" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1.5"></path>
+<!-- Nodes -->
+<circle cx="20" cy="20" fill="#1b1b1b" r="10" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="7" font-weight="600" text-anchor="middle" x="20" y="23">R</text>
+<circle cx="115" cy="20" fill="#1b1b1b" r="10" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="7" font-weight="600" text-anchor="middle" x="115" y="23">S</text>
+<circle cx="205" cy="20" fill="#1b1b1b" r="10" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="7" font-weight="600" text-anchor="middle" x="205" y="23">W</text>
+<circle cx="295" cy="20" fill="#28486e" r="10" stroke="#2b7fff" stroke-width="1.5"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="7" font-weight="600" text-anchor="middle" x="295" y="23">E</text>
+<circle cx="370" cy="20" fill="#2b7fff" r="7"></circle>
+</svg>
+<div class="flex justify-between text-[10px] text-on-surface-variant/70 font-mono uppercase px-1">
+<span>Research</span>
+<span>Structure</span>
+<span>Write</span>
+<span>Refine</span>
+<span>Deliver</span>
+</div>
+</div>
+</div>
+<!-- Bottom Status Bar -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-[11px] font-mono text-on-surface-variant/60 border-t border-whiteout/5">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-signal-blue"></span> Active Editorial Engine</span>
+<span>Latency: 0ms • Fidelity 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. TRUST / PRINCIPLES STRIP -->
+<section class="w-full px-margin-mobile md:px-margin pb-space-2xl">
+<div class="w-full p-space-md rounded-xl bg-surface-container-low/70 border border-whiteout/10 backdrop-blur-md">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md text-center items-center divide-y md:divide-y-0 md:divide-x divide-whiteout/10">
+<div class="flex items-center justify-center gap-space-xs pt-space-xs md:pt-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">menu_book</span>
+<span class="font-label-md text-label-md text-whiteout font-medium tracking-wide">Research-Driven</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs pt-space-xs md:pt-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-whiteout font-medium tracking-wide">Professional Tone</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs pt-space-xs md:pt-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">schema</span>
+<span class="font-label-md text-label-md text-whiteout font-medium tracking-wide">Clear Structure</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs pt-space-xs md:pt-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">groups</span>
+<span class="font-label-md text-label-md text-whiteout font-medium tracking-wide">Audience-Focused</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex items-center justify-center gap-space-xs pt-space-xs md:pt-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">lock</span>
+<span class="font-label-md text-label-md text-whiteout font-medium tracking-wide">Confidentiality-First</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. INTRODUCTION: DEFINITION & TRANSFORMATION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest relative border-y border-whiteout/5">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Text Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Professional Communication</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+          Good writing is more than words. It is structure, clarity and purpose.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          High-performing organizations do not struggle from a lack of facts; they struggle with distillation. Professional writing translates dense operational, technical, or academic data into prose that moves stakeholders to act.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          We combine meticulous primary research with structural framing and purposeful pacing. Whether drafting public website copy or internal board briefs, every deliverable is engineered specifically for its target audience and organizational outcome.
+        </p>
+</div>
+<!-- Transformation Diagram -->
+<div class="lg:col-span-6">
+<div class="p-space-lg rounded-2xl bg-surface-container border border-whiteout/10 relative">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm text-whiteout font-medium uppercase tracking-wider">The Communication Transformation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Structured Pipeline</span>
+</div>
+<!-- Step Progression -->
+<div class="space-y-space-sm relative">
+<!-- Node 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center font-mono text-[11px] text-whiteout">01</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-whiteout font-medium">Complex Information</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Raw facts, unorganized data, technical specs</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_downward</span>
+</div>
+<!-- Node 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center font-mono text-[11px] text-whiteout">02</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-whiteout font-medium">Research &amp; Categorization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Source validation, context mapping, audience isolation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_downward</span>
+</div>
+<!-- Node 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center font-mono text-[11px] text-whiteout">03</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-whiteout font-medium">Architectural Outlining</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Logical sequencing, hierarchy, thesis alignment</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_downward</span>
+</div>
+<!-- Node 4 Final Output (Highlighted) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-highest border border-signal-blue/40 shadow-[0_0_20px_rgba(43,127,255,0.15)]">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-signal-blue text-whiteout flex items-center justify-center font-mono text-[11px] font-bold">04</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-whiteout font-semibold">Decisive Professional Communication</h4>
+<p class="font-body-sm text-body-sm text-on-surface">Concise, impactful, persuasive text built to achieve goals</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-signal-blue text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SERVICES INVENTORY GRID (3-COLUMN CARDS) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl" id="services-inventory">
+<div class="flex flex-col gap-space-xs max-w-3xl mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Comprehensive Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Content &amp; Professional Writing Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Professional writing and documentation tailored for diverse corporate, institutional, and research applications.</p>
+</div>
+<!-- 9 Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- 01 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">01</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Business Content Writing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Professional written content for business communications, executive outreach, operational manuals, and corporate collateral.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 02 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">02</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Website Content</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Clear, purposeful web copy structured across landing pages, core capability hubs, service profiles, and value propositions.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 03 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">03</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">article</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Blog &amp; Article Writing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Research-based long-form articles, industry thought leadership, and editorial commentaries organized around defined reader intent.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 04 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">04</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Technical Writing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Rigorous documentation for software platforms, engineering workflows, standard operating procedures (SOPs), and user manuals.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 05 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">05</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Research-Based Content</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Content anchored in academic and market research, structured empirical evidence, citation indices, and technical references.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 06 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">06</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Reports &amp; Documentation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Comprehensive business dossiers, operational audits, formal investor updates, research reports, and institutional records.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 07 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">07</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Professional Editing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Substantive rewriting to elevate structural coherence, tone uniformity, rhetorical force, and professional alignment.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 08 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">08</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">spellcheck</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Proofreading</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Meticulous final review eliminating typographical errors, syntax flaws, punctuation inconsistencies, and styling discrepancies.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- 09 -->
+<div class="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">09</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+<span class="material-symbols-outlined text-[20px]">slideshow</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Presentation Content</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Slide deck narrative structuring, keynote speechwriting, executive summaries, and pitch decks designed for immediate comprehension.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          Request Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CONTENT WORKFLOW (6 STEPS CONNECTED PIPELINE) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="flex flex-col gap-space-xs text-center items-center mb-space-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Our Writing Process</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">From Information to Communication</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Every project follows a defined systematic framework to ensure accuracy, depth, and timely delivery.</p>
+</div>
+<!-- Process Timeline -->
+<div class="relative">
+<!-- Continuous horizontal line on desktop -->
+<div class="hidden lg:block absolute top-10 left-12 right-12 h-[1px] bg-whiteout/10 -z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-lg relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-whiteout/15 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">01</span>
+<span class="font-label-md text-label-md font-semibold">Understand</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Clarify purpose, target audience, core objectives, constraints, and delivery formats.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-whiteout/15 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">02</span>
+<span class="font-label-md text-label-md font-semibold">Research</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Gather primary background materials, verify references, and review relevant benchmarks.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-whiteout/15 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">03</span>
+<span class="font-label-md text-label-md font-semibold">Structure</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Map out logical hierarchies, section headings, visual cues, and key messaging arcs.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-whiteout/15 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">04</span>
+<span class="font-label-md text-label-md font-semibold">Write</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Author focused, concise drafts using precise industry vocabulary tailored to readers.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-whiteout/15 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">05</span>
+<span class="font-label-md text-label-md font-semibold">Refine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Perform rigorous editorial passes for clarity, syntax, formatting, and precision.
+          </p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col gap-space-sm items-start">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-high border border-signal-blue/40 flex flex-col items-center justify-center text-whiteout shadow-lg">
+<span class="font-mono text-label-sm text-signal-blue">06</span>
+<span class="font-label-md text-label-md font-semibold">Deliver</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Supply publication-ready files formatted cleanly for deployment and review.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. WRITING QUALITY FRAMEWORK (4 CARDS) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Institutional Standard</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">A better framework for professional writing.</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Clarity -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[28px] mb-space-md">visibility</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Clarity</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Eliminates ambiguity. Make the primary message immediately understandable and effortless to follow without dense jargon.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-whiteout/5 font-mono text-[11px] text-twilight-blue">
+          PRINCIPLE 01 // DIRECTNESS
+        </div>
+</div>
+<!-- Structure -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[28px] mb-space-md">account_tree</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Structure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Organize information with a disciplined hierarchy so readers can scan, locate insights, and absorb conclusions rapidly.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-whiteout/5 font-mono text-[11px] text-twilight-blue">
+          PRINCIPLE 02 // LOGIC
+        </div>
+</div>
+<!-- Accuracy -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[28px] mb-space-md">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Accuracy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Verify every supporting assertion. Ensure factual integrity, consistent nomenclature, and verified citation standards throughout.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-whiteout/5 font-mono text-[11px] text-twilight-blue">
+          PRINCIPLE 03 // INTEGRITY
+        </div>
+</div>
+<!-- Purpose -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[28px] mb-space-md">ads_click</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Purpose</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Align tone with strategic context. Ensure content actively serves the client's objective—whether to persuade, inform, or align.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-whiteout/5 font-mono text-[11px] text-twilight-blue">
+          PRINCIPLE 04 // IMPACT
+        </div>
+</div>
+</div>
+</section>
+<!-- 7. BUSINESS WRITING SPLIT SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Business Communication</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+          Professional writing for professional environments.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          In executive environments, poorly constructed messaging costs credibility and delays contracts. We construct high-impact documentation that respects reader time and establishes institutional authority.
+        </p>
+<div>
+<a class="inline-flex items-center gap-space-xs bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-xl py-space-md rounded-lg hover:opacity-90 transition-opacity" data-path="get-a-quote" href="#">
+            Get a Quote <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Business Reports</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Analytical market overviews, quarterly shareholder briefs, and operational assessment summaries.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">web</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Website Copy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Converting corporate landing pages, solution overviews, and capability summaries tailored for enterprise buyers.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Business Documents</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formal RFP proposals, partnership memoranda, standard operating protocols, and executive briefs.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">co_present</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Presentation Content</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Slide architecture, talking points, board-level slide decks, and conference address materials.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. RESEARCH-BASED WRITING VISUALIZATION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="p-space-xl rounded-2xl bg-surface-container border border-whiteout/10">
+<div class="max-w-2xl mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Empirical Rigor</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight mt-1">When writing needs research behind it.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Writing built on unsubstantiated opinion fails institutional scrutiny. We route complex topics through a continuous 7-stage evidence validation chain.</p>
+</div>
+<!-- Linear pipeline diagram -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-on-surface-variant/60">01</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Question</span>
+<span class="text-[10px] text-on-surface-variant">Core inquiry isolated</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-on-surface-variant/60">02</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Research</span>
+<span class="text-[10px] text-on-surface-variant">Literature &amp; data pull</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-on-surface-variant/60">03</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Sources</span>
+<span class="text-[10px] text-on-surface-variant">Cross-verification</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-on-surface-variant/60">04</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Analysis</span>
+<span class="text-[10px] text-on-surface-variant">Thematic synthesis</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-on-surface-variant/60">05</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Structure</span>
+<span class="text-[10px] text-on-surface-variant">Evidence mapping</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">06</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Content</span>
+<span class="text-[10px] text-on-surface-variant">Rigorous draft</span>
+</div>
+<div class="col-span-2 md:col-span-1 p-space-sm rounded-lg bg-secondary-container/40 border border-signal-blue/30 text-center flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">07</span>
+<span class="font-label-md text-label-md text-whiteout font-medium my-2">Review</span>
+<span class="text-[10px] text-secondary">Final validation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. TECHNICAL WRITING & ARCHITECTURE -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Technical Precision</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+          Complex information deserves clear documentation.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          From developer documentation and API blueprints to enterprise manufacturing checklists, clarity in technical writing eliminates friction and minimizes operational overhead.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          We translate intricate concepts into accessible, standardized documentation architectures with systematic navigation for both technical engineers and commercial executives.
+        </p>
+</div>
+<div class="lg:col-span-6">
+<div class="p-space-lg rounded-2xl bg-surface-container border border-whiteout/10">
+<div class="flex items-center justify-between pb-space-sm border-b border-whiteout/5 mb-space-md">
+<span class="font-label-sm text-label-sm text-whiteout uppercase tracking-wider font-semibold">Standard Technical Architecture</span>
+<span class="font-label-sm text-label-sm text-twilight-blue font-mono">DOC_SPEC_V4</span>
+</div>
+<!-- Structured stack -->
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-signal-blue text-body-sm text-whiteout">
+<span class="font-medium">1. Architecture Overview</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Scope &amp; Intent</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-whiteout/30 text-body-sm text-whiteout">
+<span class="font-medium">2. Requirements &amp; Prerequisites</span>
+<span class="text-[11px] text-on-surface-variant font-mono">System Specs</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-whiteout/30 text-body-sm text-whiteout">
+<span class="font-medium">3. Execution Process &amp; SOP</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Step-by-step</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-whiteout/30 text-body-sm text-whiteout">
+<span class="font-medium">4. Technical Specifications</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Parameters</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-whiteout/30 text-body-sm text-whiteout">
+<span class="font-medium">5. Practical Code &amp; Use Cases</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Implementation</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-high border-l-2 border-whiteout/30 text-body-sm text-whiteout">
+<span class="font-medium">6. References &amp; Appendices</span>
+<span class="text-[11px] text-on-surface-variant font-mono">Standards</span>
+</div>
+</div>
+<div class="mt-space-md text-[11px] text-on-surface-variant/60 italic text-right">
+            Illustrative documentation structure — customized to organizational governance.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. EDITING & PROOFREADING (BEFORE / AFTER COMPARISON) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs max-w-2xl mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Substantive Editorial</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Refine what you already have.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We transform existing rough drafts, fragmented notes, and internal documents into crisp, publication-ready corporate assets.</p>
+</div>
+<!-- Before / After Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- BEFORE -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-whiteout/5 relative">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-xs py-[2px] rounded bg-error-container/40 text-error font-mono text-[11px] font-bold tracking-wider uppercase">Before Editorial Pass</span>
+<span class="material-symbols-outlined text-error text-[18px]">close</span>
+</div>
+<div class="space-y-space-md text-on-surface-variant font-body-sm text-body-sm opacity-80">
+<div class="p-space-sm rounded bg-surface-container/40 border-l-2 border-error/50">
+<p class="italic">"We are trying to leverage multi-faceted methodologies to facilitate our customer pipeline growth, which is really important because our previous system had many long sentences and repeated concepts over multiple paragraphs without clear headings."</p>
+</div>
+<ul class="space-y-2 text-[13px]">
+<li class="flex items-center gap-2"><span class="text-error">•</span> Overly lengthy, run-on sentences obscuring key metrics</li>
+<li class="flex items-center gap-2"><span class="text-error">•</span> Inconsistent and missing section hierarchies</li>
+<li class="flex items-center gap-2"><span class="text-error">•</span> Jargon redundancy and lack of logical progression</li>
+<li class="flex items-center gap-2"><span class="text-error">•</span> Abrupt paragraph transitions causing cognitive friction</li>
+</ul>
+</div>
+</div>
+<!-- AFTER -->
+<div class="p-space-lg rounded-2xl bg-surface-container border border-signal-blue/30 shadow-[0_0_24px_rgba(43,127,255,0.08)] relative">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-xs py-[2px] rounded bg-secondary-container/60 text-secondary font-mono text-[11px] font-bold tracking-wider uppercase">After Professional Refinement</span>
+<span class="material-symbols-outlined text-signal-blue text-[18px]">check</span>
+</div>
+<div class="space-y-space-md text-whiteout font-body-sm text-body-sm">
+<div class="p-space-sm rounded bg-surface-container-high border-l-2 border-signal-blue">
+<p class="font-medium text-whiteout">"Our revamped framework accelerates pipeline acquisition by 28%. By streamlining core communication channels, the revised workflow delivers clear, actionable guidance to team leaders at every touchpoint."</p>
+</div>
+<ul class="space-y-2 text-[13px] text-on-surface">
+<li class="flex items-center gap-2"><span class="text-signal-blue">•</span> Punchy, high-impact phrasing with clear data attribution</li>
+<li class="flex items-center gap-2"><span class="text-signal-blue">•</span> Logical heading structure with scannable milestones</li>
+<li class="flex items-center gap-2"><span class="text-signal-blue">•</span> Uniform institutional terminology across all sections</li>
+<li class="flex items-center gap-2"><span class="text-signal-blue">•</span> Impeccable formatting ready for board presentation</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/50 italic mt-space-sm text-center">Illustrative example — actual editing depth varies based on project parameters and baseline draft quality.</p>
+</section>
+<!-- 11. CONTENT TYPES GRID (TAG CLOUD) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="flex flex-col gap-space-xs text-center items-center mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Diverse Outputs</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">What we can help you create.</h2>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-sm max-w-5xl mx-auto">
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Website Content</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Business Reports</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Research Reports</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Articles &amp; Editorials</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Blog Posts</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Technical Documents</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Business Documents</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Professional Profiles</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Company Descriptions</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Service Descriptions</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Presentation Content</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Research Summaries</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Executive Summaries</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Standard Operating Procedures</span>
+<span class="px-space-md py-space-sm rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md hover:border-signal-blue/50 transition-colors">Editing &amp; Proofreading</span>
+</div>
+</section>
+<!-- 12. AUDIENCE SECTION (6 TARGET PROFILES) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Tailored Delivery</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Who we write for.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Businesses -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">domain</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Established Businesses</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Corporate communication, thought leadership, customer-facing content, and operational playbooks.</p>
+</div>
+<!-- Startups -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">rocket_launch</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Startups &amp; Founders</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Investor pitch materials, value propositions, product documentation, and website copy.</p>
+</div>
+<!-- Professionals -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">badge</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Executives &amp; Leaders</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Executive bios, LinkedIn thought leadership, speaking remarks, and board memorandums.</p>
+</div>
+<!-- Researchers -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">science</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Research Investigators</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Research paper structuring, literature synthesis, citation formatting, and grant proposal editing.</p>
+</div>
+<!-- Organizations -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">public</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">NGOs &amp; Institutions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Policy briefs, white papers, annual reports, donor communication, and program evaluations.</p>
+</div>
+<!-- Students / Academic Boundary -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10">
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">school</span>
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Scholars &amp; Students</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strict proofreading, thesis formatting, structural review, and stylistic editing (compliant with strict academic-integrity ethics).</p>
+</div>
+</div>
+</section>
+<!-- 13. CONTENT STRUCTURE VISUAL (LAYERED ARCHITECTURE) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Anatomy of Impact</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight mt-1">Hierarchical Document Structure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every high-value institutional document follows a disciplined cognitive hierarchy.</p>
+</div>
+<!-- Vertical layered hierarchy stack -->
+<div class="space-y-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-signal-blue">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-signal-blue">01</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Title &amp; Positioning Frame</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immediate context and scope</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-signal-blue/80">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-signal-blue">02</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Executive Summary</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Distilled core findings and bottom line</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-whiteout/30">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-whiteout/60">03</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Contextual Introduction</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Problem statement and methodology</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-whiteout/30">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-whiteout/60">04</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Main Body &amp; Thematic Sections</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Detailed narrative, sub-headings, and data</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-whiteout/30">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-whiteout/60">05</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Analysis &amp; Core Findings</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Evidence evaluation and implications</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-signal-blue">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-signal-blue">06</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Actionable Recommendations</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clear strategic next steps</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 border-whiteout/20">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-label-sm text-whiteout/60">07</span>
+<span class="font-label-lg text-label-lg text-whiteout font-semibold">Conclusion &amp; References</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rigorous bibliographic support</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/50 italic text-center mt-space-md">Document structures vary according to project, audience and intended use.</p>
+</div>
+</section>
+<!-- 14. TONE & AUDIENCE INTERACTIVE SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Precision Register</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">The right tone for the right audience.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Toggle through illustrative registers to see how we recalibrate syntax and perspective according to reader intent.</p>
+</div>
+<!-- Interactive Tone Switcher -->
+<div class="w-full rounded-2xl bg-surface-container border border-whiteout/10 p-space-lg">
+<!-- Tabs -->
+<div class="flex flex-wrap gap-space-xs border-b border-whiteout/10 pb-space-md mb-space-lg" id="tone-tabs">
+<button class="tone-btn active px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium transition-all bg-whiteout text-ink" data-target="corporate" onclick="switchTone('corporate')">
+          Corporate Executive
+        </button>
+<button class="tone-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-whiteout" data-target="technical" onclick="switchTone('technical')">
+          Technical &amp; Systems
+        </button>
+<button class="tone-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-whiteout" data-target="research" onclick="switchTone('research')">
+          Research &amp; Analytical
+        </button>
+<button class="tone-btn px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-whiteout" data-target="general" onclick="switchTone('general')">
+          General Professional
+        </button>
+</div>
+<!-- Tone Content Display Panes -->
+<div id="tone-display">
+<!-- Corporate -->
+<div class="tone-pane block space-y-space-md" id="tone-corporate">
+<div class="flex items-center justify-between text-twilight-blue font-label-sm text-label-sm">
+<span>REGISTER: EXECUTIVE BRIEFING</span>
+<span>INTENT: STRATEGIC ALIGNMENT</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-blue">
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Q3 Operating Strategy Realignment</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "To preserve operating margin stability against supply volatility, we have accelerated local procurement pathways. This realignment protects cash-flow liquidity while insulating critical delivery timelines for tier-one institutional accounts."
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Characteristics: Concise, authoritative, ROI-grounded, zero filler words.</p>
+</div>
+<!-- Technical -->
+<div class="tone-pane hidden space-y-space-md" id="tone-technical">
+<div class="flex items-center justify-between text-twilight-blue font-label-sm text-label-sm">
+<span>REGISTER: TECHNICAL SPECIFICATION</span>
+<span>INTENT: PROCEDURAL RIGOR</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-blue">
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Asynchronous Pipeline Fault-Tolerance Protocol</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "Under transient network partition events, the ingest daemon queues events into encrypted local cache blocks. Idempotent retry handlers execute on a 500ms exponential backoff curve, avoiding database lock escalations while ensuring zero state loss."
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Characteristics: Precise, unambiguous terminology, deterministic step logic.</p>
+</div>
+<!-- Research -->
+<div class="tone-pane hidden space-y-space-md" id="tone-research">
+<div class="flex items-center justify-between text-twilight-blue font-label-sm text-label-sm">
+<span>REGISTER: EMPIRICAL ANALYSIS</span>
+<span>INTENT: EVIDENCE PRESENTATION</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-blue">
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Longitudinal Evaluation of Hybrid Workspace Models</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "Empirical cross-sectional data (n=1,240) indicates a statistically significant correlation between asynchronous documentation practices and retention rates (p &lt; 0.01). However, variance across distributed teams underscores the necessity of continuous feedback mechanisms."
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Characteristics: Measured, cautious, empirical, strictly cited.</p>
+</div>
+<!-- General -->
+<div class="tone-pane hidden space-y-space-md" id="tone-general">
+<div class="flex items-center justify-between text-twilight-blue font-label-sm text-label-sm">
+<span>REGISTER: CLEAR PROFESSIONAL</span>
+<span>INTENT: ACCESSIBLE CLARITY</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-blue">
+<h4 class="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">Getting Started with Our Client Services</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "We partner closely with your team to review project goals, map out project timelines, and deliver clear, high-quality deliverables that help your business operate with confidence."
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Characteristics: Accessible, welcoming, clean, easily scannable.</p>
+</div>
+</div>
+<div class="mt-space-md text-[11px] text-on-surface-variant/50 italic text-right">Illustrative example — calibrated during intake.</div>
+</div>
+</section>
+<!-- 15. CONTENT QUALITY CHECKLIST (10 CRITERIA) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Editorial Governance</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Before content reaches the final page, we look at more than grammar.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Grammar is table stakes. Our multi-stage review checks ten essential dimensions of document effectiveness.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- 1 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Purpose &amp; Audience</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tone matches target context</p>
+</div>
+</div>
+<!-- 2 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Structure &amp; Flow</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Seamless narrative pacing</p>
+</div>
+</div>
+<!-- 3 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Heading Hierarchy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Clear scannability</p>
+</div>
+</div>
+<!-- 4 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Clarity &amp; Economy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Zero redundant phrases</p>
+</div>
+</div>
+<!-- 5 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Consistency</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Uniform stylistic voice</p>
+</div>
+</div>
+<!-- 6 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Terminology</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Domain-accurate vocab</p>
+</div>
+</div>
+<!-- 7 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Formatting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Clean margins and lists</p>
+</div>
+</div>
+<!-- 8 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Citations</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verified references</p>
+</div>
+</div>
+<!-- 9 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Visual Readability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Comfortable reading pace</p>
+</div>
+</div>
+<!-- 10 -->
+<div class="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-signal-blue text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold">Final Presentation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Board-ready delivery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 16. DELIVERABLES GRID (15 CHIPS) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs text-center items-center mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Turnkey Outputs</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Professional deliverables, ready for their intended use.</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">draft</span>
+<span class="font-body-sm text-body-sm font-medium">Word / DOCX</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">picture_as_pdf</span>
+<span class="font-body-sm text-body-sm font-medium">Formatted PDF</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">markdown</span>
+<span class="font-body-sm text-body-sm font-medium">Markdown (.md)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">web</span>
+<span class="font-body-sm text-body-sm font-medium">Web Wireframe Copy</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">slideshow</span>
+<span class="font-body-sm text-body-sm font-medium">Slide Outlines</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">book</span>
+<span class="font-body-sm text-body-sm font-medium">Annual Reports</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">newspaper</span>
+<span class="font-body-sm text-body-sm font-medium">White Papers</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">smart_outlet</span>
+<span class="font-body-sm text-body-sm font-medium">Executive Summaries</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">library_books</span>
+<span class="font-body-sm text-body-sm font-medium">Policy Manuals</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">rule</span>
+<span class="font-body-sm text-body-sm font-medium">Standard SOPs</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">track_changes</span>
+<span class="font-body-sm text-body-sm font-medium">Track Changes Files</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">contact_page</span>
+<span class="font-body-sm text-body-sm font-medium">Executive Bios</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">edit_note</span>
+<span class="font-body-sm text-body-sm font-medium">Editorial Feedback Notes</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">format_quote</span>
+<span class="font-body-sm text-body-sm font-medium">Citation Index Packs</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">share</span>
+<span class="font-body-sm text-body-sm font-medium">Thought Leadership Copy</span>
+</div>
+</div>
+</section>
+<!-- 17. CROSS-SERVICE CONNECTIONS -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Connected Practices</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">Need specialized assistance alongside writing?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Cross Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-signal-blue uppercase font-mono">Academic &amp; Research</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mt-1 mb-space-xs font-semibold">Need deep research support behind the writing?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pair your documentation with our literature reviews, empirical methodology frameworks, and secondary data synthesis.
+          </p>
+</div>
+<div class="pt-space-lg">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-whiteout hover:text-signal-blue transition-colors font-medium" data-path="academic-and-research" href="#">
+            Explore Academic &amp; Research <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Cross Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-signal-blue uppercase font-mono">Business Advisory</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mt-1 mb-space-xs font-semibold">Need content for a commercial requirement?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Combine strategic consulting, market competitor analysis, and financial feasibility models directly into your executive collateral.
+          </p>
+</div>
+<div class="pt-space-lg">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-whiteout hover:text-signal-blue transition-colors font-medium" data-path="business-and-consulting" href="#">
+            Explore Business Research <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Cross Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-signal-blue uppercase font-mono">Operational Execution</span>
+<h3 class="font-headline-sm text-headline-sm text-whiteout mt-1 mb-space-xs font-semibold">Need digital implementation support?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Leverage our digital support infrastructure for CMS publishing, document layout formatting, and presentation styling.
+          </p>
+</div>
+<div class="pt-space-lg">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-whiteout hover:text-signal-blue transition-colors font-medium" data-path="digital-support" href="#">
+            Explore Digital Support <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 18. TYPICAL 7-STEP PROJECT WORKFLOW -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Project Lifecycle</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight">How an engagement progresses.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-7 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">01</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Requirement</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Intake, brief analysis &amp; scope lock</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">02</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Audience</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Context, persona &amp; tone calibration</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">03</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Research</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Data collection &amp; source gathering</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">04</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Outline</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Document structure &amp; sign-off</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">05</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Writing</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Primary draft production</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container border border-whiteout/10 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">06</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Editing</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Substantive checks &amp; proofreading</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-signal-blue/40 flex flex-col justify-between">
+<span class="font-mono text-label-sm text-signal-blue">07</span>
+<div>
+<h4 class="font-label-md text-label-md text-whiteout font-semibold mt-1">Delivery</h4>
+<p class="font-body-sm text-[12px] text-secondary mt-1">Final publication-ready package</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 19. INTERACTIVE FAQ ACCORDION (11 QUESTIONS) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Common Queries</span>
+<h2 class="font-headline-lg text-headline-lg text-whiteout uppercase tracking-tight mt-1">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Details regarding turnaround times, editorial ownership, confidentiality, and our engagement terms.</p>
+</div>
+<!-- FAQ Container -->
+<div class="space-y-space-xs" id="faq-container">
+<!-- Q1 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">What types of writing services do you provide?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              We specialize in business writing, website copy, long-form articles, technical documentation, research-based content, professional reports, pitch presentations, executive profiles, and substantive editing/proofreading.
+            </p>
+</div>
+</div>
+<!-- Q2 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">Can you write for technical or specialized topics?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Yes. Our specialists frequently write for software, engineering, finance, legal technology, health sciences, and operational logistics. We ingest your source documentation, technical specifications, or interviews to preserve 100% domain accuracy.
+            </p>
+</div>
+</div>
+<!-- Q3 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">What is the difference between editing and proofreading?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Proofreading is the final polish: correcting grammar, punctuation, typos, and minor formatting errors. Professional editing is substantive: addressing structural flow, paragraph organization, redundant text, clarity, and tone consistency.
+            </p>
+</div>
+</div>
+<!-- Q4 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">How do you approach tone for different audiences?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              During the initial intake step, we analyze the target recipient—investor, developer, peer researcher, or general consumer. We establish vocabulary boundaries, formality indices, and information density guidelines before drafting begins.
+            </p>
+</div>
+</div>
+<!-- Q5 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">Can you work from notes, outlines, or existing drafts?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Absolutely. We routinely ingest recorded transcripts, bulleted notes, preliminary slide decks, or legacy documents, organizing and expanding them into structured, publication-grade materials.
+            </p>
+</div>
+</div>
+<!-- Q6 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">What formats do you deliver content in?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              We provide editable Microsoft Word (.docx) files with Track Changes enabled, clean PDFs formatted for distribution, Markdown files (.md) for web developers, Google Docs, or formatted slide deck decks.
+            </p>
+</div>
+</div>
+<!-- Q7 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">How does the revision process work?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              All project quotes include designated revision rounds. Clients review drafts and supply consolidated feedback. We implement updates rapidly to ensure phrasing, formatting, and messaging align completely with expectations.
+            </p>
+</div>
+</div>
+<!-- Q8 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">Who owns the copyright to the completed writing?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Upon final settlement, 100% of intellectual property and copyright transfers entirely to the client. We make no residual claims on your copy, and work can be published under your name or brand.
+            </p>
+</div>
+</div>
+<!-- Q9 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">How do you maintain confidentiality for sensitive business documents?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              We execute non-disclosure agreements (NDAs) prior to receiving proprietary documents. All raw research, internal files, and drafts reside on encrypted infrastructure and are never shared or repurposed.
+            </p>
+</div>
+</div>
+<!-- Q10 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">What are your typical turnaround times?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Turnaround depends on project scope and research intensity. Concise articles or web copy typically complete in 2–4 business days; extensive institutional reports or technical documentation can take 1–2 weeks with phased interim milestone deliveries.
+            </p>
+</div>
+</div>
+<!-- Q11 -->
+<div class="faq-item rounded-xl bg-surface-container border border-whiteout/5 overflow-hidden transition-colors">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-whiteout font-medium pr-space-md">How do I start a writing or editing project with FreelancersBix?</span>
+<span class="material-symbols-outlined text-signal-blue text-[20px] transition-transform duration-200">add</span>
+</button>
+<div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+              Submit an inquiry through our "Get a Quote" portal with your project outline, target word count, timeline, and source materials. Our team will review the scope and return a transparent, fixed-price proposal within 24 business hours.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 20. FINAL HIGH-CONVERTING EDITORIAL CTA SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-4xl">
+<div class="relative w-full rounded-3xl bg-surface-container-low border border-whiteout/15 p-space-2xl md:p-space-4xl overflow-hidden shadow-2xl">
+<!-- Subtle visual grid backdrop -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2b7fff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-signal-blue/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-[4px] rounded-full bg-surface-container-high border border-whiteout/10 w-fit">
+<span class="w-2 h-2 rounded-full bg-signal-blue"></span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout">Initiate An Engagement</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-whiteout uppercase tracking-tight leading-[0.95]">
+          Have something important to communicate?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Tell us what you need written, structured, edited or refined, and we'll help turn the information into clear, high-impact professional content.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center justify-center bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-2xl py-space-md rounded-lg hover:opacity-90 transition-all shadow-[0_12px_28px_rgba(255,255,255,0.15)]" data-path="get-a-quote" href="#">
+            Get a Quote
+          </a>
+<a class="inline-flex items-center justify-center bg-surface-container-high border border-whiteout/15 text-whiteout font-label-lg text-label-lg font-medium px-space-xl py-space-md rounded-lg hover:bg-surface-container-highest transition-all" data-path="services" href="#">
+            Explore All Services
+          </a>
+</div>
+<div class="pt-space-md flex flex-wrap items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant/60">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-signal-blue text-[16px]">lock</span> Strict NDA &amp; Confidentiality</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-signal-blue text-[16px]">verified</span> 100% Client IP Ownership</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-signal-blue text-[16px]">schedule</span> Rapid Turnaround Capability</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- SCRIPT: INTERACTIVE TABS & FAQ LOGIC -->
+<script>
+  // Tone & Audience Tab Switcher
+  function switchTone(toneId) {
+    // Buttons state
+    const buttons = document.querySelectorAll('.tone-btn');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-target') === toneId) {
+        btn.classList.add('bg-whiteout', 'text-ink');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-whiteout', 'text-ink');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+
+    // Content Pane state
+    const panes = document.querySelectorAll('.tone-pane');
+    panes.forEach(pane => {
+      pane.classList.add('hidden');
+      pane.classList.remove('block');
+    });
+
+    const activePane = document.getElementById('tone-' + toneId);
+    if (activePane) {
+      activePane.classList.remove('hidden');
+      activePane.classList.add('block');
+    }
+  }
+
+  // FAQ Accordion Handler
+  function toggleFaq(button) {
+    const item = button.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const icon = button.querySelector('.material-symbols-outlined');
+    const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+    // Close all FAQs first
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      const otherAnswer = otherItem.querySelector('.faq-answer');
+      const otherIcon = otherItem.querySelector('.material-symbols-outlined');
+      otherAnswer.style.maxHeight = '0px';
+      if (otherIcon) {
+        otherIcon.textContent = 'add';
+        otherIcon.classList.remove('rotate-45');
+      }
+      otherItem.classList.remove('border-signal-blue/30');
+    });
+
+    // Toggle selected FAQ
+    if (!isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      icon.textContent = 'close';
+      icon.classList.add('rotate-45');
+      item.classList.add('border-signal-blue/30');
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-margin-mobile md:px-margin pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary">FreelancersBix</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-twilight-blue mt-space-xs">Global Professional Services</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Pioneering high-caliber corporate infrastructure, cross-border accounting, and strategic consulting for institutional clients worldwide.</p><div class="flex items-center gap-space-sm mt-space-xs"><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">alternate_email</span></a></div></div><div class="lg:col-span-4 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Practice Areas</span><ul class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="academic-and-research" href="#">Academic &amp; Research</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="business-and-consulting" href="#">Business &amp; Consulting</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="business-and-startup" href="#">Business &amp; Startup</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="content-and-writing" href="#">Content &amp; Writing</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="data-and-research" href="#">Data &amp; Research</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="digital-support" href="#">Digital Support</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Resources</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#">Insights</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="case-studies" href="#">Case Studies</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Legal &amp; Policy</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Global Inquiries</a></li></ul></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><p>© 2026 FreelancersBix. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms</a><a class="hover:text-primary transition-colors" data-path="security" href="#">Security</a></div></div></div></footer></body></html>

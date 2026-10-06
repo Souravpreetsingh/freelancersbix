@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+
+.env
+.env.*
+!.env.example
+
+*.tsbuildinfo
+eslintcache
+.DS_Store
+*.log
+
+# Original Stitch export (reference copy preserved under design/)
+stitch_freelancersbix_corporate_homepage.zip
+
+public/uploads/

@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1b1b1b", "surface-container-high": "#2a2a2a", "on-secondary": "#0c3256", "surface-container": "#1f1f1f", "whiteout": "#ffffff", "primary-fixed": "#e2e2e2", "surface-tint": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "on-tertiary-container": "#636565", "error-container": "#93000a", "on-surface": "#e2e2e2", "on-background": "#e2e2e2", "surface-variant": "#353535", "surface-container-lowest": "#0e0e0e", "background": "#131313", "on-secondary-fixed-variant": "#28486e", "tertiary-fixed-dim": "#c6c6c7", "haze": "#f5f5f5", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#a9c9f5", "tertiary-fixed": "#e2e2e2", "error": "#ffb4ab", "inverse-primary": "#5d5f5f", "inverse-surface": "#e2e2e2", "on-primary-fixed": "#1a1c1c", "secondary-container": "#28486e", "tertiary-container": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-bright": "#393939", "primary-container": "#e2e2e2", "surface-container-highest": "#353535", "on-surface-variant": "#c4c7c8", "ink": "#1b1b1b", "twilight-blue": "#426188", "secondary-fixed": "#d3e4ff", "primary": "#ffffff", "on-secondary-container": "#98b7e3", "on-secondary-fixed": "#001c38", "on-primary-container": "#636565", "outline-variant": "#444748", "surface": "#131313", "on-error": "#690005", "inverse-on-surface": "#303030", "black-void": "#000000", "primary-fixed-dim": "#c6c6c7", "surface-dim": "#131313", "outline": "#8e9192", "on-primary-fixed-variant": "#454747", "tertiary": "#ffffff", "on-primary": "#2f3131", "secondary": "#a9c9f5", "on-tertiary": "#2f3131", "signal-blue": "#2b7fff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-sm": "1rem", "space-sm": "0.5rem", "margin": "3.25rem", "space-4xl": "7.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-xl": "2rem", "space-2xl": "3.25rem", "space-md": "1rem", "space-3xl": "5rem", "space-lg": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "body-lg": [ "Inter" ], "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-xl": [ "Anton" ], "headline-xl-mobile": [ "Anton" ], "headline-lg": [ "Anton" ], "headline-lg-mobile": [ "Anton" ], "headline-md": [ "Inter" ], "headline-sm": [ "Inter" ], "body-md": [ "Inter" ] }, "fontSize": { "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-xl": [ "80px", { "lineHeight": "84px", "letterSpacing": "0.02em", "fontWeight": "900" } ], "headline-xl-mobile": [ "44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "900" } ], "headline-lg": [ "52px", { "lineHeight": "56px", "letterSpacing": "0.01em", "fontWeight": "900" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "900" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-margin-mobile md:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><a class="flex flex-col group" data-path="home" href="#"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary transition-opacity group-hover:opacity-90">FreelancersBix</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-twilight-blue">Professional Services</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold bg-surface-container-high px-space-sm py-space-xs rounded"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#">Insights</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity" data-path="get-a-quote" href="#">Get a Quote</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- 1. BREADCRUMB -->
+<section class="w-full px-margin-mobile md:px-margin pt-space-lg pb-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" data-path="home" href="#">Home</a>
+<span class="text-outline/40">/</span>
+<a class="hover:text-primary transition-colors" data-path="services" href="#">Services</a>
+<span class="text-outline/40">/</span>
+<span class="text-primary font-medium tracking-wide">Business Research &amp; Consulting Support</span>
+</nav>
+</section>
+<!-- 2. HERO SECTION (Split Layout) -->
+<section class="w-full px-margin-mobile md:px-margin pt-space-lg pb-space-3xl relative overflow-hidden">
+<!-- Ambient subtle background glow -->
+<div class="absolute -top-40 right-1/4 w-96 h-96 bg-twilight-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-20 w-80 h-80 bg-signal-blue/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
+<!-- Hero Left -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Eyebrow with pulse dot -->
+<div class="inline-flex items-center gap-space-xs w-max bg-surface-container-high/80 px-space-md py-1.5 rounded-full shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal-blue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-signal-blue"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Business Research &amp; Consulting</span>
+</div>
+<!-- H1 Anton Bold Condensed -->
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-primary tracking-tight leading-none">
+          Research that turns business questions into clearer decisions.
+        </h1>
+<!-- Supporting copy -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Structured business research, market analysis, and consulting support designed to help startups, founders, and enterprises evaluate complex markets, quantify opportunities, and execute decisive strategic steps.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="bg-whiteout text-ink font-label-lg text-label-lg px-space-xl py-space-sm rounded-lg hover:opacity-90 transition-opacity shadow-lg" data-path="get-a-quote" href="#">
+            Get a Quote
+          </a>
+<a class="bg-transparent text-primary font-label-lg text-label-lg px-space-xl py-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#services-grid">
+            Explore Services
+          </a>
+</div>
+<!-- Reassurance Subline -->
+<div class="flex items-center gap-3 pt-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span class="text-primary font-medium">Research</span>
+<span class="text-twilight-blue text-[8px]">•</span>
+<span class="text-primary font-medium">Analyse</span>
+<span class="text-twilight-blue text-[8px]">•</span>
+<span class="text-primary font-medium">Create</span>
+<span class="text-twilight-blue text-[8px]">•</span>
+<span class="text-primary font-medium">Deliver</span>
+</div>
+</div>
+<!-- Hero Right: Abstract Telemetry HUD -->
+<div class="lg:col-span-5 relative">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl relative overflow-hidden">
+<!-- Glass Header Strip -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">query_stats</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Strategic Matrix Telemetry</span>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-label-sm text-on-surface-variant uppercase tracking-widest">
+              Illustrative Strategy Model • v4.2
+            </span>
+</div>
+<!-- Top Abstract Vector Metric Display -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Market Opportunity Index</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-primary">87.4</span>
+<span class="font-label-sm text-label-sm text-signal-blue">Class A High Potential</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-signal-blue h-full w-[87%]"></div>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Competitive Position Density</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-primary">3.8x</span>
+<span class="font-label-sm text-label-sm text-twilight-blue">Expansion Gap</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-twilight-blue h-full w-[64%]"></div>
+</div>
+</div>
+</div>
+<!-- Analytical Vector Sparkline / Node Graph (SVG) -->
+<div class="bg-surface-container p-space-md rounded-lg mb-space-md relative">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Market Trend Trajectory &amp; Milestone Nodes</span>
+<span class="font-label-sm text-label-sm text-signal-blue font-mono">Q1 → Q4</span>
+</div>
+<svg class="w-full h-28 text-signal-blue overflow-visible" fill="none" viewbox="0 0 360 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="hudGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2b7fff" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#2b7fff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 Q45,65 90,70 T180,35 T270,45 T360,15 L360,100 L0,100 Z" fill="url(#hudGrad)"></path>
+<path d="M0,80 Q45,65 90,70 T180,35 T270,45 T360,15" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<!-- Milestone Nodes -->
+<circle cx="90" cy="70" fill="#ffffff" r="4" stroke="#2b7fff" stroke-width="2"></circle>
+<circle cx="180" cy="35" fill="#ffffff" r="4" stroke="#2b7fff" stroke-width="2"></circle>
+<circle cx="270" cy="45" fill="#ffffff" r="4" stroke="#2b7fff" stroke-width="2"></circle>
+<circle cx="360" cy="15" fill="#2b7fff" r="5" stroke="#ffffff" stroke-width="1.5"></circle>
+</svg>
+<div class="flex justify-between items-center text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">
+<span>Diagnostic Phase</span>
+<span>Validation Node</span>
+<span>Target Launch</span>
+</div>
+</div>
+<!-- Telemetry Mini Feed -->
+<div class="space-y-2">
+<div class="p-2 bg-surface-container rounded flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-signal-blue"></span>
+<span class="text-on-surface">Market Opportunity Matrix</span>
+</div>
+<span class="text-twilight-blue font-mono text-label-sm">SYNCHRONIZED</span>
+</div>
+<div class="p-2 bg-surface-container rounded flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Competitive Positioning Index</span>
+</div>
+<span class="text-twilight-blue font-mono text-label-sm">COMPILED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TRUST STRIP -->
+<section class="w-full px-margin-mobile md:px-margin py-space-md">
+<div class="bg-surface-container-low/70 backdrop-blur-md rounded-xl p-space-md shadow-md">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- 1 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Research-Driven</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated methodologies</span>
+</div>
+</div>
+<!-- 2 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">schema</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Structured Analysis</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Framework-aligned</span>
+</div>
+</div>
+<!-- 3 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">business_center</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Business-Focused</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commercial viability</span>
+</div>
+</div>
+<!-- 4 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">description</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Clear Deliverables</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Executive-ready briefs</span>
+</div>
+</div>
+<!-- 5 -->
+<div class="flex items-center gap-space-sm col-span-2 sm:col-span-1 lg:col-span-1">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Confidential</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Strict NDA protocols</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. INTRODUCTION SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-start">
+<!-- Left text block -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Business Research Support</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight leading-tight">
+          Better business decisions start with better information.
+        </h2>
+<div class="space-y-space-md font-body-md text-body-md text-on-surface-variant">
+<p>
+            In high-stakes markets, businesses rarely suffer from a lack of data; rather, they struggle with information overload, fragmented perspectives, and biased synthesis. Moving forward without empirical rigor exposes capital and resources to avoidable hazards.
+          </p>
+<p>
+            Our dedicated business research and advisory consultants bridge this operational void. By synthesizing structured secondary data, evaluating competitor positions, and stress-testing commercial assumptions, we provide organizations with the objective clarity required to enter new markets, secure investment, and build sustainable enterprises.
+          </p>
+</div>
+</div>
+<!-- Right process flow -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-space-xl shadow-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary">Strategic Discovery Pipeline</span>
+<span class="font-label-sm text-label-sm text-signal-blue">Sequential Logic</span>
+</div>
+<div class="relative space-y-space-md">
+<!-- Flow Step 1 -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-signal-blue/20 text-signal-blue flex items-center justify-center font-bold text-label-md shrink-0">1</div>
+<div>
+<h3 class="font-headline-sm text-body-lg font-medium text-primary">Business Question</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formulation of exact parameters, objectives, and market hypotheses.</p>
+</div>
+</div>
+<!-- Line connector -->
+<div class="w-0.5 h-6 bg-surface-container-highest ml-4"></div>
+<!-- Flow Step 2 -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-md shrink-0">2</div>
+<div>
+<h3 class="font-headline-sm text-body-lg font-medium text-primary">Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comprehensive collection of primary signals, market literature, and empirical data.</p>
+</div>
+</div>
+<!-- Line connector -->
+<div class="w-0.5 h-6 bg-surface-container-highest ml-4"></div>
+<!-- Flow Step 3 -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-md shrink-0">3</div>
+<div>
+<h3 class="font-headline-sm text-body-lg font-medium text-primary">Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Synthesis through proven frameworks (SWOT, PESTLE, Porter's Five Forces).</p>
+</div>
+</div>
+<!-- Line connector -->
+<div class="w-0.5 h-6 bg-surface-container-highest ml-4"></div>
+<!-- Flow Step 4 -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-md shrink-0">4</div>
+<div>
+<h3 class="font-headline-sm text-body-lg font-medium text-primary">Insight</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distillation of patterns into actionable strategic leverage points.</p>
+</div>
+</div>
+<!-- Line connector -->
+<div class="w-0.5 h-6 bg-surface-container-highest ml-4"></div>
+<!-- Flow Step 5 -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-signal-blue text-whiteout flex items-center justify-center font-bold text-label-md shrink-0">5</div>
+<div>
+<h3 class="font-headline-sm text-body-lg font-medium text-primary">Decision Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear executive presentations, risk assessments, and implementation blueprints.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SERVICES GRID (3-Column Desktop Grid) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl" id="services-grid">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Specialized Practice Offerings</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Business Research &amp; Consulting Services
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Focused research support for strategic, operational, and business planning requirements across various verticals.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 01 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">01</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Market Research Reports</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            In-depth analysis of market size, emerging patterns, vertical segments, and target demographics for your sector.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 02 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">02</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">leaderboard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Industry &amp; Competitor Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Benchmarking competitor capabilities, pricing architectures, market share, and untapped differentiation zones.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 03 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">03</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">assignment</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Business Plans</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Comprehensive, evidence-based business plans crafted for investors, grant applications, and internal roadmaps.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 04 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">04</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Feasibility Studies</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Rigorous evaluation of operational, technical, legal, and economic viability before committing capital.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 05 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">05</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">auto_stories</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Business Reports</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Executive briefs, operational assessments, and thematic whitepapers tailored for leadership boards.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 06 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">06</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">rocket_launch</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Startup Research &amp; Planning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Target market sizing (TAM/SAM/SOM), customer validation pathways, and lean go-to-market strategy definition.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 07 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">07</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">group_work</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Customer &amp; Market Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Buyer persona profiling, willingness-to-pay studies, journey mapping, and behavioral driver analysis.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 08 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">08</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">view_in_ar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">SWOT &amp; PESTLE Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Rigorous environmental scanning covering political, economic, sociological, and technological influences.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 09 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">09</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">slideshow</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Business Presentations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-impact pitch decks, shareholder briefings, and visual slide narratives designed for strategic buy-in.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 10 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">10</span>
+<span class="material-symbols-outlined text-signal-blue text-[24px]">account_balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Financial &amp; Business Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-industry financial benchmarks, margin trends, cost-driver assessments, and operational forecasting.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>Explore Scope</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- 11th Special Card: Custom Scope -->
+<div class="bg-secondary-container/30 rounded-xl p-space-lg flex flex-col justify-between col-span-1 md:col-span-2 lg:col-span-2 shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-space-sm text-signal-blue">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Custom Inquiries</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Have a Custom Strategic Scope?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Our multi-disciplinary advisory desk regularly formulates customized scopes of work combining multi-country secondary research, customized consumer surveys, and proprietary business modeling.
+          </p>
+</div>
+<div class="pt-space-md">
+<a class="inline-flex items-center gap-2 bg-whiteout text-ink font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity" data-path="contact" href="#">
+<span>Speak with our Advisory Desk</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. FEATURED RESEARCH FRAMEWORK (Dark Navy / Deep Slate Card) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl relative overflow-hidden">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Our Research Framework</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+          From Business Question to Actionable Insight
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          A six-stage disciplined protocol converting initial questions into verified, professional institutional intelligence.
+        </p>
+</div>
+<!-- 6-step horizontal pipeline -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-md relative">
+<!-- 01 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 01</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Understand</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Define core business questions, context, and exact analytical scope.</p>
+</div>
+</div>
+<!-- 02 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 02</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Collect data from verified secondary databases, filings, and industry sources.</p>
+</div>
+</div>
+<!-- 03 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 03</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Compare</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Organize disparate findings into structured matrices and relative baselines.</p>
+</div>
+</div>
+<!-- 04 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 04</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Analyse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identify statistical patterns, operational bottlenecks, and untapped market niches.</p>
+</div>
+</div>
+<!-- 05 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 05</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Interpret</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Translate mathematical correlations into concrete commercial opportunities.</p>
+</div>
+</div>
+<!-- 06 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">STAGE 06</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Present</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Publish comprehensive decks, documentation, and executive decision summaries.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. MARKET RESEARCH VISUALIZATION (Market Intelligence) -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left Narrative -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Market Intelligence</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+          See the market from multiple perspectives.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Evaluating a commercial landscape requires triangulation. Looking exclusively at industry growth rates often masks shifting customer sentiment or aggressive challenger positioning.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We combine macroeconomic data with micro-level buyer insights and competitor tracking to furnish a rounded, 360-degree assessment of where value is consolidating and where vulnerability lies.
+        </p>
+<!-- Feature Points -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-signal-blue text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-source industry cross-validation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-signal-blue text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Granular addressable market (TAM/SAM) segmentation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-signal-blue text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Proactive risk and vulnerability mapping</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Module -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-xl shadow-xl relative">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary">Multi-Angle Market Analysis</span>
+<span class="font-label-sm text-label-sm text-twilight-blue uppercase tracking-wider font-mono">Illustrative visualization</span>
+</div>
+<!-- 2x2 Grid of Market Diagnostic Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Card 1: Market Trajectory -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Market Size Trajectory</span>
+<span class="text-signal-blue font-mono text-label-sm font-bold">+14.2% CAGR</span>
+</div>
+<div class="space-y-2 mt-2">
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Enterprise Segment</span>
+<span class="font-mono text-twilight-blue">Expanding</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-signal-blue h-full w-[72%]"></div>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Mid-Market Segment</span>
+<span class="font-mono text-twilight-blue">Stable</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[48%]"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Risk Radar -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Risk &amp; Vulnerability Radar</span>
+<span class="text-secondary font-mono text-label-sm">Controlled</span>
+</div>
+<div class="flex items-center justify-around py-2">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-primary">Low</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Regulatory</span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-signal-blue">Med</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Substitution</span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-primary">Low</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Supplier</span>
+</div>
+</div>
+<span class="text-[11px] text-on-surface-variant text-center">Calculated across 12 sector indicators</span>
+</div>
+<!-- Card 3: Customer Demographic Spectrum -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between sm:col-span-2">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Customer Segment Penetration</span>
+<span class="text-twilight-blue font-mono text-label-sm">Distribution Breakdown</span>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2 text-center">
+<div class="p-2 bg-surface-container-high rounded">
+<span class="font-headline-sm text-headline-sm text-primary block">42%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Early Tech Adopters</span>
+</div>
+<div class="p-2 bg-surface-container-high rounded">
+<span class="font-headline-sm text-headline-sm text-primary block">38%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Legacy Modernizers</span>
+</div>
+<div class="p-2 bg-surface-container-high rounded">
+<span class="font-headline-sm text-headline-sm text-primary block">20%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Efficiency Seekers</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. COMPETITOR ANALYSIS SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Competitive Landscape Analysis</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Understand the Competitive Landscape
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        A structured visual comparison reveals gaps in the current market, helping your organization carve out uncontested space.
+      </p>
+</div>
+<!-- 2x2 Matrix Graphic Container -->
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl mb-space-xl">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary">2x2 Strategic Positioning Matrix</span>
+<span class="font-label-sm text-label-sm text-twilight-blue uppercase font-mono">Demonstration visual</span>
+</div>
+<!-- The Matrix Canvas -->
+<div class="relative w-full aspect-[16/9] max-h-96 bg-surface-container rounded-lg p-space-lg flex flex-col justify-between overflow-hidden">
+<!-- Matrix Axis Labels -->
+<span class="absolute top-3 left-1/2 -translate-x-1/2 font-label-sm text-label-sm uppercase tracking-wider text-twilight-blue font-mono">
+          High ↑ Market Position &amp; Brand Authority
+        </span>
+<span class="absolute bottom-3 right-6 font-label-sm text-label-sm uppercase tracking-wider text-twilight-blue font-mono">
+          Offering Breadth → Comprehensive
+        </span>
+<!-- Axis Lines -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-full h-px bg-surface-container-highest"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="h-full w-px bg-surface-container-highest"></div>
+</div>
+<!-- Quadrant Watermarks -->
+<span class="absolute top-6 left-6 text-on-surface-variant/20 font-headline-md uppercase pointer-events-none">Niche Authority</span>
+<span class="absolute top-6 right-6 text-on-surface-variant/20 font-headline-md uppercase pointer-events-none">Dominant Leaders</span>
+<span class="absolute bottom-8 left-6 text-on-surface-variant/20 font-headline-md uppercase pointer-events-none">Challengers</span>
+<span class="absolute bottom-8 right-6 text-on-surface-variant/20 font-headline-md uppercase pointer-events-none">Volume Providers</span>
+<!-- Plotted Competitors -->
+<!-- Competitor A -->
+<div class="absolute top-[28%] left-[22%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 bg-surface-container-high/90 px-3 py-1.5 rounded-lg shadow-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-outline"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Competitor A</span>
+<span class="text-[10px] text-on-surface-variant">Boutique • High Margin</span>
+</div>
+</div>
+<!-- Competitor B -->
+<div class="absolute top-[22%] right-[20%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 bg-surface-container-high/90 px-3 py-1.5 rounded-lg shadow-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-outline"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Competitor B</span>
+<span class="text-[10px] text-on-surface-variant">Incumbent Leader</span>
+</div>
+</div>
+<!-- Competitor C -->
+<div class="absolute bottom-[25%] left-[28%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 bg-surface-container-high/90 px-3 py-1.5 rounded-lg shadow-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-outline"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Competitor C</span>
+<span class="text-[10px] text-on-surface-variant">Low Cost Disruptor</span>
+</div>
+</div>
+<!-- Target Business (Beacon Highlight) -->
+<div class="absolute top-[42%] right-[32%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-2.5 bg-signal-blue/20 px-3.5 py-2 rounded-xl shadow-lg ring-1 ring-signal-blue">
+<div class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal-blue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-signal-blue"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-whiteout font-bold">Your Target Opportunity</span>
+<span class="text-[10px] text-secondary font-medium">Optimal Value Sweet-Spot</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4 Analysis Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-signal-blue text-[22px]">target</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Positioning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Evaluating how rival enterprises articulate brand promises, tier their pricing, and occupy perceived market spaces.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-signal-blue text-[22px]">category</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Offerings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Deconstructing feature matrices, deliverable packaging, and specific technological advantages of peer alternatives.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-signal-blue text-[22px]">troubleshoot</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Strengths &amp; Gaps</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Identifying observable friction points, service blind spots, and unmet buyer desires across existing solutions.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-signal-blue text-[22px]">public</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Market Context</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tracking regulatory adjustments, channel consolidation, and shifting macroeconomic drivers impacting all competitors.
+        </p>
+</div>
+</div>
+</section>
+<!-- 9. BUSINESS PLANNING SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Text & Formula -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Evidence-Based Strategy</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+            Build plans around evidence, not assumptions.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            A sustainable business plan is not an exercise in optimism; it is an organized, coherent mathematical and strategic synthesis of verified market realities.
+          </p>
+<!-- The Synthesis Equation -->
+<div class="bg-surface-container p-space-md rounded-lg mt-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-twilight-blue tracking-wider block mb-2">Synthesis Framework</span>
+<div class="flex flex-wrap items-center gap-1.5 text-body-sm font-medium text-primary">
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Market</span>
+<span class="text-signal-blue">+</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Customer</span>
+<span class="text-signal-blue">+</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Competition</span>
+<span class="text-signal-blue">+</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Business Model</span>
+<span class="text-signal-blue">+</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Operations</span>
+<span class="text-signal-blue">+</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[12px]">Financials</span>
+<span class="text-signal-blue">=</span>
+<span class="px-2.5 py-1 bg-signal-blue text-whiteout rounded font-semibold text-[12px]">Structured Plan</span>
+</div>
+</div>
+</div>
+<!-- 8 Evidence Pillars Grid -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">1. Validated Target Demographics</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">2. Concrete Revenue Mechanics</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">3. Competitor Moat Analysis</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">4. Realistic Operating Expenses</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">5. Multi-scenario Cash Flows</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">6. Go-to-Market Milestones</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">7. Regulatory Feasibility</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-signal-blue rounded-full"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">8. Exit &amp; Expansion Options</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. WHO WE SUPPORT -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Client Archetypes</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Business Research for Different Stages of Growth
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Whether validating an initial concept or managing cross-border commercial expansions, our research capabilities align to your maturity phase.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Startups</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          TAM/SAM quantification, rapid competitive sweeps, and investor-focused strategic summaries for seed and early rounds.
+        </p>
+</div>
+<!-- 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Small Businesses</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Local market studies, customer feedback interpretation, pricing optimization, and expansion feasibility briefs.
+        </p>
+</div>
+<!-- 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Growing Businesses</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Adjacent vertical evaluations, competitive intelligence monitoring, and structured M&amp;A target screening support.
+        </p>
+</div>
+<!-- 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Professionals</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Rigorous research backing for executive proposals, industry keynote presentations, and whitepapers.
+        </p>
+</div>
+<!-- 5 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Founders</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          High-conviction market evaluation, business modeling stress tests, and pitch-ready investment thesis papers.
+        </p>
+</div>
+<!-- 6 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Organizations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Ongoing business intelligence retainers, structured board dossiers, and department-level research outsourcing.
+        </p>
+</div>
+</div>
+</section>
+<!-- 11. RESEARCH DELIVERABLES CATALOG -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Standard Outputs</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+          Clear Research. Professional Deliverables.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Deliverables are tailored to the scope, requirements, and intended use of each project.
+        </p>
+</div>
+<!-- 15 structured deliverable chips grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">draft</span>
+<span class="font-body-sm text-body-sm text-on-surface">Market Research Reports</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">domain</span>
+<span class="font-body-sm text-body-sm text-on-surface">Industry Analysis Reports</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">group</span>
+<span class="font-body-sm text-body-sm text-on-surface">Competitor Analysis</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">menu_book</span>
+<span class="font-body-sm text-body-sm text-on-surface">Business Plans</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Feasibility Studies</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">summarize</span>
+<span class="font-body-sm text-body-sm text-on-surface">Business Reports</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">rocket</span>
+<span class="font-body-sm text-body-sm text-on-surface">Startup Research Documents</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">record_voice_over</span>
+<span class="font-body-sm text-body-sm text-on-surface">Customer Research</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">grid_view</span>
+<span class="font-body-sm text-body-sm text-on-surface">SWOT Analysis</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">public</span>
+<span class="font-body-sm text-body-sm text-on-surface">PESTLE Analysis</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">co_present</span>
+<span class="font-body-sm text-body-sm text-on-surface">Business Presentations</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">article</span>
+<span class="font-body-sm text-body-sm text-on-surface">Strategic Summaries</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">recommend</span>
+<span class="font-body-sm text-body-sm text-on-surface">Action Recommendations</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">table_chart</span>
+<span class="font-body-sm text-body-sm text-on-surface">Excel / Models</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-signal-blue text-[18px]">pie_chart</span>
+<span class="font-body-sm text-body-sm text-on-surface">Data Visualizations</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. BUSINESS RESEARCH QUALITY FRAMEWORK -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Institutional Standards</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        A Structured Approach to Business Research
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Our research practice operates against four foundational pillars ensuring high reliability and clarity in every delivered engagement.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">PILLAR 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Relevance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Focus research around the actual commercial question and project objectives, deliberately filtering out tangential or distracting white noise.
+          </p>
+</div>
+<div class="pt-space-md text-twilight-blue flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+<span>Targeted Scope</span>
+</div>
+</div>
+<!-- 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">PILLAR 02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Evidence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Draw strictly upon verified sources, recognized industry publications, regulatory filings, and clearly organized empirical evidence.
+          </p>
+</div>
+<div class="pt-space-md text-twilight-blue flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+<span>Sourced References</span>
+</div>
+</div>
+<!-- 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">PILLAR 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Move decisively past simple information compilation toward meaningful comparative analysis, stress tests, and pattern interpretation.
+          </p>
+</div>
+<div class="pt-space-md text-twilight-blue flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+<span>Deep Synthesis</span>
+</div>
+</div>
+<!-- 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-signal-blue font-bold">PILLAR 04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Clarity</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Present complex findings in executive-ready formats that leadership teams and outside investors can immediately review and act upon.
+          </p>
+</div>
+<div class="pt-space-md text-twilight-blue flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Actionable Format</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 13. EXAMPLE RESEARCH JOURNEY -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Engagement Workflow</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        What a Typical Research Project Can Look Like
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        From the initial consultation call through to final deliverables sign-off, here is our transparent sequential engagement timeline.
+      </p>
+</div>
+<!-- 7-Step Sequential Timeline -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">01</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Requirement Discussion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Briefing call to define precise hypotheses and parameters.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">forum</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">02</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Research Planning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Sourcing roadmap, scope validation, and timeline sign-off.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">event_note</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">03</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Research &amp; Collection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Extensive secondary mining across global databases.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">dataset</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">04</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Analysis &amp; Synthesis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Data correlation, model running, and pattern derivation.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">tune</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">05</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Deliverable Development</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Drafting reports, models, charts, and executive decks.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">draw</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">06</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Review &amp; Refinement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Collaborative feedback integration and stress testing.</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] mt-4 self-end">rate_review</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-mono text-signal-blue font-bold text-label-sm">07</span>
+<h3 class="font-headline-sm text-body-md font-semibold text-primary mt-1">Final Delivery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Complete asset package handoff and final walkthrough.</p>
+</div>
+<span class="material-symbols-outlined text-signal-blue text-[20px] mt-4 self-end">check_circle</span>
+</div>
+</div>
+</section>
+<!-- 14. BUSINESS RESEARCH USE CASES -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Strategic Applications</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Where Business Research Can Create Clarity
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Empirical business research solves tangible operational inflection points across organizations.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Entering a New Market</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Evaluate geographic demographics, localized customer behavior, barrier-to-entry regulations, and distribution partnerships.
+          </p>
+</div>
+</div>
+<!-- 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">psychology_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Evaluating a Business Idea</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Stress-test assumptions against real-world alternatives, customer willingness-to-pay, and required unit economics.
+          </p>
+</div>
+</div>
+<!-- 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Understanding Competitors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Demystify competitor product roadmaps, pricing models, marketing strategies, and churn weaknesses.
+          </p>
+</div>
+</div>
+<!-- 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">rocket</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Planning a Startup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Build investor-grade pitch documents with defensible market size estimates, operating assumptions, and risk buffers.
+          </p>
+</div>
+</div>
+<!-- 5 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Preparing Management Reports</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Equip board meetings, executive committees, and partners with objective data synthesis rather than subjective hunches.
+          </p>
+</div>
+</div>
+<!-- 6 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Supporting Strategic Decisions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Provide the required analytical backing when deciding whether to pivot, scale, discontinue, or acquire product lines.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 15. RESEARCH METHODOLOGY VISUAL -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Analytical Synthesis Hub</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+          Integrated Research Methodology
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Research scope and methodology vary according to project objectives and available information.
+        </p>
+</div>
+<!-- Circular / Multi-Layered Architecture Visual -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Graphic (SVG concentric node network) -->
+<div class="lg:col-span-7 flex items-center justify-center p-space-md">
+<svg class="w-full max-w-md aspect-square" fill="none" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<!-- Concentric rings -->
+<circle cx="200" cy="200" r="180" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" stroke-width="1.5"></circle>
+<circle cx="200" cy="200" r="120" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"></circle>
+<circle cx="200" cy="200" fill="#1f1f1f" r="60" stroke="#2b7fff" stroke-width="2"></circle>
+<!-- Center Node -->
+<text fill="#ffffff" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle" x="200" y="196">BUSINESS</text>
+<text fill="#2b7fff" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" x="200" y="212">RESEARCH</text>
+<!-- Surrounding Ring Nodes -->
+<!-- Market -->
+<circle cx="200" cy="80" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="200" y="84">Market</text>
+<!-- Industry -->
+<circle cx="304" cy="140" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="304" y="144">Industry</text>
+<!-- Competitors -->
+<circle cx="304" cy="260" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="304" y="264">Rivals</text>
+<!-- Customers -->
+<circle cx="200" cy="320" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="200" y="324">Customers</text>
+<!-- Financial -->
+<circle cx="96" cy="260" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="96" y="264">Financial</text>
+<!-- Strategy -->
+<circle cx="96" cy="140" fill="#2a2a2a" r="24"></circle>
+<text fill="#e2e2e2" font-family="Inter" font-size="10" text-anchor="middle" x="96" y="144">Strategy</text>
+<!-- Connecting Radial Lines -->
+<line stroke="#426188" stroke-width="1.5" x1="200" x2="200" y1="140" y2="104"></line>
+<line stroke="#426188" stroke-width="1.5" x1="242" x2="280" y1="170" y2="148"></line>
+<line stroke="#426188" stroke-width="1.5" x1="242" x2="280" y1="230" y2="252"></line>
+<line stroke="#426188" stroke-width="1.5" x1="200" x2="200" y1="260" y2="296"></line>
+<line stroke="#426188" stroke-width="1.5" x1="158" x2="120" y1="230" y2="252"></line>
+<line stroke="#426188" stroke-width="1.5" x1="158" x2="120" y1="170" y2="148"></line>
+</svg>
+</div>
+<!-- Right Explanation and Outward Vector Flow -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-signal-blue font-semibold">From Core to Impact</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Input data gathered across six foundational domains is consolidated within our central analytical engine and channeled into practical, client-specific strategic outcomes.
+          </p>
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">1. Actionable Insights</span>
+<span class="font-label-sm text-label-sm text-signal-blue">→ Clarity</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">2. Structural Analysis</span>
+<span class="font-label-sm text-label-sm text-signal-blue">→ Rigor</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">3. Business Documents</span>
+<span class="font-label-sm text-label-sm text-signal-blue">→ Readiness</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">4. Decision Support</span>
+<span class="font-label-sm text-label-sm text-signal-blue">→ Execution</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 16. BUSINESS + DATA INTEGRATION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Quantitative Power</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+            When business questions require data.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Many strategic questions cannot be answered by qualitative summaries alone. They require numerical consolidation, spreadsheet modeling, survey data cleaning, or custom dashboard visual representations.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Our teams smoothly combine narrative business consulting with dedicated data engineering, ensuring every conclusion is supported by clean data and transparent calculations.
+          </p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-signal-blue hover:text-secondary transition-colors font-label-lg text-label-lg font-medium" data-path="data-and-research" href="#">
+<span>Explore Data &amp; Research Services</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-signal-blue text-[24px]">dataset</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Data Collection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secondary extraction, survey aggregation, and structured data hygiene.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-signal-blue text-[24px]">calculate</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Data Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statistical correlation, unit modeling, and quantitative scenario testing.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-signal-blue text-[24px]">bar_chart</span>
+<h3 class="font-headline-sm text-body-lg text-primary font-semibold">Visualization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear charting, matrix plots, and presentation-ready graphic exhibits.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 17. RELATED SERVICES -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Complementary Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Explore Related FreelancersBix Services
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Connect strategic consulting seamlessly with operational execution across our global multi-disciplinary platform.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- 1 -->
+<a class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md" data-path="academic-and-research" href="#">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">school</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Academic &amp; Research</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Literature reviews, methodology design, academic sourcing, and scholarly writing support.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>View Practice</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- 2 -->
+<a class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md" data-path="foreign-accounting" href="#">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">receipt_long</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Foreign Accounting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-border bookkeeping, international VAT/tax compliance, and multi-currency reconciliations.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>View Practice</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- 3 -->
+<a class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md" data-path="data-and-research" href="#">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">analytics</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Data &amp; Research Services</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Comprehensive quantitative analysis, database architecture, econometric modeling, and reporting.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>View Practice</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- 4 -->
+<a class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors shadow-md" data-path="business-and-startup" href="#">
+<div>
+<span class="material-symbols-outlined text-signal-blue text-[24px] mb-space-sm">rocket_launch</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Business &amp; Startup Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Pitch deck production, incorporation consulting, investor due-diligence readiness, and modeling.
+          </p>
+</div>
+<div class="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+<span>View Practice</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- 18. FAQ ACCORDION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-3xl">
+<div class="flex flex-col gap-space-xs mb-space-2xl text-center items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">Clarifications</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
+        Business Research &amp; Consulting — FAQ
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Common questions regarding project scopes, timelines, data sources, and engagement deliverables.
+      </p>
+</div>
+<div class="max-w-4xl mx-auto space-y-space-sm w-full" id="faq-container">
+<!-- Q1 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>What is the difference between market research and business consulting?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Market research is primarily focused on gathering and analyzing external market, industry, and competitor information. Business consulting uses those research findings and applies strategic thinking to guide decisions, optimize operations, and formulate forward-looking plans. Our services bridge both areas seamlessly.
+        </div>
+</div>
+<!-- Q2 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Can you prepare a business plan from an early-stage concept?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Yes. We regularly work with founders at the idea stage. We help structure your initial hypotheses, run market validations, verify competitor presence, establish unit economics, and synthesize the narrative into an investor-ready document.
+        </div>
+</div>
+<!-- Q3 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>What data sources do you use for market and industry research?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          We leverage reputable secondary sources including public trade databases, regulatory repositories, industry associations, peer-reviewed market publications, and corporate financial disclosures. All primary citations and references are systematically documented.
+        </div>
+</div>
+<!-- Q4 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>How long does a typical research project take to complete?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Timelines depend on complexity and depth. Concise competitor reviews or brief market overviews typically require 5 to 8 business days. Comprehensive institutional market feasibility studies or complex business plans generally take 2 to 4 weeks.
+        </div>
+</div>
+<!-- Q5 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Can you customize the research scope to our specific requirements?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Absolutely. While we maintain standard frameworks for consistency, every engagement is adjusted to target your exact questions, specific geographic constraints, and desired output formats.
+        </div>
+</div>
+<!-- Q6 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Do you provide raw data and calculation sheets alongside final reports?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Yes. Whenever financial modeling, survey analysis, or numeric benchmarking is included, we provide fully unlocked Excel or spreadsheet workbooks with active formulas and cleanly annotated source tags.
+        </div>
+</div>
+<!-- Q7 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>How do you handle confidential business ideas and information?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Confidentiality is fundamental to our practice. We execute mutual Non-Disclosure Agreements (NDAs) prior to receiving proprietary documents, and ensure your data remains restricted to verified project analysts.
+        </div>
+</div>
+<!-- Q8 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>What formats are deliverables supplied in?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Deliverables are standardly provided as presentation decks (PowerPoint/Keynote/PDF), editorial executive reports (Word/PDF), and accompanying spreadsheet models (Excel/Google Sheets), structured for immediate executive use.
+        </div>
+</div>
+<!-- Q9 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Can your team support revision requests or follow-up questions?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Every custom engagement includes a structured review period during which your team can request clarifications, adjustments to emphasis, or minor scope refinements within the original brief parameters.
+        </div>
+</div>
+<!-- Q10 -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden shadow-sm">
+<button class="faq-btn w-full p-space-md text-left flex justify-between items-center text-primary font-headline-sm text-body-lg font-medium hover:bg-surface-container transition-colors" type="button">
+<span>How do we get started on an engagement?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-on-surface-variant">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+          Simply submit an inquiry via our "Get a Quote" form detailing your business objectives, industry sector, and desired deliverables. An advisory lead will review your requirements and coordinate an initial scope alignment session.
+        </div>
+</div>
+</div>
+</section>
+<!-- 19. CONVERSION CTA SECTION -->
+<section class="w-full px-margin-mobile md:px-margin py-space-4xl relative overflow-hidden">
+<div class="bg-surface-container-low rounded-2xl p-space-2xl md:p-space-4xl shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
+<!-- Glow ambient backdrop -->
+<div class="absolute inset-0 bg-gradient-to-tr from-signal-blue/10 via-transparent to-twilight-blue/10 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center gap-space-md max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">Initiate an Engagement</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-primary tracking-tight leading-tight">
+          Have a business question that needs deeper research?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Tell us what you are trying to understand, evaluate, or build. We can help structure the research and deliver it in a clear, professional format.
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-md">
+<a class="bg-whiteout text-ink font-label-lg text-label-lg px-space-xl py-space-sm rounded-lg hover:opacity-90 transition-opacity shadow-lg" data-path="get-a-quote" href="#">
+            Get a Quote
+          </a>
+<a class="bg-transparent text-primary font-label-lg text-label-lg px-space-xl py-space-sm rounded-lg hover:bg-surface-container transition-colors" data-path="services" href="#">
+            Explore All Services
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // FAQ accordion interaction
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqButtons = document.querySelectorAll('.faq-btn');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isHidden = content.classList.contains('hidden');
+
+        // Close all items
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        // Toggle clicked
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-margin-mobile md:px-margin pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary">FreelancersBix</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-twilight-blue mt-space-xs">Global Professional Services</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Pioneering high-caliber corporate infrastructure, cross-border accounting, and strategic consulting for institutional clients worldwide.</p><div class="flex items-center gap-space-sm mt-space-xs"><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">alternate_email</span></a></div></div><div class="lg:col-span-4 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Practice Areas</span><ul class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="academic-and-research" href="#">Academic &amp; Research</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="business-and-consulting" href="#">Business &amp; Consulting</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="foreign-accounting" href="#">Foreign Accounting</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="business-and-startup" href="#">Business &amp; Startup</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="content-and-writing" href="#">Content &amp; Writing</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="data-and-research" href="#">Data &amp; Research</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="digital-support" href="#">Digital Support</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Resources</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#">Insights</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="case-studies" href="#">Case Studies</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-label-sm text-label-sm tracking-widest uppercase text-whiteout font-semibold">Legal &amp; Policy</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Global Inquiries</a></li></ul></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><p>© 2026 FreelancersBix. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms</a><a class="hover:text-primary transition-colors" data-path="security" href="#">Security</a></div></div></div></footer></body></html>
