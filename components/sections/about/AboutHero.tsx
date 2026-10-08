@@ -5,7 +5,7 @@ import { SITE } from "@/lib/design/site";
 
 export function AboutHero() {
   return (
-    <section className="fbx-hero relative w-full overflow-hidden bg-haze py-space-3xl md:py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
+    <section className="fbx-hero relative w-full overflow-hidden bg-haze pt-space-2xl pb-space-3xl md:pt-space-3xl md:pb-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
       <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
         <div className="lg:col-span-7 flex flex-col items-start gap-space-lg">

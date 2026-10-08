@@ -6,7 +6,7 @@ import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function ServicesHero() {
   return (
-    <section className="fbx-hero relative w-full overflow-hidden bg-haze border-b border-outline-variant/60 py-space-3xl md:py-space-4xl">
+    <section className="fbx-hero relative w-full overflow-hidden bg-haze border-b border-outline-variant/60 pt-space-2xl pb-space-3xl md:pt-space-3xl md:pb-space-4xl">
       <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-6 right-0" />
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto relative z-10">

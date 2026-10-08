@@ -5,7 +5,7 @@ import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function ContactHero() {
   return (
-    <section className="fbx-hero relative w-full px-margin-mobile md:px-margin py-space-3xl md:py-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
+    <section className="fbx-hero relative w-full px-margin-mobile md:px-margin pt-space-2xl pb-space-3xl md:pt-space-3xl md:pb-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
       <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-8 -right-10" />
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
