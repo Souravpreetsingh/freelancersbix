@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base rules transcribed verbatim from the approved export's inline <style>. */
+/* FreelancersBix brand base — deep green x cream x charcoal. */
 @layer base {
   html,
   body {
@@ -12,6 +12,9 @@
 
   body {
     overscroll-behavior: none;
+    background-color: #fbf8f1;
+    color: #202722;
+    -webkit-font-smoothing: antialiased;
   }
 
   main > :first-child {
@@ -21,25 +24,497 @@
   main > :last-child {
     margin-bottom: 0 !important;
   }
+
+  ::selection {
+    background-color: #167a52;
+    color: #fbf8f1;
+  }
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Accessibility foundation (Phase 1): visible focus + reduced motion. */
+/* Accessibility foundation: visible focus + reduced motion. */
 :focus-visible {
-  outline: 2px solid #2b7fff;
+  outline: 2px solid #167a52;
   outline-offset: 2px;
 }
 
+@layer components {
+  /* Angular brand geometry — reused decorative primitives. */
+  .fbx-geo-bar {
+    transform: skewX(-24deg);
+  }
+}
+
+/* Navigation motion — services dropdown + mobile menu entrances. */
+@keyframes fbx-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fbx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fbx-menu {
+  from {
+    opacity: 0;
+    translate: 0 -8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.fbx-menu-in {
+  animation: fbx-menu 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fbx-nav-in {
+  animation: fbx-rise 0.32s ease-out both;
+}
+
+@keyframes fbx-typing-dot {
+  0%,
+  70%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.fbx-typing-dots > span {
+  animation: fbx-typing-dot 1.2s ease-in-out infinite;
+}
+
+.fbx-typing-dots > span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.fbx-typing-dots > span:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+/* ------------------------------------------------------------------ */
+/* Premium motion system                                               */
+/* ------------------------------------------------------------------ */
+:root {
+  --fbx-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --fbx-ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --fbx-dur-fast: 160ms;
+  --fbx-dur-normal: 280ms;
+  --fbx-dur-slow: 450ms;
+}
+
+/* Hero staggered entrances — parent `.fbx-hero`, items `data-hero-item`. */
+@keyframes fbx-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fbx-hero [data-hero-item] {
+  animation: fbx-hero-in 0.7s var(--fbx-ease-enter) both;
+  animation-delay: var(--fbx-hero-delay, 0ms);
+}
+
+/* Slow decorative geometry drift — uses the independent `translate`
+   property so mirrored corner transforms (`-scale-x-100`) stay intact. */
+@keyframes fbx-drift {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -8px;
+  }
+}
+
+.fbx-geo-drift {
+  animation: fbx-drift 14s var(--fbx-ease-standard) infinite alternate;
+}
+
+/* Scroll reveal — classes are added client-side only (pre-paint) so no-JS
+   and pre-hydration content stays fully visible. Reveals always transition
+   (including above-the-fold elements) because the IntersectionObserver
+   fires asynchronously after first paint. */
+.fbx-reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 620ms var(--fbx-ease-standard),
+    transform 620ms var(--fbx-ease-standard);
+  transition-delay: var(--fbx-delay, 0ms);
+}
+
+.fbx-reveal.fbx-reveal-scale {
+  transform: translateY(14px) scale(0.95);
+}
+
+.fbx-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger — the Reveal root wraps a grid, so the animated units are its
+   grandchildren (the individual cards). Each card reveals in sequence. */
+.fbx-reveal[data-fbx-stagger] > * > *:not(.fbx-process-line) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 620ms var(--fbx-ease-standard),
+    transform 620ms var(--fbx-ease-standard);
+  transition-delay: calc(var(--fbx-delay, 0ms) + var(--fbx-child, 0ms));
+}
+
+.fbx-reveal[data-fbx-stagger="scale"] > * > *:not(.fbx-process-line) {
+  transform: translateY(14px) scale(0.95);
+}
+
+.fbx-reveal[data-fbx-stagger].is-visible > * > *:not(.fbx-process-line) {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cascade delays for grid children (90ms per step, up to 12 cards). */
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(1) {
+  --fbx-child: 0ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(2) {
+  --fbx-child: 90ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(3) {
+  --fbx-child: 180ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(4) {
+  --fbx-child: 270ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(5) {
+  --fbx-child: 360ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(6) {
+  --fbx-child: 450ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(7) {
+  --fbx-child: 540ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(8) {
+  --fbx-child: 630ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(9) {
+  --fbx-child: 720ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(10) {
+  --fbx-child: 810ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(11) {
+  --fbx-child: 900ms;
+}
+.fbx-reveal[data-fbx-stagger] > * > :nth-child(12) {
+  --fbx-child: 990ms;
+}
+
+/* Process-section connector line — draws left→right when the grid reveals. */
+.fbx-process-line {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(22, 122, 82, 0.55), rgba(22, 122, 82, 0.05));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.fbx-reveal[data-fbx-stagger].is-visible .fbx-process-line {
+  transform: scaleX(1);
+  transition: transform 800ms var(--fbx-ease-standard) 180ms;
+}
+
+/* Cards — hover lift via `translate` (composes with reveal transforms). */
+.fbx-card {
+  transition:
+    translate var(--fbx-dur-normal) var(--fbx-ease-standard),
+    box-shadow var(--fbx-dur-normal) var(--fbx-ease-standard),
+    border-color var(--fbx-dur-normal) var(--fbx-ease-standard),
+    background-color var(--fbx-dur-normal) ease;
+}
+
+.fbx-card:hover {
+  translate: 0 -8px;
+  box-shadow: 0 20px 40px -20px rgba(13, 95, 64, 0.4);
+}
+
+.fbx-card:active {
+  translate: 0 -2px;
+}
+
+.fbx-arrow {
+  display: inline-block;
+  transition: translate var(--fbx-dur-fast) var(--fbx-ease-standard);
+}
+
+.fbx-card:hover .fbx-arrow,
+.fbx-card:focus-within .fbx-arrow {
+  translate: 5px 0;
+}
+
+/* Buttons — subtle lift, press and shadow. */
+.fbx-btn {
+  transition:
+    transform var(--fbx-dur-fast) var(--fbx-ease-standard),
+    box-shadow var(--fbx-dur-fast) var(--fbx-ease-standard),
+    background-color var(--fbx-dur-normal) ease,
+    border-color var(--fbx-dur-normal) ease;
+}
+
+.fbx-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -18px rgba(13, 95, 64, 0.6);
+}
+
+.fbx-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
+
+/* Animated link underline (footer, inline links). */
+.fbx-underline {
+  position: relative;
+}
+
+.fbx-underline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--fbx-dur-slow) var(--fbx-ease-standard);
+}
+
+.fbx-underline:hover::after,
+.fbx-underline:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animated accordion (mobile services) — grid-rows collapse. */
+.fbx-accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--fbx-dur-slow) var(--fbx-ease-standard);
+}
+
+.fbx-accordion[data-open] {
+  grid-template-rows: 1fr;
+}
+
+.fbx-accordion-inner {
+  min-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s var(--fbx-dur-slow);
+}
+
+.fbx-accordion[data-open] .fbx-accordion-inner {
+  visibility: visible;
+  transition: visibility 0s;
+}
+
+.fbx-accordion-inner > * {
+  opacity: 0.45;
+  transition: opacity var(--fbx-dur-slow) var(--fbx-ease-standard);
+}
+
+.fbx-accordion[data-open] .fbx-accordion-inner > * {
+  opacity: 1;
+}
+
+/* FAQ — smooth content fade on open/close. */
+.fbx-faq-body {
+  opacity: 0.6;
+  transition: opacity var(--fbx-dur-slow) var(--fbx-ease-standard);
+}
+
+details[open] .fbx-faq-body {
+  opacity: 1;
+}
+
+/* Chromium/Safari: also smooth the expand/collapse height when supported. */
+@supports selector(details::details-content) {
+  details::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition:
+      block-size var(--fbx-dur-slow) var(--fbx-ease-standard),
+      content-visibility var(--fbx-dur-slow) var(--fbx-ease-standard) allow-discrete;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
+  }
+}
+
+/* Form fields — smooth focus/border transitions. */
+input,
+select,
+textarea {
+  transition:
+    border-color var(--fbx-dur-normal) var(--fbx-ease-standard),
+    box-shadow var(--fbx-dur-normal) var(--fbx-ease-standard),
+    background-color var(--fbx-dur-normal) ease;
+}
+
+/* Success confirmation — gentle pop-in. */
+@keyframes fbx-pop {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.fbx-pop {
+  animation: fbx-pop 0.3s var(--fbx-ease-standard) both;
+}
+
+/* Opacity-only entrance used under prefers-reduced-motion so entrances
+   (hero, menu, nav, pop) remain visible but without any movement. */
+@keyframes fbx-fade-only {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  :root {
+    scroll-behavior: auto;
+  }
+
+  /* Remove continuous / decorative motion entirely. */
+  .fbx-typing-dots > span {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .fbx-geo-drift {
+    animation: none !important;
+  }
+
+  /* Hover lift is removed; colour transitions may remain. */
+  .fbx-card:hover,
+  .fbx-card:active,
+  .fbx-btn:hover,
+  .fbx-btn:active {
+    translate: none;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .fbx-underline::after {
+    transition: transform var(--fbx-dur-fast) var(--fbx-ease-standard);
+  }
+
+  /* Scroll reveals stay functional but reduce to a calm opacity fade —
+     no translate, no scale, short duration, no stagger wait. */
+  .fbx-reveal {
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.24s ease;
+    transition-delay: 0ms;
+  }
+
+  .fbx-reveal.fbx-reveal-scale,
+  .fbx-reveal[data-fbx-stagger="scale"] > * > *:not(.fbx-process-line) {
+    transform: none;
+  }
+
+  .fbx-reveal[data-fbx-stagger] > * > *:not(.fbx-process-line) {
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.24s ease;
+    transition-delay: 0ms;
+  }
+
+  .fbx-reveal.is-visible,
+  .fbx-reveal[data-fbx-stagger].is-visible > * > * {
+    opacity: 1;
+  }
+
+  .fbx-process-line {
+    transform: scaleX(1);
+    transition: none;
+  }
+
+  /* Entrance animations keep their sequence but fade only — no movement. */
+  .fbx-hero [data-hero-item] {
+    animation-name: fbx-fade-only;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+  }
+
+  .fbx-menu-in {
+    animation-name: fbx-fade-only;
+    animation-duration: 0.18s;
+  }
+
+  .fbx-nav-in {
+    animation-name: fbx-fade-only;
+    animation-duration: 0.2s;
+  }
+
+  .fbx-pop {
+    animation-name: fbx-fade-only;
+    animation-duration: 0.2s;
+  }
+}
+
+/* Mobile: scroll-reveal keeps content visible at all times so sections
+   never appear to load late while scrolling. This sits at the end of the
+   sheet so it also overrides the reduced-motion rule on small screens.
+   The hidden state added by JS is neutralised on mobile viewports
+   (transitions stay intact on larger ones). */
+@media (max-width: 767px) {
+  .fbx-reveal,
+  .fbx-reveal.fbx-reveal-scale,
+  .fbx-reveal.is-visible,
+  .fbx-reveal[data-fbx-stagger] > * > *:not(.fbx-process-line),
+  .fbx-reveal[data-fbx-stagger="scale"] > * > *:not(.fbx-process-line),
+  .fbx-reveal[data-fbx-stagger].is-visible > * > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

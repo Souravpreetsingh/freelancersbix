@@ -10,7 +10,7 @@ export function TestimonialCard({ quote, role, context }: TestimonialCardProps) 
   return (
     <div className="p-space-xl rounded-xl bg-surface-container border border-outline-variant/20 flex flex-col justify-between">
       <div className="flex flex-col gap-space-md">
-        <div className="flex items-center gap-space-xs text-signal-blue">
+        <div className="flex items-center gap-space-xs text-signal-green">
           {Array.from({ length: 5 }, (_, index) => (
             <MaterialIcon key={index} name="star" className="text-[18px]" />
           ))}

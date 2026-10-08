@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { ForeignAudience } from "@/components/sections/foreign/ForeignAudience";
 import { ForeignBenefits } from "@/components/sections/foreign/ForeignBenefits";
 import { ForeignCTA } from "@/components/sections/foreign/ForeignCTA";
@@ -21,16 +22,36 @@ export default function ForeignAccountingPage() {
   return (
     <>
       <ForeignHero />
-      <ForeignIntro />
-      <ForeignServices />
-      <ForeignWorkflow />
-      <ForeignDashboard />
-      <ForeignAudience />
-      <ForeignBenefits />
-      <ForeignTools />
-      <ForeignQuality />
-      <ForeignFAQ />
-      <ForeignCTA />
+      <Reveal>
+        <ForeignIntro />
+      </Reveal>
+      <Reveal>
+        <ForeignServices />
+      </Reveal>
+      <Reveal>
+        <ForeignWorkflow />
+      </Reveal>
+      <Reveal>
+        <ForeignDashboard />
+      </Reveal>
+      <Reveal>
+        <ForeignAudience />
+      </Reveal>
+      <Reveal>
+        <ForeignBenefits />
+      </Reveal>
+      <Reveal>
+        <ForeignTools />
+      </Reveal>
+      <Reveal>
+        <ForeignQuality />
+      </Reveal>
+      <Reveal>
+        <ForeignFAQ />
+      </Reveal>
+      <Reveal>
+        <ForeignCTA />
+      </Reveal>
     </>
   );
 }

@@ -74,7 +74,7 @@ export function DigitalServices() {
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               CAPABILITIES INVENTORY
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -93,7 +93,7 @@ export function DigitalServices() {
             >
               <div>
                 <div className="flex items-center justify-between mb-space-md">
-                  <span className="font-headline-sm text-headline-sm font-bold text-signal-blue font-mono">
+                  <span className="font-headline-sm text-headline-sm font-bold text-signal-green font-mono">
                     {service.num}
                   </span>
                   <MaterialIcon
@@ -115,8 +115,8 @@ export function DigitalServices() {
         </div>
         <div className="mt-space-xl p-space-lg rounded-xl bg-surface-container flex flex-col md:flex-row items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-md">
-            <div className="w-12 h-12 rounded-full bg-signal-blue/20 flex items-center justify-center shrink-0">
-              <MaterialIcon name="tune" className="text-signal-blue text-2xl" />
+            <div className="w-12 h-12 rounded-full bg-signal-green/20 flex items-center justify-center shrink-0">
+              <MaterialIcon name="tune" className="text-signal-green text-2xl" />
             </div>
             <div>
               <h4 className="font-headline-sm text-headline-sm text-primary font-bold">
@@ -129,7 +129,7 @@ export function DigitalServices() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-ink hover:opacity-90 transition-opacity whitespace-nowrap shrink-0"
+            className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-on-primary hover:opacity-90 transition-opacity whitespace-nowrap shrink-0"
           >
             Discuss Custom Scope
           </Link>

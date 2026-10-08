@@ -21,7 +21,7 @@ export function AcademicDeliverables() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-space-2xl gap-space-xs">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue mb-space-xs block">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs block">
               Outputs
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -38,7 +38,7 @@ export function AcademicDeliverables() {
               key={item.label}
               className="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-sm shadow-sm"
             >
-              <MaterialIcon name={item.icon} className="text-signal-blue text-[18px]" />
+              <MaterialIcon name={item.icon} className="text-signal-green text-[18px]" />
               <span className="font-label-md text-label-md text-primary">{item.label}</span>
             </div>
           ))}

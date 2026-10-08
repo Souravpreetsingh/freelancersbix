@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { StartupBusinessModel } from "@/components/sections/startup/StartupBusinessModel";
 import { StartupBusinessPlan } from "@/components/sections/startup/StartupBusinessPlan";
 import { StartupConnections } from "@/components/sections/startup/StartupConnections";
@@ -32,25 +33,63 @@ export default function BusinessAndStartupPage() {
     <>
       <ServiceBreadcrumb current="Business & Startup Support" />
       <StartupHero />
-      <StartupTrust />
-      <StartupIntro />
-      <StartupServices />
-      <StartupJourney />
-      <StartupBusinessModel />
-      <StartupResearch />
-      <StartupBusinessPlan />
-      <StartupPitchDeck />
-      <StartupMarketEntry />
-      <StartupWhoWeSupport />
-      <StartupDeliverables />
-      <StartupQuality />
-      <StartupProcessDocs />
-      <StartupOperationalSupport />
-      <StartupConnections />
-      <StartupWorkflow />
-      <StartupFAQ />
-      <StartupRelated />
-      <StartupCTA />
+      <Reveal>
+        <StartupTrust />
+      </Reveal>
+      <Reveal>
+        <StartupIntro />
+      </Reveal>
+      <Reveal>
+        <StartupServices />
+      </Reveal>
+      <Reveal>
+        <StartupJourney />
+      </Reveal>
+      <Reveal>
+        <StartupBusinessModel />
+      </Reveal>
+      <Reveal>
+        <StartupResearch />
+      </Reveal>
+      <Reveal>
+        <StartupBusinessPlan />
+      </Reveal>
+      <Reveal>
+        <StartupPitchDeck />
+      </Reveal>
+      <Reveal>
+        <StartupMarketEntry />
+      </Reveal>
+      <Reveal>
+        <StartupWhoWeSupport />
+      </Reveal>
+      <Reveal>
+        <StartupDeliverables />
+      </Reveal>
+      <Reveal>
+        <StartupQuality />
+      </Reveal>
+      <Reveal>
+        <StartupProcessDocs />
+      </Reveal>
+      <Reveal>
+        <StartupOperationalSupport />
+      </Reveal>
+      <Reveal>
+        <StartupConnections />
+      </Reveal>
+      <Reveal>
+        <StartupWorkflow />
+      </Reveal>
+      <Reveal>
+        <StartupFAQ />
+      </Reveal>
+      <Reveal>
+        <StartupRelated />
+      </Reveal>
+      <Reveal>
+        <StartupCTA />
+      </Reveal>
     </>
   );
 }

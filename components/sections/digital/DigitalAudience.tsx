@@ -39,7 +39,7 @@ export function DigitalAudience() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl max-w-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             CLIENT PROFILES
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -53,7 +53,7 @@ export function DigitalAudience() {
           {AUDIENCES.map((audience) => (
             <div key={audience.name} className="p-space-lg rounded-xl bg-surface-container-low">
               <div className="flex items-center gap-space-sm mb-space-sm">
-                <MaterialIcon name={audience.name} className="text-signal-blue text-2xl" />
+                <MaterialIcon name={audience.name} className="text-signal-green text-2xl" />
                 <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{audience.title}</h3>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{audience.desc}</p>

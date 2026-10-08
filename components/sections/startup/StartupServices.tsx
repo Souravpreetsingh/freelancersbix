@@ -88,12 +88,12 @@ export function StartupServices() {
           >
             <div className="flex flex-col gap-space-sm">
               <div className="flex items-center justify-between">
-                <span className="font-headline-sm text-headline-sm text-twilight-blue font-bold">{service.num}</span>
-                <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:text-signal-blue transition-colors">
+                <span className="font-headline-sm text-headline-sm text-deep-sage font-bold">{service.num}</span>
+                <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:text-signal-green transition-colors">
                   <MaterialIcon name={service.icon} className="text-[20px]" />
                 </div>
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-primary group-hover:text-signal-blue transition-colors">
+              <h3 className="font-headline-sm text-headline-sm text-primary group-hover:text-signal-green transition-colors">
                 {service.title}
               </h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{service.desc}</p>
@@ -109,7 +109,7 @@ export function StartupServices() {
         ))}
         <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container rounded-xl p-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-md">
-            <div className="w-12 h-12 rounded-xl bg-signal-blue/10 text-signal-blue flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-signal-green/10 text-signal-green flex items-center justify-center shrink-0">
               <MaterialIcon name="dialpad" className="text-[24px]" />
             </div>
             <div className="flex flex-col">
@@ -124,7 +124,7 @@ export function StartupServices() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-space-xs bg-whiteout text-ink font-label-lg text-label-lg font-medium px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity shrink-0"
+            className="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-lg text-label-lg font-medium px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity shrink-0"
           >
             <span>Speak with Advisory Desk</span>
             <MaterialIcon name="arrow_forward" className="text-[18px]" />

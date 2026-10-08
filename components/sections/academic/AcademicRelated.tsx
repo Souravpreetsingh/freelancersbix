@@ -42,13 +42,13 @@ export function AcademicRelated() {
               className="bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group"
             >
               <div>
-                <MaterialIcon name={card.icon} className="text-signal-blue text-[32px] mb-space-md" />
+                <MaterialIcon name={card.icon} className="text-signal-green text-[32px] mb-space-md" />
                 <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs">{card.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">{card.body}</p>
               </div>
               <Link
                 href={card.href}
-                className="inline-flex items-center font-label-sm text-label-sm text-secondary-fixed group-hover:text-primary transition-colors"
+                className="inline-flex items-center font-label-sm text-label-sm text-signal-green group-hover:text-primary transition-colors"
               >
                 <span>{card.cta}</span>
                 <MaterialIcon name="arrow_forward" className="text-[16px] ml-1" />

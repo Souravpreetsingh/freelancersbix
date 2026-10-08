@@ -25,10 +25,10 @@ export function ContactTips() {
   return (
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
       <div className="flex flex-col items-start mb-space-2xl">
-        <span className="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold">
+        <span className="font-label-md text-label-md text-signal-green uppercase tracking-widest font-semibold">
           Intake Excellence
         </span>
-        <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight mt-1">
+        <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight mt-1">
           A little context ensures rapid accuracy.
         </h2>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -39,10 +39,10 @@ export function ContactTips() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
         {TIPS.map((tip) => (
           <div key={tip.number} className="p-space-lg rounded-xl bg-surface hover:bg-surface-container transition-all">
-            <div className="font-headline-md text-headline-md font-mono text-signal-blue font-bold mb-space-sm">
+            <div className="font-headline-md text-headline-md font-mono text-signal-green font-bold mb-space-sm">
               {tip.number}
             </div>
-            <h4 className="font-headline-sm text-[16px] text-whiteout font-bold mb-space-xs">{tip.title}</h4>
+            <h4 className="font-headline-sm text-[16px] text-primary font-bold mb-space-xs">{tip.title}</h4>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{tip.text}</p>
           </div>
         ))}

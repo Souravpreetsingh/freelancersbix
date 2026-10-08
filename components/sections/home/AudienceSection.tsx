@@ -42,7 +42,7 @@ export function AudienceSection() {
               className="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between group hover:bg-surface-container transition-all"
             >
               <div className="flex flex-col gap-space-md">
-                <div className="w-12 h-12 rounded-lg bg-surface-bright flex items-center justify-center text-primary group-hover:text-signal-blue transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-surface-bright flex items-center justify-center text-primary group-hover:text-signal-green transition-colors">
                   <MaterialIcon name={item.icon} className="text-[26px]" />
                 </div>
                 <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{item.title}</h3>

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
+import { Reveal } from "@/components/motion/Reveal";
 
 const FILTERS = [
   { id: "all", label: "All" },
@@ -11,6 +12,7 @@ const FILTERS = [
   { id: "data", label: "Data" },
   { id: "content", label: "Writing" },
   { id: "digital", label: "Operations" },
+  { id: "hr", label: "HR" },
 ] as const;
 
 type FilterId = (typeof FILTERS)[number]["id"];
@@ -57,6 +59,34 @@ const JOBS: Job[] = [
     experience: "Exp: 2+ Yrs",
   },
   {
+    category: "accounting",
+    title: "Bookkeeper",
+    badges: [
+      { text: "Foreign Accounting", highlight: "signal" },
+      { text: "Flexible / Contract" },
+      { text: "Global Remote" },
+    ],
+    description:
+      "Record day-to-day AP/AR transactions, reconcile bank and card statements, track payables and receivables, and keep client ledgers accurate across multiple currencies.",
+    experience: "Exp: 1-3 Yrs",
+  },
+  {
+    category: "accounting",
+    title: "Accountant",
+    badges: [{ text: "Foreign Accounting", highlight: "signal" }, { text: "Structured Retainer" }, { text: "Remote" }],
+    description:
+      "Prepare monthly and quarterly financial statements, manage adjustments and account reconciliations, and support period-end closures with compliant reporting.",
+    experience: "Exp: 2-5 Yrs",
+  },
+  {
+    category: "hr",
+    title: "Human Resources (HR) Executive",
+    badges: [{ text: "People & Culture", highlight: "signal" }, { text: "Full-Time" }, { text: "Remote" }],
+    description:
+      "Coordinate recruitment pipelines, screen and shortlist candidates, manage onboarding workflows, and maintain employee records and internal HR documentation.",
+    experience: "Exp: 1-3 Yrs",
+  },
+  {
     category: "data",
     title: "Data Analyst",
     badges: [{ text: "Data & Analytics", highlight: "signal" }, { text: "Technical Track" }, { text: "Flexible" }],
@@ -89,9 +119,9 @@ const JOBS: Job[] = [
 function badgeClasses(highlight?: string): string {
   switch (highlight) {
     case "signal":
-      return "bg-surface-container-lowest text-signal-blue";
+      return "bg-surface-container-lowest text-signal-green";
     case "secondary":
-      return "bg-surface-container-lowest text-secondary-fixed";
+      return "bg-surface-container-lowest text-primary";
     default:
       return "bg-surface-container-lowest text-on-surface-variant";
   }
@@ -119,7 +149,7 @@ export function CareerOpportunities() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div>
             <div className="flex items-center gap-space-xs mb-space-xs">
-              <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+              <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
                 Open Opportunities
               </span>
               <span className="px-2 py-0.5 rounded text-xs bg-surface-container-high text-on-surface-variant">
@@ -131,7 +161,7 @@ export function CareerOpportunities() {
             </h2>
           </div>
           <div className="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm max-w-md">
-            <MaterialIcon name="info" className="text-signal-blue text-[20px]" />
+            <MaterialIcon name="info" className="text-signal-green text-[20px]" />
             <p className="font-label-md text-label-md text-on-surface-variant">
               Sample opportunity specimen roster. Openings updated periodically based on active international
               engagements.
@@ -147,7 +177,7 @@ export function CareerOpportunities() {
                 onClick={() => setFilter(item.id)}
                 className={`job-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all ${
                   filter === item.id
-                    ? "bg-whiteout text-ink font-medium"
+                    ? "bg-primary text-on-primary font-medium"
                     : "bg-surface-container text-on-surface-variant hover:text-primary"
                 }`}
                 data-filter={item.id}
@@ -160,7 +190,7 @@ export function CareerOpportunities() {
           <div className="relative w-full lg:w-72">
             <MaterialIcon name="search" className="absolute left-3 top-2.5 text-outline text-[20px]" />
             <input
-              className="w-full h-11 pl-10 pr-space-md bg-surface-container text-on-surface text-body-sm font-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-signal-blue placeholder:text-outline"
+              className="w-full h-11 pl-10 pr-space-md bg-surface-container text-on-surface text-body-sm font-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-signal-green placeholder:text-outline"
               id="job-search-input"
               placeholder="Search positions..."
               type="text"
@@ -169,40 +199,42 @@ export function CareerOpportunities() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-space-sm" id="jobs-container">
-          {visibleJobs.map((job) => (
-            <div
-              key={job.title}
-              className="job-card group bg-surface-container p-space-lg rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-all"
-              data-category={job.category}
-              data-title={job.title}
-            >
-              <div className="flex flex-col gap-space-xs max-w-xl">
-                <div className="flex flex-wrap items-center gap-space-xs">
-                  {job.badges.map((badge) => (
-                    <span
-                      key={badge.text}
-                      className={`px-2 py-0.5 rounded font-label-sm text-label-sm ${badgeClasses(badge.highlight)}`}
-                    >
-                      {badge.text}
-                    </span>
-                  ))}
+        <Reveal stagger>
+          <div className="grid grid-cols-1 gap-space-sm" id="jobs-container">
+            {visibleJobs.map((job) => (
+              <div
+                key={job.title}
+                className="job-card group bg-surface-container p-space-lg rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container-high transition-all"
+                data-category={job.category}
+                data-title={job.title}
+              >
+                <div className="flex flex-col gap-space-xs max-w-xl">
+                  <div className="flex flex-wrap items-center gap-space-xs">
+                    {job.badges.map((badge) => (
+                      <span
+                        key={badge.text}
+                        className={`px-2 py-0.5 rounded font-label-sm text-label-sm ${badgeClasses(badge.highlight)}`}
+                      >
+                        {badge.text}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm font-bold text-primary">{job.title}</h3>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant">{job.description}</p>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm font-bold text-primary">{job.title}</h3>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">{job.description}</p>
+                <div className="flex items-center gap-space-md self-start md:self-center shrink-0">
+                  <span className="font-label-sm text-label-sm text-on-surface-variant">{job.experience}</span>
+                  <a
+                    className="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-primary bg-primary hover:bg-primary/90 font-medium transition-all"
+                    href="#role-specimen"
+                  >
+                    View Position
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-space-md self-start md:self-center shrink-0">
-                <span className="font-label-sm text-label-sm text-on-surface-variant">{job.experience}</span>
-                <a
-                  className="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-ink bg-whiteout hover:bg-whiteout/90 font-medium transition-all"
-                  href="#role-specimen"
-                >
-                  View Position
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -82,7 +82,7 @@ export function ForeignServices() {
       <div className="max-w-[1400px] mx-auto space-y-space-2xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               Our Accounting Services
             </span>
             <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -98,19 +98,19 @@ export function ForeignServices() {
           {SERVICES.map((service) => (
             <div
               key={service.number}
-              className="p-space-lg rounded-xl bg-surface-container-low border border-white/5 flex flex-col justify-between group hover:border-white/20 hover:bg-surface-container transition-all"
+              className="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant flex flex-col justify-between group hover:border-outline-variant hover:bg-surface-container transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-space-md">
                   <span className="font-mono text-sm text-secondary font-bold">{`${service.number} //`}</span>
-                  <div className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:text-signal-blue transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:text-signal-green transition-colors">
                     <MaterialIcon name={service.icon} className="text-[20px]" />
                   </div>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold">{service.title}</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{service.title}</h3>
                 <p className="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">{service.description}</p>
               </div>
-              <div className="mt-space-lg pt-space-sm border-t border-white/5 flex items-center justify-between text-xs font-label-md text-secondary">
+              <div className="mt-space-lg pt-space-sm border-t border-outline-variant flex items-center justify-between text-xs font-label-md text-secondary">
                 <span>{service.footer}</span>
                 <MaterialIcon
                   name="arrow_forward"
@@ -119,31 +119,31 @@ export function ForeignServices() {
               </div>
             </div>
           ))}
-          <div className="p-space-lg rounded-xl bg-gradient-to-br from-surface-container-high to-surface-container-low border border-white/10 flex flex-col justify-between group md:col-span-2 lg:col-span-3 hover:border-white/20 transition-all">
+          <div className="p-space-lg rounded-xl bg-gradient-to-br from-surface-container-high to-surface-container-low border border-outline-variant flex flex-col justify-between group md:col-span-2 lg:col-span-3 hover:border-outline-variant transition-all">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="font-mono text-sm text-secondary font-bold">{"10 //"}</span>
-                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-signal-blue">
+                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-signal-green">
                     Executive Deliverable
                   </span>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold">Management Reports</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold">Management Reports</h3>
                 <p className="mt-1 font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
                   Structured preparation and compilation of periodic operational reports that provide leadership with
                   concise, decision-ready insights.
                 </p>
               </div>
               <div className="flex items-center gap-space-sm self-start md:self-auto">
-                <span className="px-3 py-1 rounded bg-black-void/50 text-xs font-mono text-on-surface border border-white/10">
+                <span className="px-3 py-1 rounded bg-primary/10 text-xs font-mono text-primary border border-signal-green/30">
                   Variance Tracking
                 </span>
-                <span className="px-3 py-1 rounded bg-black-void/50 text-xs font-mono text-on-surface border border-white/10">
+                <span className="px-3 py-1 rounded bg-primary/10 text-xs font-mono text-primary border border-signal-green/30">
                   Budget Alignment
                 </span>
               </div>
             </div>
-            <div className="mt-space-md pt-space-sm border-t border-white/5 flex items-center justify-between text-xs font-label-md text-secondary">
+            <div className="mt-space-md pt-space-sm border-t border-outline-variant flex items-center justify-between text-xs font-label-md text-secondary">
               <span>Executive Board &amp; Team Reviews</span>
               <MaterialIcon
                 name="arrow_forward"

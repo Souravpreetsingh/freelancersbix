@@ -45,14 +45,14 @@ export function ServiceRelated({
             }
           >
             <div>
-              <MaterialIcon name={item.icon} className="text-signal-blue text-[24px] mb-space-xs" />
-              <h3 className="font-headline-sm text-headline-sm text-primary group-hover:text-signal-blue transition-colors">
+              <MaterialIcon name={item.icon} className="text-signal-green text-[24px] mb-space-xs" />
+              <h3 className="font-headline-sm text-headline-sm text-primary group-hover:text-signal-green transition-colors">
                 {item.title}
               </h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">{item.description}</p>
             </div>
             {ctaLabel ? (
-              <div className="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+              <div className="pt-space-md flex items-center text-label-sm text-signal-green font-semibold gap-1 group-hover:translate-x-1 transition-transform">
                 <span>{ctaLabel}</span>
                 <MaterialIcon name="arrow_forward" className="text-[16px]" />
               </div>

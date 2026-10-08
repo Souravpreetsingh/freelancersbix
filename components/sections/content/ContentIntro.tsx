@@ -33,13 +33,13 @@ const steps = [
 
 export function ContentIntro() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest relative border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest relative border-y border-outline-variant">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
         <div className="lg:col-span-6 flex flex-col gap-space-md">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Professional Communication
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight leading-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight leading-tight">
             Good writing is more than words. It is structure, clarity and purpose.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -54,9 +54,9 @@ export function ContentIntro() {
           </p>
         </div>
         <div className="lg:col-span-6">
-          <div className="p-space-lg rounded-2xl bg-surface-container border border-whiteout/10 relative">
+          <div className="p-space-lg rounded-2xl bg-surface-container border border-outline-variant relative">
             <div className="flex items-center justify-between mb-space-md">
-              <span className="font-label-sm text-label-sm text-whiteout font-medium uppercase tracking-wider">
+              <span className="font-label-sm text-label-sm text-primary font-medium uppercase tracking-wider">
                 The Communication Transformation
               </span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">Structured Pipeline</span>
@@ -67,14 +67,14 @@ export function ContentIntro() {
                   key={step.num}
                   className={`flex items-center justify-between p-space-sm rounded-lg border ${
                     step.highlighted
-                      ? "bg-surface-container-highest border-signal-blue/40 shadow-[0_0_20px_rgba(43,127,255,0.15)]"
-                      : "bg-surface-container-high border-whiteout/5"
+                      ? "bg-surface-container-highest border-signal-green/40 shadow-[0_0_20px_rgba(22,122,82,0.15)]"
+                      : "bg-surface-container-high border-outline-variant"
                   }`}
                 >
                   <div className="flex items-center gap-space-sm">
                     <span
                       className={`w-6 h-6 rounded-full flex items-center justify-center font-mono text-[11px] ${
-                        step.highlighted ? "bg-signal-blue text-whiteout font-bold" : "bg-surface-variant text-whiteout"
+                        step.highlighted ? "bg-signal-green text-whiteout font-bold" : "bg-surface-variant text-primary"
                       }`}
                     >
                       {step.num}
@@ -82,7 +82,7 @@ export function ContentIntro() {
                     <div>
                       <h4
                         className={`font-label-lg text-label-lg ${
-                          step.highlighted ? "text-whiteout font-semibold" : "text-whiteout font-medium"
+                          step.highlighted ? "text-primary font-semibold" : "text-primary font-medium"
                         }`}
                       >
                         {step.title}
@@ -91,7 +91,7 @@ export function ContentIntro() {
                     </div>
                   </div>
                   {step.icon === "check_circle" ? (
-                    <MaterialIcon name="check_circle" className="text-signal-blue text-[20px]" />
+                    <MaterialIcon name="check_circle" className="text-signal-green text-[20px]" />
                   ) : (
                     <MaterialIcon name="arrow_downward" className="text-outline-variant text-[20px]" />
                   )}

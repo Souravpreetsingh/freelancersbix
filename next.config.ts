@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
    * tracing root to this project instead.
    */
   outputFileTracingRoot: path.join(__dirname),
+  /** Hide the floating Next.js dev-tools badge in local development. */
+  devIndicators: false,
 };
 
 export default nextConfig;

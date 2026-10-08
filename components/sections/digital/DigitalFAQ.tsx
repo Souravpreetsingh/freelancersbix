@@ -69,7 +69,7 @@ export function DigitalFAQ() {
     <section className="w-full bg-surface-container-lowest py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin max-w-4xl mx-auto">
         <div className="mb-space-2xl text-center">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             CLARIFICATIONS & POLICIES
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -86,10 +86,10 @@ export function DigitalFAQ() {
                 <span className="font-headline-sm text-headline-sm text-primary font-medium">{faq.question}</span>
                 <MaterialIcon
                   name="expand_more"
-                  className="text-signal-blue transition-transform duration-200 group-open:rotate-180"
+                  className="text-signal-green transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
-              <div className="faq-content px-space-lg pb-space-lg">
+              <div className="fbx-faq-body faq-content px-space-lg pb-space-lg">
                 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">{faq.answer}</p>
               </div>
             </details>

@@ -154,7 +154,7 @@ export function ContactWizard() {
       setQuote((state) => ({ ...state, step: targetStep }));
       return;
     }
-    if (targetStep === 2 && (!title.trim() || !description.trim())) return;
+    if (targetStep === 3 && (!title.trim() || !description.trim())) return;
     if (targetStep === 6) {
       if (!quote.contactName.trim()) {
         setContactError("Please enter your full name.");
@@ -286,13 +286,13 @@ export function ContactWizard() {
         id="quote-engine"
       >
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center mb-space-2xl">
-          <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-blue mb-space-sm">
+          <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-green mb-space-sm">
             <MaterialIcon name="calculate" className="text-[16px]" />
             <span className="font-label-md text-label-md uppercase tracking-widest font-semibold">
               PROJECT SCOPING ENGINE
             </span>
           </div>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight">
             Tell Us About Your Project.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -303,25 +303,25 @@ export function ContactWizard() {
         <div className="max-w-4xl mx-auto bg-surface rounded-xl shadow-xl overflow-hidden">
           <div className="p-space-lg md:p-space-2xl">
             <div className="flex flex-col items-center text-center py-space-xl" id="wizard-success">
-              <div className="w-16 h-16 rounded-full bg-signal-blue/20 text-signal-blue flex items-center justify-center mb-space-lg shadow-lg">
+              <div className="w-16 h-16 rounded-full bg-signal-green/20 text-signal-green flex items-center justify-center mb-space-lg shadow-lg">
                 <MaterialIcon name="check_circle" className="text-[36px]" />
               </div>
-              <span className="font-label-md text-label-md uppercase tracking-widest text-signal-blue font-bold">
+              <span className="font-label-md text-label-md uppercase tracking-widest text-signal-green font-bold">
                 TRANSMISSION CONFIRMED
               </span>
-              <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight mt-1 mb-space-xs">
+              <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight mt-1 mb-space-xs">
                 YOUR REQUEST HAS BEEN RECEIVED.
               </h3>
               <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container font-mono text-label-sm text-on-surface-variant my-space-md">
                 <span>REQUEST TRACKER ID:</span>
-                <span className="text-whiteout font-bold">{trackerId || "FBX-XXXXXX"}</span>
+                <span className="text-primary font-bold">{trackerId || "FBX-XXXXXX"}</span>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-lg mb-space-2xl">
                 Thank you for reaching out to FreelancersBix. Our domain practice leads are already examining your
                 specifications to verify capacity, scope milestones, and turnaround windows.
               </p>
               <div className="w-full max-w-2xl bg-surface-container rounded-xl p-space-lg mb-space-2xl text-left">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-whiteout font-bold block mb-space-md">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold block mb-space-md">
                   Next Steps in Our Engagement Flow
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-space-md">
@@ -332,8 +332,8 @@ export function ContactWizard() {
                     { no: "04", step: "Kickoff", text: "Execution with verified handoffs" },
                   ].map((item) => (
                     <div key={item.no} className="flex flex-col">
-                      <span className="font-mono text-signal-blue font-bold text-label-sm">{item.no}</span>
-                      <span className="font-headline-sm text-[14px] text-whiteout font-semibold mt-1">{item.step}</span>
+                      <span className="font-mono text-signal-green font-bold text-label-sm">{item.no}</span>
+                      <span className="font-headline-sm text-[14px] text-primary font-semibold mt-1">{item.step}</span>
                       <span className="font-body-sm text-[12px] text-on-surface-variant mt-0.5">{item.text}</span>
                     </div>
                   ))}
@@ -341,13 +341,13 @@ export function ContactWizard() {
               </div>
               <div className="flex items-center gap-space-md">
                 <Link
-                  className="px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   href="/"
                 >
                   Back to Home
                 </Link>
                 <button
-                  className="px-space-lg py-space-md bg-surface-container-high hover:bg-surface-container text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="px-space-lg py-space-md bg-surface-container-high hover:bg-surface-container text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={resetWizard}
                   type="button"
                 >
@@ -367,13 +367,13 @@ export function ContactWizard() {
       id="quote-engine"
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center mb-space-2xl">
-        <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-blue mb-space-sm">
+        <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-green mb-space-sm">
           <MaterialIcon name="calculate" className="text-[16px]" />
           <span className="font-label-md text-label-md uppercase tracking-widest font-semibold">
             PROJECT SCOPING ENGINE
           </span>
         </div>
-        <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight">
+        <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight">
           Tell Us About Your Project.
         </h2>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -397,21 +397,21 @@ export function ContactWizard() {
                 >
                   <span
                     className={`font-label-sm text-[10px] sm:text-label-sm uppercase font-mono font-bold ${
-                      isActive ? "text-signal-blue" : isDone ? "text-whiteout" : "text-on-surface-variant"
+                      isActive ? "text-signal-green" : isDone ? "text-primary" : "text-on-surface-variant"
                     }`}
                   >
                     {String(stepNumber).padStart(2, "0")}
                   </span>
                   <span
                     className={`font-label-sm text-[10px] sm:text-label-sm font-medium truncate w-full ${
-                      isActive || isDone ? "text-whiteout" : "text-on-surface-variant"
+                      isActive || isDone ? "text-primary" : "text-on-surface-variant"
                     }`}
                   >
                     {step}
                   </span>
                   <span
                     className={`w-full h-1 rounded-full mt-1.5 indicator-line ${
-                      isActive ? "bg-signal-blue" : isDone ? "bg-whiteout" : "bg-surface-variant"
+                      isActive ? "bg-signal-green" : isDone ? "bg-primary" : "bg-surface-variant"
                     }`}
                   />
                 </button>
@@ -423,10 +423,10 @@ export function ContactWizard() {
           {quote.step === 1 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 01
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">
                   What primary service track do you require?
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -453,18 +453,16 @@ export function ContactWizard() {
                       />
                       <div
                         className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 check-icon ${
-                          selected ? "bg-signal-blue text-whiteout" : "bg-surface-container-highest text-primary"
+                          selected ? "bg-signal-green text-whiteout" : "bg-surface-container-highest text-primary"
                         }`}
                       >
                         <MaterialIcon name={service.icon} className="text-[20px]" />
                       </div>
                       <div className="flex flex-col">
                         <div className="flex items-center gap-2">
-                          <span className="font-headline-sm text-[16px] text-whiteout font-medium">
-                            {service.title}
-                          </span>
+                          <span className="font-headline-sm text-[16px] text-primary font-medium">{service.title}</span>
                           {service.popular && (
-                            <span className="text-[10px] font-mono px-1.5 py-0.5 bg-signal-blue/20 text-signal-blue rounded">
+                            <span className="text-[10px] font-mono px-1.5 py-0.5 bg-signal-green/20 text-signal-green rounded">
                               Popular
                             </span>
                           )}
@@ -475,10 +473,10 @@ export function ContactWizard() {
                   );
                 })}
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <span className="font-label-sm text-label-sm text-on-surface-variant">Step 1 of 6</span>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   onClick={() => goToStep(2)}
                   type="button"
                 >
@@ -492,10 +490,10 @@ export function ContactWizard() {
           {quote.step === 2 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 02
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">
                   Define your requirement & timeline.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -505,13 +503,13 @@ export function ContactWizard() {
               <div className="flex flex-col gap-space-lg mb-space-xl">
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="field-title"
                   >
-                    Project / Requirement Title <span className="text-signal-blue">*</span>
+                    Project / Requirement Title <span className="text-signal-green">*</span>
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="field-title"
                     placeholder="e.g. Multi-Entity Financial Consolidation & 3-Statement Model"
                     type="text"
@@ -521,13 +519,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="field-desc"
                   >
-                    Requirement Scope & Objectives <span className="text-signal-blue">*</span>
+                    Requirement Scope & Objectives <span className="text-signal-green">*</span>
                   </label>
                   <textarea
-                    className="w-full p-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full p-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="field-desc"
                     placeholder="Detail your exact deliverables, existing roadblocks, tools used (e.g., QuickBooks, Stata, Python), and any specific formatting guidelines..."
                     rows={4}
@@ -537,13 +535,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="field-outcome"
                   >
                     Desired Final Output / Deliverable Type
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="field-outcome"
                     placeholder="e.g. Reconciled Balance Sheet Workbook (.xlsx), PDF Executive Summary, Presentation Deck"
                     type="text"
@@ -553,7 +551,7 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-sm">
                   <div className="flex items-center justify-between">
-                    <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                    <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                       Desired Delivery Timeline
                     </span>
                     <span className="font-label-sm text-label-sm text-on-surface-variant italic">
@@ -567,8 +565,8 @@ export function ContactWizard() {
                         type="button"
                         className={`px-space-sm py-space-xs rounded-full font-label-md text-label-md transition-all text-center ${
                           quote.deadline === deadline
-                            ? "bg-whiteout text-ink font-medium"
-                            : "bg-surface-container text-on-surface-variant hover:text-whiteout"
+                            ? "bg-primary text-on-primary font-medium"
+                            : "bg-surface-container text-on-surface-variant hover:text-primary"
                         }`}
                         onClick={() => selectOption("deadline", deadline)}
                       >
@@ -578,9 +576,9 @@ export function ContactWizard() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={() => goToStep(1)}
                   type="button"
                 >
@@ -588,7 +586,7 @@ export function ContactWizard() {
                   <span>Back</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   onClick={() => goToStep(3)}
                   type="button"
                 >
@@ -602,10 +600,10 @@ export function ContactWizard() {
           {quote.step === 3 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 03
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">
                   Project scale & investment framework.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -614,7 +612,7 @@ export function ContactWizard() {
               </div>
               <div className="flex flex-col gap-space-xl mb-space-xl">
                 <div className="flex flex-col gap-space-sm">
-                  <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                  <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                     Estimated Budget Range
                   </span>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
@@ -630,17 +628,17 @@ export function ContactWizard() {
                         onClick={() => selectOption("budget", budget.value)}
                       >
                         <div
-                          className={`font-label-sm text-label-sm ${quote.budget === budget.value ? "text-signal-blue font-semibold" : "text-on-surface-variant"}`}
+                          className={`font-label-sm text-label-sm ${quote.budget === budget.value ? "text-signal-green font-semibold" : "text-on-surface-variant"}`}
                         >
                           {budget.label}
                         </div>
-                        <div className="font-headline-sm text-[16px] text-whiteout font-medium mt-1">{budget.name}</div>
+                        <div className="font-headline-sm text-[16px] text-primary font-medium mt-1">{budget.name}</div>
                       </button>
                     ))}
                   </div>
                 </div>
                 <div className="flex flex-col gap-space-sm">
-                  <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                  <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                     Preferred Billing Currency
                   </span>
                   <div className="flex flex-wrap gap-space-xs">
@@ -650,8 +648,8 @@ export function ContactWizard() {
                         type="button"
                         className={`px-space-md py-space-xs rounded-full font-label-md text-label-md ${
                           quote.currency === currency.value
-                            ? "bg-whiteout text-ink font-medium"
-                            : "bg-surface-container text-on-surface-variant hover:text-whiteout"
+                            ? "bg-primary text-on-primary font-medium"
+                            : "bg-surface-container text-on-surface-variant hover:text-primary"
                         }`}
                         onClick={() => selectOption("currency", currency.value)}
                       >
@@ -661,7 +659,7 @@ export function ContactWizard() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-space-sm">
-                  <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                  <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                     Deliverable Engagement Structure
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
@@ -676,9 +674,7 @@ export function ContactWizard() {
                         }`}
                         onClick={() => selectOption("structure", structure.value)}
                       >
-                        <div className="font-headline-sm text-[15px] text-whiteout font-semibold">
-                          {structure.title}
-                        </div>
+                        <div className="font-headline-sm text-[15px] text-primary font-semibold">{structure.title}</div>
                         <div className="font-body-sm text-[13px] text-on-surface-variant mt-1">
                           {structure.subtitle}
                         </div>
@@ -687,9 +683,9 @@ export function ContactWizard() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={() => goToStep(2)}
                   type="button"
                 >
@@ -697,7 +693,7 @@ export function ContactWizard() {
                   <span>Back</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   onClick={() => goToStep(4)}
                   type="button"
                 >
@@ -711,10 +707,10 @@ export function ContactWizard() {
           {quote.step === 4 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 04
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">
                   Attach supporting documents.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -722,7 +718,7 @@ export function ContactWizard() {
                 </p>
               </div>
               <label
-                className="w-full p-space-2xl rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col items-center justify-center text-center mb-space-lg border border-dashed border-whiteout/20 hover:border-signal-blue"
+                className="w-full p-space-2xl rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col items-center justify-center text-center mb-space-lg border border-dashed border-outline-variant hover:border-signal-green"
                 htmlFor="file-input"
               >
                 <input
@@ -736,17 +732,17 @@ export function ContactWizard() {
                   }}
                 />
                 <div className="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center mb-space-md">
-                  <MaterialIcon name="cloud_upload" className="text-signal-blue text-[28px]" />
+                  <MaterialIcon name="cloud_upload" className="text-signal-green text-[28px]" />
                 </div>
-                <div className="font-headline-sm text-[18px] text-whiteout font-semibold">
-                  Drop project files here, or <span className="text-signal-blue underline">browse your disk</span>
+                <div className="font-headline-sm text-[18px] text-primary font-semibold">
+                  Drop project files here, or <span className="text-signal-green underline">browse your disk</span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs">
                   Supports PDF, DOCX, XLSX, CSV, ZIP, PPTX (Up to 50MB per batch). Transferred over TLS 1.3 encryption.
                 </p>
               </label>
               <div className="flex flex-col gap-space-sm mb-space-xl">
-                <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                   Uploaded Materials (Simulated Ready)
                 </span>
                 {quote.files.map((file, index) => (
@@ -756,10 +752,10 @@ export function ContactWizard() {
                   >
                     <div className="flex items-center gap-space-md min-w-0">
                       <div className="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
-                        <MaterialIcon name={file.icon} className="text-signal-blue text-[20px]" />
+                        <MaterialIcon name={file.icon} className="text-signal-green text-[20px]" />
                       </div>
                       <div className="flex flex-col min-w-0">
-                        <span className="font-headline-sm text-[14px] text-whiteout font-medium truncate">
+                        <span className="font-headline-sm text-[14px] text-primary font-medium truncate">
                           {file.name}
                         </span>
                         <span className="font-label-sm text-[12px] text-on-surface-variant">
@@ -768,11 +764,11 @@ export function ContactWizard() {
                       </div>
                     </div>
                     <div className="flex items-center gap-space-md">
-                      <span className="font-label-sm text-label-sm text-signal-blue font-mono font-medium">
+                      <span className="font-label-sm text-label-sm text-signal-green font-mono font-medium">
                         100% READY
                       </span>
                       <button
-                        className="text-on-surface-variant hover:text-whiteout p-1"
+                        className="text-on-surface-variant hover:text-primary p-1"
                         onClick={() => removeFile(index)}
                         type="button"
                       >
@@ -782,9 +778,9 @@ export function ContactWizard() {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={() => goToStep(3)}
                   type="button"
                 >
@@ -792,7 +788,7 @@ export function ContactWizard() {
                   <span>Back</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   onClick={() => goToStep(5)}
                   type="button"
                 >
@@ -806,12 +802,10 @@ export function ContactWizard() {
           {quote.step === 5 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 05
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
-                  Your contact details.
-                </h3>
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">Your contact details.</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Where should our practice leads deliver your project brief evaluation and estimate?
                 </p>
@@ -819,13 +813,13 @@ export function ContactWizard() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg">
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="contact-name"
                   >
-                    Full Name <span className="text-signal-blue">*</span>
+                    Full Name <span className="text-signal-green">*</span>
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="contact-name"
                     placeholder="Sarah Jenkins"
                     type="text"
@@ -835,13 +829,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="contact-org"
                   >
                     Organization / Company
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="contact-org"
                     placeholder="Nexus Capital & Advisory"
                     type="text"
@@ -851,13 +845,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="contact-email"
                   >
-                    Business Email <span className="text-signal-blue">*</span>
+                    Business Email <span className="text-signal-green">*</span>
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="contact-email"
                     placeholder="sarah.jenkins@nexuscap.com"
                     type="email"
@@ -871,13 +865,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="contact-phone"
                   >
                     Phone / WhatsApp
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="contact-phone"
                     placeholder="+1 (415) 890-2134"
                     type="tel"
@@ -887,13 +881,13 @@ export function ContactWizard() {
                 </div>
                 <div className="flex flex-col gap-space-xs">
                   <label
-                    className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                    className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                     htmlFor="contact-country"
                   >
                     Country / Timezone
                   </label>
                   <input
-                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                    className="w-full h-11 px-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                     id="contact-country"
                     placeholder="United States (EST)"
                     type="text"
@@ -902,7 +896,7 @@ export function ContactWizard() {
                   />
                 </div>
                 <div className="flex flex-col gap-space-xs">
-                  <span className="font-label-sm text-label-sm uppercase font-semibold text-whiteout">
+                  <span className="font-label-sm text-label-sm uppercase font-semibold text-primary">
                     Preferred Channel
                   </span>
                   <div className="grid grid-cols-3 gap-space-xs h-11">
@@ -912,7 +906,7 @@ export function ContactWizard() {
                         type="button"
                         className={`rounded font-label-sm text-label-sm ${
                           quote.preferredChannel === channel
-                            ? "bg-whiteout text-ink font-medium"
+                            ? "bg-primary text-on-primary font-medium"
                             : "bg-surface-container-high text-on-surface-variant"
                         }`}
                         onClick={() => selectOption("preferredChannel", channel)}
@@ -925,13 +919,13 @@ export function ContactWizard() {
               </div>
               <div className="flex flex-col gap-space-xs mb-space-lg">
                 <label
-                  className="font-label-sm text-label-sm uppercase font-semibold text-whiteout"
+                  className="font-label-sm text-label-sm uppercase font-semibold text-primary"
                   htmlFor="contact-notes"
                 >
                   Additional Instructions or Preferences
                 </label>
                 <textarea
-                  className="w-full p-space-md rounded bg-surface-container-high text-whiteout font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-blue"
+                  className="w-full p-space-md rounded bg-surface-container-high text-primary font-body-sm text-body-sm placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-signal-green"
                   id="contact-notes"
                   placeholder="e.g. Please reach out via email first with an initial scope proposal before booking a scoping call..."
                   rows={2}
@@ -941,7 +935,7 @@ export function ContactWizard() {
               </div>
               <div className="flex items-start gap-space-sm p-space-md rounded-lg bg-surface-container-low mb-space-xl">
                 <input
-                  className="mt-1 w-4 h-4 rounded bg-surface-container border-0 accent-signal-blue cursor-pointer"
+                  className="mt-1 w-4 h-4 rounded bg-surface-container border-0 accent-signal-green cursor-pointer"
                   id="privacy-check"
                   type="checkbox"
                   checked={consent}
@@ -953,15 +947,15 @@ export function ContactWizard() {
                 >
                   I understand that the project information and materials submitted will be treated confidentially and
                   used solely to prepare the formal FreelancersBix quote and project plan. Read our{" "}
-                  <a className="text-signal-blue underline" href="/privacy-policy">
+                  <Link className="text-signal-green underline" href="/privacy-policy">
                     Privacy Policy
-                  </a>
+                  </Link>
                   .
                 </label>
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={() => goToStep(4)}
                   type="button"
                 >
@@ -969,7 +963,7 @@ export function ContactWizard() {
                   <span>Back</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-whiteout hover:opacity-90 text-ink rounded-lg font-label-lg text-label-lg font-medium transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary hover:bg-[#08452F] text-on-primary rounded-lg font-label-lg text-label-lg font-medium transition-all"
                   onClick={() => goToStep(6)}
                   type="button"
                 >
@@ -983,10 +977,10 @@ export function ContactWizard() {
           {quote.step === 6 && (
             <div className="flex flex-col">
               <div className="mb-space-lg">
-                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+                <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
                   STAGE 06
                 </span>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold mt-1">
+                <h3 className="font-headline-md text-headline-md text-primary font-bold mt-1">
                   Review your intake specification.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -994,18 +988,18 @@ export function ContactWizard() {
                 </p>
               </div>
               <div className="p-space-xl rounded-xl bg-surface-container mb-space-xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-lg border-b border-whiteout/10 pb-space-lg mb-space-lg">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-lg border-b border-outline-variant pb-space-lg mb-space-lg">
                   <div>
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Discipline Track
                     </span>
-                    <div className="font-headline-sm text-[17px] text-whiteout font-semibold mt-1">{quote.service}</div>
+                    <div className="font-headline-sm text-[17px] text-primary font-semibold mt-1">{quote.service}</div>
                   </div>
                   <div>
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Estimated Budget & Currency
                     </span>
-                    <div className="font-headline-sm text-[17px] text-signal-blue font-semibold mt-1">
+                    <div className="font-headline-sm text-[17px] text-signal-green font-semibold mt-1">
                       {quote.budget} ({quote.currency})
                     </div>
                   </div>
@@ -1013,7 +1007,7 @@ export function ContactWizard() {
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Requirement Title
                     </span>
-                    <div className="font-headline-sm text-[17px] text-whiteout font-semibold mt-1">
+                    <div className="font-headline-sm text-[17px] text-primary font-semibold mt-1">
                       {title.trim() || "Multi-Entity Financial Consolidation & 3-Statement Model"}
                     </div>
                   </div>
@@ -1032,13 +1026,13 @@ export function ContactWizard() {
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Target Timeline
                     </span>
-                    <div className="font-body-md text-body-md text-whiteout font-medium mt-1">{quote.deadline}</div>
+                    <div className="font-body-md text-body-md text-primary font-medium mt-1">{quote.deadline}</div>
                   </div>
                   <div>
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Attached Materials
                     </span>
-                    <div className="font-body-md text-body-md text-whiteout font-medium mt-1">
+                    <div className="font-body-md text-body-md text-primary font-medium mt-1">
                       {quote.files.length} file(s) attached
                     </div>
                   </div>
@@ -1046,7 +1040,7 @@ export function ContactWizard() {
                     <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                       Submitted By
                     </span>
-                    <div className="font-body-md text-body-md text-whiteout font-medium mt-1">
+                    <div className="font-body-md text-body-md text-primary font-medium mt-1">
                       {quote.contactName.trim() || "Sarah Jenkins"}
                       {quote.contactOrg.trim() ? ` (${quote.contactOrg.trim()})` : ""}
                     </div>
@@ -1056,9 +1050,9 @@ export function ContactWizard() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between pt-space-lg border-t border-whiteout/10">
+              <div className="flex items-center justify-between pt-space-lg border-t border-outline-variant">
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-whiteout rounded-lg font-label-lg text-label-lg transition-all"
+                  className="inline-flex items-center gap-space-sm px-space-lg py-space-md text-on-surface-variant hover:text-primary rounded-lg font-label-lg text-label-lg transition-all"
                   onClick={() => goToStep(5)}
                   type="button"
                 >
@@ -1066,7 +1060,7 @@ export function ContactWizard() {
                   <span>Edit Details</span>
                 </button>
                 <button
-                  className="inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-whiteout hover:opacity-90 disabled:opacity-60 text-ink rounded-lg font-label-lg text-label-lg font-bold transition-all shadow-lg disabled:cursor-not-allowed"
+                  className="fbx-btn inline-flex items-center gap-space-sm px-space-2xl py-space-md bg-primary hover:bg-[#08452F] disabled:opacity-60 text-on-primary rounded-lg font-label-lg text-label-lg font-bold shadow-lg disabled:cursor-not-allowed disabled:pointer-events-none"
                   onClick={submitQuote}
                   disabled={submitState === "submitting"}
                   type="button"
@@ -1080,7 +1074,7 @@ export function ContactWizard() {
                 <div className="mt-space-lg p-space-md rounded-lg bg-error/10 border border-error/30 flex items-start gap-space-sm">
                   <MaterialIcon name="warning" className="text-error text-[20px] shrink-0" />
                   <div className="flex flex-col gap-1">
-                    <p className="font-body-sm text-body-sm text-whiteout">{submitError}</p>
+                    <p className="font-body-sm text-body-sm text-primary">{submitError}</p>
                     {fieldErrors.length > 0 ? (
                       <ul className="flex flex-col gap-0.5">
                         {fieldErrors.map((fieldError) => (

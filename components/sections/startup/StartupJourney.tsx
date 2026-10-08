@@ -17,8 +17,8 @@ export function StartupJourney() {
         {STAGES.map((stage) => (
           <div key={stage.num} className="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
             <div className="flex items-center justify-between">
-              <span className="font-headline-md text-headline-md text-signal-blue font-bold">{stage.num}</span>
-              <span className="font-label-sm text-label-sm uppercase text-twilight-blue font-semibold">Stage</span>
+              <span className="font-headline-md text-headline-md text-signal-green font-bold">{stage.num}</span>
+              <span className="font-label-sm text-label-sm uppercase text-deep-sage font-semibold">Stage</span>
             </div>
             <h3 className="font-headline-sm text-headline-sm text-primary">{stage.title}</h3>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{stage.desc}</p>

@@ -42,7 +42,7 @@ export function DataBusiness() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Enterprise Applications
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Data support for business questions.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -54,11 +54,11 @@ export function DataBusiness() {
           {applications.map((application) => (
             <div
               key={application.title}
-              className="p-space-lg rounded-xl bg-surface-container border border-whiteout/5 flex flex-col justify-between"
+              className="p-space-lg rounded-xl bg-surface-container border border-outline-variant flex flex-col justify-between"
             >
               <div>
-                <MaterialIcon name={application.icon} className="text-[28px] text-signal-blue mb-2" />
-                <h3 className="font-headline-sm text-headline-sm text-whiteout mb-2">{application.title}</h3>
+                <MaterialIcon name={application.icon} className="text-[28px] text-signal-green mb-2" />
+                <h3 className="font-headline-sm text-headline-sm text-primary mb-2">{application.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{application.body}</p>
               </div>
             </div>

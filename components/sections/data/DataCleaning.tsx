@@ -33,13 +33,13 @@ const afterRows = [
 
 export function DataCleaning() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-2xl">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Interactive Data Audit
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Data Cleaning in Action
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -72,10 +72,10 @@ export function DataCleaning() {
               Inconsistent timestamps, unhandled whitespace, missing numerical parameters, unindexed keys.
             </p>
           </div>
-          <div className="p-space-lg rounded-xl bg-surface-container-low border border-signal-blue/30">
-            <div className="flex items-center justify-between pb-space-md border-b border-signal-blue/30 mb-space-md">
+          <div className="p-space-lg rounded-xl bg-surface-container-low border border-signal-green/30">
+            <div className="flex items-center justify-between pb-space-md border-b border-signal-green/30 mb-space-md">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-signal-blue" />
+                <span className="w-2 h-2 rounded-full bg-signal-green" />
                 <span className="font-label-lg text-label-lg uppercase text-secondary font-bold">
                   After: Standardized &amp; Reconciled
                 </span>
@@ -86,8 +86,8 @@ export function DataCleaning() {
               {afterRows.map((row) => (
                 <div
                   key={row.id}
-                  className={`px-3 py-2.5 rounded-lg bg-surface-container-lowest/80 border border-signal-blue/20 whitespace-nowrap ${
-                    row.muted ? "text-outline" : "text-whiteout"
+                  className={`px-3 py-2.5 rounded-lg bg-surface-container-lowest/80 border border-signal-green/20 whitespace-nowrap ${
+                    row.muted ? "text-outline" : "text-primary"
                   }`}
                 >
                   {row.id} {row.cells} <span className="text-secondary">{row.note}</span>

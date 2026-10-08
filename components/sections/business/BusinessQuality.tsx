@@ -40,7 +40,7 @@ export function BusinessQuality() {
         eyebrow="Institutional Standards"
         title="A Structured Approach to Business Research"
         lead="Our research practice operates against four foundational pillars ensuring high reliability and clarity in every delivered engagement."
-        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold"
+        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold"
         containerClassName="flex flex-col gap-space-xs mb-space-2xl text-center items-center"
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
@@ -50,11 +50,11 @@ export function BusinessQuality() {
             className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md"
           >
             <div className="space-y-space-xs">
-              <span className="font-label-sm text-label-sm font-mono text-signal-blue font-bold">{pillar.num}</span>
+              <span className="font-label-sm text-label-sm font-mono text-signal-green font-bold">{pillar.num}</span>
               <h3 className="font-headline-sm text-headline-sm text-primary">{pillar.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{pillar.desc}</p>
             </div>
-            <div className="pt-space-md text-twilight-blue flex items-center gap-1 font-label-sm">
+            <div className="pt-space-md text-deep-sage flex items-center gap-1 font-label-sm">
               <MaterialIcon name={pillar.icon} className="text-[16px]" />
               <span>{pillar.tag}</span>
             </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { DataAcademic } from "@/components/sections/data/DataAcademic";
 import { DataBusiness } from "@/components/sections/data/DataBusiness";
 import { DataCleaning } from "@/components/sections/data/DataCleaning";
@@ -36,31 +37,73 @@ export default function DataAndResearchPage() {
         current="Data & Research Services"
         variant="chevron"
         size="md"
-        wrapperClassName="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm bg-surface-container-lowest/40 border-b border-whiteout/5"
-        currentClassName="text-whiteout font-medium"
+        wrapperClassName="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm bg-surface-container-lowest/40 border-b border-outline-variant"
+        currentClassName="text-primary font-medium"
       />
       <DataHero />
-      <DataTrust />
-      <DataIntro />
-      <DataServices />
-      <DataWorkflow />
-      <DataQuality />
-      <DataCleaning />
-      <DataExcel />
-      <DataVisualizations />
-      <DataMethod />
-      <DataSurvey />
-      <DataStatistics />
-      <DataReportStructure />
-      <DataBusiness />
-      <DataAcademic />
-      <DataDeliverables />
-      <DataPillars />
-      <DataTopology />
-      <DataRelated />
-      <DataEngagement />
-      <DataFAQ />
-      <DataCTA />
+      <Reveal>
+        <DataTrust />
+      </Reveal>
+      <Reveal>
+        <DataIntro />
+      </Reveal>
+      <Reveal>
+        <DataServices />
+      </Reveal>
+      <Reveal>
+        <DataWorkflow />
+      </Reveal>
+      <Reveal>
+        <DataQuality />
+      </Reveal>
+      <Reveal>
+        <DataCleaning />
+      </Reveal>
+      <Reveal>
+        <DataExcel />
+      </Reveal>
+      <Reveal>
+        <DataVisualizations />
+      </Reveal>
+      <Reveal>
+        <DataMethod />
+      </Reveal>
+      <Reveal>
+        <DataSurvey />
+      </Reveal>
+      <Reveal>
+        <DataStatistics />
+      </Reveal>
+      <Reveal>
+        <DataReportStructure />
+      </Reveal>
+      <Reveal>
+        <DataBusiness />
+      </Reveal>
+      <Reveal>
+        <DataAcademic />
+      </Reveal>
+      <Reveal>
+        <DataDeliverables />
+      </Reveal>
+      <Reveal>
+        <DataPillars />
+      </Reveal>
+      <Reveal>
+        <DataTopology />
+      </Reveal>
+      <Reveal>
+        <DataRelated />
+      </Reveal>
+      <Reveal>
+        <DataEngagement />
+      </Reveal>
+      <Reveal>
+        <DataFAQ />
+      </Reveal>
+      <Reveal>
+        <DataCTA />
+      </Reveal>
     </>
   );
 }

@@ -41,10 +41,10 @@ export function ServiceFAQ({
               <span className="font-headline-sm text-headline-sm text-primary font-medium">{faq.q}</span>
               <MaterialIcon
                 name="expand_more"
-                className="text-signal-blue text-[20px] transition-transform duration-200 group-open:rotate-180"
+                className="text-signal-green text-[20px] transition-transform duration-200 group-open:rotate-180"
               />
             </summary>
-            <div className="px-space-lg pb-space-lg pt-0">
+            <div className="fbx-faq-body px-space-lg pb-space-lg pt-0">
               <p className="font-body-sm text-body-sm text-on-surface-variant">{faq.a}</p>
             </div>
           </details>

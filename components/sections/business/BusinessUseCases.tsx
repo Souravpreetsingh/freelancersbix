@@ -42,7 +42,7 @@ export function BusinessUseCases() {
         eyebrow="Strategic Applications"
         title="Where Business Research Can Create Clarity"
         lead="Empirical business research solves tangible operational inflection points across organizations."
-        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold"
+        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold"
         containerClassName="flex flex-col gap-space-xs mb-space-2xl text-center items-center"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
@@ -52,7 +52,7 @@ export function BusinessUseCases() {
             className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md"
           >
             <div>
-              <div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue mb-space-sm">
+              <div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-signal-green mb-space-sm">
                 <MaterialIcon name={item.icon} className="text-[18px]" />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs">{item.title}</h3>

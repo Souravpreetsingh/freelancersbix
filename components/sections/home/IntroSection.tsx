@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { SITE } from "@/lib/design/site";
 
 export function IntroSection() {
   return (
@@ -26,24 +27,20 @@ export function IntroSection() {
             </div>
             <div className="pt-space-xl mt-space-lg border-t border-outline-variant/20 flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
-                <span className="w-3 h-3 bg-whiteout rounded-full" />
-                <span className="w-3 h-3 bg-signal-blue rounded-full" />
-                <span className="w-3 h-3 bg-twilight-blue rounded-full" />
+                <span className="w-3 h-3 bg-whiteout rounded-full ring-1 ring-outline-variant" />
+                <span className="w-3 h-3 bg-signal-green rounded-full" />
+                <span className="w-3 h-3 bg-deep-sage rounded-full" />
               </div>
-              <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">EST. 2026</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">EST. 2020</span>
             </div>
           </div>
 
           <div className="lg:col-span-7 flex flex-col gap-space-lg pl-0 lg:pl-space-lg">
-            <p className="font-body-lg text-body-lg text-on-surface leading-relaxed">
-              FreelancersBix helps students, professionals, startups and businesses with reliable, structured and
-              high-quality professional services. From academic research and business analysis to accounting, data and
-              digital support, we bring specialized expertise together under one platform.
-            </p>
+            <p className="font-body-lg text-body-lg text-on-surface leading-relaxed">{SITE.aboutExcerpt}</p>
             <div className="pt-space-xs">
               <Link
                 href="/about"
-                className="group inline-flex items-center gap-space-xs font-label-lg text-label-lg text-whiteout font-semibold hover:text-signal-blue transition-colors"
+                className="group inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary font-semibold hover:text-signal-green transition-colors"
               >
                 <span>Discover FreelancersBix</span>
                 <MaterialIcon

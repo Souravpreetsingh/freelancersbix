@@ -76,7 +76,7 @@ export function BusinessServices() {
         eyebrow="Specialized Practice Offerings"
         title="Business Research & Consulting Services"
         lead="Focused research support for strategic, operational, and business planning requirements across various verticals."
-        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold"
+        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
         {SERVICES.map((service) => (
@@ -86,15 +86,13 @@ export function BusinessServices() {
           >
             <div>
               <div className="flex justify-between items-start mb-space-md">
-                <span className="font-label-lg text-label-lg font-mono text-twilight-blue font-bold">
-                  {service.num}
-                </span>
-                <MaterialIcon name={service.icon} className="text-signal-blue text-[24px]" />
+                <span className="font-label-lg text-label-lg font-mono text-deep-sage font-bold">{service.num}</span>
+                <MaterialIcon name={service.icon} className="text-signal-green text-[24px]" />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs">{service.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{service.desc}</p>
             </div>
-            <div className="pt-space-md flex items-center text-label-sm text-signal-blue font-semibold gap-1 group-hover:translate-x-1 transition-transform">
+            <div className="pt-space-md flex items-center text-label-sm text-signal-green font-semibold gap-1 group-hover:translate-x-1 transition-transform">
               <span>Explore Scope</span>
               <MaterialIcon name="arrow_forward" className="text-[16px]" />
             </div>
@@ -102,7 +100,7 @@ export function BusinessServices() {
         ))}
         <div className="bg-secondary-container/30 rounded-xl p-space-lg flex flex-col justify-between col-span-1 md:col-span-2 lg:col-span-2 shadow-md">
           <div>
-            <div className="flex items-center gap-2 mb-space-sm text-signal-blue">
+            <div className="flex items-center gap-2 mb-space-sm text-signal-green">
               <MaterialIcon name="tune" className="text-[24px]" />
               <span className="font-label-sm text-label-sm uppercase tracking-wider font-semibold">
                 Custom Inquiries
@@ -119,7 +117,7 @@ export function BusinessServices() {
           <div className="pt-space-md">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-whiteout text-ink font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-primary text-on-primary font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg hover:opacity-90 transition-opacity"
             >
               <span>Speak with our Advisory Desk</span>
               <MaterialIcon name="north_east" className="text-[18px]" />

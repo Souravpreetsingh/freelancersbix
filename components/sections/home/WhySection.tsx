@@ -45,7 +45,7 @@ export function WhySection() {
               className="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col justify-between hover:bg-surface-container transition-all"
             >
               <div className="flex flex-col gap-space-md">
-                <span className="font-mono text-signal-blue text-headline-sm font-bold">{item.number}</span>
+                <span className="font-mono text-signal-green text-headline-sm font-bold">{item.number}</span>
                 <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{item.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{item.description}</p>
               </div>

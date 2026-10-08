@@ -34,7 +34,7 @@ export function HowToChoose() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col items-start gap-space-xs max-w-3xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Not Sure Where to Start?
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -49,7 +49,7 @@ export function HowToChoose() {
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="p-space-xl rounded-xl bg-surface-container-low border border-white/10 flex flex-col justify-between"
+              className="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant flex flex-col justify-between"
             >
               <div>
                 <span className="font-headline-lg text-headline-lg text-on-surface-variant/30 font-bold block mb-space-sm">
@@ -58,7 +58,7 @@ export function HowToChoose() {
                 <h3 className="font-headline-sm text-headline-sm text-primary mb-2">{step.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{step.description}</p>
               </div>
-              <div className="mt-space-lg pt-space-md border-t border-white/5 flex items-center gap-2 text-secondary text-xs">
+              <div className="mt-space-lg pt-space-md border-t border-outline-variant flex items-center gap-2 text-secondary text-xs">
                 <MaterialIcon name={step.icon} className="text-[16px]" />
                 <span>{step.note}</span>
               </div>
@@ -68,7 +68,7 @@ export function HowToChoose() {
         <div className="flex justify-start">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-ink hover:bg-haze transition-all font-medium"
+            className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-on-primary hover:bg-[#08452F] transition-all font-medium"
           >
             Tell Us What You Need
           </Link>

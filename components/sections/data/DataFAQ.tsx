@@ -57,7 +57,7 @@ export function DataFAQ() {
       title="Frequently Asked Questions"
       eyebrow="Inquiries & Clarifications"
       items={faqs}
-      sectionClassName="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-whiteout/5"
+      sectionClassName="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant"
     />
   );
 }

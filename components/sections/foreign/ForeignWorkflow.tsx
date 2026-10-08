@@ -46,10 +46,10 @@ const STEPS: { number: string; icon: IconName; title: string; description: strin
 
 export function ForeignWorkflow() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-white/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-[1400px] mx-auto space-y-space-2xl">
         <div>
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             How Accounting Support Works
           </span>
           <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -64,30 +64,30 @@ export function ForeignWorkflow() {
           {STEPS.map((step) => (
             <div
               key={step.number}
-              className="p-space-lg rounded-xl bg-surface-container-low border border-white/5 flex flex-col justify-between relative group hover:border-white/20 transition-all"
+              className="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant flex flex-col justify-between relative group hover:border-outline-variant transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-space-lg">
-                  <span className="font-mono text-lg font-bold text-signal-blue">{step.number}</span>
+                  <span className="font-mono text-lg font-bold text-signal-green">{step.number}</span>
                   <MaterialIcon name={step.icon} className="text-outline-variant text-[20px]" />
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold uppercase">{step.title}</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold uppercase">{step.title}</h3>
                 <p className="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">{step.description}</p>
               </div>
-              <span className="mt-space-lg font-mono text-[10px] text-outline uppercase tracking-wider">
+              <span className="mt-space-lg font-mono text-[10px] text-signal-green uppercase tracking-wider">
                 {step.phase}
               </span>
             </div>
           ))}
         </div>
-        <div className="p-space-md rounded-lg bg-surface-container/60 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-xs text-on-surface-variant">
+        <div className="p-space-md rounded-lg bg-surface-container/60 border border-outline-variant flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-xs text-on-surface-variant">
           <div className="flex items-center gap-2">
             <MaterialIcon name="verified_user" className="text-secondary text-[18px]" />
             <span>
               Collaborative operational support. Client retains full management approval and regulatory governance.
             </span>
           </div>
-          <span className="font-mono text-[11px] text-outline">PROTOCOL // FBX-ACC-V2</span>
+          <span className="font-mono text-[11px] text-on-surface-variant">PROTOCOL // FBX-ACC-V2</span>
         </div>
       </div>
     </section>

@@ -58,16 +58,14 @@ export function StartupBusinessPlan() {
             key={section.num}
             className="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between min-h-[140px]"
           >
-            <span className="font-label-sm text-label-sm text-twilight-blue font-semibold uppercase">
-              {section.num}
-            </span>
+            <span className="font-label-sm text-label-sm text-deep-sage font-semibold uppercase">{section.num}</span>
             <h4 className="font-headline-sm text-headline-sm text-primary">{section.title}</h4>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{section.desc}</p>
           </div>
         ))}
       </div>
       <div className="p-space-md bg-surface-container rounded-lg flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
-        <MaterialIcon name="verified" className="text-[16px] text-signal-blue" />
+        <MaterialIcon name="verified" className="text-[16px] text-signal-green" />
         <span>
           Disclaimer: The scope and structure of a business plan vary according to the business, audience and intended
           use.

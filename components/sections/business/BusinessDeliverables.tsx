@@ -24,7 +24,7 @@ export function BusinessDeliverables() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl">
         <div className="flex flex-col gap-space-xs mb-space-xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Standard Outputs
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
@@ -37,7 +37,7 @@ export function BusinessDeliverables() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-sm">
           {DELIVERABLES.map((item) => (
             <div key={item.label} className="bg-surface-container p-space-sm rounded-lg flex items-center gap-2">
-              <MaterialIcon name={item.icon} className="text-signal-blue text-[18px]" />
+              <MaterialIcon name={item.icon} className="text-signal-green text-[18px]" />
               <span className="font-body-sm text-body-sm text-on-surface">{item.label}</span>
             </div>
           ))}

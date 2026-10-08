@@ -29,10 +29,10 @@ export function ContentDeliverables() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs text-center items-center mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Turnkey Outputs
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             Professional deliverables, ready for their intended use.
           </h2>
         </div>
@@ -40,9 +40,9 @@ export function ContentDeliverables() {
           {deliverables.map((item) => (
             <div
               key={item.label}
-              className="p-space-sm rounded-lg bg-surface-container border border-whiteout/5 flex items-center gap-space-xs text-on-surface hover:text-whiteout transition-colors"
+              className="p-space-sm rounded-lg bg-surface-container border border-primary/40 flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors"
             >
-              <MaterialIcon name={item.icon} className="text-signal-blue text-[18px]" />
+              <MaterialIcon name={item.icon} className="text-signal-green text-[18px]" />
               <span className="font-body-sm text-body-sm font-medium">{item.label}</span>
             </div>
           ))}

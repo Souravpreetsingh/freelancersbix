@@ -81,14 +81,14 @@ export function StartupBusinessModel() {
               className="bg-surface-container rounded-lg p-space-md flex flex-col justify-between min-h-[140px]"
             >
               <div>
-                <div className="flex items-center justify-between text-twilight-blue mb-space-xs">
+                <div className="flex items-center justify-between text-deep-sage mb-space-xs">
                   <span className="font-label-sm text-label-sm uppercase font-semibold">{cell.slot}</span>
                   <MaterialIcon name={cell.icon} className="text-[18px]" />
                 </div>
                 <h4 className="font-headline-sm text-headline-sm text-primary mb-1">{cell.title}</h4>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{cell.desc}</p>
               </div>
-              <span className="font-label-sm text-label-sm text-signal-blue">{cell.chip}</span>
+              <span className="font-label-sm text-label-sm text-signal-green">{cell.chip}</span>
             </div>
           ))}
         </div>

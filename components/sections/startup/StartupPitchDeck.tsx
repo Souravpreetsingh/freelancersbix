@@ -28,7 +28,7 @@ export function StartupPitchDeck() {
             className="bg-surface-container-low p-space-sm rounded-lg flex flex-col items-center text-center gap-1 group hover:bg-surface-container transition-colors"
           >
             <span
-              className={`font-label-sm text-label-sm font-bold ${slide.highlight ? "text-signal-blue" : "text-twilight-blue"}`}
+              className={`font-label-sm text-label-sm font-bold ${slide.highlight ? "text-signal-green" : "text-deep-sage"}`}
             >
               {slide.num}
             </span>

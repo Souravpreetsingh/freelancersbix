@@ -1,14 +1,14 @@
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 const nodes = [
-  { letter: "Q", label: "Question", circle: "bg-signal-blue text-whiteout" },
-  { letter: "V", label: "Variables", circle: "bg-surface-container-high text-whiteout" },
-  { letter: "D", label: "Dataset", circle: "bg-surface-container-high text-whiteout" },
-  { letter: "M", label: "Method", circle: "bg-surface-container-high text-whiteout" },
-  { letter: "A", label: "Analysis", circle: "bg-surface-container-high text-whiteout" },
-  { letter: "F", label: "Finding", circle: "bg-secondary text-ink" },
-  { letter: "I", label: "Interpret", circle: "bg-surface-container-high text-whiteout" },
-  { letter: "C", label: "Conclusion", circle: "bg-whiteout text-ink" },
+  { letter: "Q", label: "Question", circle: "bg-signal-green text-whiteout" },
+  { letter: "V", label: "Variables", circle: "bg-surface-container-high text-primary" },
+  { letter: "D", label: "Dataset", circle: "bg-surface-container-high text-primary" },
+  { letter: "M", label: "Method", circle: "bg-surface-container-high text-primary" },
+  { letter: "A", label: "Analysis", circle: "bg-surface-container-high text-primary" },
+  { letter: "F", label: "Finding", circle: "bg-secondary text-whiteout" },
+  { letter: "I", label: "Interpret", circle: "bg-surface-container-high text-primary" },
+  { letter: "C", label: "Conclusion", circle: "bg-primary text-on-primary" },
 ];
 
 export function DataMethod() {
@@ -19,7 +19,7 @@ export function DataMethod() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Methodological Integration
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Analysis should answer a question.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -27,7 +27,7 @@ export function DataMethod() {
             you can defend.
           </p>
         </div>
-        <div className="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 overflow-x-auto">
+        <div className="p-space-lg rounded-xl bg-surface-container border border-outline-variant overflow-x-auto">
           <div className="flex items-center min-w-[720px] justify-between gap-2">
             {nodes.map((node, index) => (
               <div key={node.letter} className="flex items-center gap-2">

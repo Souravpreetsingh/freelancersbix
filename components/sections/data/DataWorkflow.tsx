@@ -9,20 +9,20 @@ const steps = [
 ];
 
 const numClass = (step: (typeof steps)[number]): string => {
-  if (step.num === "01") return "text-signal-blue";
-  if (step.num === "07") return "text-whiteout";
+  if (step.num === "01") return "text-signal-green";
+  if (step.num === "07") return "text-primary";
   return "text-secondary";
 };
 
 export function DataWorkflow() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center gap-space-xs mb-space-2xl">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Our Data Workflow
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout max-w-3xl">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary max-w-3xl">
             From raw information to meaningful presentation.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -37,17 +37,17 @@ export function DataWorkflow() {
                 key={step.num}
                 className={`p-4 rounded-xl border flex flex-col justify-between ${
                   highlight
-                    ? "bg-signal-blue/15 border-signal-blue/40"
-                    : "bg-surface-container-low/80 border-whiteout/10"
+                    ? "bg-signal-green/15 border-signal-green/40"
+                    : "bg-surface-container-low/80 border-outline-variant"
                 }`}
               >
                 <span className={`font-headline-sm text-headline-sm font-mono font-bold ${numClass(step)}`}>
                   {step.num}
                 </span>
                 <div className="mt-3">
-                  <h4 className="font-label-lg text-label-lg text-whiteout font-semibold mb-1">{step.title}</h4>
+                  <h4 className="font-label-lg text-label-lg text-primary font-semibold mb-1">{step.title}</h4>
                   <p
-                    className={`text-[13px] leading-tight ${highlight ? "text-whiteout/80" : "text-on-surface-variant"}`}
+                    className={`text-[13px] leading-tight ${highlight ? "text-primary/80" : "text-on-surface-variant"}`}
                   >
                     {step.body}
                   </p>

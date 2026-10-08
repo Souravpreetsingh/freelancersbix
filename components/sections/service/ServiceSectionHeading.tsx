@@ -17,7 +17,7 @@ export function ServiceSectionHeading({
     <div className={containerClassName ?? "flex flex-col gap-space-xs max-w-2xl mb-space-2xl"}>
       <span
         className={
-          eyebrowClassName ?? "font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold"
+          eyebrowClassName ?? "font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold"
         }
       >
         {eyebrow}

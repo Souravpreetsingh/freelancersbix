@@ -38,7 +38,7 @@ export function DigitalCompanion() {
     <section className="w-full bg-surface-container-lowest py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             FREELANCERSBIX ECOSYSTEM
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -52,7 +52,7 @@ export function DigitalCompanion() {
               className="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between"
             >
               <div>
-                <MaterialIcon name={companion.name} className="text-signal-blue text-2xl mb-space-sm" />
+                <MaterialIcon name={companion.name} className="text-signal-green text-2xl mb-space-sm" />
                 <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">
                   {companion.title}
                 </h3>
@@ -60,7 +60,7 @@ export function DigitalCompanion() {
               </div>
               <Link
                 href={companion.href}
-                className="font-label-sm text-label-sm text-signal-blue hover:text-whiteout flex items-center gap-1"
+                className="font-label-sm text-label-sm text-signal-green hover:text-primary flex items-center gap-1"
               >
                 <span>{companion.label}</span>
                 <MaterialIcon name="arrow_forward" className="text-sm" />

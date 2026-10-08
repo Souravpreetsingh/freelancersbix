@@ -34,7 +34,7 @@ export function DigitalVirtualAssistance() {
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
           <div className="lg:col-span-5 flex flex-col gap-space-md">
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               DEDICATED BANDWIDTH
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary leading-tight">
@@ -46,7 +46,7 @@ export function DigitalVirtualAssistance() {
               documentation, data verification, and research synthesis.
             </p>
             <div className="p-space-md rounded-lg bg-surface-container-low flex items-start gap-3">
-              <MaterialIcon name="info" className="text-signal-blue text-xl" />
+              <MaterialIcon name="info" className="text-signal-green text-xl" />
               <p className="font-body-sm text-body-sm text-on-surface-variant">
                 <strong className="text-primary">Note:</strong> Services are scoped strictly according to the specific
                 project or workflow. We focus on structured digital deliverables rather than open-ended phone
@@ -57,7 +57,7 @@ export function DigitalVirtualAssistance() {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
             {AREAS.map((area) => (
               <div key={area.name} className="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between">
-                <div className="flex items-center gap-space-sm mb-space-sm text-signal-blue">
+                <div className="flex items-center gap-space-sm mb-space-sm text-signal-green">
                   <MaterialIcon name={area.name} />
                   <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{area.title}</h3>
                 </div>

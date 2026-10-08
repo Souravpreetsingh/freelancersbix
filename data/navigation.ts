@@ -10,6 +10,7 @@ export const primaryNav: NavLink[] = [
   { label: "Services", href: "/services" },
   { label: "Foreign Accounting", href: "/services/foreign-accounting" },
   { label: "Careers", href: "/careers" },
+  { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 

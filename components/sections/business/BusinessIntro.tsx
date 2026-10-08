@@ -2,7 +2,7 @@ const PIPELINE: { num: string; step: string; circleClass: string; detail: string
   {
     num: "1",
     step: "Business Question",
-    circleClass: "bg-signal-blue/20 text-signal-blue",
+    circleClass: "bg-signal-green/20 text-signal-green",
     detail: "Formulation of exact parameters, objectives, and market hypotheses.",
   },
   {
@@ -26,7 +26,7 @@ const PIPELINE: { num: string; step: string; circleClass: string; detail: string
   {
     num: "5",
     step: "Decision Support",
-    circleClass: "bg-signal-blue text-whiteout",
+    circleClass: "bg-signal-green text-whiteout",
     detail: "Clear executive presentations, risk assessments, and implementation blueprints.",
   },
 ];
@@ -36,7 +36,7 @@ export function BusinessIntro() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-start">
         <div className="lg:col-span-6 flex flex-col gap-space-md">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Business Research Support
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight leading-tight">
@@ -59,7 +59,7 @@ export function BusinessIntro() {
         <div className="lg:col-span-6 bg-surface-container-low rounded-xl p-space-xl shadow-lg">
           <div className="flex items-center justify-between pb-space-md mb-space-md">
             <span className="font-headline-sm text-headline-sm text-primary">Strategic Discovery Pipeline</span>
-            <span className="font-label-sm text-label-sm text-signal-blue">Sequential Logic</span>
+            <span className="font-label-sm text-label-sm text-signal-green">Sequential Logic</span>
           </div>
           <div className="relative space-y-space-md">
             {PIPELINE.map((item, index) => (

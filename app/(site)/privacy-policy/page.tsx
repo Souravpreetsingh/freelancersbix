@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
 import { RoutePlaceholder } from "@/components/ui/RoutePlaceholder";
 import { pageMetadata } from "@/lib/design/seo";
 import type { Metadata } from "next";
@@ -7,5 +8,9 @@ export const metadata: Metadata = pageMetadata("/privacy-policy", undefined, {
 });
 
 export default function PrivacyPolicyPage() {
-  return <RoutePlaceholder title="Privacy Policy" />;
+  return (
+    <Reveal>
+      <RoutePlaceholder title="Privacy Policy" />
+    </Reveal>
+  );
 }

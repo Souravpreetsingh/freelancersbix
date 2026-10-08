@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { ContentAudience } from "@/components/sections/content/ContentAudience";
 import { ContentBusiness } from "@/components/sections/content/ContentBusiness";
 import { ContentChecklist } from "@/components/sections/content/ContentChecklist";
@@ -35,28 +36,66 @@ export default function ContentAndWritingPage() {
         variant="slash"
         size="md"
         wrapperClassName="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm"
-        currentClassName="text-whiteout font-medium"
+        currentClassName="text-primary font-medium"
       />
       <ContentHero />
-      <ContentTrust />
-      <ContentIntro />
-      <ContentServices />
-      <ContentWorkflow />
-      <ContentQuality />
-      <ContentBusiness />
-      <ContentPipeline />
-      <ContentTechnical />
-      <ContentProofread />
-      <ContentTypes />
-      <ContentAudience />
-      <ContentStructure />
-      <ContentTone />
-      <ContentChecklist />
-      <ContentDeliverables />
-      <ContentConnections />
-      <ContentEngagement />
-      <ContentFAQ />
-      <ContentCTA />
+      <Reveal>
+        <ContentTrust />
+      </Reveal>
+      <Reveal>
+        <ContentIntro />
+      </Reveal>
+      <Reveal>
+        <ContentServices />
+      </Reveal>
+      <Reveal>
+        <ContentWorkflow />
+      </Reveal>
+      <Reveal>
+        <ContentQuality />
+      </Reveal>
+      <Reveal>
+        <ContentBusiness />
+      </Reveal>
+      <Reveal>
+        <ContentPipeline />
+      </Reveal>
+      <Reveal>
+        <ContentTechnical />
+      </Reveal>
+      <Reveal>
+        <ContentProofread />
+      </Reveal>
+      <Reveal>
+        <ContentTypes />
+      </Reveal>
+      <Reveal>
+        <ContentAudience />
+      </Reveal>
+      <Reveal>
+        <ContentStructure />
+      </Reveal>
+      <Reveal>
+        <ContentTone />
+      </Reveal>
+      <Reveal>
+        <ContentChecklist />
+      </Reveal>
+      <Reveal>
+        <ContentDeliverables />
+      </Reveal>
+      <Reveal>
+        <ContentConnections />
+      </Reveal>
+      <Reveal>
+        <ContentEngagement />
+      </Reveal>
+      <Reveal>
+        <ContentFAQ />
+      </Reveal>
+      <Reveal>
+        <ContentCTA />
+      </Reveal>
     </>
   );
 }

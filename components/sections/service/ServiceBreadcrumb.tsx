@@ -18,7 +18,7 @@ export function ServiceBreadcrumb({
 }: ServiceBreadcrumbProps) {
   const sizeClass = size === "sm" ? "font-label-sm text-label-sm" : "font-label-md text-label-md";
   return (
-    <section className="w-full bg-surface-container-lowest">
+    <section className="w-full bg-haze border-b border-outline-variant/60">
       <div className={wrapperClassName ?? "w-full px-margin-mobile md:px-margin py-space-sm"}>
         <nav
           aria-label="Breadcrumb"
@@ -40,7 +40,7 @@ export function ServiceBreadcrumb({
           ) : (
             <span className="text-outline-variant">/</span>
           )}
-          <span className={currentClassName ?? "text-signal-blue font-medium"}>{current}</span>
+          <span className={currentClassName ?? "text-signal-green font-medium"}>{current}</span>
         </nav>
       </div>
     </section>

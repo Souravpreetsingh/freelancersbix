@@ -106,7 +106,7 @@ export function AcademicServices() {
                 </span>
               ) : null}
               <div className="flex items-start justify-between mb-space-md pt-space-sm">
-                <span className="font-label-md text-label-md font-bold tracking-widest text-signal-blue">
+                <span className="font-label-md text-label-md font-bold tracking-widest text-signal-green">
                   {service.num}
                 </span>
                 <MaterialIcon
@@ -118,7 +118,7 @@ export function AcademicServices() {
               <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">{service.body}</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center font-label-sm text-label-sm text-secondary-fixed group-hover:text-primary transition-colors"
+                className="inline-flex items-center font-label-sm text-label-sm text-signal-green group-hover:text-primary transition-colors"
               >
                 <span>Discuss Research Support</span>
                 <MaterialIcon name="arrow_forward" className="text-[16px] ml-1" />
@@ -126,7 +126,7 @@ export function AcademicServices() {
             </div>
           ))}
           <div className="bg-surface-container rounded-xl p-space-xl flex flex-col justify-center items-start shadow-md">
-            <span className="font-label-sm text-label-sm text-signal-blue uppercase font-bold mb-space-xs">
+            <span className="font-label-sm text-label-sm text-signal-green uppercase font-bold mb-space-xs">
               Custom Scope
             </span>
             <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs">
@@ -137,7 +137,7 @@ export function AcademicServices() {
             </p>
             <Link
               href="/contact"
-              className="px-space-md py-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-whiteout hover:text-on-primary transition-all"
+              className="px-space-md py-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all"
             >
               <span>Submit Custom Brief →</span>
             </Link>

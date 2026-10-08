@@ -16,7 +16,7 @@ export function DigitalResearch() {
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
           <div className="lg:col-span-6 flex flex-col gap-space-md">
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               FACTUAL ACCUMULATION
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary leading-tight">
@@ -30,7 +30,7 @@ export function DigitalResearch() {
             <div>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 font-label-lg text-label-lg text-signal-blue hover:text-whiteout transition-colors"
+                className="inline-flex items-center gap-2 font-label-lg text-label-lg text-signal-green hover:text-primary transition-colors"
               >
                 <span>Explore Academic & Research Support</span>
                 <MaterialIcon name="arrow_forward" className="text-sm" />
@@ -46,10 +46,10 @@ export function DigitalResearch() {
                 <div
                   key={step.num}
                   className={`p-space-sm rounded-lg text-center ${
-                    step.highlight ? "bg-signal-blue/20" : "bg-surface-container"
+                    step.highlight ? "bg-signal-green/20" : "bg-surface-container"
                   }`}
                 >
-                  <span className={`block font-bold ${step.highlight ? "text-secondary" : "text-signal-blue"}`}>
+                  <span className={`block font-bold ${step.highlight ? "text-secondary" : "text-signal-green"}`}>
                     {step.num}
                   </span>
                   <span className={`text-[11px] ${step.highlight ? "text-primary" : "text-on-surface-variant"}`}>

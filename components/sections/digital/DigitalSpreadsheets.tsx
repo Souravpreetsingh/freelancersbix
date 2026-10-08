@@ -40,7 +40,7 @@ export function DigitalSpreadsheets() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl max-w-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             SPREADSHEET EXCELLENCE
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -54,7 +54,7 @@ export function DigitalSpreadsheets() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
           {CARDS.map((card) => (
             <div key={card.name} className="p-space-lg rounded-xl bg-surface-container-low">
-              <MaterialIcon name={card.name} className="text-signal-blue text-2xl mb-space-sm" />
+              <MaterialIcon name={card.name} className="text-signal-green text-2xl mb-space-sm" />
               <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">{card.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{card.desc}</p>
             </div>
@@ -67,7 +67,7 @@ export function DigitalSpreadsheets() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-space-sm text-body-sm">
             {TASKS.map((task) => (
               <div key={task} className="flex items-center gap-2 text-on-surface-variant">
-                <MaterialIcon name="check_circle" className="text-signal-blue text-sm" />
+                <MaterialIcon name="check_circle" className="text-signal-green text-sm" />
                 <span>{task}</span>
               </div>
             ))}

@@ -27,13 +27,13 @@ const cards = [
 
 export function ContentConnections() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Connected Practices
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             Need specialized assistance alongside writing?
           </h2>
         </div>
@@ -41,11 +41,13 @@ export function ContentConnections() {
           {cards.map((card) => (
             <div
               key={card.cta}
-              className="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between"
+              className="p-space-lg rounded-xl bg-surface-container border border-outline-variant flex flex-col justify-between"
             >
               <div>
-                <span className="font-label-sm text-label-sm text-signal-blue uppercase font-mono">{card.eyebrow}</span>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout mt-1 mb-space-xs font-semibold">
+                <span className="font-label-sm text-label-sm text-signal-green uppercase font-mono">
+                  {card.eyebrow}
+                </span>
+                <h3 className="font-headline-sm text-headline-sm text-primary mt-1 mb-space-xs font-semibold">
                   {card.title}
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{card.body}</p>
@@ -53,7 +55,7 @@ export function ContentConnections() {
               <div className="pt-space-lg">
                 <Link
                   href={card.href}
-                  className="inline-flex items-center gap-1 font-label-md text-label-md text-whiteout hover:text-signal-blue transition-colors font-medium"
+                  className="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-signal-green transition-colors font-medium"
                 >
                   <span>{card.cta}</span>
                   <MaterialIcon name="arrow_forward" className="text-[14px]" />

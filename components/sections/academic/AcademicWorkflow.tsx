@@ -51,7 +51,7 @@ export function AcademicWorkflow() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
           {steps.map((step) => (
             <div key={step.num} className="p-space-lg rounded-xl bg-surface-container-low shadow-sm">
-              <span className="font-label-sm text-label-sm text-signal-blue font-bold">{`${step.num} ${step.tag}`}</span>
+              <span className="font-label-sm text-label-sm text-signal-green font-bold">{`${step.num} ${step.tag}`}</span>
               <h3 className="font-headline-sm text-headline-sm text-primary mt-space-xs mb-space-xs">{step.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{step.body}</p>
             </div>

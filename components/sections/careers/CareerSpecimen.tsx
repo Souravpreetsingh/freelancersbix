@@ -28,7 +28,7 @@ export function CareerSpecimen() {
         <div className="bg-surface-container-low rounded-xl p-space-xl md:p-space-2xl shadow-xl flex flex-col gap-space-xl">
           <div className="flex flex-wrap items-center justify-between gap-space-sm">
             <div className="flex items-center gap-space-xs">
-              <span className="px-space-sm py-1 rounded bg-signal-blue/20 text-signal-blue font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              <span className="px-space-sm py-1 rounded bg-signal-green/20 text-signal-green font-label-sm text-label-sm font-bold uppercase tracking-wider">
                 Spotlight Opportunity Specimen
               </span>
               <span className="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
@@ -49,13 +49,13 @@ export function CareerSpecimen() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-xl pt-space-md">
             <div className="flex flex-col gap-space-md">
               <div className="flex items-center gap-space-xs text-primary">
-                <MaterialIcon name="checklist" className="text-signal-blue" />
+                <MaterialIcon name="checklist" className="text-signal-green" />
                 <h4 className="font-headline-sm text-headline-sm font-bold uppercase">Key Deliverables</h4>
               </div>
               <ul className="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
                 {DELIVERABLES.map((deliverable) => (
                   <li key={deliverable} className="flex items-start gap-space-xs">
-                    <span className="text-signal-blue font-bold">•</span>
+                    <span className="text-signal-green font-bold">•</span>
                     <span>{deliverable}</span>
                   </li>
                 ))}
@@ -63,13 +63,13 @@ export function CareerSpecimen() {
             </div>
             <div className="flex flex-col gap-space-md">
               <div className="flex items-center gap-space-xs text-primary">
-                <MaterialIcon name="verified" className="text-signal-blue" />
+                <MaterialIcon name="verified" className="text-signal-green" />
                 <h4 className="font-headline-sm text-headline-sm font-bold uppercase">Qualifications</h4>
               </div>
               <ul className="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
                 {QUALIFICATIONS.map((qualification) => (
                   <li key={qualification} className="flex items-start gap-space-xs">
-                    <span className="text-signal-blue font-bold">•</span>
+                    <span className="text-signal-green font-bold">•</span>
                     <span>{qualification}</span>
                   </li>
                 ))}
@@ -82,14 +82,14 @@ export function CareerSpecimen() {
               <div className="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
                 {PARAMETERS.map((parameter) => (
                   <div key={parameter.label} className="flex justify-between gap-space-sm">
-                    <span className="text-outline">{parameter.label}</span>
+                    <span className="text-on-surface-variant">{parameter.label}</span>
                     <span className="text-primary font-medium text-right">{parameter.value}</span>
                   </div>
                 ))}
               </div>
               <div className="pt-space-md">
                 <a
-                  className="w-full inline-flex items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-ink bg-whiteout hover:bg-whiteout/90 font-medium transition-all"
+                  className="w-full inline-flex items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary/90 font-medium transition-all"
                   href="#general-application"
                 >
                   Apply for this Position

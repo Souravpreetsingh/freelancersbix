@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
 import { ApproachSection } from "@/components/sections/home/ApproachSection";
 import { AudienceSection } from "@/components/sections/home/AudienceSection";
@@ -14,23 +15,43 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ValueStrip />
-      <IntroSection />
-      <ServicesMatrix />
-      <FeaturedAccounting />
-      <WhySection />
-      <ApproachSection />
-      <AudienceSection />
-      <StatsSection />
-      <TestimonialsSection />
-      <CTASection
-        eyebrow="Initiate Engagement"
-        title="Have a project in mind?"
-        description="Tell us what you need. Our team will help you identify the right service, configure clear milestones and chart next steps."
-        primary={{ label: "Get a Free Consultation", href: "/contact" }}
-        secondary={{ label: "Contact Us", href: "/contact" }}
-        notes={["Standard NDA Protected", "Response within 24 Hours", "Global Compliance"]}
-      />
+      <Reveal>
+        <ValueStrip />
+      </Reveal>
+      <Reveal>
+        <IntroSection />
+      </Reveal>
+      <Reveal>
+        <ServicesMatrix />
+      </Reveal>
+      <Reveal>
+        <FeaturedAccounting />
+      </Reveal>
+      <Reveal>
+        <WhySection />
+      </Reveal>
+      <Reveal>
+        <ApproachSection />
+      </Reveal>
+      <Reveal>
+        <AudienceSection />
+      </Reveal>
+      <Reveal>
+        <StatsSection />
+      </Reveal>
+      <Reveal>
+        <TestimonialsSection />
+      </Reveal>
+      <Reveal>
+        <CTASection
+          eyebrow="Initiate Engagement"
+          title="Have a project in mind?"
+          description="Tell us what you need. Our team will help you identify the right service, configure clear milestones and chart next steps."
+          primary={{ label: "Get a Free Consultation", href: "/contact" }}
+          secondary={{ label: "Contact Us", href: "/contact" }}
+          notes={["Standard NDA Protected", "Response within 24 Hours", "Global Compliance"]}
+        />
+      </Reveal>
     </>
   );
 }

@@ -49,7 +49,7 @@ const MAX_FILES = 8;
  * Optional free-text field. The wizard sends empty strings for optional
  * inputs; this helper collapses them to `undefined` so storage stays clean.
  */
-function optionalText(max: number) {
+export function optionalText(max: number) {
   return z
     .union([z.literal(""), z.string().trim().min(1).max(max)])
     .optional()

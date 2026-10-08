@@ -63,10 +63,10 @@ export function ContentTone() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Precision Register
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             The right tone for the right audience.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -74,15 +74,15 @@ export function ContentTone() {
             intent.
           </p>
         </div>
-        <div className="w-full rounded-2xl bg-surface-container border border-whiteout/10 p-space-lg">
-          <div className="flex flex-wrap gap-space-xs border-b border-whiteout/10 pb-space-md mb-space-lg">
+        <div className="w-full rounded-2xl bg-surface-container border border-outline-variant p-space-lg">
+          <div className="flex flex-wrap gap-space-xs border-b border-outline-variant pb-space-md mb-space-lg">
             {panes.map((pane) => (
               <button
                 key={pane.id}
                 type="button"
                 onClick={() => setActiveId(pane.id)}
                 className={`px-space-md py-space-xs rounded-full font-label-md text-label-md font-medium transition-all ${
-                  active.id === pane.id ? "bg-whiteout text-ink" : "text-on-surface-variant hover:text-whiteout"
+                  active.id === pane.id ? "bg-primary text-on-primary" : "text-on-surface-variant hover:text-primary"
                 }`}
               >
                 {pane.label}
@@ -90,12 +90,12 @@ export function ContentTone() {
             ))}
           </div>
           <div className="space-y-space-md">
-            <div className="flex items-center justify-between text-twilight-blue font-label-sm text-label-sm">
+            <div className="flex items-center justify-between text-deep-sage font-label-sm text-label-sm">
               <span>{active.register}</span>
               <span>{active.intent}</span>
             </div>
-            <div className="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-blue">
-              <h4 className="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">
+            <div className="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-signal-green">
+              <h4 className="font-headline-sm text-headline-sm text-primary mb-space-xs font-semibold">
                 {active.title}
               </h4>
               <p className="font-body-md text-body-md text-on-surface leading-relaxed">{active.quote}</p>

@@ -54,7 +54,7 @@ export function BusinessJourney() {
         eyebrow="Engagement Workflow"
         title="What a Typical Research Project Can Look Like"
         lead="From the initial consultation call through to final deliverables sign-off, here is our transparent sequential engagement timeline."
-        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold"
+        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold"
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-space-sm">
         {STEPS.map((step, index) => (
@@ -63,13 +63,13 @@ export function BusinessJourney() {
             className="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm"
           >
             <div>
-              <span className="font-mono text-signal-blue font-bold text-label-sm">{step.num}</span>
+              <span className="font-mono text-signal-green font-bold text-label-sm">{step.num}</span>
               <h3 className="font-headline-sm text-body-md font-semibold text-primary mt-1">{step.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">{step.desc}</p>
             </div>
             <MaterialIcon
               name={step.icon}
-              className={`text-[20px] mt-4 self-end ${index === STEPS.length - 1 ? "text-signal-blue" : "text-outline"}`}
+              className={`text-[20px] mt-4 self-end ${index === STEPS.length - 1 ? "text-signal-green" : "text-outline"}`}
             />
           </div>
         ))}

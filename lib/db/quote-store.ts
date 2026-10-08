@@ -82,6 +82,7 @@ async function runInsert(store: Pool, q: QuoteRequest, reference: string): Promi
       q.preferredChannel,
       q.notes ?? null,
       q.consent === true,
+      "NEW",
     ],
   );
   return rowCount === 1 && rows[0] ? rows[0] : null;
@@ -109,4 +110,101 @@ export async function createQuoteRequest(q: QuoteRequest): Promise<CreateQuoteRe
     }
     return { ok: false, code: "UNREACHABLE" };
   }
+}
+
+export interface QuoteRecord {
+  id: string;
+  reference: string;
+  service: string;
+  title: string;
+  description: string;
+  outcome: string | null;
+  deadline: string;
+  budget: string;
+  currency: string;
+  structure: string;
+  files: { name: string; size: string }[];
+  contactName: string;
+  contactOrg: string | null;
+  contactEmail: string;
+  contactPhone: string | null;
+  contactCountry: string | null;
+  preferredChannel: string;
+  notes: string | null;
+  consent: boolean;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+type QuoteRow = Record<string, unknown>;
+
+const QUOTE_SELECT = `
+  SELECT id, reference, service, title, description, outcome,
+         deadline, budget, currency, structure, files,
+         contact_name, contact_org, contact_email, contact_phone, contact_country,
+         preferred_channel, notes, consent, status, created_at, updated_at
+  FROM quote_requests`;
+
+function mapQuoteRow(row: QuoteRow): QuoteRecord {
+  return {
+    id: String(row.id),
+    reference: String(row.reference),
+    service: String(row.service),
+    title: String(row.title),
+    description: String(row.description),
+    outcome: row.outcome == null ? null : String(row.outcome),
+    deadline: String(row.deadline),
+    budget: String(row.budget),
+    currency: String(row.currency),
+    structure: String(row.structure),
+    files: Array.isArray(row.files) ? (row.files as { name: string; size: string }[]) : [],
+    contactName: String(row.contact_name),
+    contactOrg: row.contact_org == null ? null : String(row.contact_org),
+    contactEmail: String(row.contact_email),
+    contactPhone: row.contact_phone == null ? null : String(row.contact_phone),
+    contactCountry: row.contact_country == null ? null : String(row.contact_country),
+    preferredChannel: String(row.preferred_channel),
+    notes: row.notes == null ? null : String(row.notes),
+    consent: row.consent === true || row.consent === "t" || row.consent === "true",
+    status: String(row.status),
+    createdAt: String(row.created_at),
+    updatedAt: String(row.updated_at),
+  };
+}
+
+export async function listQuoteRequests(): Promise<QuoteRecord[]> {
+  const store = getPool();
+  if (!store) return [];
+  const { rows } = await store.query<QuoteRow>(`${QUOTE_SELECT} ORDER BY created_at DESC`);
+  return rows.map(mapQuoteRow);
+}
+
+export async function getQuoteRequest(id: string): Promise<QuoteRecord | null> {
+  const store = getPool();
+  if (!store) return null;
+  const { rows } = await store.query<QuoteRow>(`${QUOTE_SELECT} WHERE id = $1 LIMIT 1`, [id]);
+  return rows[0] ? mapQuoteRow(rows[0]) : null;
+}
+
+export async function updateQuoteStatus(id: string, status: string): Promise<boolean> {
+  const store = getPool();
+  if (!store) return false;
+  const { rowCount } = await store.query(
+    `UPDATE quote_requests SET status = $2, updated_at = now() WHERE id = $1`,
+    [id, status],
+  );
+  return rowCount === 1;
+}
+
+/** Dashboard counts, keyed by status. Returns zero-object when unconfigured. */
+export async function quoteStatusCounts(): Promise<Record<string, number>> {
+  const store = getPool();
+  if (!store) return {};
+  const { rows } = await store.query<{ status: string; count: string }>(
+    `SELECT status, count(*)::text AS count FROM quote_requests GROUP BY status`,
+  );
+  const counts: Record<string, number> = {};
+  for (const row of rows) counts[row.status] = Number(row.count);
+  return counts;
 }

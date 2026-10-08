@@ -47,7 +47,7 @@ export function AcademicWhoWeSupport() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
           {groups.map((group) => (
             <div key={group.title} className="p-space-lg rounded-xl bg-surface-container-low shadow-sm">
-              <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-blue mb-space-md">
+              <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-signal-green mb-space-md">
                 <MaterialIcon name={group.icon} className="text-[20px]" />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs">{group.title}</h3>

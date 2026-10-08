@@ -19,7 +19,7 @@ export function AcademicTrust() {
               item.label === "Confidentiality-Conscious" ? "col-span-2 md:col-span-1" : ""
             }`}
           >
-            <MaterialIcon name={item.icon} className="text-signal-blue text-[20px]" />
+            <MaterialIcon name={item.icon} className="text-signal-green text-[20px]" />
             <span className="font-label-lg text-label-lg text-primary font-medium">{item.label}</span>
           </div>
         ))}

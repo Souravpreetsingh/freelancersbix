@@ -40,8 +40,8 @@ export function ApproachSection() {
       banner={
         <div className="p-space-xl rounded-xl bg-surface-container-high/80 border border-outline-variant/20 flex items-center justify-center text-center">
           <span className="font-headline-sm text-headline-sm text-primary tracking-wide">
-            Research <span className="text-signal-blue px-2">•</span> Analyse{" "}
-            <span className="text-signal-blue px-2">•</span> Create <span className="text-signal-blue px-2">•</span>{" "}
+            Research <span className="text-signal-green px-2">•</span> Analyse{" "}
+            <span className="text-signal-green px-2">•</span> Create <span className="text-signal-green px-2">•</span>{" "}
             Deliver
           </span>
         </div>

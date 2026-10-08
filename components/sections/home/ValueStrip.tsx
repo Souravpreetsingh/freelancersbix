@@ -18,7 +18,7 @@ export function ValueStrip() {
             key={item.title}
             className="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors"
           >
-            <div className="w-10 h-10 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-signal-blue">
+            <div className="w-10 h-10 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-signal-green">
               <MaterialIcon name={item.icon} className="text-[22px]" />
             </div>
             <div className="flex flex-col min-w-0">

@@ -33,7 +33,7 @@ export function StartupDeliverables() {
             key={deliverable.label}
             className="bg-surface-container p-space-md rounded-lg flex items-center gap-space-xs text-on-surface"
           >
-            <MaterialIcon name={deliverable.icon} className="text-signal-blue text-[18px]" />
+            <MaterialIcon name={deliverable.icon} className="text-signal-green text-[18px]" />
             <span className="font-body-sm text-body-sm">{deliverable.label}</span>
           </div>
         ))}

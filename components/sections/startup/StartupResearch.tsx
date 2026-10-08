@@ -29,7 +29,7 @@ export function StartupResearch() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
         <div className="lg:col-span-5 flex flex-col gap-space-md">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Startup Research
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase leading-tight">
@@ -40,7 +40,7 @@ export function StartupResearch() {
             research, competitive profiling, and market scanning mitigates premature deployment of capital.
           </p>
           <div className="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-sm text-label-sm">
-            <MaterialIcon name="fact_check" className="text-[16px] text-signal-blue" />
+            <MaterialIcon name="fact_check" className="text-[16px] text-signal-green" />
             <span>Illustrative research framework tailored to early-stage decision validation.</span>
           </div>
         </div>
@@ -50,7 +50,7 @@ export function StartupResearch() {
               key={block.title}
               className="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm hover:bg-surface-container transition-colors"
             >
-              <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+              <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-green">
                 <MaterialIcon name={block.icon} className="text-[20px]" />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-primary">{block.title}</h3>

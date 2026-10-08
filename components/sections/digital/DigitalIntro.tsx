@@ -4,7 +4,7 @@ const STEPS = [
     title: "Request",
     desc: "Scope baseline, expectations & format target",
     tag: "Intake",
-    tagClass: "bg-signal-blue/10 text-signal-blue",
+    tagClass: "bg-signal-green/10 text-signal-green",
     active: false,
   },
   {
@@ -20,7 +20,7 @@ const STEPS = [
     title: "Process",
     desc: "Execute entry, standardization, data assembly",
     tag: "Active",
-    tagClass: "bg-signal-blue/20 text-signal-blue font-bold",
+    tagClass: "bg-signal-green/20 text-signal-green font-bold",
     active: true,
   },
   {
@@ -47,7 +47,7 @@ export function DigitalIntro() {
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
           <div className="lg:col-span-6 flex flex-col gap-space-md">
-            <span className="font-label-sm text-label-sm tracking-widest uppercase text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm tracking-widest uppercase text-signal-green font-bold">
               DIGITAL OPERATIONS SUPPORT
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary leading-tight">
@@ -81,7 +81,7 @@ export function DigitalIntro() {
                     <div className="flex items-center gap-space-sm">
                       <span
                         className={`w-7 h-7 rounded-full font-mono text-label-sm flex items-center justify-center font-bold ${
-                          step.active ? "bg-signal-blue text-whiteout" : "bg-surface-container-highest text-primary"
+                          step.active ? "bg-signal-green text-whiteout" : "bg-surface-container-highest text-primary"
                         }`}
                       >
                         {step.num}

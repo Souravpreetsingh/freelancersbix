@@ -19,10 +19,10 @@ const PIPELINE: { label: string; value: string }[] = [
 
 export function ForeignTools() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-white/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-[1400px] mx-auto space-y-space-2xl">
         <div className="max-w-3xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Tools &amp; Workflows
           </span>
           <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -37,22 +37,22 @@ export function ForeignTools() {
           {TOOLS.map((tool) => (
             <div
               key={tool.label}
-              className="p-space-md rounded-xl bg-surface-container-low border border-white/5 text-center flex flex-col items-center justify-center space-y-2 hover:border-white/20 transition-all"
+              className="p-space-md rounded-xl bg-surface-container-low border border-outline-variant text-center flex flex-col items-center justify-center space-y-2 hover:border-outline-variant transition-all"
             >
-              <MaterialIcon name={tool.icon} className="text-signal-blue text-[28px]" />
-              <span className="font-headline-sm text-xs font-bold text-whiteout">{tool.label}</span>
+              <MaterialIcon name={tool.icon} className="text-signal-green text-[28px]" />
+              <span className="font-headline-sm text-xs font-bold text-primary">{tool.label}</span>
             </div>
           ))}
         </div>
-        <div className="p-space-lg rounded-xl bg-surface-container-low border border-white/5">
+        <div className="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant">
           <div className="flex flex-col md:flex-row items-center justify-between gap-space-md text-center">
             {PIPELINE.map((stage, index) => (
               <div key={stage.label} className="contents">
                 <div className="flex-1">
-                  <span className="font-mono text-xs text-signal-blue uppercase tracking-widest block mb-1">
+                  <span className="font-mono text-xs text-signal-green uppercase tracking-widest block mb-1">
                     {stage.label}
                   </span>
-                  <span className="font-headline-sm text-headline-sm font-bold text-whiteout">{stage.value}</span>
+                  <span className="font-headline-sm text-headline-sm font-bold text-primary">{stage.value}</span>
                 </div>
                 {index < PIPELINE.length - 1 ? (
                   <MaterialIcon name="east" className="text-outline-variant rotate-90 md:rotate-0" />
@@ -61,7 +61,7 @@ export function ForeignTools() {
             ))}
           </div>
         </div>
-        <p className="text-xs text-outline font-body-sm text-center">
+        <p className="text-xs text-on-surface-variant font-body-sm text-center">
           Supported tools and integrations vary based on client preferences, regulatory domicile, and existing
           operational setup.
         </p>

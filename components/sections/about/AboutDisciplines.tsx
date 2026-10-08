@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
+import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import type { IconName } from "@/lib/design/icons";
 
@@ -9,7 +10,6 @@ const DISCIPLINES: {
   title: string;
   description: string;
   href: string;
-  highlight?: boolean;
 }[] = [
   {
     index: "01",
@@ -34,7 +34,6 @@ const DISCIPLINES: {
     description:
       "US, UK, and Australian GAAP/IFRS bookkeeping, reconciliations, payroll administration, and financial reporting.",
     href: "/services/foreign-accounting",
-    highlight: true,
   },
   {
     index: "04",
@@ -80,51 +79,32 @@ export function AboutDisciplines() {
           className="flex flex-col gap-space-xs"
           eyebrowBold={false}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
-          {DISCIPLINES.map((item) => (
-            <div
-              key={item.index}
-              className={
-                item.highlight
-                  ? "group p-space-lg rounded-xl bg-surface-container-high border-2 border-signal-blue relative flex flex-col justify-between min-h-[260px] shadow-[0_8px_32px_rgba(43,127,255,0.15)]"
-                  : "group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-blue/50 transition-all flex flex-col justify-between min-h-[260px]"
-              }
-            >
-              {item.highlight ? (
-                <div className="absolute -top-3 right-4 px-2 py-0.5 rounded-full bg-signal-blue text-black-void font-label-sm text-label-sm font-bold tracking-wide uppercase">
-                  Primary Core Practice
-                </div>
-              ) : null}
-              <div>
-                <div className="flex items-center justify-between mb-space-md">
-                  <span
-                    className={
-                      item.highlight
-                        ? "font-label-md text-label-md font-mono text-signal-blue"
-                        : "font-label-md text-label-md font-mono text-on-surface-variant"
-                    }
-                  >
-                    {item.index}
-                  </span>
-                  <MaterialIcon name={item.icon} className="text-signal-blue text-2xl" />
-                </div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold mb-space-xs">{item.title}</h3>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">{item.description}</p>
-              </div>
-              <Link
-                href={item.href}
-                className={
-                  item.highlight
-                    ? "inline-flex items-center gap-1 font-label-md text-label-md text-signal-blue font-bold mt-space-md group-hover:translate-x-1 transition-transform"
-                    : "inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all"
-                }
+        <Reveal stagger>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            {DISCIPLINES.map((item) => (
+              <div
+                key={item.index}
+                className="group p-space-lg rounded-xl bg-surface-container border border-outline-variant/30 hover:border-signal-green/50 transition-all flex flex-col justify-between min-h-[260px]"
               >
-                <span>Explore Service</span>
-                <MaterialIcon name="arrow_forward" className="text-sm" />
-              </Link>
-            </div>
-          ))}
-        </div>
+                <div>
+                  <div className="flex items-center justify-between mb-space-md">
+                    <span className="font-label-md text-label-md font-mono text-on-surface-variant">{item.index}</span>
+                    <MaterialIcon name={item.icon} className="text-signal-green text-2xl" />
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">{item.title}</h3>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant">{item.description}</p>
+                </div>
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-medium mt-space-md group-hover:text-secondary group-hover:translate-x-1 transition-all"
+                >
+                  <span>Explore Service</span>
+                  <MaterialIcon name="arrow_forward" className="text-sm" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -174,10 +154,10 @@ export function AboutCohorts() {
               className="p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between min-h-[280px]"
             >
               <div className="flex flex-col gap-space-md">
-                <div className="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-whiteout border border-outline-variant/40">
+                <div className="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/40">
                   <span className="font-headline-sm text-headline-sm font-bold">{item.monogram}</span>
                 </div>
-                <h3 className="font-headline-md text-headline-md text-whiteout font-bold">{item.title}</h3>
+                <h3 className="font-headline-md text-headline-md text-primary font-bold">{item.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{item.description}</p>
               </div>
               <span className="font-label-sm text-label-sm text-secondary font-mono">{item.tag}</span>

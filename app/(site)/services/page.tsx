@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { AccountingDeepDive } from "@/components/sections/services/AccountingDeepDive";
 import { HowToChoose } from "@/components/sections/services/HowToChoose";
 import { ServiceCategories } from "@/components/sections/services/ServiceCategories";
@@ -20,13 +21,27 @@ export default function ServicesPage() {
     <>
       <ServicesHero />
       <ServicesSubnav />
-      <ServiceCategories />
-      <AccountingDeepDive />
-      <HowToChoose />
-      <ServicesApproach />
-      <WhyServices />
-      <ServicesFAQ />
-      <ServicesCTA />
+      <Reveal>
+        <ServiceCategories />
+      </Reveal>
+      <Reveal>
+        <AccountingDeepDive />
+      </Reveal>
+      <Reveal>
+        <HowToChoose />
+      </Reveal>
+      <Reveal>
+        <ServicesApproach />
+      </Reveal>
+      <Reveal>
+        <WhyServices />
+      </Reveal>
+      <Reveal>
+        <ServicesFAQ />
+      </Reveal>
+      <Reveal>
+        <ServicesCTA />
+      </Reveal>
     </>
   );
 }

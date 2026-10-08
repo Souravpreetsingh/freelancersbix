@@ -50,7 +50,7 @@ export function BusinessFramework() {
               className="bg-surface-container p-space-md rounded-lg flex flex-col justify-between relative"
             >
               <div className="flex flex-col gap-space-xs">
-                <span className="font-label-sm text-label-sm font-mono text-signal-blue font-bold">{stage.num}</span>
+                <span className="font-label-sm text-label-sm font-mono text-signal-green font-bold">{stage.num}</span>
                 <h3 className="font-headline-sm text-body-lg text-primary font-semibold">{stage.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{stage.desc}</p>
               </div>

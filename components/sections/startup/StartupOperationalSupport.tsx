@@ -46,7 +46,7 @@ export function StartupOperationalSupport() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
         {ITEMS.map((item) => (
           <div key={item.title} className="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-xs">
-            <MaterialIcon name={item.icon} className="text-signal-blue text-[24px]" />
+            <MaterialIcon name={item.icon} className="text-signal-green text-[24px]" />
             <h3 className="font-headline-sm text-headline-sm text-primary">{item.title}</h3>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{item.desc}</p>
           </div>

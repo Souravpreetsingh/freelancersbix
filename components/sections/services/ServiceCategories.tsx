@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
+import { Reveal } from "@/components/motion/Reveal";
 import type { IconName } from "@/lib/design/icons";
 
 interface ChecklistItem {
@@ -183,11 +184,11 @@ function Checklist({ items, featured }: { items: ChecklistItem[]; featured?: boo
           key={item.label}
           className={
             featured
-              ? `p-3 rounded-lg bg-surface-container-highest/60 border border-white/10 flex items-start gap-2.5 ${item.spanClass ?? ""}`
-              : `p-3 rounded-lg bg-surface-container border border-white/5 flex items-start gap-2.5 ${item.spanClass ?? ""}`
+              ? `p-3 rounded-lg bg-surface-container-highest/60 border border-outline-variant flex items-start gap-2.5 ${item.spanClass ?? ""}`
+              : `p-3 rounded-lg bg-surface-container border border-outline-variant flex items-start gap-2.5 ${item.spanClass ?? ""}`
           }
         >
-          <MaterialIcon name="check_circle" className="text-signal-blue text-[18px] shrink-0 mt-0.5" />
+          <MaterialIcon name="check_circle" className="text-signal-green text-[18px] shrink-0 mt-0.5" />
           <span className="font-body-sm text-body-sm text-on-surface">{item.label}</span>
         </div>
       ))}
@@ -201,7 +202,7 @@ function CategoryLeft({ category }: { category: Category }) {
       <div className="flex flex-col justify-between max-w-md">
         <div>
           <div className="flex items-center gap-3 mb-space-sm">
-            <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-widest uppercase bg-signal-blue text-whiteout">
+            <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-widest uppercase bg-signal-green text-whiteout">
               Featured Service
             </span>
             <span className="font-mono text-xs uppercase tracking-widest text-secondary">{category.practice}</span>
@@ -213,13 +214,13 @@ function CategoryLeft({ category }: { category: Category }) {
           <p className="font-body-md text-body-md text-on-surface-variant">{category.description}</p>
         </div>
         {/* Miniature Visual Metric Dashboard */}
-        <div className="p-4 rounded-lg bg-surface-container-lowest/80 border border-white/10 my-space-md flex flex-col gap-2">
+        <div className="p-4 rounded-lg bg-surface-container-lowest/80 border border-outline-variant my-space-md flex flex-col gap-2">
           <div className="flex justify-between items-center text-xs">
             <span className="text-on-surface-variant font-mono">Ledger Reconciliation Rate</span>
-            <span className="text-signal-blue font-bold">99.98%</span>
+            <span className="text-signal-green font-bold">99.98%</span>
           </div>
           <div className="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-            <div className="w-[99%] h-full bg-signal-blue rounded-full" />
+            <div className="w-[99%] h-full bg-signal-green rounded-full" />
           </div>
           <div className="flex justify-between items-center text-[11px] text-on-surface-variant pt-1">
             <span>Multi-Currency Synchronized</span>
@@ -246,8 +247,8 @@ function CategoryLeft({ category }: { category: Category }) {
           <span className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
             {category.practice}
           </span>
-          <span className="h-px w-8 bg-white/10" />
-          <MaterialIcon name={category.icon} className="text-signal-blue text-[20px]" />
+          <span className="h-px w-8 bg-outline-variant/70" />
+          <MaterialIcon name={category.icon} className="text-signal-green text-[20px]" />
         </div>
         <h3 className="font-headline-md text-headline-md text-primary font-bold mb-space-xs">{category.title}</h3>
         <p className="font-body-md text-body-md text-on-surface-variant">{category.description}</p>
@@ -270,7 +271,7 @@ export function ServiceCategories() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto flex flex-col gap-space-3xl">
         <div className="flex flex-col items-start gap-space-xs max-w-3xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             What We Offer
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -281,32 +282,34 @@ export function ServiceCategories() {
             designed to make complex work more structured, verifiable, and manageable.
           </p>
         </div>
-        <div className="flex flex-col gap-space-xl">
-          {CATEGORIES.map((category) =>
-            category.featured ? (
-              <div
-                key={category.id}
-                id={category.id}
-                className="scroll-mt-32 p-space-xl md:p-space-2xl rounded-xl bg-gradient-to-b from-surface-container-high to-surface-container border-2 border-signal-blue/40 shadow-2xl relative overflow-hidden"
-              >
-                <div className="absolute -right-20 -top-20 w-80 h-80 bg-signal-blue/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="flex flex-col lg:flex-row justify-between gap-space-xl relative z-10">
-                  <CategoryLeft category={category} />
-                  <Checklist items={category.checklist} featured />
+        <Reveal stagger>
+          <div className="flex flex-col gap-space-xl">
+            {CATEGORIES.map((category) =>
+              category.featured ? (
+                <div
+                  key={category.id}
+                  id={category.id}
+                  className="scroll-mt-32 p-space-xl md:p-space-2xl rounded-xl bg-gradient-to-b from-surface-container-high to-surface-container border-2 border-signal-green/40 shadow-2xl relative overflow-hidden"
+                >
+                  <div className="absolute -right-20 -top-20 w-80 h-80 bg-signal-green/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="flex flex-col lg:flex-row justify-between gap-space-xl relative z-10">
+                    <CategoryLeft category={category} />
+                    <Checklist items={category.checklist} featured />
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div
-                key={category.id}
-                id={category.id}
-                className="scroll-mt-32 p-space-xl md:p-space-2xl rounded-xl bg-surface-container-low border border-white/10 hover:border-white/20 transition-all flex flex-col lg:flex-row justify-between gap-space-xl"
-              >
-                <CategoryLeft category={category} />
-                <Checklist items={category.checklist} />
-              </div>
-            ),
-          )}
-        </div>
+              ) : (
+                <div
+                  key={category.id}
+                  id={category.id}
+                  className="scroll-mt-32 p-space-xl md:p-space-2xl rounded-xl bg-surface-container-low border border-outline-variant hover:border-outline-variant transition-all flex flex-col lg:flex-row justify-between gap-space-xl"
+                >
+                  <CategoryLeft category={category} />
+                  <Checklist items={category.checklist} />
+                </div>
+              ),
+            )}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

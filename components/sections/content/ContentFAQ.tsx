@@ -54,7 +54,7 @@ export function ContentFAQ() {
       title="Frequently Asked Questions"
       lead="Details regarding turnaround times, editorial ownership, confidentiality, and our engagement terms."
       items={items}
-      sectionClassName="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5"
+      sectionClassName="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant"
       headingClassName="flex flex-col gap-space-xs mb-space-2xl text-center items-center"
     />
   );

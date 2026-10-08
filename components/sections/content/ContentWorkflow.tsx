@@ -39,13 +39,13 @@ const steps = [
 
 export function ContentWorkflow() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs text-center items-center mb-space-3xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Our Writing Process
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             From Information to Communication
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -53,16 +53,16 @@ export function ContentWorkflow() {
           </p>
         </div>
         <div className="relative">
-          <div className="hidden lg:block absolute top-10 left-12 right-12 h-[1px] bg-whiteout/10 -z-0" />
+          <div className="hidden lg:block absolute top-10 left-12 right-12 h-[1px] bg-outline-variant/80 -z-0" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-lg relative z-10">
             {steps.map((step) => (
               <div key={step.num} className="flex flex-col gap-space-sm items-start">
                 <div
-                  className={`w-20 h-20 rounded-2xl bg-surface-container-high flex flex-col items-center justify-center text-whiteout shadow-lg ${
-                    step.highlighted ? "border border-signal-blue/40" : "border border-whiteout/15"
+                  className={`w-20 h-20 rounded-2xl bg-surface-container-high flex flex-col items-center justify-center text-primary shadow-lg ${
+                    step.highlighted ? "border border-signal-green/40" : "border border-outline-variant"
                   }`}
                 >
-                  <span className="font-mono text-label-sm text-signal-blue">{step.num}</span>
+                  <span className="font-mono text-label-sm text-signal-green">{step.num}</span>
                   <span className="font-label-md text-label-md font-semibold">{step.label}</span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{step.body}</p>

@@ -5,7 +5,7 @@ import type { IconName } from "@/lib/design/icons";
 const PRINCIPLES: { number: string; numberClass: string; title: string; description: string }[] = [
   {
     number: "01",
-    numberClass: "text-signal-blue",
+    numberClass: "text-signal-green",
     title: "Quality",
     description: "We focus on accuracy, clarity and professional presentation.",
   },
@@ -17,7 +17,7 @@ const PRINCIPLES: { number: string; numberClass: string; title: string; descript
   },
   {
     number: "03",
-    numberClass: "text-signal-blue",
+    numberClass: "text-signal-green",
     title: "Confidentiality",
     description: "We treat client information and project materials with appropriate care and discretion.",
   },
@@ -29,7 +29,7 @@ const PRINCIPLES: { number: string; numberClass: string; title: string; descript
   },
   {
     number: "05",
-    numberClass: "text-whiteout",
+    numberClass: "text-primary",
     title: "Continuous Improvement",
     description: "We continuously improve how we research, analyse, create and deliver.",
   },
@@ -53,7 +53,7 @@ export function AboutPrinciples() {
             >
               <span className={`font-label-md text-label-md font-mono ${item.numberClass}`}>{item.number}</span>
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold mb-2">{item.title}</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">{item.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{item.description}</p>
               </div>
             </div>
@@ -67,7 +67,7 @@ export function AboutPrinciples() {
 const APPROACH_STEPS: { number: string; circleClass: string; title: string; description: string }[] = [
   {
     number: "01",
-    circleClass: "border-signal-blue text-signal-blue",
+    circleClass: "border-signal-green text-signal-green",
     title: "Research",
     description: "Understand the requirement, gather relevant information and establish the right context.",
   },
@@ -85,7 +85,7 @@ const APPROACH_STEPS: { number: string; circleClass: string; title: string; desc
   },
   {
     number: "04",
-    circleClass: "border-whiteout text-whiteout",
+    circleClass: "border-primary/40 text-primary",
     title: "Deliver",
     description: "Review, refine and deliver the final work with clarity and attention to detail.",
   },
@@ -113,15 +113,15 @@ export function AboutApproach() {
               >
                 {step.number}
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold">{step.title}</h3>
+              <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{step.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{step.description}</p>
             </div>
           ))}
         </div>
         <div className="py-space-md px-space-lg rounded-lg bg-surface-container-low border border-outline-variant/20 flex items-center justify-between">
           <div className="flex items-center gap-space-sm">
-            <MaterialIcon name="verified" className="text-signal-blue" />
-            <span className="font-label-lg text-label-lg text-whiteout">
+            <MaterialIcon name="verified" className="text-signal-green" />
+            <span className="font-label-lg text-label-lg text-primary">
               A structured process creates better outcomes.
             </span>
           </div>
@@ -137,7 +137,7 @@ export function AboutApproach() {
 const WHY_CARDS: { icon: IconName; iconClass: string; title: string; description: string }[] = [
   {
     icon: "account_tree",
-    iconClass: "text-signal-blue",
+    iconClass: "text-signal-green",
     title: "Structured Approach",
     description: "Milestones and clear phases prevent ambiguity.",
   },
@@ -149,7 +149,7 @@ const WHY_CARDS: { icon: IconName; iconClass: string; title: string; description
   },
   {
     icon: "chat",
-    iconClass: "text-signal-blue",
+    iconClass: "text-signal-green",
     title: "Clear Communication",
     description: "Regular status updates and responsive interaction.",
   },
@@ -161,7 +161,7 @@ const WHY_CARDS: { icon: IconName; iconClass: string; title: string; description
   },
   {
     icon: "tune",
-    iconClass: "text-signal-blue",
+    iconClass: "text-signal-green",
     title: "Flexible Support",
     description: "On-demand projects or integrated recurring retainer.",
   },
@@ -178,11 +178,11 @@ export function AboutWhy() {
     <section className="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
         <div className="lg:col-span-5 flex flex-col gap-space-md">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue">Why Choose Us</span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green">Why Choose Us</span>
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             Professional support without unnecessary complexity.
           </h2>
-          <p className="font-body-lg text-body-lg text-whiteout font-medium mt-space-sm">
+          <p className="font-body-lg text-body-lg text-primary font-medium mt-space-sm">
             “Your requirement is the starting point. Understanding it is our priority.”
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant">
@@ -198,7 +198,7 @@ export function AboutWhy() {
             >
               <MaterialIcon name={item.icon} className={`${item.iconClass} text-2xl`} />
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold">{item.title}</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold">{item.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">{item.description}</p>
               </div>
             </div>

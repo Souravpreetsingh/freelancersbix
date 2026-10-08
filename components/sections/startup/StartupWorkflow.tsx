@@ -24,7 +24,7 @@ export function StartupWorkflow() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-sm">
         {STEPS.map((step) => (
           <div key={step.num} className="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
-            <span className="font-headline-sm text-headline-sm text-signal-blue font-bold">{step.num}</span>
+            <span className="font-headline-sm text-headline-sm text-signal-green font-bold">{step.num}</span>
             <h4 className="font-headline-sm text-headline-sm text-primary">{step.title}</h4>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{step.desc}</p>
           </div>

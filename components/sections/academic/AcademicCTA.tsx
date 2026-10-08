@@ -7,12 +7,12 @@ export function AcademicCTA() {
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(43, 127, 255, 0.4) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(rgba(22, 122, 82, 0.4) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }}
       />
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mb-space-xs inline-block">
+        <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs inline-block">
           Initiate Consultation
         </span>
         <h2 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary uppercase mb-space-md tracking-tight">
@@ -25,7 +25,7 @@ export function AcademicCTA() {
         <div className="flex flex-wrap items-center justify-center gap-space-md">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-space-2xl py-space-md rounded-lg font-label-lg text-label-lg text-on-primary bg-primary hover:bg-haze transition-all shadow-md group"
+            className="fbx-btn inline-flex items-center justify-center px-space-2xl py-space-md rounded-lg font-label-lg text-label-lg text-on-primary bg-primary hover:bg-[#08452F] transition-all shadow-md group"
           >
             <span>Get a Quote</span>
             <MaterialIcon
@@ -35,7 +35,7 @@ export function AcademicCTA() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-space-2xl py-space-md rounded-lg font-label-lg text-label-lg text-primary bg-surface-container-high hover:bg-surface-variant transition-colors"
+            className="fbx-btn inline-flex items-center justify-center px-space-2xl py-space-md rounded-lg font-label-lg text-label-lg text-primary bg-surface-container-high hover:bg-surface-variant transition-colors"
           >
             Contact Us
           </Link>

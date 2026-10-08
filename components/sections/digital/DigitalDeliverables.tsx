@@ -21,7 +21,7 @@ export function DigitalDeliverables() {
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               TANGIBLE OUTPUTS
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">

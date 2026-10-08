@@ -39,47 +39,47 @@ const REPORTS: { name: string; status: string }[] = [
 
 export function ForeignDashboard() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-black-void">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-brand-deep">
       <div className="max-w-[1400px] mx-auto space-y-space-2xl">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-inverse-primary font-bold">
             Operational Clarity
           </span>
-          <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
+          <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase">
             Financial Information, Organized Clearly.
           </h2>
-          <p className="mt-space-sm font-body-lg text-body-lg text-on-surface-variant">
+          <p className="mt-space-sm font-body-lg text-body-lg text-whiteout/75">
             Use an organized workflow to bring invoices, expenses, receivables, payables, and reporting into a clearer
             operational view.
           </p>
         </div>
-        <div className="w-full rounded-2xl bg-surface-container-low border border-white/10 p-space-md md:p-space-xl shadow-2xl backdrop-blur-xl">
-          <div className="flex flex-wrap items-center justify-between gap-space-md pb-space-lg border-b border-white/5">
-            <div className="flex items-center gap-1.5 p-1 rounded-lg bg-surface-container-lowest border border-white/5">
+        <div className="w-full rounded-2xl bg-haze border border-whiteout/20 p-space-md md:p-space-xl shadow-2xl">
+          <div className="flex flex-wrap items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/60">
+            <div className="flex items-center gap-1.5 p-1 rounded-lg bg-surface-container-lowest border border-outline-variant/60">
               <button
                 type="button"
-                className="px-3 py-1.5 rounded-md text-xs font-medium bg-surface-container text-whiteout shadow-sm"
+                className="px-3 py-1.5 rounded-md text-xs font-medium bg-primary text-on-primary shadow-sm"
               >
                 Global Consolidation
               </button>
               <button
                 type="button"
-                className="px-3 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-whiteout transition-colors"
+                className="px-3 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors"
               >
                 Entity A (US)
               </button>
               <button
                 type="button"
-                className="px-3 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-whiteout transition-colors"
+                className="px-3 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors"
               >
                 Entity B (UK)
               </button>
             </div>
             <div className="flex items-center gap-space-sm text-xs font-mono">
-              <span className="hidden sm:inline-flex px-3 py-1.5 rounded-md bg-surface-container-lowest text-on-surface-variant border border-white/5">
+              <span className="hidden sm:inline-flex px-3 py-1.5 rounded-md bg-surface-container-lowest text-on-surface-variant border border-outline-variant/60">
                 Cycle: Q3 Oct - Dec
               </span>
-              <span className="px-3 py-1.5 rounded-md bg-surface-container-lowest text-secondary border border-white/5">
+              <span className="px-3 py-1.5 rounded-md bg-surface-container-lowest text-secondary border border-outline-variant/60">
                 Base: USD ($)
               </span>
             </div>
@@ -88,12 +88,12 @@ export function ForeignDashboard() {
             {KPIS.map((kpi) => (
               <div
                 key={kpi.label}
-                className="p-space-md rounded-xl bg-surface-container-lowest/80 border border-white/5"
+                className="p-space-md rounded-xl bg-surface-container-lowest/80 border border-outline-variant/60"
               >
                 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">
                   {kpi.label}
                 </span>
-                <div className="font-headline-md text-headline-md text-whiteout font-bold mt-1">{kpi.value}</div>
+                <div className="font-headline-md text-headline-md text-primary font-bold mt-1">{kpi.value}</div>
                 <div className={`mt-2 text-xs flex items-center gap-1 ${kpi.noteClass}`}>
                   {kpi.icon ? <MaterialIcon name={kpi.icon} className="text-[14px]" /> : null}
                   {kpi.note}
@@ -102,7 +102,7 @@ export function ForeignDashboard() {
             ))}
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
-            <div className="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest/80 border border-white/5 space-y-space-md">
+            <div className="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest/80 border border-outline-variant/60 space-y-space-md">
               <div className="flex items-center justify-between">
                 <div>
                   <h4 className="font-headline-sm text-headline-sm text-primary font-bold">
@@ -122,13 +122,13 @@ export function ForeignDashboard() {
                     key={row.account}
                     className="flex items-center justify-between p-2.5 rounded bg-surface-container-low text-xs"
                   >
-                    <span className="font-medium text-whiteout">{row.account}</span>
+                    <span className="font-medium text-ink">{row.account}</span>
                     <span className="font-mono text-secondary">{row.status}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest/80 border border-white/5 flex flex-col justify-between">
+            <div className="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest/80 border border-outline-variant/60 flex flex-col justify-between">
               <div>
                 <h4 className="font-headline-sm text-headline-sm text-primary font-bold">
                   Monthly Financial Deliverables
@@ -141,24 +141,24 @@ export function ForeignDashboard() {
                     <li
                       key={report.name}
                       className={`flex items-center justify-between py-1.5 ${
-                        index < REPORTS.length - 1 ? "border-b border-white/5" : ""
+                        index < REPORTS.length - 1 ? "border-b border-outline-variant/60" : ""
                       }`}
                     >
-                      <span className="text-whiteout flex items-center gap-2">
-                        <MaterialIcon name="description" className="text-signal-blue text-[16px]" />
+                      <span className="text-ink flex items-center gap-2">
+                        <MaterialIcon name="description" className="text-signal-green text-[16px]" />
                         {report.name}
                       </span>
-                      <span className="text-outline">{report.status}</span>
+                      <span className="text-on-surface-variant">{report.status}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="mt-space-md pt-space-xs text-[11px] font-mono text-outline text-right">
+              <div className="mt-space-md pt-space-xs text-[11px] font-mono text-on-surface-variant text-right">
                 Archive cycle: FY26-M03
               </div>
             </div>
           </div>
-          <p className="mt-space-lg text-center text-xs text-outline font-body-sm">
+          <p className="mt-space-lg text-center text-xs text-on-surface-variant font-body-sm">
             Illustrative operational interface preview. All figures represent illustrative placeholders.
           </p>
         </div>

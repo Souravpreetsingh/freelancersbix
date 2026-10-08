@@ -45,7 +45,7 @@ export function CareerWhy() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col gap-space-xs max-w-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Why FreelancersBix
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-primary">
@@ -58,7 +58,7 @@ export function CareerWhy() {
               key={reason.number}
               className="bg-surface-container p-space-xl rounded-xl flex flex-col gap-space-md hover:bg-surface-container-high transition-colors"
             >
-              <div className="flex items-center justify-between text-twilight-blue">
+              <div className="flex items-center justify-between text-deep-sage">
                 <MaterialIcon name={reason.icon} className="text-3xl" />
                 <span className="font-label-sm text-label-sm font-bold tracking-widest text-on-surface-variant">
                   {reason.number}

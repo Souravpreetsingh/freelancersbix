@@ -11,7 +11,7 @@ const stages = [
     num: "02",
     label: "Data Cleansing & Deduplication",
     chip: "Filter",
-    chipClasses: "bg-signal-blue/20 text-secondary",
+    chipClasses: "bg-signal-green/20 text-secondary",
   },
   {
     num: "03",
@@ -29,20 +29,20 @@ const stages = [
     num: "05",
     label: "Executive Visualizations & Interpretations",
     chip: "Presentation Ready",
-    chipClasses: "bg-signal-blue text-whiteout font-semibold",
+    chipClasses: "bg-signal-green text-whiteout font-semibold",
     highlight: true,
   },
 ];
 
 export function DataIntro() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
         <div className="lg:col-span-6 flex flex-col gap-space-md">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Data + Research
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Data becomes valuable when it becomes understandable.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -55,9 +55,9 @@ export function DataIntro() {
           </p>
         </div>
         <div className="lg:col-span-6">
-          <div className="rounded-xl p-space-xl bg-surface-container-low/60 border border-whiteout/10 backdrop-blur-md">
+          <div className="rounded-xl p-space-xl bg-surface-container-low/60 border border-outline-variant backdrop-blur-md">
             <div className="flex items-center justify-between mb-space-lg">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-twilight-blue font-semibold">
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-deep-sage font-semibold">
                 End-to-End Transformation Pipeline
               </span>
               <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary">
@@ -70,8 +70,8 @@ export function DataIntro() {
                   <div
                     className={`flex items-center justify-between p-3 rounded-lg ${
                       stage.highlight
-                        ? "bg-signal-blue/10 border border-signal-blue/30 shadow-[0_0_20px_rgba(43,127,255,0.2)]"
-                        : "bg-surface-container/70 border border-whiteout/5"
+                        ? "bg-signal-green/10 border border-signal-green/30 shadow-[0_0_20px_rgba(22,122,82,0.2)]"
+                        : "bg-surface-container/70 border border-outline-variant"
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
@@ -80,9 +80,7 @@ export function DataIntro() {
                       >
                         {stage.num}
                       </span>
-                      <span className="font-body-sm text-body-sm text-whiteout font-medium truncate">
-                        {stage.label}
-                      </span>
+                      <span className="font-body-sm text-body-sm text-primary font-medium truncate">{stage.label}</span>
                     </div>
                     <span
                       className={`whitespace-nowrap px-2.5 py-1 rounded-full font-label-sm text-label-sm ${stage.chipClasses}`}
@@ -91,7 +89,7 @@ export function DataIntro() {
                     </span>
                   </div>
                   {index < stages.length - 1 ? (
-                    <div className="flex justify-center -my-1 text-signal-blue">
+                    <div className="flex justify-center -my-1 text-signal-green">
                       <MaterialIcon name="south" className="text-[18px]" />
                     </div>
                   ) : null}

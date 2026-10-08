@@ -31,7 +31,7 @@ export function CareerJourney() {
       <div className="max-w-7xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               The Pathway
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-primary">
@@ -51,7 +51,7 @@ export function CareerJourney() {
             >
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center font-bold font-label-md text-label-md ${
-                  step.active ? "bg-signal-blue text-ink" : "bg-surface-container-highest text-primary"
+                  step.active ? "bg-signal-green text-whiteout" : "bg-surface-container-highest text-primary"
                 }`}
               >
                 {step.number}

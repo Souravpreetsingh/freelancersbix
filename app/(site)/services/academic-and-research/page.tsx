@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { AcademicCTA } from "@/components/sections/academic/AcademicCTA";
 import { AcademicDataInterface } from "@/components/sections/academic/AcademicDataInterface";
 import { AcademicDeliverables } from "@/components/sections/academic/AcademicDeliverables";
@@ -33,21 +34,51 @@ export default function AcademicAndResearchPage() {
         currentClassName="text-primary font-medium tracking-wide"
       />
       <AcademicHero />
-      <AcademicTrust />
-      <AcademicIntro />
-      <AcademicServices />
-      <AcademicLifecycle />
-      <AcademicFramework />
-      <AcademicWhoWeSupport />
-      <AcademicExpectations />
-      <AcademicDeliverables />
-      <AcademicQuality />
-      <AcademicIntegrity />
-      <AcademicDataInterface />
-      <AcademicWorkflow />
-      <AcademicFAQ />
-      <AcademicRelated />
-      <AcademicCTA />
+      <Reveal>
+        <AcademicTrust />
+      </Reveal>
+      <Reveal>
+        <AcademicIntro />
+      </Reveal>
+      <Reveal>
+        <AcademicServices />
+      </Reveal>
+      <Reveal>
+        <AcademicLifecycle />
+      </Reveal>
+      <Reveal>
+        <AcademicFramework />
+      </Reveal>
+      <Reveal>
+        <AcademicWhoWeSupport />
+      </Reveal>
+      <Reveal>
+        <AcademicExpectations />
+      </Reveal>
+      <Reveal>
+        <AcademicDeliverables />
+      </Reveal>
+      <Reveal>
+        <AcademicQuality />
+      </Reveal>
+      <Reveal>
+        <AcademicIntegrity />
+      </Reveal>
+      <Reveal>
+        <AcademicDataInterface />
+      </Reveal>
+      <Reveal>
+        <AcademicWorkflow />
+      </Reveal>
+      <Reveal>
+        <AcademicFAQ />
+      </Reveal>
+      <Reveal>
+        <AcademicRelated />
+      </Reveal>
+      <Reveal>
+        <AcademicCTA />
+      </Reveal>
     </>
   );
 }

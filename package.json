@@ -9,7 +9,11 @@
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "db:create": "node scripts/db-create.mjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:status": "node scripts/migrate.mjs --status",
+    "admin:create": "node scripts/create-admin.mjs"
   },
   "dependencies": {
     "next": "15.5.27",

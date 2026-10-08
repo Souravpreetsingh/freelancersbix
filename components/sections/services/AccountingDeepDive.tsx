@@ -48,24 +48,24 @@ const FEATURES: { icon: IconName; title: string; description: string; tag: strin
 ];
 
 const DASHBOARD_CARDS: { label: string; value: string; note: string; noteClass: string }[] = [
-  { label: "Reconciliation Status", value: "Balanced", note: "100% Verified Ledger", noteClass: "text-emerald-400" },
-  { label: "Audit Verification", value: "GAAP Compliant", note: "Zero Pending Flags", noteClass: "text-signal-blue" },
+  { label: "Reconciliation Status", value: "Balanced", note: "100% Verified Ledger", noteClass: "text-signal-green" },
+  { label: "Audit Verification", value: "GAAP Compliant", note: "Zero Pending Flags", noteClass: "text-signal-green" },
   { label: "Currency Pairings", value: "USD • EUR • GBP", note: "Daily FX Adjusted", noteClass: "text-secondary" },
-  { label: "Reporting Cycle", value: "Day +3 Monthly", note: "On-Schedule Delivery", noteClass: "text-emerald-400" },
+  { label: "Reporting Cycle", value: "Day +3 Monthly", note: "On-Schedule Delivery", noteClass: "text-signal-green" },
 ];
 
 export function AccountingDeepDive() {
   return (
     <section
       id="featured-accounting-deepdive"
-      className="w-full bg-surface-container-lowest py-space-4xl border-y border-white/10 relative overflow-hidden"
+      className="w-full bg-surface-container-lowest py-space-4xl border-y border-outline-variant relative overflow-hidden"
     >
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto flex flex-col gap-space-3xl">
         {/* Section Banner */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-space-xl">
           <div className="max-w-3xl flex flex-col gap-space-xs">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-signal-blue/10 border border-signal-blue/20">
-              <span className="w-2 h-2 rounded-full bg-signal-blue" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-signal-green/10 border border-signal-green/20">
+              <span className="w-2 h-2 rounded-full bg-signal-green" />
               <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
                 Specialized Offshore Practice
               </span>
@@ -82,13 +82,13 @@ export function AccountingDeepDive() {
           <div className="flex flex-wrap items-center gap-space-md">
             <Link
               href="/contact"
-              className="px-space-lg py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-ink hover:bg-haze transition-all font-medium"
+              className="px-space-lg py-space-sm rounded-lg font-label-lg text-label-lg bg-primary text-on-primary hover:bg-[#08452F] transition-all font-medium"
             >
               Talk to Our Team
             </Link>
             <Link
               href="#cat-accounting"
-              className="px-space-lg py-space-sm rounded-lg font-label-lg text-label-lg border border-white/20 text-primary hover:bg-white/5 transition-all font-medium"
+              className="px-space-lg py-space-sm rounded-lg font-label-lg text-label-lg border border-outline-variant text-primary hover:bg-surface-container-high transition-all font-medium"
             >
               View Accounting Scope
             </Link>
@@ -100,10 +100,10 @@ export function AccountingDeepDive() {
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="p-space-lg rounded-xl bg-surface-container-low border border-white/5 hover:border-signal-blue/40 transition-all flex flex-col justify-between"
+              className="p-space-lg rounded-xl bg-surface-container-low border border-outline-variant hover:border-signal-green/40 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mb-space-sm text-signal-blue">
+                <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center mb-space-sm text-signal-green">
                   <MaterialIcon name={feature.icon} className="text-[22px]" />
                 </div>
                 <h3 className="font-headline-sm text-headline-sm text-primary mb-1">{feature.title}</h3>
@@ -115,8 +115,8 @@ export function AccountingDeepDive() {
         </div>
 
         {/* Executive Dashboard Mockup Visual Component */}
-        <div className="w-full rounded-2xl bg-surface-container p-6 md:p-8 border border-white/10 shadow-2xl flex flex-col gap-6">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div className="w-full rounded-2xl bg-surface-container p-6 md:p-8 border border-outline-variant shadow-2xl flex flex-col gap-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-outline-variant pb-4">
             <div className="flex items-center gap-3">
               <span className="w-3 h-3 rounded-full bg-red-500/80" />
               <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -125,7 +125,7 @@ export function AccountingDeepDive() {
             </div>
             <div className="flex items-center gap-4 text-xs font-mono">
               <span className="text-on-surface-variant">
-                Status: <span className="text-signal-blue font-semibold">Live Pipeline</span>
+                Status: <span className="text-signal-green font-semibold">Live Pipeline</span>
               </span>
               <span className="text-on-surface-variant">
                 Jurisdiction: <span className="text-primary">US/UK/EU Standard</span>
@@ -134,7 +134,10 @@ export function AccountingDeepDive() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {DASHBOARD_CARDS.map((card) => (
-              <div key={card.label} className="p-4 rounded-xl bg-surface-container-lowest border border-white/5">
+              <div
+                key={card.label}
+                className="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant"
+              >
                 <span className="text-xs text-on-surface-variant font-mono uppercase">{card.label}</span>
                 <div className="text-2xl font-bold text-primary mt-1">{card.value}</div>
                 <span className={`text-xs mt-1 inline-block ${card.noteClass}`}>{card.note}</span>

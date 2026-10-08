@@ -12,12 +12,12 @@ export function ContentPipeline() {
   return (
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
-        <div className="p-space-xl rounded-2xl bg-surface-container border border-whiteout/10">
+        <div className="p-space-xl rounded-2xl bg-surface-container border border-outline-variant">
           <div className="max-w-2xl mb-space-2xl">
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
               Empirical Rigor
             </span>
-            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight mt-1">
+            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight mt-1">
               When writing needs research behind it.
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant">
@@ -31,18 +31,18 @@ export function ContentPipeline() {
                 key={cell.num}
                 className={
                   cell.outcome
-                    ? "col-span-2 md:col-span-1 p-space-sm rounded-lg bg-secondary-container/40 border border-signal-blue/30 text-center flex flex-col justify-between"
-                    : "p-space-sm rounded-lg bg-surface-container-high border border-whiteout/5 text-center flex flex-col justify-between"
+                    ? "col-span-2 md:col-span-1 p-space-sm rounded-lg bg-secondary-container/40 border border-signal-green/30 text-center flex flex-col justify-between"
+                    : "p-space-sm rounded-lg bg-surface-container-high border border-outline-variant text-center flex flex-col justify-between"
                 }
               >
                 <span
                   className={`font-mono text-label-sm ${
-                    cell.outcome || cell.highlighted ? "text-signal-blue" : "text-on-surface-variant/60"
+                    cell.outcome || cell.highlighted ? "text-signal-green" : "text-on-surface-variant/60"
                   }`}
                 >
                   {cell.num}
                 </span>
-                <span className="font-label-md text-label-md text-whiteout font-medium my-2">{cell.label}</span>
+                <span className="font-label-md text-label-md text-primary font-medium my-2">{cell.label}</span>
                 <span className={`text-[10px] ${cell.outcome ? "text-secondary" : "text-on-surface-variant"}`}>
                   {cell.sub}
                 </span>

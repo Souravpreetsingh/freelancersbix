@@ -27,7 +27,7 @@ export function DataQuality() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Verification Standards
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Good analysis starts with organized data.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -36,8 +36,11 @@ export function DataQuality() {
           </p>
           <div className="space-y-3 pt-space-xs">
             {standards.map((standard) => (
-              <div key={standard.label} className="p-3.5 rounded-lg bg-surface-container-low border border-whiteout/5">
-                <span className="font-label-lg text-label-lg text-whiteout font-semibold block mb-0.5">
+              <div
+                key={standard.label}
+                className="p-3.5 rounded-lg bg-surface-container-low border border-outline-variant"
+              >
+                <span className="font-label-lg text-label-lg text-primary font-semibold block mb-0.5">
                   {standard.label}
                 </span>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{standard.body}</p>
@@ -46,19 +49,17 @@ export function DataQuality() {
           </div>
         </div>
         <div className="lg:col-span-7">
-          <div className="p-space-xl rounded-xl bg-surface-container border border-whiteout/10">
+          <div className="p-space-xl rounded-xl bg-surface-container border border-outline-variant">
             <div className="flex items-center justify-between mb-space-lg">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-whiteout font-semibold">
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">
                 Data Maturity Progression
               </span>
               <span className="font-label-sm text-label-sm text-outline">Illustrative example</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-whiteout/10 text-center flex flex-col items-center">
+              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-outline-variant text-center flex flex-col items-center">
                 <MaterialIcon name="warning" className="text-[28px] text-error mb-space-sm" />
-                <span className="font-headline-sm text-headline-sm text-whiteout font-semibold mb-2">
-                  Messy Dataset
-                </span>
+                <span className="font-headline-sm text-headline-sm text-primary font-semibold mb-2">Messy Dataset</span>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
                   High entropy, null collisions, varied dates
                 </p>
@@ -66,9 +67,9 @@ export function DataQuality() {
                   Unverified
                 </span>
               </div>
-              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-whiteout/10 text-center flex flex-col items-center">
+              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-outline-variant text-center flex flex-col items-center">
                 <MaterialIcon name="sync_saved_locally" className="text-[28px] text-secondary mb-space-sm" />
-                <span className="font-headline-sm text-headline-sm text-whiteout font-semibold mb-2">
+                <span className="font-headline-sm text-headline-sm text-primary font-semibold mb-2">
                   Structured Dataset
                 </span>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
@@ -78,15 +79,15 @@ export function DataQuality() {
                   Formatted
                 </span>
               </div>
-              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-signal-blue/20 text-center flex flex-col items-center bg-signal-blue/5">
-                <MaterialIcon name="verified" className="text-[28px] text-signal-blue mb-space-sm" />
-                <span className="font-headline-sm text-headline-sm text-whiteout font-semibold mb-2">
+              <div className="p-space-lg rounded-xl bg-surface-container-lowest/80 border border-signal-green/20 text-center flex flex-col items-center bg-signal-green/5">
+                <MaterialIcon name="verified" className="text-[28px] text-signal-green mb-space-sm" />
+                <span className="font-headline-sm text-headline-sm text-primary font-semibold mb-2">
                   Analysis-Ready
                 </span>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
                   Imputed, verified, documented variables
                 </p>
-                <span className="px-3 py-1 rounded-full bg-signal-blue text-whiteout border border-signal-blue/50 font-label-sm text-label-sm font-bold">
+                <span className="px-3 py-1 rounded-full bg-signal-green text-whiteout border border-signal-green/50 font-label-sm text-label-sm font-bold">
                   &quot;100% Ready&quot;
                 </span>
               </div>

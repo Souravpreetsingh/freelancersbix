@@ -1,17 +1,28 @@
 import { type IconName } from "@/lib/design/icons";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
+import { Reveal } from "@/components/motion/Reveal";
+import { SITE } from "@/lib/design/site";
 
-const CHANNELS: { icon: IconName; label: string; value: string; note: string }[] = [
+const CHANNELS: { icon: IconName; label: string; value: string; note: string; href?: string }[] = [
   {
     icon: "alternate_email",
     label: "Direct Mail",
-    value: "hello@freelancersbix.com",
+    value: SITE.email,
+    href: `mailto:${SITE.email}`,
     note: "24-hour response turnaround on business days",
+  },
+  {
+    icon: "mail",
+    label: "Secondary Mail",
+    value: SITE.secondaryEmail,
+    href: `mailto:${SITE.secondaryEmail}`,
+    note: "Alternate inbox for ongoing correspondence",
   },
   {
     icon: "call",
     label: "Enquiry Desk & Messaging",
-    value: "+1 (555) 019-8234 / +44 20 7946 0912",
+    value: SITE.phone,
+    href: SITE.phoneHref,
     note: "Available Mon–Fri · 08:00–19:00 UTC",
   },
   {
@@ -67,10 +78,10 @@ export function ContactInfo() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
         <div className="lg:col-span-5 flex flex-col">
-          <span className="font-label-md text-label-md text-signal-blue uppercase tracking-widest font-semibold mb-space-sm">
+          <span className="font-label-md text-label-md text-signal-green uppercase tracking-widest font-semibold mb-space-sm">
             Contact FreelancersBix
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight leading-tight mb-space-md">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight leading-tight mb-space-md">
             We are ready to hear your brief.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mb-space-xl">
@@ -85,15 +96,24 @@ export function ContactInfo() {
               >
                 <div className="flex items-start gap-space-md">
                   <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
-                    <MaterialIcon name={channel.icon} className="text-signal-blue" />
+                    <MaterialIcon name={channel.icon} className="text-signal-green" />
                   </div>
                   <div className="flex flex-col">
                     <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
                       {channel.label}
                     </span>
-                    <span className="font-body-lg text-body-lg font-medium text-whiteout mt-space-xs">
-                      {channel.value}
-                    </span>
+                    {channel.href ? (
+                      <a
+                        className="font-body-lg text-body-lg font-medium text-primary mt-space-xs hover:text-signal-green transition-colors break-words"
+                        href={channel.href}
+                      >
+                        {channel.value}
+                      </a>
+                    ) : (
+                      <span className="font-body-lg text-body-lg font-medium text-primary mt-space-xs break-words">
+                        {channel.value}
+                      </span>
+                    )}
                     <span className="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">
                       {channel.note}
                     </span>
@@ -110,38 +130,42 @@ export function ContactInfo() {
                 <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest font-semibold">
                   Practice Matrix
                 </span>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout font-bold mt-1">
+                <h3 className="font-headline-sm text-headline-sm text-primary font-bold mt-1">
                   What can we help you solve?
                 </h3>
               </div>
-              <span className="font-label-sm text-label-sm text-signal-blue bg-signal-blue/10 px-space-sm py-space-xs rounded-full">
+              <span className="font-label-sm text-label-sm text-signal-green bg-signal-green/10 px-space-sm py-space-xs rounded-full">
                 7 Specializations
               </span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-              {DISCIPLINES.map((discipline) => (
-                <div
-                  key={discipline.title}
-                  className={`p-space-md rounded-lg ${discipline.featured ? "bg-surface-container-high relative overflow-hidden group" : "bg-surface-container hover:bg-surface-container-high transition-all"} ${
-                    discipline.title === "Digital & Administrative Support" ? "sm:col-span-2" : ""
-                  }`}
-                >
-                  {discipline.featured && (
-                    <div className="absolute top-0 right-0 px-2 py-0.5 bg-signal-blue text-whiteout font-label-sm text-[10px] font-bold uppercase rounded-bl">
-                      Featured
+            <Reveal stagger>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                {DISCIPLINES.map((discipline) => (
+                  <div
+                    key={discipline.title}
+                    className={`p-space-md rounded-lg ${discipline.featured ? "bg-surface-container-high relative overflow-hidden group" : "bg-surface-container hover:bg-surface-container-high transition-all"} ${
+                      discipline.title === "Digital & Administrative Support" ? "sm:col-span-2" : ""
+                    }`}
+                  >
+                    {discipline.featured && (
+                      <div className="absolute top-0 right-0 px-2 py-0.5 bg-signal-green text-whiteout font-label-sm text-[10px] font-bold uppercase rounded-bl">
+                        Featured
+                      </div>
+                    )}
+                    <div className="flex items-center gap-space-sm mb-space-xs">
+                      <MaterialIcon
+                        name={discipline.icon}
+                        className={`text-[20px] ${discipline.featured ? "text-signal-green" : "text-on-surface"}`}
+                      />
+                      <span className="font-headline-sm text-[16px] text-primary font-semibold">
+                        {discipline.title}
+                      </span>
                     </div>
-                  )}
-                  <div className="flex items-center gap-space-sm mb-space-xs">
-                    <MaterialIcon
-                      name={discipline.icon}
-                      className={`text-[20px] ${discipline.featured ? "text-signal-blue" : "text-on-surface"}`}
-                    />
-                    <span className="font-headline-sm text-[16px] text-whiteout font-semibold">{discipline.title}</span>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">{discipline.text}</p>
                   </div>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant">{discipline.text}</p>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

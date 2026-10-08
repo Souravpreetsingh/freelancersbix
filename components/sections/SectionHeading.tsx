@@ -16,7 +16,7 @@ interface SectionHeadingProps {
 
 const DEFAULT_WRAPPER = "flex flex-col gap-space-xs max-w-3xl";
 const DEFAULT_TITLE =
-  "font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout tracking-tight";
+  "font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary tracking-tight";
 const DEFAULT_DESCRIPTION = "font-body-md text-body-md text-on-surface-variant mt-space-xs";
 
 export function SectionHeading({
@@ -32,7 +32,7 @@ export function SectionHeading({
     <div className={className ?? DEFAULT_WRAPPER}>
       <span
         className={cn(
-          "font-label-sm text-label-sm tracking-widest text-signal-blue uppercase",
+          "font-label-sm text-label-sm tracking-widest text-signal-green uppercase",
           eyebrowBold && "font-bold",
         )}
       >

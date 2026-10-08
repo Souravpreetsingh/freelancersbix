@@ -71,10 +71,10 @@ export function ContentServices() {
     <section id="services-inventory" className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs max-w-3xl mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Comprehensive Capabilities
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             Content &amp; Professional Writing Services
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
@@ -86,21 +86,21 @@ export function ContentServices() {
           {services.map((service) => (
             <div
               key={service.num}
-              className="group p-space-lg rounded-xl bg-surface-container border border-whiteout/10 hover:border-signal-blue/50 hover:bg-surface-container-high transition-all flex flex-col justify-between"
+              className="group p-space-lg rounded-xl bg-surface-container border border-outline-variant hover:border-signal-green/50 hover:bg-surface-container-high transition-all flex flex-col justify-between"
             >
-              <span className="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-blue transition-colors">
+              <span className="font-mono text-label-sm text-on-surface-variant group-hover:text-signal-green transition-colors">
                 {service.num}
               </span>
-              <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-whiteout group-hover:bg-signal-blue group-hover:text-whiteout transition-all">
+              <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-signal-green group-hover:text-on-primary transition-all">
                 <MaterialIcon name={service.icon} className="text-[20px]" />
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">
+              <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs font-semibold">
                 {service.title}
               </h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{service.body}</p>
               <Link
                 href="/contact"
-                className="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                className="pt-space-md flex items-center gap-1 font-label-sm text-label-sm text-signal-green font-medium opacity-0 group-hover:opacity-100 transition-opacity"
               >
                 <span>Request Service</span>
                 <MaterialIcon name="arrow_forward" className="text-[14px]" />

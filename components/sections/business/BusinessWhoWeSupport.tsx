@@ -42,7 +42,7 @@ export function BusinessWhoWeSupport() {
         eyebrow="Client Archetypes"
         title="Business Research for Different Stages of Growth"
         lead="Whether validating an initial concept or managing cross-border commercial expansions, our research capabilities align to your maturity phase."
-        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold"
+        eyebrowClassName="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold"
         containerClassName="flex flex-col gap-space-xs mb-space-2xl text-center items-center"
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
@@ -51,7 +51,7 @@ export function BusinessWhoWeSupport() {
             key={item.title}
             className="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md"
           >
-            <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-blue">
+            <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-signal-green">
               <MaterialIcon name={item.icon} className="text-[20px]" />
             </div>
             <h3 className="font-headline-sm text-headline-sm text-primary">{item.title}</h3>

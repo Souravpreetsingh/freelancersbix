@@ -4,7 +4,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What types of professionals can apply?",
     answer:
-      "We welcome researchers, academic writers, accountants, data specialists, business analysts, digital operators, and developers. Whether you are specialized in niche quantitative research or comprehensive corporate bookkeeping, there is potential alignment.",
+      "We welcome researchers, academic writers, accountants, bookkeepers, HR professionals, data specialists, business analysts, digital operators, and developers. Whether you are specialized in niche quantitative research or comprehensive corporate bookkeeping, there is potential alignment.",
   },
   {
     question: "Do you accept applications for roles that are not currently listed?",
@@ -48,7 +48,7 @@ export function CareerFAQ() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface">
       <div className="max-w-4xl mx-auto flex flex-col gap-space-2xl">
         <div className="text-center flex flex-col items-center gap-space-xs">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Questions &amp; Answers
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-primary">
@@ -64,14 +64,14 @@ export function CareerFAQ() {
               key={faq.question}
               className="faq-item bg-surface-container rounded-xl overflow-hidden transition-colors group [&_summary::-webkit-details-marker]:hidden"
             >
-              <summary className="faq-toggle w-full p-space-lg flex items-center justify-between text-left text-primary hover:text-signal-blue transition-colors cursor-pointer">
+              <summary className="faq-toggle w-full p-space-lg flex items-center justify-between text-left text-primary hover:text-signal-green transition-colors cursor-pointer">
                 <span className="font-headline-sm text-headline-sm font-medium">{faq.question}</span>
                 <MaterialIcon
                   name="expand_more"
                   className="faq-icon text-on-surface-variant transform transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
-              <div className="faq-content px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
+              <div className="fbx-faq-body faq-content px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
                 {faq.answer}
               </div>
             </details>

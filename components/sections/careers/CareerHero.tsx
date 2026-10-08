@@ -1,39 +1,60 @@
+import type { CSSProperties } from "react";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function CareerHero() {
   return (
-    <section className="relative w-full px-margin-mobile md:px-margin pt-space-2xl pb-space-3xl overflow-hidden">
-      <div className="absolute -top-32 right-1/4 w-96 h-96 bg-twilight-blue/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 -left-20 w-80 h-80 bg-signal-blue/10 rounded-full blur-[100px] pointer-events-none" />
+    <section className="fbx-hero relative w-full px-margin-mobile md:px-margin py-space-3xl md:py-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
+      <div className="absolute -top-32 right-1/4 w-96 h-96 bg-deep-sage/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -left-20 w-80 h-80 bg-signal-green/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
         <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
-          <div className="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-signal-blue font-label-md text-label-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-signal-blue animate-pulse" />
+          <div
+            data-hero-item
+            style={{ "--fbx-hero-delay": "80ms" } as CSSProperties}
+            className="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-signal-green font-label-md text-label-md"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-signal-green animate-pulse" />
             <span>CAREERS AT FREELANCERSBIX</span>
           </div>
-          <h1 className="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase tracking-tight text-primary max-w-2xl">
+          <h1
+            data-hero-item
+            style={{ "--fbx-hero-delay": "140ms" } as CSSProperties}
+            className="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase tracking-tight text-primary max-w-2xl"
+          >
             Build Meaningful Work With A Team That Values Expertise.
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          <p
+            data-hero-item
+            style={{ "--fbx-hero-delay": "200ms" } as CSSProperties}
+            className="font-body-lg text-body-lg text-on-surface-variant max-w-xl"
+          >
             We’re building a professional services environment where research, business thinking, accounting expertise,
             data skills and digital capabilities come together to deliver analytical depth and global execution.
           </p>
-          <div className="flex flex-wrap items-center gap-space-md pt-space-md">
+          <div
+            data-hero-item
+            style={{ "--fbx-hero-delay": "280ms" } as CSSProperties}
+            className="flex flex-wrap items-center gap-space-md pt-space-md"
+          >
             <a
               href="#opportunities"
-              className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg text-ink bg-whiteout hover:bg-whiteout/90 transition-all font-medium"
+              className="fbx-btn inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary/90 font-medium"
             >
               View Opportunities
               <MaterialIcon name="arrow_forward" className="ml-1.5 text-[18px]" />
             </a>
             <a
               href="#general-application"
-              className="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg text-primary bg-surface-container-high hover:bg-surface-variant transition-all font-medium"
+              className="fbx-btn inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg text-primary bg-surface-container-high hover:bg-surface-variant font-medium"
             >
               Send Your Resume
             </a>
           </div>
-          <div className="grid grid-cols-3 gap-space-lg pt-space-xl mt-space-md w-full max-w-lg bg-surface-container-lowest/60 p-space-md rounded-xl">
+          <div
+            data-hero-item
+            style={{ "--fbx-hero-delay": "360ms" } as CSSProperties}
+            className="grid grid-cols-3 gap-space-lg pt-space-xl mt-space-md w-full max-w-lg bg-surface-container-lowest/60 p-space-md rounded-xl"
+          >
             <div>
               <div className="font-headline-md text-headline-md text-primary font-bold">5+</div>
               <div className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
@@ -55,9 +76,13 @@ export function CareerHero() {
           </div>
         </div>
         <div className="lg:col-span-5 relative w-full flex items-center justify-center">
-          <div className="relative w-full aspect-square max-w-md bg-surface-container-lowest rounded-xl p-space-lg flex items-center justify-center overflow-hidden shadow-2xl">
+          <div
+            data-hero-item
+            style={{ "--fbx-hero-delay": "120ms" } as CSSProperties}
+            className="relative w-full aspect-square max-w-md bg-surface-container-lowest rounded-xl p-space-lg flex items-center justify-center overflow-hidden shadow-2xl"
+          >
             <svg
-              className="absolute inset-0 w-full h-full text-twilight-blue/25"
+              className="absolute inset-0 w-full h-full text-deep-sage/25"
               fill="none"
               viewBox="0 0 400 400"
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +113,7 @@ export function CareerHero() {
             </svg>
             <div className="absolute inset-0 flex flex-col justify-between p-space-md z-10 pointer-events-none">
               <div className="self-center bg-surface-container-high px-space-md py-space-xs rounded-full shadow-lg flex items-center gap-space-xs">
-                <span className="w-2 h-2 rounded-full bg-signal-blue" />
+                <span className="w-2 h-2 rounded-full bg-signal-green" />
                 <span className="font-label-sm text-label-sm text-primary font-medium">Research &amp; Analysis</span>
               </div>
               <div className="flex justify-between items-center w-full px-space-xs">
@@ -103,17 +128,17 @@ export function CareerHero() {
               </div>
               <div className="flex justify-around items-center w-full">
                 <div className="bg-surface-container-high px-space-md py-space-xs rounded-full shadow-lg flex items-center gap-space-xs">
-                  <span className="w-2 h-2 rounded-full bg-signal-blue" />
+                  <span className="w-2 h-2 rounded-full bg-signal-green" />
                   <span className="font-label-sm text-label-sm text-primary font-medium">Data Modeling</span>
                 </div>
                 <div className="bg-surface-container-high px-space-md py-space-xs rounded-full shadow-lg flex items-center gap-space-xs">
-                  <span className="w-2 h-2 rounded-full bg-secondary-fixed" />
+                  <span className="w-2 h-2 rounded-full bg-signal-green" />
                   <span className="font-label-sm text-label-sm text-primary font-medium">Digital Ops</span>
                 </div>
               </div>
             </div>
             <div className="relative z-20 w-24 h-24 rounded-full bg-surface-container-highest flex flex-col items-center justify-center shadow-xl">
-              <MaterialIcon name="hub" className="text-signal-blue text-3xl" />
+              <MaterialIcon name="hub" className="text-signal-green text-3xl" />
               <span className="font-label-sm text-label-sm text-primary tracking-widest uppercase mt-0.5">CORE</span>
             </div>
           </div>

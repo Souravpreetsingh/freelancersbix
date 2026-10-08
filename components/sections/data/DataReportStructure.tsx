@@ -13,13 +13,13 @@ const sections = [
 
 export function DataReportStructure() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center gap-space-xs mb-space-2xl">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Synthesis &amp; Publication
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Bring analysis together in a professional report.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -27,8 +27,8 @@ export function DataReportStructure() {
             appendix.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto p-space-xl rounded-xl bg-surface-container-low border border-whiteout/10 backdrop-blur-md">
-          <div className="flex items-center justify-between pb-space-md border-b border-whiteout/10 mb-space-lg">
+        <div className="max-w-4xl mx-auto p-space-xl rounded-xl bg-surface-container-low border border-outline-variant backdrop-blur-md">
+          <div className="flex items-center justify-between pb-space-md border-b border-outline-variant mb-space-lg">
             <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">
               Illustrative Report Structure
             </span>
@@ -38,9 +38,9 @@ export function DataReportStructure() {
             {sections.map((section) => (
               <div
                 key={section.tag}
-                className="p-3 rounded-lg bg-surface-container/60 border border-whiteout/5 flex items-center justify-between"
+                className="p-3 rounded-lg bg-surface-container/60 border border-outline-variant flex items-center justify-between"
               >
-                <span className="font-label-md text-label-md text-whiteout">{section.title}</span>
+                <span className="font-label-md text-label-md text-primary">{section.title}</span>
                 <span className="font-label-sm text-label-sm text-outline whitespace-nowrap">{section.tag}</span>
               </div>
             ))}

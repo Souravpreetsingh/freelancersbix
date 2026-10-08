@@ -7,28 +7,28 @@ const STATS: { value: string; label: string; detail: string; accent?: boolean }[
 
 export function StatsSection() {
   return (
-    <section className="w-full bg-black-void py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/15 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-signal-blue/5 via-transparent to-twilight-blue/5 pointer-events-none" />
+    <section className="w-full bg-brand-deep py-space-4xl px-margin-mobile md:px-margin border-b border-whiteout/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-signal-green/10 via-transparent to-deep-sage/20 pointer-events-none" />
       <div className="max-w-7xl mx-auto flex flex-col gap-space-2xl relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-space-xl">
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-start gap-space-xs p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/20"
+              className="flex flex-col items-start gap-space-xs p-space-lg rounded-xl bg-surface-container-lowest border border-whiteout/10"
             >
               <span
                 className={`font-headline-xl text-headline-xl-mobile md:text-headline-xl font-mono font-bold ${
-                  stat.accent ? "text-signal-blue" : "text-whiteout"
+                  stat.accent ? "text-signal-green" : "text-primary"
                 }`}
               >
                 {stat.value}
               </span>
-              <span className="font-headline-sm text-headline-sm text-primary font-medium">{stat.label}</span>
+              <span className="font-headline-sm text-headline-sm text-ink font-medium">{stat.label}</span>
               <span className="font-body-sm text-[12px] text-on-surface-variant">{stat.detail}</span>
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-between text-on-surface-variant/70 text-label-sm font-mono pt-space-md border-t border-outline-variant/20">
+        <div className="flex items-center justify-between text-whiteout/60 text-label-sm font-mono pt-space-md border-t border-whiteout/20">
           <span>* Live operational benchmarks</span>
           <span>Standardized Quality Protocol</span>
         </div>

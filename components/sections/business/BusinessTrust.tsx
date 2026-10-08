@@ -24,7 +24,7 @@ export function BusinessTrust() {
               }
             >
               <div className="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
-                <MaterialIcon name={item.icon} className="text-signal-blue text-[18px]" />
+                <MaterialIcon name={item.icon} className="text-signal-green text-[18px]" />
               </div>
               <div className="flex flex-col">
                 <span className="font-label-md text-label-md text-primary font-medium">{item.title}</span>

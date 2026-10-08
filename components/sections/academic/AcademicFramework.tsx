@@ -13,7 +13,7 @@ export function AcademicFramework() {
       <div className="max-w-7xl mx-auto bg-surface-container-low rounded-xl p-space-2xl shadow-xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue mb-space-xs block">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs block">
               Architectural Integrity
             </span>
             <h2 className="font-headline-md text-headline-md text-primary font-bold">
@@ -39,12 +39,12 @@ export function AcademicFramework() {
               >
                 <span
                   className={`font-label-sm text-label-sm block mb-1 ${
-                    node.highlighted ? "text-secondary" : "text-signal-blue"
+                    node.highlighted ? "text-secondary" : "text-signal-green"
                   }`}
                 >
                   {node.num}
                 </span>
-                <span className="font-label-md text-label-md text-whiteout font-medium">{node.label}</span>
+                <span className="font-label-md text-label-md text-primary font-medium">{node.label}</span>
               </div>
             </div>
           ))}

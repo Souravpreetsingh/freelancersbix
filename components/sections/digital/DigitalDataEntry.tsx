@@ -4,13 +4,13 @@ import type { IconName } from "@/lib/design/icons";
 const NODES: { name: IconName; iconClass: string; title: string; sub: string }[] = [
   {
     name: "description",
-    iconClass: "text-signal-blue text-2xl",
+    iconClass: "text-signal-green text-2xl",
     title: "Source Info",
     sub: "Scans, PDFs, forms, links",
   },
   {
     name: "keyboard",
-    iconClass: "text-signal-blue text-2xl",
+    iconClass: "text-signal-green text-2xl",
     title: "Data Entry",
     sub: "Manual & batch intake",
   },
@@ -29,7 +29,7 @@ export function DigitalDataEntry() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="max-w-3xl mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             INPUT ASSURANCE
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">

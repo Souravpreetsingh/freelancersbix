@@ -15,13 +15,13 @@ const rows = [
 
 export function ContentStructure() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Anatomy of Impact
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight mt-1">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight mt-1">
             Hierarchical Document Structure
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
@@ -33,14 +33,14 @@ export function ContentStructure() {
             <div
               key={row.num}
               className={`p-space-sm rounded-lg bg-surface-container flex items-center justify-between border-l-4 ${
-                row.accent ? "border-signal-blue" : "border-whiteout/30"
+                row.accent ? "border-signal-green" : "border-outline-variant"
               }`}
             >
               <div className="flex items-center gap-space-sm">
-                <span className={`font-mono text-label-sm ${row.accent ? "text-signal-blue" : "text-whiteout/60"}`}>
+                <span className={`font-mono text-label-sm ${row.accent ? "text-signal-green" : "text-primary/60"}`}>
                   {row.num}
                 </span>
-                <span className="font-label-lg text-label-lg text-whiteout font-semibold">{row.title}</span>
+                <span className="font-label-lg text-label-lg text-primary font-semibold">{row.title}</span>
               </div>
               <span className="font-label-sm text-label-sm text-on-surface-variant">{row.sub}</span>
             </div>

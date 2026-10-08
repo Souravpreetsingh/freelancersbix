@@ -19,7 +19,7 @@ export function StartupTrust() {
               key={item.label}
               className={`flex items-center gap-space-xs text-on-surface ${item.wide ? "col-span-2 md:col-span-1" : ""}`}
             >
-              <MaterialIcon name={item.icon} className="text-signal-blue text-[20px]" />
+              <MaterialIcon name={item.icon} className="text-signal-green text-[20px]" />
               <span className="font-label-sm text-label-sm uppercase tracking-wider font-medium">{item.label}</span>
             </div>
           ))}

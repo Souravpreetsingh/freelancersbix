@@ -36,7 +36,7 @@ export function AcademicExpectations() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
           {pillars.map((pillar) => (
             <div key={pillar.num} className="p-space-lg rounded-xl bg-surface-container shadow-sm">
-              <span className="font-label-sm text-label-sm text-signal-blue font-bold">{pillar.num}</span>
+              <span className="font-label-sm text-label-sm text-signal-green font-bold">{pillar.num}</span>
               <h3 className="font-headline-sm text-headline-sm text-primary mt-space-xs mb-space-xs">{pillar.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{pillar.body}</p>
             </div>

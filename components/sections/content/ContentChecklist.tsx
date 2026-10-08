@@ -15,13 +15,13 @@ const items = [
 
 export function ContentChecklist() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Editorial Governance
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             Before content reaches the final page, we look at more than grammar.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -32,11 +32,11 @@ export function ContentChecklist() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="p-space-md rounded-xl bg-surface-container border border-whiteout/5 flex items-start gap-space-sm"
+              className="p-space-md rounded-xl bg-surface-container border border-outline-variant flex items-start gap-space-sm"
             >
-              <MaterialIcon name="check_circle" className="text-signal-blue text-[20px] shrink-0 mt-0.5" />
+              <MaterialIcon name="check_circle" className="text-signal-green text-[20px] shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-label-md text-label-md text-whiteout font-semibold">{item.title}</h4>
+                <h4 className="font-label-md text-label-md text-primary font-semibold">{item.title}</h4>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">{item.body}</p>
               </div>
             </div>

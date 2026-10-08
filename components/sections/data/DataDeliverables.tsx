@@ -23,7 +23,7 @@ export function DataDeliverables() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Tangible Outputs
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Clear analytical deliverables.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -35,9 +35,9 @@ export function DataDeliverables() {
           {deliverables.map((deliverable) => (
             <span
               key={deliverable}
-              className="px-4 py-2 rounded-lg bg-surface-container border border-whiteout/10 text-whiteout font-label-md text-label-md flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-surface-container border border-primary/40 text-primary font-label-md text-label-md flex items-center gap-2"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-signal-blue" />
+              <span className="w-1.5 h-1.5 rounded-full bg-signal-green" />
               {deliverable}
             </span>
           ))}

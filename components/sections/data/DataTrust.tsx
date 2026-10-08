@@ -11,7 +11,7 @@ const items: { icon: IconName; label: string; sub: string }[] = [
 
 export function DataTrust() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-lg bg-surface-container-lowest border-y border-whiteout/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-lg bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 items-center gap-space-md">
         {items.map((item, index) => (
           <div
@@ -22,7 +22,7 @@ export function DataTrust() {
               <MaterialIcon name={item.icon} className="text-[20px]" />
             </span>
             <div className="flex flex-col">
-              <span className="font-label-lg text-label-lg text-whiteout font-semibold">{item.label}</span>
+              <span className="font-label-lg text-label-lg text-primary font-semibold">{item.label}</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">{item.sub}</span>
             </div>
           </div>

@@ -29,14 +29,14 @@ export function ServiceCard({
   return (
     <div
       className={cn(
-        "p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 border border-outline-variant/20 flex flex-col justify-between group",
+        "fbx-card p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 border border-outline-variant/20 flex flex-col justify-between group",
         highlight &&
-          "bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest border-2 border-signal-blue/70 shadow-[0_12px_40px_rgba(43,127,255,0.15)] relative overflow-hidden",
+          "bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest border-2 border-signal-green/70 shadow-[0_12px_40px_rgba(22,122,82,0.15)] relative overflow-hidden",
         wide && "md:col-span-2 lg:col-span-3",
       )}
     >
       {highlight ? (
-        <div className="absolute -right-12 -top-12 w-32 h-32 bg-signal-blue/15 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -right-12 -top-12 w-32 h-32 bg-signal-green/15 rounded-full blur-2xl pointer-events-none" />
       ) : null}
       {wide ? (
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
@@ -54,7 +54,7 @@ export function ServiceCard({
           <div className="flex-shrink-0 pt-space-md md:pt-0">
             <Link
               href={href}
-              className="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-signal-blue transition-colors"
+              className="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-signal-green transition-colors"
             >
               <span>{linkLabel}</span>
               <MaterialIcon name="arrow_forward" className="text-[16px]" />
@@ -68,13 +68,13 @@ export function ServiceCard({
               <span
                 className={cn(
                   "font-mono text-on-surface-variant/60 font-semibold text-label-sm",
-                  highlight && "text-signal-blue font-bold text-label-sm",
+                  highlight && "text-signal-green font-bold text-label-sm",
                 )}
               >
                 {index}
               </span>
               {highlight ? (
-                <span className="px-space-xs py-0.5 rounded-full bg-signal-blue/20 text-signal-blue font-label-sm text-[11px] font-bold tracking-wider uppercase border border-signal-blue/30">
+                <span className="px-space-xs py-0.5 rounded-full bg-signal-green/20 text-signal-green font-label-sm text-[11px] font-bold tracking-wider uppercase border border-signal-green/30">
                   Primary Core Practice
                 </span>
               ) : (
@@ -84,9 +84,7 @@ export function ServiceCard({
                 />
               )}
             </div>
-            <h3
-              className={cn("font-headline-sm text-headline-sm text-primary font-bold", highlight && "text-whiteout")}
-            >
+            <h3 className={cn("font-headline-sm text-headline-sm text-primary font-bold", highlight && "text-primary")}>
               {title}
             </h3>
             <p
@@ -101,18 +99,18 @@ export function ServiceCard({
           <div
             className={cn(
               "pt-space-xl mt-space-lg border-t border-outline-variant/15",
-              highlight && "border-signal-blue/20 relative z-10",
+              highlight && "border-signal-green/20 relative z-10",
             )}
           >
             <Link
               href={href}
               className={cn(
-                "inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-signal-blue transition-colors",
-                highlight && "text-signal-blue font-bold hover:text-whiteout",
+                "inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-signal-green transition-colors",
+                highlight && "text-signal-green font-bold hover:text-primary",
               )}
             >
               <span>{linkLabel}</span>
-              <MaterialIcon name="arrow_forward" className="text-[16px]" />
+              <MaterialIcon name="arrow_forward" className="fbx-arrow text-[16px]" />
             </Link>
           </div>
         </>

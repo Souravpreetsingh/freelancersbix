@@ -37,7 +37,7 @@ export function StartupQuality() {
             key={pillar.num}
             className="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm hover:bg-surface-container transition-colors"
           >
-            <span className="font-headline-sm text-headline-sm text-twilight-blue font-bold">{pillar.num}</span>
+            <span className="font-headline-sm text-headline-sm text-deep-sage font-bold">{pillar.num}</span>
             <h3 className="font-headline-sm text-headline-sm text-primary">{pillar.title}</h3>
             <p className="font-body-sm text-body-sm text-on-surface-variant">{pillar.desc}</p>
           </div>

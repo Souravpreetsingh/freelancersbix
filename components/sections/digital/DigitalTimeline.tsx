@@ -13,7 +13,7 @@ export function DigitalTimeline() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl text-center max-w-2xl mx-auto">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             CLIENT ENGAGEMENT PATHWAY
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -25,7 +25,7 @@ export function DigitalTimeline() {
             <div key={step.num} className="p-space-sm rounded-lg bg-surface-container-low text-center">
               <span
                 className={`font-mono text-label-sm font-bold block mb-1 ${
-                  step.highlight ? "text-secondary" : "text-signal-blue"
+                  step.highlight ? "text-secondary" : "text-signal-green"
                 }`}
               >
                 {step.num}

@@ -36,7 +36,7 @@ export function DataExcel() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Spreadsheet Engineering
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Make spreadsheets easier to understand and use.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
@@ -48,20 +48,18 @@ export function DataExcel() {
           {capabilities.map((capability) => (
             <div
               key={capability.title}
-              className="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between"
+              className="p-space-lg rounded-xl bg-surface-container border border-outline-variant flex flex-col justify-between"
             >
               <div>
-                <MaterialIcon name={capability.icon} className="text-[28px] text-signal-blue mb-3" />
-                <h3 className="font-headline-sm text-headline-sm text-whiteout mb-2">{capability.title}</h3>
+                <MaterialIcon name={capability.icon} className="text-[28px] text-signal-green mb-3" />
+                <h3 className="font-headline-sm text-headline-sm text-primary mb-2">{capability.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{capability.body}</p>
               </div>
-              <span className="font-label-sm text-label-sm text-twilight-blue font-mono mt-space-md">
-                {capability.tag}
-              </span>
+              <span className="font-label-sm text-label-sm text-deep-sage font-mono mt-space-md">{capability.tag}</span>
             </div>
           ))}
         </div>
-        <p className="mt-space-lg p-3 rounded-lg bg-surface-container-low border border-whiteout/5 text-center">
+        <p className="mt-space-lg p-3 rounded-lg bg-surface-container-low border border-outline-variant text-center">
           <span className="font-label-sm text-label-sm text-outline">
             * Standard operational spreadsheet structuring &amp; analytical formulas — not accredited proprietary
             software licensing or enterprise ERP implementation.

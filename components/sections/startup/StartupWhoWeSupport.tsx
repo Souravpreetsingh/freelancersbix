@@ -49,7 +49,7 @@ export function StartupWhoWeSupport() {
             key={profile.title}
             className="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm hover:bg-surface-container transition-colors"
           >
-            <div className="flex items-center gap-space-xs text-signal-blue">
+            <div className="flex items-center gap-space-xs text-signal-green">
               <MaterialIcon name={profile.icon} className="text-[20px]" />
               <h3 className="font-headline-sm text-headline-sm text-primary">{profile.title}</h3>
             </div>

@@ -49,8 +49,8 @@ export function AcademicLifecycle() {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-space-sm ${
                   index === steps.length - 1
-                    ? "bg-secondary-container text-secondary"
-                    : "bg-surface-container-highest text-whiteout"
+                    ? "bg-secondary-container text-on-secondary-container"
+                    : "bg-surface-container-highest text-primary"
                 }`}
               >
                 {step.num}

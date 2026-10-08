@@ -14,7 +14,7 @@ export function StartupProcessDocs() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
         <div className="lg:col-span-5 flex flex-col gap-space-md">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Operational Discipline
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase leading-tight">
@@ -27,7 +27,7 @@ export function StartupProcessDocs() {
         </div>
         <div className="lg:col-span-7 flex flex-col gap-space-md">
           <div className="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md">
-            <div className="font-label-sm text-label-sm uppercase tracking-wider text-twilight-blue font-semibold">
+            <div className="font-label-sm text-label-sm uppercase tracking-wider text-deep-sage font-semibold">
               Standard Process Loop
             </div>
             <div className="flex flex-wrap items-center justify-between gap-space-xs text-center">
@@ -35,12 +35,12 @@ export function StartupProcessDocs() {
                 <div key={step} className="flex items-center gap-space-xs">
                   <div
                     className={`bg-surface-container px-3 py-2 rounded-lg font-label-md text-label-md ${
-                      index === LOOP_STEPS.length - 1 ? "text-signal-blue font-medium" : "text-primary"
+                      index === LOOP_STEPS.length - 1 ? "text-signal-green font-medium" : "text-primary"
                     }`}
                   >
                     {step}
                   </div>
-                  {index < LOOP_STEPS.length - 1 ? <span className="text-signal-blue">→</span> : null}
+                  {index < LOOP_STEPS.length - 1 ? <span className="text-signal-green">→</span> : null}
                 </div>
               ))}
             </div>

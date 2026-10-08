@@ -70,7 +70,7 @@ export function DataServices() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Core Practice Offerings
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Data &amp; Research Services
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -83,21 +83,21 @@ export function DataServices() {
             <Link
               key={service.num}
               href="/contact"
-              className="group p-space-xl rounded-xl bg-surface-container-low/70 hover:bg-surface-container border border-whiteout/10 flex flex-col justify-between transition-colors"
+              className="group p-space-xl rounded-xl bg-surface-container-low/70 hover:bg-surface-container border border-outline-variant flex flex-col justify-between transition-colors"
             >
               <div>
                 <div className="flex items-center justify-between mb-space-md">
                   <span className="font-headline-sm text-headline-sm font-mono text-outline group-hover:text-secondary transition-colors">
                     {service.num}
                   </span>
-                  <span className="w-10 h-10 rounded-lg bg-surface-container text-whiteout group-hover:bg-signal-blue/20 group-hover:text-secondary flex items-center justify-center transition-colors">
+                  <span className="w-10 h-10 rounded-lg bg-surface-container text-primary group-hover:bg-signal-green/20 group-hover:text-secondary flex items-center justify-center transition-colors">
                     <MaterialIcon name={service.icon} className="text-[22px]" />
                   </span>
                 </div>
-                <h3 className="font-headline-sm text-headline-sm text-whiteout mb-2">{service.title}</h3>
+                <h3 className="font-headline-sm text-headline-sm text-primary mb-2">{service.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{service.body}</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-secondary group-hover:text-whiteout font-label-md text-label-md mt-space-lg transition-colors">
+              <span className="inline-flex items-center gap-1.5 text-secondary group-hover:text-primary font-label-md text-label-md mt-space-lg transition-colors">
                 Discuss Requirement
                 <MaterialIcon
                   name="arrow_forward"
@@ -107,13 +107,13 @@ export function DataServices() {
             </Link>
           ))}
         </div>
-        <div className="mt-space-2xl p-space-lg rounded-xl bg-gradient-to-r from-surface-container via-surface-container-low to-surface-container border border-whiteout/10 flex flex-col md:flex-row items-center justify-between gap-space-md">
+        <div className="mt-space-2xl p-space-lg rounded-xl bg-gradient-to-r from-surface-container via-surface-container-low to-surface-container border border-outline-variant flex flex-col md:flex-row items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-md">
-            <span className="w-12 h-12 rounded-lg bg-signal-blue/20 text-secondary flex items-center justify-center shrink-0">
+            <span className="w-12 h-12 rounded-lg bg-signal-green/20 text-secondary flex items-center justify-center shrink-0">
               <MaterialIcon name="support_agent" className="text-[24px]" />
             </span>
             <div>
-              <h4 className="font-label-xl text-label-xl text-whiteout font-semibold">
+              <h4 className="font-label-xl text-label-xl text-primary font-semibold">
                 Have a Custom Data or Research Requirement?
               </h4>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
@@ -123,7 +123,7 @@ export function DataServices() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-whiteout text-ink font-label-lg text-label-lg px-space-xl py-3 rounded-lg hover:bg-whiteout/90 transition-colors whitespace-nowrap"
+            className="inline-flex items-center justify-center bg-primary text-on-primary font-label-lg text-label-lg px-space-xl py-3 rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
           >
             Speak with our Analytical Team
           </Link>

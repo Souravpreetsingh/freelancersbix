@@ -21,7 +21,7 @@ export function DigitalTrust() {
                 item.wide ? "col-span-2 md:col-span-1" : ""
               }`}
             >
-              <MaterialIcon name={item.name} className="text-signal-blue text-2xl" />
+              <MaterialIcon name={item.name} className="text-signal-green text-2xl" />
               <span className="font-label-lg text-label-lg text-on-surface">{item.label}</span>
             </div>
           ))}

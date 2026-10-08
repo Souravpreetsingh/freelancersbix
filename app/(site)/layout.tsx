@@ -1,5 +1,7 @@
+import { ChatBot } from "@/components/chat/ChatBot";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { PageTransition } from "@/components/motion/PageTransition";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,10 +13,16 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         Skip to main content
       </a>
       <Header />
-      <main id="main-content" className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
-        {children}
-      </main>
+      <PageTransition>
+        <main
+          id="main-content"
+          className="w-full pt-24 min-h-[calc(100vh-96px)] bg-[linear-gradient(to_bottom,#F6F0E4_0px,#F6F0E4_96px,#FBF8F1_96px)]"
+        >
+          {children}
+        </main>
+      </PageTransition>
       <Footer />
+      <ChatBot />
     </>
   );
 }

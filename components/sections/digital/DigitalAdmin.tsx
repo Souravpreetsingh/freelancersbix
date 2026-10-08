@@ -39,7 +39,7 @@ export function DigitalAdmin() {
     <section className="w-full bg-surface-container-lowest py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl text-center max-w-2xl mx-auto">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             OPERATIONAL ASSURANCE
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -49,7 +49,7 @@ export function DigitalAdmin() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
           {CARDS.map((card) => (
             <div key={card.name} className="p-space-lg rounded-xl bg-surface-container-low">
-              <MaterialIcon name={card.name} className="text-signal-blue text-2xl mb-space-sm" />
+              <MaterialIcon name={card.name} className="text-signal-green text-2xl mb-space-sm" />
               <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">{card.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{card.desc}</p>
             </div>

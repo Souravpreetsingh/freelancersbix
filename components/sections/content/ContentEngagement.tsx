@@ -13,10 +13,10 @@ export function ContentEngagement() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Project Lifecycle
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             How an engagement progresses.
           </h2>
         </div>
@@ -26,13 +26,13 @@ export function ContentEngagement() {
               key={step.num}
               className={`p-space-sm rounded-lg flex flex-col justify-between ${
                 index === steps.length - 1
-                  ? "bg-surface-container-high border border-signal-blue/40"
-                  : "bg-surface-container border border-whiteout/10"
+                  ? "bg-surface-container-high border border-signal-green/40"
+                  : "bg-surface-container border border-outline-variant"
               }`}
             >
-              <span className="font-mono text-label-sm text-signal-blue">{step.num}</span>
+              <span className="font-mono text-label-sm text-signal-green">{step.num}</span>
               <div>
-                <h4 className="font-label-md text-label-md text-whiteout font-semibold mt-1">{step.title}</h4>
+                <h4 className="font-label-md text-label-md text-primary font-semibold mt-1">{step.title}</h4>
                 <p
                   className={`font-body-sm text-[12px] mt-1 ${
                     index === steps.length - 1 ? "text-secondary" : "text-on-surface-variant"

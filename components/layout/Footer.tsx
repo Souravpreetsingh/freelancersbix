@@ -1,17 +1,15 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { FooterAccent } from "@/components/brand/Geometry";
+import { CurrentYear, FooterColumnNav } from "@/components/layout/FooterClient";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import { footerColumns } from "@/data/navigation";
 import { SITE } from "@/lib/design/site";
-import { cn } from "@/lib/utils/cn";
 
-const inactiveFooterLink = "font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors";
-const activeFooterLink = "font-body-sm text-body-sm text-primary font-bold transition-colors";
+const columnHeading = "font-label-sm text-label-sm uppercase tracking-widest text-[#7EB99E] font-bold mb-space-xs";
 
 const socialLink =
-  "p-space-xs rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors";
+  "p-space-xs rounded-full text-whiteout/70 hover:text-whiteout hover:bg-whiteout/10 transition-colors";
 
 const socialLinks = [
   { name: "public", label: "Global Network" },
@@ -19,61 +17,75 @@ const socialLinks = [
   { name: "share", label: "Corporate Location" },
 ] as const;
 
-function FooterColumnNav({ links }: { links: (typeof footerColumns)[number]["links"] }) {
-  const pathname = usePathname();
-
-  return (
-    <nav className="flex flex-col gap-space-xs">
-      {links.map((link) => {
-        const active = pathname === link.href;
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            aria-current={active ? "page" : undefined}
-            className={cn(active ? activeFooterLink : inactiveFooterLink)}
-          >
-            {link.label}
-          </Link>
-        );
-      })}
-    </nav>
-  );
-}
-
 export function Footer() {
   return (
-    <footer className="w-full bg-surface-container-lowest text-on-surface-variant">
-      <div className="w-full px-margin-mobile md:px-margin py-space-3xl">
+    <footer className="relative w-full overflow-hidden bg-brand-deep text-whiteout">
+      <FooterAccent className="-bottom-10 -right-10 h-56 w-56 md:h-80 md:w-80 lg:h-96 lg:w-96" />
+      <div className="relative w-full px-margin-mobile md:px-margin py-space-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-2xl mb-space-3xl">
           <div className="lg:col-span-2 flex flex-col items-start gap-space-md">
             <div className="flex items-center gap-space-sm">
-              <img
+              <Image
                 alt="FreelancersBix Logo"
                 className="h-8 w-auto object-contain"
-                src="/images/freelancersbix-logo.png"
+                height={512}
+                sizes="32px"
+                src="/images/freelancersbix-logo-light.png"
+                width={512}
               />
-              <span className="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">
+              <span className="font-headline-sm text-headline-sm font-bold tracking-tight text-whiteout">
                 {SITE.name}
               </span>
             </div>
-            <p className="font-label-lg text-label-lg text-primary tracking-wide uppercase">{SITE.tagline}</p>
-            <p className="font-body-sm text-body-sm text-on-surface-variant max-w-sm">{SITE.description}</p>
+            <p className="font-label-lg text-label-lg text-[#7EB99E] tracking-wide uppercase">{SITE.tagline}</p>
+            <p className="font-body-sm text-body-sm text-whiteout/75 max-w-sm">{SITE.aboutExcerpt}</p>
+            <div className="flex flex-col gap-space-xs pt-space-xs">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="font-body-sm text-body-sm text-whiteout/75 hover:text-whiteout transition-colors"
+              >
+                {SITE.email}
+              </a>
+              <a
+                href={`mailto:${SITE.secondaryEmail}`}
+                className="font-body-sm text-body-sm text-whiteout/75 hover:text-whiteout transition-colors"
+              >
+                {SITE.secondaryEmail}
+              </a>
+              <a
+                href={SITE.phoneHref}
+                className="font-body-sm text-body-sm text-whiteout/75 hover:text-whiteout transition-colors"
+              >
+                {SITE.phone}
+              </a>
+              <Link
+                href="/contact"
+                className="font-body-sm text-body-sm text-whiteout/75 hover:text-whiteout transition-colors"
+              >
+                Contact &amp; enquiries
+              </Link>
+            </div>
+            <div className="flex flex-col gap-space-xs pt-space-sm w-full max-w-sm border-t border-[rgba(220,206,180,0.25)]">
+              <p className="font-body-sm text-body-sm text-whiteout/75">
+                <span className="text-[#7EB99E] font-semibold">GSTIN</span>: 03ANIPY7753K1ZB
+              </p>
+              <p className="font-body-sm text-body-sm text-whiteout/75">
+                <span className="text-[#7EB99E] font-semibold">UDHYAM REGISTRATION</span>: UDYAM-PB-20-0125720
+              </p>
+            </div>
           </div>
 
           {footerColumns.map((column) => (
             <div key={column.heading} className="flex flex-col gap-space-sm">
-              <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-space-xs">
-                {column.heading}
-              </span>
+              <span className={columnHeading}>{column.heading}</span>
               <FooterColumnNav links={column.links} />
             </div>
           ))}
         </div>
 
-        <div className="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
-          <p className="font-body-sm text-body-sm text-on-surface-variant">
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+        <div className="pt-space-lg border-t border-[rgba(220,206,180,0.25)] flex flex-col sm:flex-row items-center justify-between gap-space-md">
+          <p className="font-body-sm text-body-sm text-whiteout/60">
+            © <CurrentYear /> {SITE.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-space-md">
             {socialLinks.map((social) => (

@@ -19,8 +19,8 @@ export function ContentTrust() {
   return (
     <section className="w-full px-margin-mobile md:px-margin pb-space-2xl">
       <div className="max-w-7xl mx-auto">
-        <div className="w-full p-space-md rounded-xl bg-surface-container-low/70 border border-whiteout/10 backdrop-blur-md">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-space-md text-center items-center divide-y md:divide-y-0 md:divide-x divide-whiteout/10">
+        <div className="w-full p-space-md rounded-xl bg-surface-container-low/70 border border-outline-variant backdrop-blur-md">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-space-md text-center items-center divide-y md:divide-y-0 md:divide-x divide-outline-variant">
             {items.map((item) => (
               <div
                 key={item.label}
@@ -28,10 +28,8 @@ export function ContentTrust() {
                   item.wide ? "col-span-2 md:col-span-1" : ""
                 }`}
               >
-                <MaterialIcon name={item.icon} className="text-signal-blue text-[18px]" />
-                <span className="font-label-md text-label-md text-whiteout font-medium tracking-wide">
-                  {item.label}
-                </span>
+                <MaterialIcon name={item.icon} className="text-signal-green text-[18px]" />
+                <span className="font-label-md text-label-md text-primary font-medium tracking-wide">{item.label}</span>
               </div>
             ))}
           </div>

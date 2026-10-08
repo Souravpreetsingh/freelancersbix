@@ -45,7 +45,7 @@ export function WhyServices() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col items-start gap-space-xs max-w-3xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Operational Discipline
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -56,7 +56,7 @@ export function WhyServices() {
           {REASONS.map((reason) => (
             <div
               key={reason.title}
-              className="p-space-lg rounded-xl bg-surface-container border border-white/10 hover:border-white/20 transition-all flex flex-col gap-2"
+              className="p-space-lg rounded-xl bg-surface-container border border-outline-variant hover:border-outline-variant transition-all flex flex-col gap-2"
             >
               <div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-2">
                 <MaterialIcon name={reason.icon} className="text-[20px]" />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { DigitalAdmin } from "@/components/sections/digital/DigitalAdmin";
 import { DigitalAudience } from "@/components/sections/digital/DigitalAudience";
 import { DigitalBreadcrumb } from "@/components/sections/digital/DigitalBreadcrumb";
@@ -33,26 +34,66 @@ export default function DigitalSupportPage() {
     <>
       <DigitalBreadcrumb />
       <DigitalHero />
-      <DigitalTrust />
-      <DigitalIntro />
-      <DigitalServices />
-      <DigitalWorkflow />
-      <DigitalVirtualAssistance />
-      <DigitalDataEntry />
-      <DigitalFileManagement />
-      <DigitalSpreadsheets />
-      <DigitalResearch />
-      <DigitalLeadResearch />
-      <DigitalAdmin />
-      <DigitalOpsFramework />
-      <DigitalQuality />
-      <DigitalAudience />
-      <DigitalDeliverables />
-      <DigitalWorkflowIntegration />
-      <DigitalCompanion />
-      <DigitalTimeline />
-      <DigitalFAQ />
-      <DigitalCTA />
+      <Reveal>
+        <DigitalTrust />
+      </Reveal>
+      <Reveal>
+        <DigitalIntro />
+      </Reveal>
+      <Reveal>
+        <DigitalServices />
+      </Reveal>
+      <Reveal>
+        <DigitalWorkflow />
+      </Reveal>
+      <Reveal>
+        <DigitalVirtualAssistance />
+      </Reveal>
+      <Reveal>
+        <DigitalDataEntry />
+      </Reveal>
+      <Reveal>
+        <DigitalFileManagement />
+      </Reveal>
+      <Reveal>
+        <DigitalSpreadsheets />
+      </Reveal>
+      <Reveal>
+        <DigitalResearch />
+      </Reveal>
+      <Reveal>
+        <DigitalLeadResearch />
+      </Reveal>
+      <Reveal>
+        <DigitalAdmin />
+      </Reveal>
+      <Reveal>
+        <DigitalOpsFramework />
+      </Reveal>
+      <Reveal>
+        <DigitalQuality />
+      </Reveal>
+      <Reveal>
+        <DigitalAudience />
+      </Reveal>
+      <Reveal>
+        <DigitalDeliverables />
+      </Reveal>
+      <Reveal>
+        <DigitalWorkflowIntegration />
+      </Reveal>
+      <Reveal>
+        <DigitalCompanion />
+      </Reveal>
+      <Reveal>
+        <DigitalTimeline />
+      </Reveal>
+      <Reveal>
+        <DigitalFAQ />
+      </Reveal>
+      <Reveal>
+        <DigitalCTA />
+      </Reveal>
     </>
   );
 }

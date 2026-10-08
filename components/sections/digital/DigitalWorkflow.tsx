@@ -48,7 +48,7 @@ export function DigitalWorkflow() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="mb-space-2xl text-center max-w-2xl mx-auto">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             OUR SUPPORT WORKFLOW
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -64,7 +64,7 @@ export function DigitalWorkflow() {
               <div>
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-headline-sm mb-space-md ${
-                    step.highlight ? "bg-signal-blue text-whiteout" : "bg-surface-container-highest text-primary"
+                    step.highlight ? "bg-signal-green text-whiteout" : "bg-surface-container-highest text-primary"
                   }`}
                 >
                   {step.num}
@@ -74,7 +74,7 @@ export function DigitalWorkflow() {
               </div>
               <span
                 className={`font-mono text-label-sm mt-space-md pt-space-xs block ${
-                  step.highlight ? "text-secondary" : "text-signal-blue"
+                  step.highlight ? "text-secondary" : "text-signal-green"
                 }`}
               >
                 {step.tag}

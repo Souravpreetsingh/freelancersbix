@@ -45,10 +45,12 @@ const FAQS: { question: string; answer: string }[] = [
 
 export function ForeignFAQ() {
   return (
-    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-white/5">
+    <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest border-y border-outline-variant">
       <div className="max-w-[1000px] mx-auto space-y-space-2xl">
         <div className="text-center">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">FAQs</span>
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
+            FAQs
+          </span>
           <h2 className="mt-space-xs font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
             Frequently Asked Questions.
           </h2>
@@ -60,14 +62,14 @@ export function ForeignFAQ() {
           {FAQS.map((faq) => (
             <details
               key={faq.question}
-              className="group rounded-xl bg-surface-container-low border border-white/5 overflow-hidden transition-all [&_summary::-webkit-details-marker]:hidden"
+              className="group rounded-xl bg-surface-container-low border border-outline-variant overflow-hidden transition-all [&_summary::-webkit-details-marker]:hidden"
             >
               <summary className="w-full p-space-lg text-left flex items-center justify-between gap-space-md cursor-pointer">
-                <span className="font-headline-sm text-headline-sm font-bold text-whiteout">{faq.question}</span>
+                <span className="font-headline-sm text-headline-sm font-bold text-primary">{faq.question}</span>
                 <MaterialIcon name="add" className="text-secondary text-[20px] group-open:hidden shrink-0" />
                 <MaterialIcon name="remove" className="text-secondary text-[20px] hidden group-open:block shrink-0" />
               </summary>
-              <div className="px-space-lg pb-space-lg text-on-surface-variant font-body-sm text-body-sm border-t border-white/5 pt-space-sm">
+              <div className="fbx-faq-body px-space-lg pb-space-lg text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant pt-space-sm">
                 {faq.answer}
               </div>
             </details>

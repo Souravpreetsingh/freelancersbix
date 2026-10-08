@@ -42,7 +42,7 @@ export function DigitalOpsFramework() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="max-w-2xl mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             OPERATIONAL METHODOLOGY
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -56,7 +56,7 @@ export function DigitalOpsFramework() {
               className="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between"
             >
               <div>
-                <span className="font-mono text-label-sm text-signal-blue uppercase font-bold">{item.stage}</span>
+                <span className="font-mono text-label-sm text-signal-green uppercase font-bold">{item.stage}</span>
                 <h3 className="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">{item.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{item.desc}</p>
               </div>

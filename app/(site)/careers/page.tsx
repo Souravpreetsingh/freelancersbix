@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { CareerAreas } from "@/components/sections/careers/CareerAreas";
 import { CareerBrand } from "@/components/sections/careers/CareerBrand";
 import { CareerCTA } from "@/components/sections/careers/CareerCTA";
@@ -22,17 +23,39 @@ export default function CareersPage() {
   return (
     <>
       <CareerHero />
-      <CareerWhy />
-      <CareerProfiles />
-      <CareerOpportunities />
-      <CareerSpecimen />
-      <CareerAreas />
-      <CareerPrinciples />
-      <CareerJourney />
-      <CareerFAQ />
-      <CareerForm />
-      <CareerBrand />
-      <CareerCTA />
+      <Reveal>
+        <CareerWhy />
+      </Reveal>
+      <Reveal>
+        <CareerProfiles />
+      </Reveal>
+      <Reveal>
+        <CareerOpportunities />
+      </Reveal>
+      <Reveal>
+        <CareerSpecimen />
+      </Reveal>
+      <Reveal>
+        <CareerAreas />
+      </Reveal>
+      <Reveal>
+        <CareerPrinciples />
+      </Reveal>
+      <Reveal>
+        <CareerJourney />
+      </Reveal>
+      <Reveal>
+        <CareerFAQ />
+      </Reveal>
+      <Reveal>
+        <CareerForm />
+      </Reveal>
+      <Reveal>
+        <CareerBrand />
+      </Reveal>
+      <Reveal>
+        <CareerCTA />
+      </Reveal>
     </>
   );
 }

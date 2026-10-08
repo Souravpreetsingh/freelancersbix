@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/motion/Reveal";
 import { BusinessCompetitorAnalysis } from "@/components/sections/business/BusinessCompetitorAnalysis";
 import { BusinessCTA } from "@/components/sections/business/BusinessCTA";
 import { BusinessDataIntegration } from "@/components/sections/business/BusinessDataIntegration";
@@ -39,23 +40,57 @@ export default function BusinessAndConsultingPage() {
         currentClassName="text-primary font-medium tracking-wide"
       />
       <BusinessHero />
-      <BusinessTrust />
-      <BusinessIntro />
-      <BusinessServices />
-      <BusinessFramework />
-      <BusinessMarketIntelligence />
-      <BusinessCompetitorAnalysis />
-      <BusinessPlanning />
-      <BusinessWhoWeSupport />
-      <BusinessDeliverables />
-      <BusinessQuality />
-      <BusinessJourney />
-      <BusinessUseCases />
-      <BusinessMethodology />
-      <BusinessDataIntegration />
-      <BusinessRelated />
-      <BusinessFAQ />
-      <BusinessCTA />
+      <Reveal>
+        <BusinessTrust />
+      </Reveal>
+      <Reveal>
+        <BusinessIntro />
+      </Reveal>
+      <Reveal>
+        <BusinessServices />
+      </Reveal>
+      <Reveal>
+        <BusinessFramework />
+      </Reveal>
+      <Reveal>
+        <BusinessMarketIntelligence />
+      </Reveal>
+      <Reveal>
+        <BusinessCompetitorAnalysis />
+      </Reveal>
+      <Reveal>
+        <BusinessPlanning />
+      </Reveal>
+      <Reveal>
+        <BusinessWhoWeSupport />
+      </Reveal>
+      <Reveal>
+        <BusinessDeliverables />
+      </Reveal>
+      <Reveal>
+        <BusinessQuality />
+      </Reveal>
+      <Reveal>
+        <BusinessJourney />
+      </Reveal>
+      <Reveal>
+        <BusinessUseCases />
+      </Reveal>
+      <Reveal>
+        <BusinessMethodology />
+      </Reveal>
+      <Reveal>
+        <BusinessDataIntegration />
+      </Reveal>
+      <Reveal>
+        <BusinessRelated />
+      </Reveal>
+      <Reveal>
+        <BusinessFAQ />
+      </Reveal>
+      <Reveal>
+        <BusinessCTA />
+      </Reveal>
     </>
   );
 }

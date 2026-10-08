@@ -18,7 +18,7 @@ export function AcademicQuality() {
     <section className="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
         <div className="lg:col-span-5">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue mb-space-xs block">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs block">
             Quality Protocol
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-space-md">
@@ -51,7 +51,7 @@ export function AcademicQuality() {
               >
                 <span
                   className={`font-headline-sm text-headline-sm font-bold ${
-                    index === stream.length - 1 ? "text-secondary" : "text-signal-blue"
+                    index === stream.length - 1 ? "text-secondary" : "text-signal-green"
                   }`}
                 >
                   {item.num}

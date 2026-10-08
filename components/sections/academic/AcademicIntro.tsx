@@ -27,7 +27,7 @@ export function AcademicIntro() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue mb-space-xs block">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs block">
               Operational Clarity
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-space-md">
@@ -40,23 +40,23 @@ export function AcademicIntro() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-space-xs py-space-md">
-            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-whiteout">
+            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
               01 Understand
             </span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">→</span>
-            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-whiteout">
+            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
               02 Source
             </span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">→</span>
-            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-whiteout">
+            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
               03 Analyse
             </span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">→</span>
-            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-whiteout">
+            <span className="px-space-sm py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
               04 Structure
             </span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">→</span>
-            <span className="px-space-sm py-1 rounded bg-secondary-container font-label-sm text-label-sm text-secondary">
+            <span className="px-space-sm py-1 rounded bg-secondary-container font-label-sm text-label-sm text-on-secondary-container">
               05 Deliver
             </span>
           </div>
@@ -64,7 +64,7 @@ export function AcademicIntro() {
         <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-space-md">
           {phases.map((phase) => (
             <div key={phase.num} className="p-space-lg rounded-xl bg-surface-container-low shadow-sm">
-              <span className="font-label-sm text-label-sm text-signal-blue font-bold">{`PHASE ${phase.num}`}</span>
+              <span className="font-label-sm text-label-sm text-signal-green font-bold">{`PHASE ${phase.num}`}</span>
               <h3 className="font-headline-sm text-headline-sm text-primary mt-space-xs mb-space-xs">{phase.title}</h3>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{phase.body}</p>
             </div>

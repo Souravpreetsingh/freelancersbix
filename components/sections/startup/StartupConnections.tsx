@@ -19,7 +19,7 @@ export function StartupConnections() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
         <div className="bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
               Integrations
             </span>
             <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mt-1 mb-space-md">
@@ -39,7 +39,7 @@ export function StartupConnections() {
           </div>
           <Link
             href="/services/data-and-research"
-            className="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-signal-blue hover:text-primary transition-colors font-medium"
+            className="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-signal-green hover:text-primary transition-colors font-medium"
           >
             <span>Explore Data &amp; Research Services</span>
             <MaterialIcon name="arrow_forward" className="text-[18px]" />
@@ -47,7 +47,7 @@ export function StartupConnections() {
         </div>
         <div className="bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-semibold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
               Extended Advisory
             </span>
             <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mt-1 mb-space-md">
@@ -60,7 +60,7 @@ export function StartupConnections() {
             <div className="space-y-space-xs mb-space-lg font-body-sm text-body-sm text-on-surface">
               {RESEARCH_CHECKLIST.map((item) => (
                 <div key={item} className="flex items-center gap-space-xs">
-                  <MaterialIcon name="check" className="text-[16px] text-signal-blue" />
+                  <MaterialIcon name="check" className="text-[16px] text-signal-green" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -68,7 +68,7 @@ export function StartupConnections() {
           </div>
           <Link
             href="/services/business-and-consulting"
-            className="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-signal-blue hover:text-primary transition-colors font-medium"
+            className="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-signal-green hover:text-primary transition-colors font-medium"
           >
             <span>Explore Business Research</span>
             <MaterialIcon name="arrow_forward" className="text-[18px]" />

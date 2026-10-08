@@ -12,7 +12,7 @@ export function ServicesSubnav() {
   return (
     <nav
       aria-label="Service categories"
-      className="sticky top-20 z-40 w-full bg-surface-container-lowest/90 backdrop-blur-xl border-y border-white/10"
+      className="sticky top-20 z-40 w-full bg-surface-container-lowest/90 backdrop-blur-xl border-y border-outline-variant"
     >
       <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto overflow-x-auto no-scrollbar py-3">
         <div className="flex items-center gap-2 md:gap-3 whitespace-nowrap min-w-max">
@@ -21,10 +21,10 @@ export function ServicesSubnav() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-1.5 rounded-lg text-xs font-medium text-primary bg-signal-blue/20 border border-signal-blue/40 shadow-sm transition-all flex items-center gap-1.5"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-medium text-primary bg-signal-green/20 border border-signal-green/40 shadow-sm transition-all flex items-center gap-1.5"
                 aria-current="true"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-signal-blue" />
+                <span className="w-1.5 h-1.5 rounded-full bg-signal-green" />
                 {item.label}
               </a>
             ) : (

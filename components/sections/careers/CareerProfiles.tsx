@@ -53,7 +53,7 @@ export function CareerProfiles() {
       <div className="max-w-7xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               Who We Look For
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-primary">
@@ -74,7 +74,7 @@ export function CareerProfiles() {
               }`}
             >
               <div className="flex items-center justify-between">
-                <MaterialIcon name={profile.icon} className="text-signal-blue text-2xl" />
+                <MaterialIcon name={profile.icon} className="text-signal-green text-2xl" />
                 <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">{profile.number}</span>
               </div>
               <h4 className="font-headline-sm text-headline-sm text-primary font-bold pt-space-xs">{profile.title}</h4>

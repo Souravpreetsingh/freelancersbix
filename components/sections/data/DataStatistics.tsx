@@ -43,7 +43,7 @@ export function DataStatistics() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Quantitative Modeling
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Analytical support aligned with the research objective.
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
@@ -53,18 +53,18 @@ export function DataStatistics() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-space-md">
           {methods.map((method) => (
-            <div key={method.name} className="p-space-md rounded-xl bg-surface-container border border-whiteout/5">
-              <span className="font-headline-sm text-headline-sm text-whiteout block mb-1">{method.name}</span>
+            <div key={method.name} className="p-space-md rounded-xl bg-surface-container border border-outline-variant">
+              <span className="font-headline-sm text-headline-sm text-primary block mb-1">{method.name}</span>
               <p className="font-body-sm text-body-sm text-on-surface-variant">{method.body}</p>
             </div>
           ))}
         </div>
-        <div className="mt-space-lg p-space-md rounded-xl bg-surface-container-low border border-whiteout/10 flex items-start gap-space-md">
+        <div className="mt-space-lg p-space-md rounded-xl bg-surface-container-low border border-outline-variant flex items-start gap-space-md">
           <MaterialIcon name="info" className="text-secondary text-[24px] shrink-0" />
           <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            <strong className="text-whiteout font-semibold">Methodological Notice:</strong> Deployed quantitative
-            methods are always matched to the disciplinary norms of your field, the structure of your variables, and the
-            express purpose of the inquiry.
+            <strong className="text-primary font-semibold">Methodological Notice:</strong> Deployed quantitative methods
+            are always matched to the disciplinary norms of your field, the structure of your variables, and the express
+            purpose of the inquiry.
           </p>
         </div>
       </div>

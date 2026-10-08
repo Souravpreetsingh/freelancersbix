@@ -40,10 +40,10 @@ export function ContentQuality() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-space-xs mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-twilight-blue font-semibold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-deep-sage font-semibold">
             Institutional Standard
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-whiteout uppercase tracking-tight">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
             A better framework for professional writing.
           </h2>
         </div>
@@ -51,16 +51,16 @@ export function ContentQuality() {
           {cards.map((card) => (
             <div
               key={card.footer}
-              className="p-space-lg rounded-xl bg-surface-container border border-whiteout/10 flex flex-col justify-between"
+              className="p-space-lg rounded-xl bg-surface-container border border-outline-variant flex flex-col justify-between"
             >
               <div>
-                <MaterialIcon name={card.icon} className="text-signal-blue text-[28px] mb-space-md" />
-                <h3 className="font-headline-sm text-headline-sm text-whiteout mb-space-xs font-semibold">
+                <MaterialIcon name={card.icon} className="text-signal-green text-[28px] mb-space-md" />
+                <h3 className="font-headline-sm text-headline-sm text-primary mb-space-xs font-semibold">
                   {card.title}
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{card.body}</p>
               </div>
-              <div className="mt-space-lg pt-space-sm border-t border-whiteout/5 font-mono text-[11px] text-twilight-blue">
+              <div className="mt-space-lg pt-space-sm border-t border-outline-variant font-mono text-[11px] text-deep-sage">
                 {card.footer}
               </div>
             </div>

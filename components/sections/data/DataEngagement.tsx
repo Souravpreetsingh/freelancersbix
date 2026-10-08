@@ -3,7 +3,7 @@ const steps = [
     num: "01",
     label: "Requirement & Scope Specification",
     tag: "Initial Consultation",
-    numClass: "text-signal-blue",
+    numClass: "text-signal-green",
     bold: false,
   },
   {
@@ -45,7 +45,7 @@ const steps = [
     num: "07",
     label: "Delivery, Codebook Handover & Review",
     tag: "Project Completion",
-    numClass: "text-whiteout",
+    numClass: "text-primary",
     bold: true,
     highlighted: true,
   },
@@ -59,7 +59,7 @@ export function DataEngagement() {
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">
             Engagement Cadence
           </span>
-          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-whiteout">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary">
             Typical Project Workflow
           </h2>
         </div>
@@ -68,19 +68,19 @@ export function DataEngagement() {
             <div
               key={step.num}
               className={`p-4 rounded-xl border flex items-center justify-between ${
-                step.highlighted ? "bg-signal-blue/15 border-signal-blue/30" : "bg-surface-container border-whiteout/5"
+                step.highlighted
+                  ? "bg-signal-green/15 border-signal-green/30"
+                  : "bg-surface-container border-outline-variant"
               }`}
             >
               <div className="flex items-center gap-4">
                 <span className={`font-mono font-bold text-sm ${step.numClass}`}>{step.num}</span>
-                <span
-                  className={`font-label-lg text-label-lg text-whiteout ${step.bold ? "font-bold" : "font-medium"}`}
-                >
+                <span className={`font-label-lg text-label-lg text-primary ${step.bold ? "font-bold" : "font-medium"}`}>
                   {step.label}
                 </span>
               </div>
               <span
-                className={`font-label-sm text-label-sm ${step.highlighted ? "text-whiteout/80" : "text-on-surface-variant"}`}
+                className={`font-label-sm text-label-sm ${step.highlighted ? "text-primary/80" : "text-on-surface-variant"}`}
               >
                 {step.tag}
               </span>

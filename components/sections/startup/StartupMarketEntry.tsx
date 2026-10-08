@@ -24,14 +24,14 @@ export function StartupMarketEntry() {
                 <span className="font-headline-sm text-headline-sm text-primary">{part.title}</span>
                 <span className="font-label-sm text-label-sm text-on-surface-variant">{part.sub}</span>
               </div>
-              <span className="font-headline-md text-headline-md text-signal-blue">
+              <span className="font-headline-md text-headline-md text-signal-green">
                 {index === PARTS.length - 1 ? "=" : "+"}
               </span>
             </div>
           ))}
-          <div className="bg-signal-blue text-whiteout px-space-lg py-space-sm rounded-lg flex flex-col items-center shadow-lg shadow-signal-blue/20">
+          <div className="bg-signal-green text-whiteout px-space-lg py-space-sm rounded-lg flex flex-col items-center shadow-lg shadow-signal-green/20">
             <span className="font-headline-sm text-headline-sm uppercase font-bold">Market Entry Assessment</span>
-            <span className="font-label-sm text-label-sm text-primary-fixed">Evidence-Backed Decision</span>
+            <span className="font-label-sm text-label-sm text-whiteout/85">Evidence-Backed Decision</span>
           </div>
         </div>
       </div>

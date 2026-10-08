@@ -35,7 +35,7 @@ export function DigitalLeadResearch() {
     <section className="w-full bg-surface py-space-3xl">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="max-w-3xl mb-space-2xl">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             TARGET DISCOVERY
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-primary mt-1">
@@ -63,7 +63,7 @@ export function DigitalLeadResearch() {
                   <td className="p-3 font-bold text-primary">{row.company}</td>
                   <td className="p-3 text-on-surface-variant">{row.industry}</td>
                   <td className="p-3 text-on-surface-variant">{row.location}</td>
-                  <td className="p-3 text-signal-blue">{row.website}</td>
+                  <td className="p-3 text-signal-green">{row.website}</td>
                   <td className="p-3 text-on-surface-variant">{row.category}</td>
                   <td className="p-3 text-primary">{row.contact}</td>
                   <td className="p-3 text-on-surface-variant">{row.notes}</td>

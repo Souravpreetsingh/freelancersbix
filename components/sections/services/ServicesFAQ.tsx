@@ -45,10 +45,10 @@ const FAQS: { question: string; answer: string }[] = [
 
 export function ServicesFAQ() {
   return (
-    <section className="w-full bg-surface-container-lowest py-space-3xl border-t border-white/10">
+    <section className="w-full bg-surface-container-lowest py-space-3xl border-t border-outline-variant">
       <div className="w-full px-margin-mobile md:px-margin max-w-4xl mx-auto flex flex-col gap-space-2xl">
         <div className="flex flex-col items-center text-center gap-space-xs">
-          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-blue font-bold">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
             Service FAQ
           </span>
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
@@ -62,7 +62,7 @@ export function ServicesFAQ() {
           {FAQS.map((faq) => (
             <details
               key={faq.question}
-              className="group p-5 rounded-xl bg-surface-container border border-white/10 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all"
+              className="group p-5 rounded-xl bg-surface-container border border-outline-variant [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all"
             >
               <summary className="flex items-center justify-between font-headline-sm text-headline-sm text-primary font-medium">
                 <span>{faq.question}</span>
@@ -71,7 +71,7 @@ export function ServicesFAQ() {
                   className="group-open:rotate-180 transition-transform text-on-surface-variant"
                 />
               </summary>
-              <div className="mt-3 text-on-surface-variant font-body-sm text-body-sm leading-relaxed border-t border-white/5 pt-3">
+              <div className="fbx-faq-body mt-3 text-on-surface-variant font-body-sm text-body-sm leading-relaxed border-t border-outline-variant pt-3">
                 {faq.answer}
               </div>
             </details>
