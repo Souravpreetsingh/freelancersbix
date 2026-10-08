@@ -30,6 +30,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={className ?? DEFAULT_WRAPPER}>
+      <span aria-hidden="true" className="block h-[3px] w-12 bg-signal-green" />
       <span
         className={cn(
           "font-label-sm text-label-sm tracking-widest text-signal-green uppercase",

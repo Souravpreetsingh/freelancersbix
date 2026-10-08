@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function DigitalHero() {
   return (
     <section className="fbx-hero relative w-full overflow-hidden bg-haze border-b border-outline-variant/60 py-space-3xl md:py-space-4xl">
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-6 right-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-signal-green/20 via-surface-container to-transparent pointer-events-none" />
       <div className="w-full px-margin-mobile md:px-margin relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-center">
           <div className="lg:col-span-7 flex flex-col items-start gap-space-md">

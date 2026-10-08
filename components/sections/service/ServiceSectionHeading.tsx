@@ -15,6 +15,7 @@ export function ServiceSectionHeading({
 }: ServiceSectionHeadingProps) {
   return (
     <div className={containerClassName ?? "flex flex-col gap-space-xs max-w-2xl mb-space-2xl"}>
+      <span aria-hidden="true" className="block h-[3px] w-12 bg-signal-green" />
       <span
         className={
           eyebrowClassName ?? "font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold"

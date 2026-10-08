@@ -1,21 +1,14 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function HeroSection() {
   return (
     <section className="fbx-hero relative w-full overflow-hidden bg-haze text-primary py-space-3xl md:py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
-      {/* Subtle ambient backdrop glow & grid decoration */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-30"
-        style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(13,95,64,0.15) 1px, transparent 0)",
-          backgroundSize: "32px 32px",
-        }}
-      />
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-signal-green/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-deep-sage/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Structured background: line pattern, diagonal rules & angled green block */}
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-8 -right-10" />
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">

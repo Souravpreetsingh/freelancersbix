@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 const trust = [
@@ -12,8 +13,7 @@ export function ContentCTA() {
     <section className="w-full px-margin-mobile md:px-margin py-space-4xl">
       <div className="max-w-7xl mx-auto">
         <div className="relative w-full rounded-3xl bg-surface-container-low border border-outline-variant p-space-2xl md:p-space-4xl overflow-hidden shadow-2xl">
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#167A52_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-          <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-signal-green/15 rounded-full blur-[140px] pointer-events-none" />
+          <LinePattern pattern="dots" className="opacity-60" />
           <div className="relative z-10 max-w-3xl flex flex-col gap-space-lg">
             <div className="inline-flex items-center gap-space-xs px-space-sm py-[4px] rounded-full bg-surface-container-high border border-outline-variant w-fit">
               <span className="w-2 h-2 rounded-full bg-signal-green" />

@@ -1,11 +1,11 @@
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function CareerHero() {
   return (
     <section className="fbx-hero relative w-full px-margin-mobile md:px-margin py-space-3xl md:py-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
-      <div className="absolute -top-32 right-1/4 w-96 h-96 bg-deep-sage/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 -left-20 w-80 h-80 bg-signal-green/10 rounded-full blur-[100px] pointer-events-none" />
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
         <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
           <div

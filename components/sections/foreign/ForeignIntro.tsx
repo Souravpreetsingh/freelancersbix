@@ -1,3 +1,4 @@
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import type { IconName } from "@/lib/design/icons";
 
@@ -43,7 +44,7 @@ export function ForeignIntro() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-stretch">
           <div className="lg:col-span-5 p-space-xl rounded-xl bg-surface-container flex flex-col justify-between border border-outline-variant relative overflow-hidden">
-            <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-deep-sage/10 rounded-full blur-2xl" />
+            <LinePattern pattern="diagonal" className="opacity-40" />
             <div>
               <span className="font-mono text-xs text-secondary tracking-widest uppercase">Philosophy // 01</span>
               <h3 className="mt-space-md font-headline-md text-headline-md text-primary font-bold leading-snug">

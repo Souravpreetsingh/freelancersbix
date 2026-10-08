@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { CtaAccent } from "@/components/brand/Geometry";
+import { LinePattern } from "@/components/brand/Backdrop";
+import { AngularDivider, CtaAccent } from "@/components/brand/Geometry";
 
 export interface CTASectionProps {
   eyebrow: string;
@@ -16,8 +17,11 @@ export function CTASection({ eyebrow, title, description, primary, secondary, no
     <section className="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin">
       <div className="max-w-7xl mx-auto rounded-2xl bg-brand-deep py-space-3xl md:py-space-4xl px-space-xl md:px-space-2xl relative overflow-hidden flex flex-col items-center text-center">
         <CtaAccent className="-bottom-8 -left-8 h-56 w-56 md:h-80 md:w-80" />
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-inverse-primary/20 rounded-full blur-3xl pointer-events-none" />
+        <LinePattern pattern="grid" tone="on-dark" className="opacity-60" />
         <div className="relative z-10 flex flex-col items-center gap-space-lg max-w-3xl">
+          <div className="w-40 sm:w-56">
+            <AngularDivider tone="on-dark" />
+          </div>
           <div className="inline-flex items-center gap-space-xs px-space-md py-0.5 rounded-full bg-whiteout/10 border border-whiteout/20">
             <span className="font-label-sm text-label-sm tracking-wider uppercase text-inverse-primary font-bold">
               {eyebrow}

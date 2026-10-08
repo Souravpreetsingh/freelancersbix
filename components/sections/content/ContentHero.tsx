@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
@@ -8,9 +9,8 @@ const markers = ["Research", "Analyse", "Create", "Deliver"];
 export function ContentHero() {
   return (
     <section className="fbx-hero relative w-full px-margin-mobile md:px-margin py-space-3xl md:py-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-6 right-0" />
-      <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-signal-green/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-80 h-80 bg-deep-sage/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
         <div className="lg:col-span-7 flex flex-col gap-space-lg">
           <div

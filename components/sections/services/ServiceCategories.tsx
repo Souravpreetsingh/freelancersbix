@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DiagonalLines } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import { Reveal } from "@/components/motion/Reveal";
 import type { IconName } from "@/lib/design/icons";
@@ -291,7 +292,7 @@ export function ServiceCategories() {
                   id={category.id}
                   className="scroll-mt-32 p-space-xl md:p-space-2xl rounded-xl bg-gradient-to-b from-surface-container-high to-surface-container border-2 border-signal-green/40 shadow-2xl relative overflow-hidden"
                 >
-                  <div className="absolute -right-20 -top-20 w-80 h-80 bg-signal-green/10 rounded-full blur-3xl pointer-events-none" />
+                  <DiagonalLines className="-top-6 -right-6 h-40 w-40 opacity-70 md:h-52 md:w-52" />
                   <div className="flex flex-col lg:flex-row justify-between gap-space-xl relative z-10">
                     <CategoryLeft category={category} />
                     <Checklist items={category.checklist} featured />

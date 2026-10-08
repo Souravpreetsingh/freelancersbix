@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DiagonalLines } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import type { IconName } from "@/lib/design/icons";
 import { cn } from "@/lib/utils/cn";
@@ -35,9 +36,7 @@ export function ServiceCard({
         wide && "md:col-span-2 lg:col-span-3",
       )}
     >
-      {highlight ? (
-        <div className="absolute -right-12 -top-12 w-32 h-32 bg-signal-green/15 rounded-full blur-2xl pointer-events-none" />
-      ) : null}
+      {highlight ? <DiagonalLines className="-right-6 -top-6 h-32 w-32 opacity-70" /> : null}
       {wide ? (
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
           <div className="flex flex-col gap-space-xs max-w-2xl">

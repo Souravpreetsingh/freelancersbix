@@ -1,12 +1,12 @@
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function ContactHero() {
   return (
     <section className="fbx-hero relative w-full px-margin-mobile md:px-margin py-space-3xl md:py-space-4xl overflow-hidden bg-haze border-b border-outline-variant/60">
-      <div className="absolute -top-32 right-1/4 w-[480px] h-[480px] rounded-full bg-signal-green/10 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-[360px] h-[360px] rounded-full bg-deep-sage/15 blur-[120px] pointer-events-none" />
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-8 -right-10" />
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
         <div className="lg:col-span-7 flex flex-col items-start">

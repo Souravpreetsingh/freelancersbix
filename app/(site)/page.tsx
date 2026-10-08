@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { AngularDivider } from "@/components/brand/Geometry";
 import { CTASection } from "@/components/sections/CTASection";
 import { ApproachSection } from "@/components/sections/home/ApproachSection";
 import { AudienceSection } from "@/components/sections/home/AudienceSection";
@@ -20,6 +21,9 @@ export default function HomePage() {
       </Reveal>
       <Reveal>
         <IntroSection />
+      </Reveal>
+      <Reveal>
+        <AngularDivider className="max-w-7xl mx-auto px-margin-mobile md:px-margin mb-space-2xl" />
       </Reveal>
       <Reveal>
         <ServicesMatrix />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 const flow = ["Question", "Data Ingest", "Analysis", "Findings", "Discussion", "Conclusion"];
@@ -8,7 +9,7 @@ export function DataAcademic() {
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-background border-b border-outline-variant">
       <div className="max-w-7xl mx-auto">
         <div className="p-space-2xl rounded-2xl bg-surface-container-low border border-outline-variant relative overflow-hidden">
-          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-signal-green/10 rounded-full blur-[100px] pointer-events-none" />
+          <LinePattern pattern="diagonal" className="opacity-40" />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
             <div className="lg:col-span-8 flex flex-col gap-space-md">
               <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GreenStrip, LinePattern } from "@/components/brand/Backdrop";
 import { FooterAccent } from "@/components/brand/Geometry";
 import { CurrentYear, FooterColumnNav } from "@/components/layout/FooterClient";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
@@ -20,6 +21,8 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-brand-deep text-whiteout">
+      <LinePattern pattern="grid" tone="on-dark" className="opacity-50" />
+      <GreenStrip orientation="horizontal" tone="on-dark" className="left-0 top-0" />
       <FooterAccent className="-bottom-10 -right-10 h-56 w-56 md:h-80 md:w-80 lg:h-96 lg:w-96" />
       <div className="relative w-full px-margin-mobile md:px-margin py-space-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-2xl mb-space-3xl">

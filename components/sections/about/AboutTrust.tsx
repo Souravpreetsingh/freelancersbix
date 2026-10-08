@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GreenStrip, LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 
@@ -62,7 +63,8 @@ export function AboutQuality() {
 export function AboutPhilosophy() {
   return (
     <section className="w-full bg-surface-container-lowest py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20 relative overflow-hidden">
-      <div className="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-signal-green/5 blur-[100px] pointer-events-none" />
+      <LinePattern pattern="grid" className="opacity-50" />
+      <GreenStrip orientation="horizontal" className="right-0 top-0" />
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
         <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-md">
           Our Philosophy
@@ -88,7 +90,7 @@ export function AboutCTA() {
     <section className="w-full bg-surface py-space-3xl px-margin-mobile md:px-margin border-t border-outline-variant/20">
       <div className="max-w-7xl mx-auto">
         <div className="relative w-full rounded-2xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container border border-outline-variant/40 p-space-2xl md:p-space-3xl flex flex-col lg:flex-row items-center justify-between gap-space-xl overflow-hidden shadow-[0_24px_50px_rgba(32,39,34,0.19)]">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-signal-green/10 rounded-full blur-[90px] pointer-events-none" />
+          <LinePattern pattern="diagonal" className="opacity-40" />
           <div className="flex flex-col gap-space-sm max-w-2xl relative z-10">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green">
               Get Started Today

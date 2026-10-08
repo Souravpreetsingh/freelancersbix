@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { DiagonalLines, GreenStrip, LinePattern } from "@/components/brand/Backdrop";
 
 export function DigitalCTA() {
   return (
     <section className="relative w-full overflow-hidden bg-brand-deep py-space-3xl md:py-space-4xl">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-inverse-primary/30 via-signal-green/15 to-brand-deep pointer-events-none" />
+      <LinePattern pattern="grid" tone="on-dark" className="opacity-60" />
+      <DiagonalLines tone="on-dark" className="-top-6 -right-6 h-44 w-44 opacity-60 md:h-60 md:w-60" />
+      <GreenStrip orientation="horizontal" tone="on-dark" className="left-0 top-0" />
       <div className="w-full px-margin-mobile md:px-margin relative z-10 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-whiteout/10 border border-whiteout/20 backdrop-blur-md mb-space-md">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-inverse-primary font-bold">

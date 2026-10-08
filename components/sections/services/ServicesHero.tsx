@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function ServicesHero() {
   return (
     <section className="fbx-hero relative w-full overflow-hidden bg-haze border-b border-outline-variant/60 py-space-3xl md:py-space-4xl">
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-6 right-0" />
-      <div className="absolute -top-32 right-0 w-[580px] h-[580px] bg-deep-sage/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-signal-green/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto">
+      <div className="w-full px-margin-mobile md:px-margin max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
           {/* Text Column */}
           <div className="lg:col-span-7 flex flex-col items-start gap-space-md z-10">

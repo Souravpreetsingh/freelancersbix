@@ -1,16 +1,11 @@
 import Link from "next/link";
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function AcademicCTA() {
   return (
     <section className="w-full bg-surface-container py-space-4xl px-margin-mobile md:px-margin relative overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(rgba(22, 122, 82, 0.4) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
+      <LinePattern pattern="dots" className="opacity-60" />
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green mb-space-xs inline-block">
           Initiate Consultation

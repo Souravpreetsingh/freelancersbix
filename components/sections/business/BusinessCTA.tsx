@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { LinePattern } from "@/components/brand/Backdrop";
 
 export function BusinessCTA() {
   return (
     <section className="w-full px-margin-mobile md:px-margin py-space-4xl relative overflow-hidden">
       <div className="bg-surface-container-low rounded-2xl p-space-2xl md:p-space-4xl shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
-        <div className="absolute inset-0 bg-gradient-to-tr from-signal-green/10 via-transparent to-deep-sage/10 pointer-events-none" />
+        <LinePattern pattern="grid" className="opacity-50" />
         <div className="relative z-10 flex flex-col items-center gap-space-md max-w-3xl">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-semibold">
             Initiate an Engagement

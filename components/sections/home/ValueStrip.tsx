@@ -1,3 +1,4 @@
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 import type { IconName } from "@/lib/design/icons";
 
@@ -11,8 +12,9 @@ const VALUE_ITEMS: { icon: IconName; title: string; description: string }[] = [
 
 export function ValueStrip() {
   return (
-    <section className="w-full bg-surface-container-highest py-space-xl px-margin-mobile md:px-margin border-y border-outline-variant/40">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+    <section className="relative w-full overflow-hidden bg-surface-container-highest py-space-xl px-margin-mobile md:px-margin border-y border-outline-variant/40">
+      <LinePattern pattern="diagonal" className="opacity-40" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md relative z-10">
         {VALUE_ITEMS.map((item) => (
           <div
             key={item.title}

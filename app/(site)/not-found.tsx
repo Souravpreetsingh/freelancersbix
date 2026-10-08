@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { CornerAccent } from "@/components/brand/Geometry";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export default function NotFound() {
   return (
     <section className="relative w-full overflow-hidden bg-haze px-margin-mobile md:px-margin py-space-4xl border-b border-outline-variant/60">
+      <HeroBackdrop pattern="dots" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-8 -right-10" />
       <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center text-center gap-space-lg">
         <span className="font-mono text-label-lg text-signal-green font-bold tracking-widest">404</span>

@@ -1,4 +1,5 @@
 import { type IconName } from "@/lib/design/icons";
+import { LinePattern } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 const GUARANTEES: { icon: IconName; title: string; text: string }[] = [
@@ -23,7 +24,7 @@ export function ContactTrust() {
   return (
     <section className="w-full px-margin-mobile md:px-margin py-space-3xl bg-surface-container-lowest">
       <div className="p-space-xl md:p-space-3xl rounded-xl bg-surface relative overflow-hidden">
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-signal-green/10 blur-[100px] pointer-events-none" />
+        <LinePattern pattern="diagonal" className="opacity-40" />
         <div className="relative z-10 max-w-3xl mb-space-2xl">
           <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-signal-green mb-space-md">
             <MaterialIcon name="verified_user" className="text-[16px]" />

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { SITE } from "@/lib/design/site";
 
 export function AboutHero() {
   return (
     <section className="fbx-hero relative w-full overflow-hidden bg-haze py-space-3xl md:py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
-      <div className="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-signal-green/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-deep-sage/10 blur-[100px] pointer-events-none" />
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
         <div className="lg:col-span-7 flex flex-col items-start gap-space-lg">
           <div
             data-hero-item

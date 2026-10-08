@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { HeroBackdrop } from "@/components/brand/Backdrop";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function AcademicHero() {
   return (
     <section className="fbx-hero relative w-full bg-haze border-b border-outline-variant/60 py-space-3xl md:py-space-4xl px-margin-mobile md:px-margin overflow-hidden">
-      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-signal-green/10 blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 -right-48 w-[32rem] h-[32rem] rounded-full bg-deep-sage/15 blur-[140px] pointer-events-none" />
+      <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
         <div className="lg:col-span-6 flex flex-col items-start">
           <div

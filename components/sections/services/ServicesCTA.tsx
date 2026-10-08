@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinePattern } from "@/components/brand/Backdrop";
 
 export function ServicesCTA() {
   return (
@@ -6,7 +7,7 @@ export function ServicesCTA() {
       id="quote-cta"
       className="w-full bg-surface py-space-4xl border-t border-outline-variant relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-signal-green/5 via-transparent to-deep-sage/5 pointer-events-none" />
+      <LinePattern pattern="diagonal" className="opacity-40" />
       <div className="w-full px-margin-mobile md:px-margin max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center gap-space-md">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant">
           <span className="w-1.5 h-1.5 rounded-full bg-signal-green" />

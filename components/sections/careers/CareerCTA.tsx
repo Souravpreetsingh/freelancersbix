@@ -1,9 +1,11 @@
+import { LinePattern } from "@/components/brand/Backdrop";
+
 export function CareerCTA() {
   return (
     <section className="w-full px-margin-mobile md:px-margin pb-space-4xl bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="bg-surface-container-low rounded-2xl p-space-2xl md:p-space-3xl flex flex-col md:flex-row items-center justify-between gap-space-xl shadow-2xl relative overflow-hidden">
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-signal-green/15 rounded-full blur-[90px] pointer-events-none" />
+          <LinePattern pattern="diagonal" className="opacity-40" />
           <div className="flex flex-col gap-space-xs max-w-xl z-10">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-signal-green font-bold">
               Ready to Begin?
