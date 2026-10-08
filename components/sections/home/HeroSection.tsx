@@ -6,7 +6,7 @@ import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function HeroSection() {
   return (
-    <section className="fbx-hero relative w-full overflow-hidden bg-haze text-primary py-space-3xl md:py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
+    <section className="fbx-hero relative w-full overflow-hidden bg-haze text-primary pt-space-2xl pb-space-3xl md:pt-space-3xl md:pb-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/60">
       {/* Structured background: line pattern, diagonal rules & angled green block */}
       <HeroBackdrop pattern="grid" block="right" diagonals="top-left" />
       <CornerAccent corner="top-right" tone="on-light" size="lg" className="-top-8 -right-10" />
