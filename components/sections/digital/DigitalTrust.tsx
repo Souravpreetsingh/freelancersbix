@@ -11,7 +11,7 @@ const TRUST_ITEMS: { name: IconName; label: string; wide?: boolean }[] = [
 
 export function DigitalTrust() {
   return (
-    <section className="w-full bg-surface-container-low py-space-md">
+    <section className="w-full bg-surface-container-highest py-space-md border-y border-outline-variant/40">
       <div className="w-full px-margin-mobile md:px-margin">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-space-md items-center">
           {TRUST_ITEMS.map((item) => (

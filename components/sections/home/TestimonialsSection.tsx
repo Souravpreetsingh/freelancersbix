@@ -24,7 +24,7 @@ const TESTIMONIALS: { quote: string; role: string; context: string }[] = [
 
 export function TestimonialsSection() {
   return (
-    <section className="w-full bg-surface-container-low py-space-4xl px-margin-mobile md:px-margin border-b border-outline-variant/15">
+    <section className="w-full bg-surface-container-highest py-space-4xl px-margin-mobile md:px-margin border-y border-outline-variant/40">
       <div className="max-w-7xl mx-auto flex flex-col gap-space-3xl">
         <SectionHeading eyebrow="Client Experience" title="Professional support. Clear outcomes." />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">

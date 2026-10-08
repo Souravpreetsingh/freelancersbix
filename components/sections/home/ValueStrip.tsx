@@ -11,12 +11,12 @@ const VALUE_ITEMS: { icon: IconName; title: string; description: string }[] = [
 
 export function ValueStrip() {
   return (
-    <section className="w-full bg-surface-container-low py-space-xl px-margin-mobile md:px-margin border-b border-outline-variant/15">
+    <section className="w-full bg-surface-container-highest py-space-xl px-margin-mobile md:px-margin border-y border-outline-variant/40">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
         {VALUE_ITEMS.map((item) => (
           <div
             key={item.title}
-            className="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container transition-colors"
+            className="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-bright border border-outline-variant/50 hover:shadow-md transition-all"
           >
             <div className="w-10 h-10 rounded-lg bg-surface-bright flex items-center justify-center flex-shrink-0 text-signal-green">
               <MaterialIcon name={item.icon} className="text-[22px]" />

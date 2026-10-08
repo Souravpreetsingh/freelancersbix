@@ -2,7 +2,7 @@ import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
 export function AcademicIntegrity() {
   return (
-    <section className="w-full bg-surface-container-low py-space-2xl px-margin-mobile md:px-margin shadow-sm">
+    <section className="w-full bg-surface-container-highest py-space-2xl px-margin-mobile md:px-margin border-y border-outline-variant/40">
       <div className="max-w-5xl mx-auto bg-surface-container-lowest rounded-xl p-space-2xl shadow-xl flex flex-col md:flex-row items-start gap-space-xl">
         <div className="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
           <MaterialIcon name="verified_user" className="text-[28px]" />
