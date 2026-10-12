@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/design/site";
+import { baseOpenGraph } from "@/lib/design/seo";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -24,10 +25,8 @@ export const metadata: Metadata = {
   description: SITE.description,
   applicationName: SITE.name,
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    ...baseOpenGraph,
     url: SITE.url,
-    siteName: SITE.name,
     title: SITE.title,
     description: SITE.description,
   },
