@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { ChatBot } from "@/components/chat/ChatBot";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -24,6 +25,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       </PageTransition>
       <Footer />
       <ChatBot />
+      <GoogleAnalytics />
       <StructuredData />
     </>
   );
