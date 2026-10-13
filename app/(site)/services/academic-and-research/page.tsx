@@ -29,6 +29,7 @@ export default function AcademicAndResearchPage() {
     <>
       <ServiceBreadcrumb
         current="Academic & Research Support"
+        href="/services/academic-and-research"
         variant="chevron"
         size="md"
         currentClassName="text-primary font-medium tracking-wide"

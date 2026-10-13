@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = pageMetadata("/privacy-policy", undefined, {
   title: { absolute: "Privacy Policy — FreelancersBix" },
+  description:
+    "How FreelancersBix collects, uses and protects personal information across the website and client engagements, including your privacy rights.",
 });
 
 export default function PrivacyPolicyPage() {

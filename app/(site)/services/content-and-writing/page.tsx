@@ -33,6 +33,7 @@ export default function ContentAndWritingPage() {
     <>
       <ServiceBreadcrumb
         current="Content & Professional Writing"
+        href="/services/content-and-writing"
         variant="slash"
         size="md"
         wrapperClassName="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm"

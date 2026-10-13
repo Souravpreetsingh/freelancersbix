@@ -2,6 +2,7 @@ import { ChatBot } from "@/components/chat/ChatBot";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { PageTransition } from "@/components/motion/PageTransition";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -23,6 +24,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       </PageTransition>
       <Footer />
       <ChatBot />
+      <StructuredData />
     </>
   );
 }

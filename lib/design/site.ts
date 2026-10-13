@@ -8,7 +8,7 @@
 export const SITE = {
   name: "FreelancersBix",
   /** Origin used for metadataBase, canonical URLs, sitemap and robots. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://freelancersbix.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.freelancersbix.com",
   /** Approved homepage title (export has no title; supplied for SEO foundation). */
   title: "FreelancersBix | Professional Research, Business, Accounting & Digital Support",
   /** Verbatim home hero / footer description. */
@@ -58,3 +58,28 @@ export const allRoutes = [
   "/terms-of-service",
   "/security",
 ] as const;
+
+/**
+ * Public routes that are intentionally hidden from search while they ship as
+ * placeholders awaiting approved content.
+ *
+ * This is the single source of truth for the temporary noindex state:
+ * `pageMetadata()` reads it to emit `robots: noindex`, and the sitemap filters
+ * it out. To publish a route, remove it from this list only — the page metadata
+ * becomes indexable and the route re-enters the sitemap together, so the two
+ * can never drift apart.
+ */
+export const NOINDEX_ROUTES = [
+  "/insights",
+  "/case-studies",
+  "/security",
+  "/terms-of-service",
+  "/privacy-policy",
+] as const;
+
+export type NoIndexRoute = (typeof NOINDEX_ROUTES)[number];
+
+/** Type guard that narrows a pathname to a currently noindexed public route. */
+export function isNoIndexRoute(pathname: string): pathname is NoIndexRoute {
+  return (NOINDEX_ROUTES as readonly string[]).includes(pathname);
+}

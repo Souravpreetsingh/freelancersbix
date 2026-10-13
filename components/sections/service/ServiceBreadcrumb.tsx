@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 interface ServiceBreadcrumbProps {
   current: string;
+  /** Canonical in-app path of the current page, e.g. "/services/data-and-research". */
+  href: string;
   variant?: "slash" | "chevron";
   wrapperClassName?: string;
   size?: "sm" | "md";
@@ -11,6 +14,7 @@ interface ServiceBreadcrumbProps {
 
 export function ServiceBreadcrumb({
   current,
+  href,
   variant = "slash",
   wrapperClassName,
   size = "sm",
@@ -19,6 +23,13 @@ export function ServiceBreadcrumb({
   const sizeClass = size === "sm" ? "font-label-sm text-label-sm" : "font-label-md text-label-md";
   return (
     <section className="w-full bg-haze border-b border-outline-variant/60">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+          { name: current, path: href },
+        ]}
+      />
       <div className={wrapperClassName ?? "w-full px-margin-mobile md:px-margin py-space-sm"}>
         <nav
           aria-label="Breadcrumb"

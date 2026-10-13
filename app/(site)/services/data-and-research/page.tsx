@@ -35,6 +35,7 @@ export default function DataAndResearchPage() {
     <>
       <ServiceBreadcrumb
         current="Data & Research Services"
+        href="/services/data-and-research"
         variant="chevron"
         size="md"
         wrapperClassName="w-full px-margin-mobile md:px-margin pt-space-md pb-space-sm bg-surface-container-lowest/40 border-b border-outline-variant"

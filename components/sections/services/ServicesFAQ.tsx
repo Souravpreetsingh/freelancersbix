@@ -1,6 +1,6 @@
 import { MaterialIcon } from "@/components/icons/MaterialIcon";
 
-const FAQS: { question: string; answer: string }[] = [
+export const SERVICE_FAQS: { question: string; answer: string }[] = [
   {
     question: "What types of clients do you support?",
     answer:
@@ -59,7 +59,7 @@ export function ServicesFAQ() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          {FAQS.map((faq) => (
+          {SERVICE_FAQS.map((faq) => (
             <details
               key={faq.question}
               className="group p-5 rounded-xl bg-surface-container border border-outline-variant [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all"

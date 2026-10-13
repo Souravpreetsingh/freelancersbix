@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/design/site";
-import { baseOpenGraph } from "@/lib/design/seo";
+import { baseOpenGraph, openGraphImage } from "@/lib/design/seo";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -31,9 +31,10 @@ export const metadata: Metadata = {
     description: SITE.description,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: SITE.title,
     description: SITE.description,
+    images: [openGraphImage.url],
   },
   alternates: {
     canonical: "/",
